@@ -21,34 +21,33 @@ String json2yaml(
   YamlStyle yamlStyle = YamlStyle.generic,
 }) =>
     _renderToYaml(json, 0, yamlStyle)
-
-        /// to make the formatting cleaner with fewer blank lines
-        .replaceAll(RegExp(r'(?<=\n\s*)\-\s\s*'), '- ');
+    /// to make the formatting cleaner with fewer blank lines
+    .replaceAll(RegExp(r'(?<=\n\s*)\-\s\s*'), '- ');
 
 String _renderToYaml(
   Map<String, dynamic> json,
   int nestingLevel,
   YamlStyle style,
-) =>
-    json.entries
-        .map((MapEntry<String, dynamic> entry) => _formatEntry(
-              entry,
-              nestingLevel,
-              style,
-            ))
-        .join('\n');
+) => json.entries
+    .map(
+      (MapEntry<String, dynamic> entry) =>
+          _formatEntry(entry, nestingLevel, style),
+    )
+    .join('\n');
 
 String _formatEntry(
-        MapEntry<String, dynamic> entry, int nesting, YamlStyle style) =>
-    '${_indentation(nesting)}${entry.key}:${_formatValue(
-      entry.value,
-      nesting,
-      style,
-      "\n",
-    )}';
+  MapEntry<String, dynamic> entry,
+  int nesting,
+  YamlStyle style,
+) =>
+    '${_indentation(nesting)}${entry.key}:${_formatValue(entry.value, nesting, style, "\n")}';
 
 String _formatValue(
-    dynamic value, int nesting, YamlStyle style, String newLine) {
+  dynamic value,
+  int nesting,
+  YamlStyle style,
+  String newLine,
+) {
   if (value is Map<String, dynamic>) {
     return '$newLine${_renderToYaml(value, nesting + 1, style)}';
   }
@@ -116,8 +115,10 @@ String _formatValue(
 }
 
 String _formatList(List<dynamic> list, int nesting, YamlStyle style) => list
-    .map((dynamic value) =>
-        '${_indentation(nesting)}-${_formatValue(value, nesting, style, '')}')
+    .map(
+      (dynamic value) =>
+          '${_indentation(nesting)}-${_formatValue(value, nesting, style, '')}',
+    )
     .join('\n');
 
 String _indentation(int nesting) => _spaces(nesting * 2);

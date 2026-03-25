@@ -14,14 +14,20 @@ import 'primitive_types.dart';
 class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
   const FhirTime._(this._valueString, this._valueTime, this._isValid);
 
-  factory FhirTime(dynamic inValue) => inValue is String &&
-          RegExp(r'^([01][0-9]|2[0-3])(:([0-5][0-9])(:([0-5][0-9]|60)(\.[0-9]+)?)?)?$')
-              .hasMatch(inValue)
+  factory FhirTime(dynamic inValue) =>
+      inValue is String &&
+          RegExp(
+            r'^([01][0-9]|2[0-3])(:([0-5][0-9])(:([0-5][0-9]|60)(\.[0-9]+)?)?)?$',
+          ).hasMatch(inValue)
       ? FhirTime._(inValue, inValue, true)
       : FhirTime._(inValue.toString(), null, false);
 
-  factory FhirTime.fromUnits(
-      {dynamic hour, dynamic minute, dynamic second, dynamic millisecond}) {
+  factory FhirTime.fromUnits({
+    dynamic hour,
+    dynamic minute,
+    dynamic second,
+    dynamic millisecond,
+  }) {
     String? timeString = hour?.toString().padLeft(2, '0');
     if (timeString != null && minute != null) {
       timeString += ':${minute.toString().padLeft(2, '0')}';
@@ -40,9 +46,10 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
   factory FhirTime.fromYaml(dynamic yaml) => yaml is String
       ? FhirTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirTime.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirTime>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirTime.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirTime>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final String _valueString;
   final String? _valueTime;
@@ -55,15 +62,18 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
   int? get hour => _valueTime?.split(':')[0] == null
       ? null
       : int.tryParse(_valueTime!.split(':')[0]);
-  int? get minute => (_valueTime?.split(':').length ?? 0) <= 1 ||
+  int? get minute =>
+      (_valueTime?.split(':').length ?? 0) <= 1 ||
           _valueTime?.split(':')[1] == null
       ? null
       : int.tryParse(_valueTime!.split(':')[1]);
-  int? get second => (_valueTime?.split(':').length ?? 0) <= 2 ||
+  int? get second =>
+      (_valueTime?.split(':').length ?? 0) <= 2 ||
           _valueTime?.split(':')[2] == null
       ? null
       : int.tryParse(_valueTime!.split(':')[2].split('.')[0]);
-  int? get millisecond => (_valueTime?.split(':').length ?? 0) <= 2 ||
+  int? get millisecond =>
+      (_valueTime?.split(':').length ?? 0) <= 2 ||
           _valueTime?.split(':')[2] == null ||
           _valueTime!.split(':')[2].split('.').length <= 1
       ? null
@@ -96,8 +106,8 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
     final FhirTime? rhs = o is FhirTime
         ? o
         : o is String
-            ? FhirTime(o)
-            : null;
+        ? FhirTime(o)
+        : null;
 
     /// If compared Object is null, is invalid, or if this is invalid, we don't
     /// continue to try the comparison
@@ -108,11 +118,13 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
       } else {
         /// otherwise passed value is null or invalid OR this is invalid, or all
         /// of the above, and we throw and error saying as much.
-        throw InvalidTypes<FhirTime>('Two values were passed to the date time '
-            '"$comparator" comparison operator, '
-            'they were not both valid FhirDateTimeBase types\n'
-            'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
-            'Argument 2: $o (${o.runtimeType}): Valid - false}');
+        throw InvalidTypes<FhirTime>(
+          'Two values were passed to the date time '
+          '"$comparator" comparison operator, '
+          'they were not both valid FhirDateTimeBase types\n'
+          'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
+          'Argument 2: $o (${o.runtimeType}): Valid - false}',
+        );
       }
     }
 
@@ -129,7 +141,10 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
     /// The above would always be true, even if the 17:00 is more precise
 
     bool? comparePrecisionValue(
-        Comparator comparator, String lhsValue, String rhsValue) {
+      Comparator comparator,
+      String lhsValue,
+      String rhsValue,
+    ) {
       switch (comparator) {
         case Comparator.eq:
 
@@ -144,7 +159,6 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
           if (num.parse(lhsValue) < num.parse(rhsValue)) {
             return false;
           } else
-
           /// if at any point this is greater than the Object precision,
           /// this is true
           if (num.parse(lhsValue) > num.parse(rhsValue)) {
@@ -157,7 +171,6 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
           if (num.parse(lhsValue) < num.parse(rhsValue)) {
             return false;
           } else
-
           /// if at any point this is greater than the Object precision,
           /// this is true
           if (num.parse(lhsValue) > num.parse(rhsValue)) {
@@ -170,7 +183,6 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
           if (num.parse(lhsValue) < num.parse(rhsValue)) {
             return true;
           } else
-
           /// if at any point this is greater than the Object precision,
           /// this is false
           if (num.parse(lhsValue) > num.parse(rhsValue)) {
@@ -183,7 +195,6 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
           if (num.parse(lhsValue) < num.parse(rhsValue)) {
             return true;
           } else
-
           /// if at any point this is greater than the Object precision,
           /// this is false
           if (num.parse(lhsValue) > num.parse(rhsValue)) {
@@ -194,13 +205,17 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
     }
 
     /// We pick the shorter of the two lists
-    final int timePrecision =
-        lhsTime.length > rhsTime.length ? rhsTime.length : lhsTime.length;
+    final int timePrecision = lhsTime.length > rhsTime.length
+        ? rhsTime.length
+        : lhsTime.length;
 
     /// And compare what we can
     for (int i = 0; i < timePrecision; i++) {
-      final bool? comparedValue =
-          comparePrecisionValue(comparator, lhsTime[i], rhsTime[i]);
+      final bool? comparedValue = comparePrecisionValue(
+        comparator,
+        lhsTime[i],
+        rhsTime[i],
+      );
       if (comparedValue != null) {
         return comparedValue;
       }
@@ -242,8 +257,12 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
     }
   }
 
-  FhirTime plus(
-      {int hours = 0, int minutes = 0, int seconds = 0, int milliseconds = 0}) {
+  FhirTime plus({
+    int hours = 0,
+    int minutes = 0,
+    int seconds = 0,
+    int milliseconds = 0,
+  }) {
     int newMilliseconds = (millisecond ?? 0) + milliseconds;
     int newSeconds = (second ?? 0) + seconds + (newMilliseconds ~/ 1000);
     newMilliseconds = newMilliseconds % 1000;
@@ -260,8 +279,12 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
     );
   }
 
-  FhirTime subtract(
-      {int hours = 0, int minutes = 0, int seconds = 0, int milliseconds = 0}) {
+  FhirTime subtract({
+    int hours = 0,
+    int minutes = 0,
+    int seconds = 0,
+    int milliseconds = 0,
+  }) {
     int newMilliseconds = (millisecond ?? 0) - milliseconds;
     int newSeconds = (second ?? 0) - seconds;
     int newMinutes = (minute ?? 0) - minutes;
@@ -316,6 +339,6 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
   int compareTo(FhirTime other) => (this > other ?? false)
       ? 1
       : (this < other ?? false)
-          ? -1
-          : 0;
+      ? -1
+      : 0;
 }

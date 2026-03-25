@@ -143,7 +143,6 @@ abstract class Coverage with Resource, _$Coverage {
   const factory Coverage({
     @Default(R4ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
-
     /// [resourceType] This is a Coverage resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -301,13 +300,14 @@ abstract class Coverage with Resource, _$Coverage {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
       ? Coverage.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? Coverage.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Coverage cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? Coverage.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+      : throw ArgumentError(
+          'Coverage cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Coverage.fromJson(Map<String, dynamic> json) =>
@@ -320,8 +320,10 @@ abstract class Coverage with Resource, _$Coverage {
     if (json is Map<String, dynamic>) {
       return _$CoverageFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -430,13 +432,16 @@ abstract class CoverageClass with _$CoverageClass {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageClass.fromYaml(dynamic yaml) => yaml is String
       ? CoverageClass.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageClass.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageClass cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CoverageClass.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageClass cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageClass.fromJson(Map<String, dynamic> json) =>
@@ -449,8 +454,10 @@ abstract class CoverageClass with _$CoverageClass {
     if (json is Map<String, dynamic>) {
       return _$CoverageClassFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -549,13 +556,16 @@ abstract class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageCostToBeneficiary.fromYaml(dynamic yaml) => yaml is String
       ? CoverageCostToBeneficiary.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageCostToBeneficiary.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageCostToBeneficiary cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CoverageCostToBeneficiary.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageCostToBeneficiary cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
@@ -568,8 +578,10 @@ abstract class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
     if (json is Map<String, dynamic>) {
       return _$CoverageCostToBeneficiaryFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -656,13 +668,16 @@ abstract class CoverageException with _$CoverageException {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageException.fromYaml(dynamic yaml) => yaml is String
       ? CoverageException.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageException.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageException cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CoverageException.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageException cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageException.fromJson(Map<String, dynamic> json) =>
@@ -675,8 +690,10 @@ abstract class CoverageException with _$CoverageException {
     if (json is Map<String, dynamic>) {
       return _$CoverageExceptionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -687,7 +704,8 @@ abstract class CoverageException with _$CoverageException {
 
 /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
 @freezed
-abstract class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
+abstract class CoverageEligibilityRequest
+    with Resource, _$CoverageEligibilityRequest {
   /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
   const CoverageEligibilityRequest._();
 
@@ -805,7 +823,6 @@ abstract class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRe
   const factory CoverageEligibilityRequest({
     @Default(R4ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
-
     /// [resourceType] This is a CoverageEligibilityRequest resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -947,13 +964,16 @@ abstract class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRe
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityRequest.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityRequest.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityRequest.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityRequest cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CoverageEligibilityRequest.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityRequest cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
@@ -966,8 +986,10 @@ abstract class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRe
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1076,20 +1098,23 @@ abstract class CoverageEligibilityRequestSupportingInfo
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) => yaml
-          is String
+  factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) =>
+      yaml is String
       ? CoverageEligibilityRequestSupportingInfo.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityRequestSupportingInfo.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityRequestSupportingInfo cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? CoverageEligibilityRequestSupportingInfo.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityRequestSupportingInfo cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory CoverageEligibilityRequestSupportingInfo.fromJson(
-          Map<String, dynamic> json) =>
-      _$CoverageEligibilityRequestSupportingInfoFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$CoverageEligibilityRequestSupportingInfoFromJson(json);
 }
 
 @freezed
@@ -1194,25 +1219,29 @@ abstract class CoverageEligibilityRequestInsurance
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) => yaml
-          is String
+  factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) =>
+      yaml is String
       ? CoverageEligibilityRequestInsurance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityRequestInsurance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityRequestInsurance cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? CoverageEligibilityRequestInsurance.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityRequestInsurance cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory CoverageEligibilityRequestInsurance.fromJson(
-          Map<String, dynamic> json) =>
-      _$CoverageEligibilityRequestInsuranceFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$CoverageEligibilityRequestInsuranceFromJson(json);
 }
 
 /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
 @freezed
-abstract class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
+abstract class CoverageEligibilityRequestItem
+    with _$CoverageEligibilityRequestItem {
   /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
   const CoverageEligibilityRequestItem._();
 
@@ -1306,7 +1335,6 @@ abstract class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestI
     ///  information applicable for this service or product line.
     List<FhirPositiveInt>? supportingInfoSequence,
     @JsonKey(name: '_supportingInfoSequence')
-
     /// [supportingInfoSequenceElement] Extensions for supportingInfoSequence
     List<Element>? supportingInfoSequenceElement,
 
@@ -1348,16 +1376,19 @@ abstract class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestI
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) => yaml
-          is String
+  factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) =>
+      yaml is String
       ? CoverageEligibilityRequestItem.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityRequestItem.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityRequestItem cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? CoverageEligibilityRequestItem.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityRequestItem cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
@@ -1370,8 +1401,10 @@ abstract class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestI
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestItemFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1461,25 +1494,29 @@ abstract class CoverageEligibilityRequestDiagnosis
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) => yaml
-          is String
+  factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) =>
+      yaml is String
       ? CoverageEligibilityRequestDiagnosis.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityRequestDiagnosis.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityRequestDiagnosis cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? CoverageEligibilityRequestDiagnosis.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityRequestDiagnosis cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory CoverageEligibilityRequestDiagnosis.fromJson(
-          Map<String, dynamic> json) =>
-      _$CoverageEligibilityRequestDiagnosisFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$CoverageEligibilityRequestDiagnosisFromJson(json);
 }
 
 /// [CoverageEligibilityResponse] This resource provides eligibility and plan
 @freezed
-abstract class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
+abstract class CoverageEligibilityResponse
+    with Resource, _$CoverageEligibilityResponse {
   /// [CoverageEligibilityResponse] This resource provides eligibility and plan
   const CoverageEligibilityResponse._();
 
@@ -1600,7 +1637,6 @@ abstract class CoverageEligibilityResponse with Resource, _$CoverageEligibilityR
   const factory CoverageEligibilityResponse({
     @Default(R4ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
-
     /// [resourceType] This is a CoverageEligibilityResponse resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -1752,13 +1788,16 @@ abstract class CoverageEligibilityResponse with Resource, _$CoverageEligibilityR
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityResponse.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityResponse.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityResponse.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityResponse cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CoverageEligibilityResponse.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityResponse cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
@@ -1771,8 +1810,10 @@ abstract class CoverageEligibilityResponse with Resource, _$CoverageEligibilityR
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1884,25 +1925,29 @@ abstract class CoverageEligibilityResponseInsurance
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) => yaml
-          is String
+  factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) =>
+      yaml is String
       ? CoverageEligibilityResponseInsurance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityResponseInsurance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityResponseInsurance cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? CoverageEligibilityResponseInsurance.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityResponseInsurance cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory CoverageEligibilityResponseInsurance.fromJson(
-          Map<String, dynamic> json) =>
-      _$CoverageEligibilityResponseInsuranceFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$CoverageEligibilityResponseInsuranceFromJson(json);
 }
 
 /// [CoverageEligibilityResponseItem] This resource provides eligibility and
 @freezed
-abstract class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
+abstract class CoverageEligibilityResponseItem
+    with _$CoverageEligibilityResponseItem {
   /// [CoverageEligibilityResponseItem] This resource provides eligibility and
   const CoverageEligibilityResponseItem._();
 
@@ -2064,7 +2109,6 @@ abstract class CoverageEligibilityResponseItem with _$CoverageEligibilityRespons
     ///  preauthorization is required prior to actual service delivery.
     FhirBoolean? authorizationRequired,
     @JsonKey(name: '_authorizationRequired')
-
     /// [authorizationRequiredElement] Extensions for authorizationRequired
     Element? authorizationRequiredElement,
 
@@ -2084,16 +2128,19 @@ abstract class CoverageEligibilityResponseItem with _$CoverageEligibilityRespons
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) => yaml
-          is String
+  factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) =>
+      yaml is String
       ? CoverageEligibilityResponseItem.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityResponseItem.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityResponseItem cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? CoverageEligibilityResponseItem.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityResponseItem cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -2106,8 +2153,10 @@ abstract class CoverageEligibilityResponseItem with _$CoverageEligibilityRespons
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseItemFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2246,25 +2295,29 @@ abstract class CoverageEligibilityResponseBenefit
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) => yaml
-          is String
+  factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) =>
+      yaml is String
       ? CoverageEligibilityResponseBenefit.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityResponseBenefit.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityResponseBenefit cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? CoverageEligibilityResponseBenefit.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityResponseBenefit cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory CoverageEligibilityResponseBenefit.fromJson(
-          Map<String, dynamic> json) =>
-      _$CoverageEligibilityResponseBenefitFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$CoverageEligibilityResponseBenefitFromJson(json);
 }
 
 /// [CoverageEligibilityResponseError] This resource provides eligibility
 @freezed
-abstract class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
+abstract class CoverageEligibilityResponseError
+    with _$CoverageEligibilityResponseError {
   /// [CoverageEligibilityResponseError] This resource provides eligibility
   const CoverageEligibilityResponseError._();
 
@@ -2335,20 +2388,23 @@ abstract class CoverageEligibilityResponseError with _$CoverageEligibilityRespon
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) => yaml
-          is String
+  factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) =>
+      yaml is String
       ? CoverageEligibilityResponseError.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CoverageEligibilityResponseError.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageEligibilityResponseError cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? CoverageEligibilityResponseError.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CoverageEligibilityResponseError cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory CoverageEligibilityResponseError.fromJson(
-          Map<String, dynamic> json) =>
-      _$CoverageEligibilityResponseErrorFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$CoverageEligibilityResponseErrorFromJson(json);
 }
 
 /// [EnrollmentRequest] This resource provides the insurance enrollment
@@ -2435,7 +2491,6 @@ abstract class EnrollmentRequest with Resource, _$EnrollmentRequest {
   const factory EnrollmentRequest({
     @Default(R4ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
-
     /// [resourceType] This is a EnrollmentRequest resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -2534,13 +2589,16 @@ abstract class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentRequest.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? EnrollmentRequest.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EnrollmentRequest cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? EnrollmentRequest.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'EnrollmentRequest cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
@@ -2553,8 +2611,10 @@ abstract class EnrollmentRequest with Resource, _$EnrollmentRequest {
     if (json is Map<String, dynamic>) {
       return _$EnrollmentRequestFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2654,7 +2714,6 @@ abstract class EnrollmentResponse with Resource, _$EnrollmentResponse {
   const factory EnrollmentResponse({
     @Default(R4ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
-
     /// [resourceType] This is a EnrollmentResponse resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -2762,13 +2821,16 @@ abstract class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentResponse.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? EnrollmentResponse.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EnrollmentResponse cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? EnrollmentResponse.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'EnrollmentResponse cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
@@ -2781,8 +2843,10 @@ abstract class EnrollmentResponse with Resource, _$EnrollmentResponse {
     if (json is Map<String, dynamic>) {
       return _$EnrollmentResponseFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 

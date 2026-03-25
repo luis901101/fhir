@@ -43,203 +43,203 @@ enum DateTimePrecision {
 
 extension DateTimePrecisionExtension on DateTimePrecision {
   bool get isValidInstantPrecision => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant,
-        DateTimePrecision.invalid,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.instant,
+    DateTimePrecision.invalid,
+  ].contains(this);
 
   bool get isValidDatePrecision => <DateTimePrecision>[
-        DateTimePrecision.yyyy,
-        DateTimePrecision.yyyy_MM,
-        DateTimePrecision.yyyy_MM_dd,
-        DateTimePrecision.invalid,
-      ].contains(this);
+    DateTimePrecision.yyyy,
+    DateTimePrecision.yyyy_MM,
+    DateTimePrecision.yyyy_MM_dd,
+    DateTimePrecision.invalid,
+  ].contains(this);
 
   bool get isValidDateTimePrecision => <DateTimePrecision>[
-        DateTimePrecision.yyyy,
-        DateTimePrecision.yyyy_MM,
-        DateTimePrecision.yyyy_MM_dd,
-        DateTimePrecision.yyyy_MM_dd_T_Z,
-        DateTimePrecision.yyyy_MM_dd_T_ZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH,
-        DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.dateTime,
-        DateTimePrecision.instant,
-        DateTimePrecision.invalid,
-      ].contains(this);
+    DateTimePrecision.yyyy,
+    DateTimePrecision.yyyy_MM,
+    DateTimePrecision.yyyy_MM_dd,
+    DateTimePrecision.yyyy_MM_dd_T_Z,
+    DateTimePrecision.yyyy_MM_dd_T_ZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH,
+    DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.dateTime,
+    DateTimePrecision.instant,
+    DateTimePrecision.invalid,
+  ].contains(this);
 
   bool get hasYear => <DateTimePrecision>[
-        DateTimePrecision.yyyy,
-        DateTimePrecision.yyyy_MM,
-        DateTimePrecision.yyyy_MM_dd,
-        DateTimePrecision.yyyy_MM_dd_T_Z,
-        DateTimePrecision.yyyy_MM_dd_T_ZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH,
-        DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.dateTime,
-        DateTimePrecision.instant,
-      ].contains(this);
+    DateTimePrecision.yyyy,
+    DateTimePrecision.yyyy_MM,
+    DateTimePrecision.yyyy_MM_dd,
+    DateTimePrecision.yyyy_MM_dd_T_Z,
+    DateTimePrecision.yyyy_MM_dd_T_ZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH,
+    DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.dateTime,
+    DateTimePrecision.instant,
+  ].contains(this);
 
   bool get hasMonth => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM,
-        DateTimePrecision.yyyy_MM_dd,
-        DateTimePrecision.yyyy_MM_dd_T_Z,
-        DateTimePrecision.yyyy_MM_dd_T_ZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH,
-        DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant,
-        DateTimePrecision.dateTime,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM,
+    DateTimePrecision.yyyy_MM_dd,
+    DateTimePrecision.yyyy_MM_dd_T_Z,
+    DateTimePrecision.yyyy_MM_dd_T_ZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH,
+    DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.instant,
+    DateTimePrecision.dateTime,
+  ].contains(this);
 
   bool get hasDay => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd,
-        DateTimePrecision.yyyy_MM_dd_T_Z,
-        DateTimePrecision.yyyy_MM_dd_T_ZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH,
-        DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant,
-        DateTimePrecision.dateTime,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd,
+    DateTimePrecision.yyyy_MM_dd_T_Z,
+    DateTimePrecision.yyyy_MM_dd_T_ZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH,
+    DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.instant,
+    DateTimePrecision.dateTime,
+  ].contains(this);
 
   bool get hasHours => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH,
-        DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant,
-        DateTimePrecision.dateTime,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_HH,
+    DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.instant,
+    DateTimePrecision.dateTime,
+  ].contains(this);
 
   bool get hasMinutes => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant,
-        DateTimePrecision.dateTime,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.instant,
+    DateTimePrecision.dateTime,
+  ].contains(this);
 
   bool get hasSeconds => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant,
-        DateTimePrecision.dateTime,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.instant,
+    DateTimePrecision.dateTime,
+  ].contains(this);
 
   bool get hasMilliseconds => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant,
-        DateTimePrecision.dateTime,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.instant,
+    DateTimePrecision.dateTime,
+  ].contains(this);
 
   bool get hasTimezoneOffset => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_Z,
-        DateTimePrecision.yyyy_MM_dd_T_ZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_Z,
+    DateTimePrecision.yyyy_MM_dd_T_ZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.instant,
+  ].contains(this);
 
   bool get yearsPrecision => DateTimePrecision.yyyy == this;
 
   bool get monthsPrecision => DateTimePrecision.yyyy_MM == this;
 
   bool get daysPrecision => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd,
-        DateTimePrecision.yyyy_MM_dd_T_Z,
-        DateTimePrecision.yyyy_MM_dd_T_ZZ,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd,
+    DateTimePrecision.yyyy_MM_dd_T_Z,
+    DateTimePrecision.yyyy_MM_dd_T_ZZ,
+  ].contains(this);
 
   bool get hoursPrecision => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH,
-        DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_HH,
+    DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+  ].contains(this);
 
   bool get minutesPrecision => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+  ].contains(this);
 
   bool get secondsPrecision => <DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.dateTime,
-        DateTimePrecision.instant,
-      ].contains(this);
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+    DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+    DateTimePrecision.dateTime,
+    DateTimePrecision.instant,
+  ].contains(this);
 
   bool isEquivalentTo(DateTimePrecision precision) =>
       (yearsPrecision && precision.yearsPrecision) ||
@@ -442,31 +442,35 @@ extension DateTimePrecisionExtension on DateTimePrecision {
     );
     final DateTime localDateTime = dateTime.toLocal();
     final Duration localOffset = localDateTime.timeZoneOffset;
-    final int actualOffset = localOffset.inHours +
+    final int actualOffset =
+        localOffset.inHours +
         (int.tryParse(map['offset']?.toString() ?? '0') ?? 0);
-    final DateTime actualDateTime =
-        localDateTime.add(Duration(hours: actualOffset));
+    final DateTime actualDateTime = localDateTime.add(
+      Duration(hours: actualOffset),
+    );
     return DateTime(
-        actualDateTime.year,
-        actualDateTime.month,
-        actualDateTime.day,
-        actualDateTime.hour - actualOffset,
-        actualDateTime.minute,
-        actualDateTime.second,
-        actualDateTime.millisecond,
-        actualDateTime.microsecond);
+      actualDateTime.year,
+      actualDateTime.month,
+      actualDateTime.day,
+      actualDateTime.hour - actualOffset,
+      actualDateTime.minute,
+      actualDateTime.second,
+      actualDateTime.millisecond,
+      actualDateTime.microsecond,
+    );
   }
 
   String dateTimeMapToString<T>(Map<String, num?> map) {
     final DateTime dateTime = DateTime(
-        map['year'] as int? ?? 0,
-        map['month'] as int? ?? 1,
-        map['day'] as int? ?? 1,
-        map['hour'] as int? ?? 0,
-        map['minute'] as int? ?? 0,
-        map['second'] as int? ?? 0,
-        map['millisecond'] as int? ?? 0,
-        map['microsecond'] as int? ?? 0);
+      map['year'] as int? ?? 0,
+      map['month'] as int? ?? 1,
+      map['day'] as int? ?? 1,
+      map['hour'] as int? ?? 0,
+      map['minute'] as int? ?? 0,
+      map['second'] as int? ?? 0,
+      map['millisecond'] as int? ?? 0,
+      map['microsecond'] as int? ?? 0,
+    );
     final String year = dateTime.year.toString().padLeft(4, '0');
     final String month = dateTime.month.toString().padLeft(2, '0');
     final String day = dateTime.day.toString().padLeft(2, '0');
@@ -475,8 +479,9 @@ extension DateTimePrecisionExtension on DateTimePrecision {
     final String second = dateTime.second.toString().padLeft(2, '0');
     final String millisecond = dateTime.millisecond.toString().padLeft(3, '0');
     final String microsecond = dateTime.microsecond.toString().padLeft(3, '0');
-    final String offset =
-        timeZoneOffsetToString(map['timeZoneOffset']?.toDouble());
+    final String offset = timeZoneOffsetToString(
+      map['timeZoneOffset']?.toDouble(),
+    );
     switch (this) {
       case DateTimePrecision.yyyy:
         return year;
@@ -534,14 +539,17 @@ extension DateTimePrecisionExtension on DateTimePrecision {
           return DateTime.tryParse('${string.substring(0, 10)}T00:00:00Z');
         case DateTimePrecision.yyyy_MM_dd_T_ZZ:
           {
-            final DateTime? dateTime =
-                DateTime.tryParse('${string.substring(0, 10)}T00:00:00');
+            final DateTime? dateTime = DateTime.tryParse(
+              '${string.substring(0, 10)}T00:00:00',
+            );
             final DateTime? localDateTime = dateTime?.toLocal();
             final Duration? localOffset = localDateTime?.timeZoneOffset;
-            final int actualOffset = (localOffset?.inHours ?? 0) +
+            final int actualOffset =
+                (localOffset?.inHours ?? 0) +
                 (int.tryParse(string.split(':').first) ?? 0);
-            final DateTime? actualDateTime =
-                localDateTime?.add(Duration(hours: actualOffset));
+            final DateTime? actualDateTime = localDateTime?.add(
+              Duration(hours: actualOffset),
+            );
             return actualDateTime == null
                 ? null
                 : DateTime(
@@ -552,7 +560,8 @@ extension DateTimePrecisionExtension on DateTimePrecision {
                     actualDateTime.minute,
                     actualDateTime.second,
                     actualDateTime.millisecond,
-                    actualDateTime.microsecond);
+                    actualDateTime.microsecond,
+                  );
           }
         case DateTimePrecision.yyyy_MM_dd_T_HH:
           return DateTime.tryParse(string.substring(0, 13));
@@ -562,13 +571,16 @@ extension DateTimePrecisionExtension on DateTimePrecision {
           {
             {
               final DateTime? dateTime = DateTime.tryParse(
-                  '${string.substring(0, 13)}:00:00${string.substring(13)}');
+                '${string.substring(0, 13)}:00:00${string.substring(13)}',
+              );
               final DateTime? localDateTime = dateTime?.toLocal();
               final Duration? localOffset = localDateTime?.timeZoneOffset;
-              final int actualOffset = (localOffset?.inHours ?? 0) +
+              final int actualOffset =
+                  (localOffset?.inHours ?? 0) +
                   (int.tryParse(string.split(':').first) ?? 0);
-              final DateTime? actualDateTime =
-                  localDateTime?.add(Duration(hours: actualOffset));
+              final DateTime? actualDateTime = localDateTime?.add(
+                Duration(hours: actualOffset),
+              );
               return actualDateTime == null
                   ? null
                   : DateTime(
@@ -579,7 +591,8 @@ extension DateTimePrecisionExtension on DateTimePrecision {
                       actualDateTime.minute,
                       actualDateTime.second,
                       actualDateTime.millisecond,
-                      actualDateTime.microsecond);
+                      actualDateTime.microsecond,
+                    );
             }
           }
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm:
@@ -588,7 +601,8 @@ extension DateTimePrecisionExtension on DateTimePrecision {
           return DateTime.tryParse('${string.substring(0, 16)}:00Z');
         case DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ:
           return DateTime.tryParse(
-              '${string.substring(0, 16)}:00${string.substring(16)}');
+            '${string.substring(0, 16)}:00${string.substring(16)}',
+          );
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss:
           return DateTime.tryParse(string.substring(0, 19));
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z:
@@ -597,13 +611,16 @@ extension DateTimePrecisionExtension on DateTimePrecision {
           {
             {
               final DateTime? dateTime = DateTime.tryParse(
-                  '${string.substring(0, 19)}${string.substring(19)}');
+                '${string.substring(0, 19)}${string.substring(19)}',
+              );
               final DateTime? localDateTime = dateTime?.toLocal();
               final Duration? localOffset = localDateTime?.timeZoneOffset;
-              final int actualOffset = (localOffset?.inHours ?? 0) +
+              final int actualOffset =
+                  (localOffset?.inHours ?? 0) +
                   (int.tryParse(string.split(':').first) ?? 0);
-              final DateTime? actualDateTime =
-                  localDateTime?.add(Duration(hours: actualOffset));
+              final DateTime? actualDateTime = localDateTime?.add(
+                Duration(hours: actualOffset),
+              );
               return actualDateTime == null
                   ? null
                   : DateTime(
@@ -614,7 +631,8 @@ extension DateTimePrecisionExtension on DateTimePrecision {
                       actualDateTime.minute,
                       actualDateTime.second,
                       actualDateTime.millisecond,
-                      actualDateTime.microsecond);
+                      actualDateTime.microsecond,
+                    );
             }
           }
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS:
@@ -625,13 +643,16 @@ extension DateTimePrecisionExtension on DateTimePrecision {
           {
             {
               final DateTime? dateTime = DateTime.tryParse(
-                  '${string.substring(0, 23)}${string.substring(23)}');
+                '${string.substring(0, 23)}${string.substring(23)}',
+              );
               final DateTime? localDateTime = dateTime?.toLocal();
               final Duration? localOffset = localDateTime?.timeZoneOffset;
-              final int actualOffset = (localOffset?.inHours ?? 0) +
+              final int actualOffset =
+                  (localOffset?.inHours ?? 0) +
                   (int.tryParse(string.split(':').first) ?? 0);
-              final DateTime? actualDateTime =
-                  localDateTime?.add(Duration(hours: actualOffset));
+              final DateTime? actualDateTime = localDateTime?.add(
+                Duration(hours: actualOffset),
+              );
               return actualDateTime == null
                   ? null
                   : DateTime(
@@ -642,7 +663,8 @@ extension DateTimePrecisionExtension on DateTimePrecision {
                       actualDateTime.minute,
                       actualDateTime.second,
                       actualDateTime.millisecond,
-                      actualDateTime.microsecond);
+                      actualDateTime.microsecond,
+                    );
             }
           }
         case DateTimePrecision.dateTime:
@@ -749,62 +771,64 @@ extension DateTimePrecisionExtension on DateTimePrecision {
 
 DateTimePrecision precisionFromDateTimeString(String inValue) {
   if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)\.\d{3}[+-](0[0-9]|1[0-3]):[0-5][0-9]$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)\.\d{3}[+-](0[0-9]|1[0-3]):[0-5][0-9]$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)\.\d{3}Z$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)\.\d{3}Z$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)\.\d{3}$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)\.\d{3}$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)[+-](0[0-9]|1[0-3]):[0-5][0-9]$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)[+-](0[0-9]|1[0-3]):[0-5][0-9]$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)Z$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)Z$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9][+-](0[0-9]|1[0-3]):[0-5][0-9]$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9][+-](0[0-9]|1[0-3]):[0-5][0-9]$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]Z$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]Z$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3]):[0-5][0-9]$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_mm;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3])[+-](0[0-9]|1[0-3]):[0-5][0-9]$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3])[+-](0[0-9]|1[0-3]):[0-5][0-9]$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HHZZ;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3])Z$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3])Z$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH_Z;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3])$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T ]([01][0-9]|2[0-3])$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_HH;
   } else if (RegExp(
-          r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T[+-](0[0-9]|1[0-3]):[0-5][0-9]$')
-      .hasMatch(inValue)) {
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T[+-](0[0-9]|1[0-3]):[0-5][0-9]$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_ZZ;
-  } else if (RegExp(r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])TZ$')
-      .hasMatch(inValue)) {
+  } else if (RegExp(
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])TZ$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd_T_Z;
-  } else if (RegExp(r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$')
-      .hasMatch(inValue)) {
+  } else if (RegExp(
+    r'^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$',
+  ).hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM_dd;
   } else if (RegExp(r'^\d{4}-(0[1-9]|1[0-2])$').hasMatch(inValue)) {
     return DateTimePrecision.yyyy_MM;
@@ -821,15 +845,18 @@ DateTimePrecision precisionFromDateTimeString(String inValue) {
 
 /// For reference purposes from the [FHIR spec](https://build.fhir.org/datatypes.html#date)
 final RegExp dateExp = RegExp(
-    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1]))?)?');
+  r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1]))?)?',
+);
 
 /// [DateTime](https://build.fhir.org/datatypes.html#dateTime)
 final RegExp dateTimeExp = RegExp(
-    r'(?<year>[0-9]{4})(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1])(T((?<hour>[01][0-9]|2[0-3])(:(?<minute>[0-5][0-9])(:(?<second>[0-5][0-9]|60)(\.(?<fraction>[0-9]+))?)?)?)?(?<timezone>Z|(\+|-)([0-1][0-9]|2[0-3])(:[0-5][0-9])?)?)?)?)?');
+  r'(?<year>[0-9]{4})(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1])(T((?<hour>[01][0-9]|2[0-3])(:(?<minute>[0-5][0-9])(:(?<second>[0-5][0-9]|60)(\.(?<fraction>[0-9]+))?)?)?)?(?<timezone>Z|(\+|-)([0-1][0-9]|2[0-3])(:[0-5][0-9])?)?)?)?)?',
+);
 
 /// [Instant](https://build.fhir.org/datatypes.html#instant)
 final RegExp instantExp = RegExp(
-    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(?<month>0[1-9]|1[0-2])-(?<day>0[1-9]|[1-2][0-9]|3[0-1])T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<millimicrosecond>[0-9]{1,9}))?(?<timezone>Z|(\+|-)(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00))');
+  r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(?<month>0[1-9]|1[0-2])-(?<day>0[1-9]|[1-2][0-9]|3[0-1])T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<millimicrosecond>[0-9]{1,9}))?(?<timezone>Z|(\+|-)(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00))',
+);
 
 Map<String, num?> formatDateTimeString<T>(String dateTimeString) {
   final RegExpMatch? dateTimeRegExp = dateTimeExp.firstMatch(dateTimeString);
@@ -844,18 +871,18 @@ Map<String, num?> formatDateTimeString<T>(String dateTimeString) {
     'millisecond': fractionString == null
         ? null
         : fractionString.length >= 3
-            ? int.tryParse(fractionString.substring(0, 3))
-            : int.tryParse(fractionString),
+        ? int.tryParse(fractionString.substring(0, 3))
+        : int.tryParse(fractionString),
     'microsecond': fractionString == null
         ? null
         : fractionString.length > 3
-            ? fractionString.length <= 6
-                ? int.tryParse(
-                    fractionString.substring(3, fractionString.length))
-                : int.tryParse(fractionString.substring(3, 6))
-            : null,
-    'timeZoneOffset':
-        stringToTimeZoneOffset(dateTimeRegExp?.namedGroup('timezone')),
+        ? fractionString.length <= 6
+              ? int.tryParse(fractionString.substring(3, fractionString.length))
+              : int.tryParse(fractionString.substring(3, 6))
+        : null,
+    'timeZoneOffset': stringToTimeZoneOffset(
+      dateTimeRegExp?.namedGroup('timezone'),
+    ),
     'isUtc': (dateTimeRegExp?.namedGroup('timezone')?.contains('Z') ?? false)
         ? 0
         : 1,
@@ -870,32 +897,32 @@ DateTimePrecision precisionFromMap(Map<String, num?> map) {
   } else if (map['hour'] == null) {
     return map['isUtc'] == 1
         ? map['timeZoneOffset'] == null
-            ? DateTimePrecision.yyyy_MM_dd
-            : DateTimePrecision.yyyy_MM_dd_T_ZZ
+              ? DateTimePrecision.yyyy_MM_dd
+              : DateTimePrecision.yyyy_MM_dd_T_ZZ
         : DateTimePrecision.yyyy_MM_dd_T_Z;
   } else if (map['minute'] == null) {
     return map['isUtc'] == 1
         ? map['timeZoneOffset'] == null
-            ? DateTimePrecision.yyyy_MM_dd_T_HH
-            : DateTimePrecision.yyyy_MM_dd_T_HHZZ
+              ? DateTimePrecision.yyyy_MM_dd_T_HH
+              : DateTimePrecision.yyyy_MM_dd_T_HHZZ
         : DateTimePrecision.yyyy_MM_dd_T_HH_Z;
   } else if (map['second'] == null) {
     return map['isUtc'] == 1
         ? map['timeZoneOffset'] == null
-            ? DateTimePrecision.yyyy_MM_dd_T_HH_mm
-            : DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ
+              ? DateTimePrecision.yyyy_MM_dd_T_HH_mm
+              : DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ
         : DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z;
   } else if (map['millisecond'] == null) {
     return map['isUtc'] == 1
         ? map['timeZoneOffset'] == null
-            ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss
-            : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ
+              ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss
+              : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ
         : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z;
   } else if (map['microsecond'] == null) {
     return map['isUtc'] == 1
         ? map['timeZoneOffset'] == null
-            ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS
-            : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ
+              ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS
+              : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ
         : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z;
   } else {
     return DateTimePrecision.dateTime;
@@ -912,8 +939,10 @@ String timeZoneOffsetToString(double? offset) {
       (offset ?? 0) % 1 * 60; // Extract remaining minutes from offset
 
   final String hoursString = offsetHours.abs().toString().padLeft(2, '0');
-  final String minutesString =
-      offsetMinutes.abs().toInt().toString().padLeft(2, '0');
+  final String minutesString = offsetMinutes.abs().toInt().toString().padLeft(
+    2,
+    '0',
+  );
 
   return '${offset != null && offset < 0 ? '-' : '+'}$hoursString:$minutesString';
 }

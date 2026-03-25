@@ -23,11 +23,12 @@ class FhirPositiveInt extends FhirNumber {
       return tempPositiveInt == null
           ? FhirPositiveInt._(inValue.toString(), null, false)
           : tempPositiveInt > 0
-              ? FhirPositiveInt._(inValue.toString(), tempPositiveInt, true)
-              : FhirPositiveInt._(inValue.toString(), null, false);
+          ? FhirPositiveInt._(inValue.toString(), tempPositiveInt, true)
+          : FhirPositiveInt._(inValue.toString(), null, false);
     }
     throw CannotBeConstructed<FhirPositiveInt>(
-        'PositiveInt cannot be constructed from $inValue.');
+      'PositiveInt cannot be constructed from $inValue.',
+    );
   }
 
   factory FhirPositiveInt.fromJson(dynamic json) => FhirPositiveInt(json);
@@ -35,9 +36,10 @@ class FhirPositiveInt extends FhirNumber {
   factory FhirPositiveInt.fromYaml(dynamic yaml) => yaml is String
       ? FhirPositiveInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirPositiveInt.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirPositiveInt>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirPositiveInt.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirPositiveInt>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   @override
   int? get value => valueNumber as int?;

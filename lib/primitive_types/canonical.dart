@@ -26,7 +26,8 @@ class FhirCanonical implements FhirPrimitiveBase {
     }
 
     throw CannotBeConstructed<FhirCanonical>(
-        'Canonical cannot be constructed from $inValue.');
+      'Canonical cannot be constructed from $inValue.',
+    );
   }
 
   factory FhirCanonical.fromJson(dynamic json) => FhirCanonical(json);
@@ -34,9 +35,10 @@ class FhirCanonical implements FhirPrimitiveBase {
   factory FhirCanonical.fromYaml(dynamic yaml) => yaml is String
       ? FhirCanonical.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirCanonical.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirCanonical>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirCanonical.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirCanonical>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final String _valueString;
   final Uri? _valueCanonical;
@@ -56,8 +58,8 @@ class FhirCanonical implements FhirPrimitiveBase {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirCanonical
-          ? o.value == _valueCanonical
-          : o is String
-              ? o == _valueString
-              : false;
+      ? o.value == _valueCanonical
+      : o is String
+      ? o == _valueString
+      : false;
 }

@@ -33,7 +33,8 @@ enum MimeType {
   @JsonValue('application/msword')
   application_msword,
   @JsonValue(
-      'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  )
   application_vnd_openxmlformats_officedocument_wordprocessingml_document,
   @JsonValue('application/vnd.ms-fontobject')
   application_vnd_ms_fontobject,
@@ -96,7 +97,8 @@ enum MimeType {
   @JsonValue('application/vnd.ms-powerpoint')
   application_vnd_ms_powerpoint,
   @JsonValue(
-      'application/vnd.openxmlformats-officedocument.presentationml.presentation')
+    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+  )
   application_vnd_openxmlformats_officedocument_presentationml_presentation,
   @JsonValue('application/vnd.rar')
   application_vnd_rar,
@@ -135,7 +137,8 @@ enum MimeType {
   @JsonValue('application/vnd.ms-excel')
   application_vnd_ms_excel,
   @JsonValue(
-      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  )
   application_vnd_openxmlformats_officedocument_spreadsheetml_sheet,
   @JsonValue('application/xml')
   application_xml,

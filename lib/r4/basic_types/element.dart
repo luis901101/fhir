@@ -52,13 +52,14 @@ abstract class Element with _$Element {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Element.fromYaml(dynamic yaml) => yaml is String
       ? Element.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? Element.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Element cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? Element.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+      : throw ArgumentError(
+          'Element cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Element.fromJson(Map<String, dynamic> json) =>
@@ -71,8 +72,10 @@ abstract class Element with _$Element {
     if (json is Map<String, dynamic>) {
       return _$ElementFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 

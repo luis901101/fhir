@@ -13,7 +13,11 @@ import 'primitive_type_exceptions.dart';
 
 class FhirDecimal extends FhirNumber {
   const FhirDecimal._(
-      super.valueString, super.valueNumber, super.isValid, this.isInt);
+    super.valueString,
+    super.valueNumber,
+    super.isValid,
+    this.isInt,
+  );
 
   factory FhirDecimal(dynamic inValue) {
     if (inValue is FhirDecimal) {
@@ -45,7 +49,8 @@ class FhirDecimal extends FhirNumber {
       }
     }
     throw CannotBeConstructed<FhirDecimal>(
-        'Decimal cannot be constructed from $inValue ${inValue.runtimeType}');
+      'Decimal cannot be constructed from $inValue ${inValue.runtimeType}',
+    );
   }
 
   factory FhirDecimal.fromJson(dynamic json) => FhirDecimal(json);
@@ -53,9 +58,10 @@ class FhirDecimal extends FhirNumber {
   factory FhirDecimal.fromYaml(dynamic yaml) => yaml is String
       ? FhirDecimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirDecimal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirDecimal>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirDecimal.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirDecimal>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final bool isInt;
   @override

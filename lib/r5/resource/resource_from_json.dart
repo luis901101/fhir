@@ -34,13 +34,15 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R5ResourceType.Claim => Claim.fromJson(json),
     R5ResourceType.ClaimResponse => ClaimResponse.fromJson(json),
     R5ResourceType.ClinicalImpression => ClinicalImpression.fromJson(json),
-    R5ResourceType.ClinicalUseDefinition =>
-      ClinicalUseDefinition.fromJson(json),
+    R5ResourceType.ClinicalUseDefinition => ClinicalUseDefinition.fromJson(
+      json,
+    ),
     R5ResourceType.CodeSystem => CodeSystem.fromJson(json),
     R5ResourceType.Communication => Communication.fromJson(json),
     R5ResourceType.CommunicationRequest => CommunicationRequest.fromJson(json),
-    R5ResourceType.CompartmentDefinition =>
-      CompartmentDefinition.fromJson(json),
+    R5ResourceType.CompartmentDefinition => CompartmentDefinition.fromJson(
+      json,
+    ),
     R5ResourceType.Composition => Composition.fromJson(json),
     R5ResourceType.ConceptMap => ConceptMap.fromJson(json),
     R5ResourceType.Condition => Condition.fromJson(json),
@@ -86,8 +88,9 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R5ResourceType.ImagingSelection => ImagingSelection.fromJson(json),
     R5ResourceType.ImagingStudy => ImagingStudy.fromJson(json),
     R5ResourceType.Immunization => Immunization.fromJson(json),
-    R5ResourceType.ImmunizationEvaluation =>
-      ImmunizationEvaluation.fromJson(json),
+    R5ResourceType.ImmunizationEvaluation => ImmunizationEvaluation.fromJson(
+      json,
+    ),
     R5ResourceType.ImmunizationRecommendation =>
       ImmunizationRecommendation.fromJson(json),
     R5ResourceType.ImplementationGuide => ImplementationGuide.fromJson(json),
@@ -121,20 +124,23 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R5ResourceType.NutritionOrder => NutritionOrder.fromJson(json),
     R5ResourceType.NutritionProduct => NutritionProduct.fromJson(json),
     R5ResourceType.Observation => Observation.fromJson(json),
-    R5ResourceType.ObservationDefinition =>
-      ObservationDefinition.fromJson(json),
+    R5ResourceType.ObservationDefinition => ObservationDefinition.fromJson(
+      json,
+    ),
     R5ResourceType.OperationDefinition => OperationDefinition.fromJson(json),
     R5ResourceType.OperationOutcome => OperationOutcome.fromJson(json),
     R5ResourceType.Organization => Organization.fromJson(json),
-    R5ResourceType.OrganizationAffiliation =>
-      OrganizationAffiliation.fromJson(json),
+    R5ResourceType.OrganizationAffiliation => OrganizationAffiliation.fromJson(
+      json,
+    ),
     R5ResourceType.PackagedProductDefinition =>
       PackagedProductDefinition.fromJson(json),
     R5ResourceType.Parameters => Parameters.fromJson(json),
     R5ResourceType.Patient => Patient.fromJson(json),
     R5ResourceType.PaymentNotice => PaymentNotice.fromJson(json),
-    R5ResourceType.PaymentReconciliation =>
-      PaymentReconciliation.fromJson(json),
+    R5ResourceType.PaymentReconciliation => PaymentReconciliation.fromJson(
+      json,
+    ),
     R5ResourceType.Permission => Permission.fromJson(json),
     R5ResourceType.Person => Person.fromJson(json),
     R5ResourceType.PlanDefinition => PlanDefinition.fromJson(json),
@@ -143,10 +149,12 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R5ResourceType.Procedure => Procedure.fromJson(json),
     R5ResourceType.Provenance => Provenance.fromJson(json),
     R5ResourceType.Questionnaire => Questionnaire.fromJson(json),
-    R5ResourceType.QuestionnaireResponse =>
-      QuestionnaireResponse.fromJson(json),
-    R5ResourceType.RegulatedAuthorization =>
-      RegulatedAuthorization.fromJson(json),
+    R5ResourceType.QuestionnaireResponse => QuestionnaireResponse.fromJson(
+      json,
+    ),
+    R5ResourceType.RegulatedAuthorization => RegulatedAuthorization.fromJson(
+      json,
+    ),
     R5ResourceType.RelatedPerson => RelatedPerson.fromJson(json),
     R5ResourceType.RequestOrchestration => RequestOrchestration.fromJson(json),
     R5ResourceType.Requirements => Requirements.fromJson(json),
@@ -171,13 +179,15 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R5ResourceType.SubstanceProtein => SubstanceProtein.fromJson(json),
     R5ResourceType.SubstanceReferenceInformation =>
       SubstanceReferenceInformation.fromJson(json),
-    R5ResourceType.SubstanceSourceMaterial =>
-      SubstanceSourceMaterial.fromJson(json),
+    R5ResourceType.SubstanceSourceMaterial => SubstanceSourceMaterial.fromJson(
+      json,
+    ),
     R5ResourceType.SupplyDelivery => SupplyDelivery.fromJson(json),
     R5ResourceType.SupplyRequest => SupplyRequest.fromJson(json),
     R5ResourceType.Task => Task.fromJson(json),
-    R5ResourceType.TerminologyCapabilities =>
-      TerminologyCapabilities.fromJson(json),
+    R5ResourceType.TerminologyCapabilities => TerminologyCapabilities.fromJson(
+      json,
+    ),
     R5ResourceType.TestPlan => TestPlan.fromJson(json),
     R5ResourceType.TestReport => TestReport.fromJson(json),
     R5ResourceType.TestScript => TestScript.fromJson(json),
@@ -186,7 +196,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     R5ResourceType.VerificationResult => VerificationResult.fromJson(json),
     R5ResourceType.VisionPrescription => VisionPrescription.fromJson(json),
     _ => throw UnsupportedError(
-        "You have passed Resource.fromJson a type doesn't exist or is null. "
-        'In this case, the resourceType is $resourceType.')
+      "You have passed Resource.fromJson a type doesn't exist or is null. "
+      'In this case, the resourceType is $resourceType.',
+    ),
   };
 }

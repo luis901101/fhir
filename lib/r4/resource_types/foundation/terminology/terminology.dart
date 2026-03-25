@@ -212,7 +212,6 @@ abstract class CodeSystem with Resource, _$CodeSystem {
   const factory CodeSystem({
     @Default(R4ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
-
     /// [resourceType] This is a CodeSystem resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -459,13 +458,16 @@ abstract class CodeSystem with Resource, _$CodeSystem {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystem.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystem.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CodeSystem.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CodeSystem cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CodeSystem.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CodeSystem cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystem.fromJson(Map<String, dynamic> json) =>
@@ -478,8 +480,10 @@ abstract class CodeSystem with Resource, _$CodeSystem {
     if (json is Map<String, dynamic>) {
       return _$CodeSystemFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -599,13 +603,16 @@ abstract class CodeSystemFilter with _$CodeSystemFilter {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemFilter.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemFilter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CodeSystemFilter.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CodeSystemFilter cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CodeSystemFilter.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CodeSystemFilter cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
@@ -618,8 +625,10 @@ abstract class CodeSystemFilter with _$CodeSystemFilter {
     if (json is Map<String, dynamic>) {
       return _$CodeSystemFilterFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -750,13 +759,16 @@ abstract class CodeSystemProperty with _$CodeSystemProperty {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemProperty.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemProperty.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CodeSystemProperty.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CodeSystemProperty cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CodeSystemProperty.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CodeSystemProperty cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
@@ -769,8 +781,10 @@ abstract class CodeSystemProperty with _$CodeSystemProperty {
     if (json is Map<String, dynamic>) {
       return _$CodeSystemPropertyFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -910,13 +924,16 @@ abstract class CodeSystemConcept with _$CodeSystemConcept {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemConcept.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CodeSystemConcept.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CodeSystemConcept cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CodeSystemConcept.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CodeSystemConcept cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
@@ -929,8 +946,10 @@ abstract class CodeSystemConcept with _$CodeSystemConcept {
     if (json is Map<String, dynamic>) {
       return _$CodeSystemConceptFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1032,13 +1051,16 @@ abstract class CodeSystemDesignation with _$CodeSystemDesignation {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemDesignation.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemDesignation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CodeSystemDesignation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CodeSystemDesignation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CodeSystemDesignation.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CodeSystemDesignation cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
@@ -1051,8 +1073,10 @@ abstract class CodeSystemDesignation with _$CodeSystemDesignation {
     if (json is Map<String, dynamic>) {
       return _$CodeSystemDesignationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1204,13 +1228,16 @@ abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystemProperty1.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemProperty1.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? CodeSystemProperty1.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CodeSystemProperty1 cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? CodeSystemProperty1.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'CodeSystemProperty1 cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
@@ -1223,8 +1250,10 @@ abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
     if (json is Map<String, dynamic>) {
       return _$CodeSystemProperty1FromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1410,7 +1439,6 @@ abstract class ConceptMap with Resource, _$ConceptMap {
   const factory ConceptMap({
     @Default(R4ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
-
     /// [resourceType] This is a ConceptMap resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -1627,13 +1655,16 @@ abstract class ConceptMap with Resource, _$ConceptMap {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMap.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ConceptMap.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMap cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ConceptMap.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ConceptMap cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
@@ -1646,8 +1677,10 @@ abstract class ConceptMap with Resource, _$ConceptMap {
     if (json is Map<String, dynamic>) {
       return _$ConceptMapFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1791,13 +1824,16 @@ abstract class ConceptMapGroup with _$ConceptMapGroup {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapGroup.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapGroup.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ConceptMapGroup.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapGroup cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ConceptMapGroup.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ConceptMapGroup cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
@@ -1810,8 +1846,10 @@ abstract class ConceptMapGroup with _$ConceptMapGroup {
     if (json is Map<String, dynamic>) {
       return _$ConceptMapGroupFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1915,13 +1953,16 @@ abstract class ConceptMapElement with _$ConceptMapElement {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapElement.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ConceptMapElement.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapElement cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ConceptMapElement.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ConceptMapElement cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
@@ -1934,8 +1975,10 @@ abstract class ConceptMapElement with _$ConceptMapElement {
     if (json is Map<String, dynamic>) {
       return _$ConceptMapElementFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2084,13 +2127,16 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapTarget.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapTarget.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ConceptMapTarget.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapTarget cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ConceptMapTarget.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ConceptMapTarget cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
@@ -2103,8 +2149,10 @@ abstract class ConceptMapTarget with _$ConceptMapTarget {
     if (json is Map<String, dynamic>) {
       return _$ConceptMapTargetFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2230,13 +2278,16 @@ abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapDependsOn.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapDependsOn.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ConceptMapDependsOn.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapDependsOn cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ConceptMapDependsOn.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ConceptMapDependsOn cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
@@ -2249,8 +2300,10 @@ abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
     if (json is Map<String, dynamic>) {
       return _$ConceptMapDependsOnFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2380,13 +2433,16 @@ abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMapUnmapped.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapUnmapped.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ConceptMapUnmapped.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapUnmapped cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ConceptMapUnmapped.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ConceptMapUnmapped cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
@@ -2399,8 +2455,10 @@ abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
     if (json is Map<String, dynamic>) {
       return _$ConceptMapUnmappedFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2537,7 +2595,6 @@ abstract class NamingSystem with Resource, _$NamingSystem {
   const factory NamingSystem({
     @Default(R4ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
-
     /// [resourceType] This is a NamingSystem resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -2691,13 +2748,16 @@ abstract class NamingSystem with Resource, _$NamingSystem {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystem.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? NamingSystem.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'NamingSystem cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? NamingSystem.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'NamingSystem cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NamingSystem.fromJson(Map<String, dynamic> json) =>
@@ -2710,8 +2770,10 @@ abstract class NamingSystem with Resource, _$NamingSystem {
     if (json is Map<String, dynamic>) {
       return _$NamingSystemFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2845,13 +2907,16 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystemUniqueId.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? NamingSystemUniqueId.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'NamingSystemUniqueId cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? NamingSystemUniqueId.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'NamingSystemUniqueId cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
@@ -2864,8 +2929,10 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
     if (json is Map<String, dynamic>) {
       return _$NamingSystemUniqueIdFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2876,7 +2943,8 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
 
 /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
 @freezed
-abstract class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
+abstract class TerminologyCapabilities
+    with Resource, _$TerminologyCapabilities {
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   const TerminologyCapabilities._();
 
@@ -3059,7 +3127,6 @@ abstract class TerminologyCapabilities with Resource, _$TerminologyCapabilities 
   const factory TerminologyCapabilities({
     @Default(R4ResourceType.TerminologyCapabilities)
     @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
-
     /// [resourceType] This is a TerminologyCapabilities resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -3286,13 +3353,16 @@ abstract class TerminologyCapabilities with Resource, _$TerminologyCapabilities 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilities.fromYaml(dynamic yaml) => yaml is String
       ? TerminologyCapabilities.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilities.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilities cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? TerminologyCapabilities.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilities cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
@@ -3305,8 +3375,10 @@ abstract class TerminologyCapabilities with Resource, _$TerminologyCapabilities 
     if (json is Map<String, dynamic>) {
       return _$TerminologyCapabilitiesFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3318,7 +3390,8 @@ abstract class TerminologyCapabilities with Resource, _$TerminologyCapabilities 
 
 /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
 @freezed
-abstract class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
+abstract class TerminologyCapabilitiesSoftware
+    with _$TerminologyCapabilitiesSoftware {
   /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
   const TerminologyCapabilitiesSoftware._();
 
@@ -3406,16 +3479,19 @@ abstract class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSof
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesSoftware.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesSoftware.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesSoftware.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesSoftware.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesSoftware cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesSoftware.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesSoftware cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json) =>
@@ -3428,8 +3504,10 @@ abstract class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSof
     if (json is Map<String, dynamic>) {
       return _$TerminologyCapabilitiesSoftwareFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3526,20 +3604,23 @@ abstract class TerminologyCapabilitiesImplementation
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesImplementation.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesImplementation.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesImplementation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesImplementation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesImplementation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesImplementation.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesImplementation cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory TerminologyCapabilitiesImplementation.fromJson(
-          Map<String, dynamic> json) =>
-      _$TerminologyCapabilitiesImplementationFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$TerminologyCapabilitiesImplementationFromJson(json);
 }
 
 @freezed
@@ -3632,25 +3713,29 @@ abstract class TerminologyCapabilitiesCodeSystem
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesCodeSystem.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesCodeSystem.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesCodeSystem.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesCodeSystem.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesCodeSystem cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesCodeSystem.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesCodeSystem cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory TerminologyCapabilitiesCodeSystem.fromJson(
-          Map<String, dynamic> json) =>
-      _$TerminologyCapabilitiesCodeSystemFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$TerminologyCapabilitiesCodeSystemFromJson(json);
 }
 
 /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
 @freezed
-abstract class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
+abstract class TerminologyCapabilitiesVersion
+    with _$TerminologyCapabilitiesVersion {
   /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
   const TerminologyCapabilitiesVersion._();
 
@@ -3774,16 +3859,19 @@ abstract class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVers
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesVersion.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesVersion.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesVersion.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesVersion.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesVersion cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesVersion.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesVersion cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =>
@@ -3796,8 +3884,10 @@ abstract class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVers
     if (json is Map<String, dynamic>) {
       return _$TerminologyCapabilitiesVersionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3808,7 +3898,8 @@ abstract class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVers
 
 /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
 @freezed
-abstract class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
+abstract class TerminologyCapabilitiesFilter
+    with _$TerminologyCapabilitiesFilter {
   /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
   const TerminologyCapabilitiesFilter._();
 
@@ -3895,13 +3986,16 @@ abstract class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilte
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilitiesFilter.fromYaml(dynamic yaml) => yaml is String
       ? TerminologyCapabilitiesFilter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesFilter.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesFilter cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? TerminologyCapabilitiesFilter.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesFilter cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =>
@@ -3914,8 +4008,10 @@ abstract class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilte
     if (json is Map<String, dynamic>) {
       return _$TerminologyCapabilitiesFilterFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3926,7 +4022,8 @@ abstract class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilte
 
 /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
 @freezed
-abstract class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
+abstract class TerminologyCapabilitiesExpansion
+    with _$TerminologyCapabilitiesExpansion {
   /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
   const TerminologyCapabilitiesExpansion._();
 
@@ -4036,25 +4133,29 @@ abstract class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesEx
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesExpansion.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesExpansion.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesExpansion.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesExpansion.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesExpansion cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesExpansion.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesExpansion cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory TerminologyCapabilitiesExpansion.fromJson(
-          Map<String, dynamic> json) =>
-      _$TerminologyCapabilitiesExpansionFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$TerminologyCapabilitiesExpansionFromJson(json);
 }
 
 /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
 @freezed
-abstract class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
+abstract class TerminologyCapabilitiesParameter
+    with _$TerminologyCapabilitiesParameter {
   /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
   const TerminologyCapabilitiesParameter._();
 
@@ -4139,20 +4240,23 @@ abstract class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesPa
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesParameter.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesParameter.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesParameter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesParameter.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesParameter cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesParameter.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesParameter cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory TerminologyCapabilitiesParameter.fromJson(
-          Map<String, dynamic> json) =>
-      _$TerminologyCapabilitiesParameterFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$TerminologyCapabilitiesParameterFromJson(json);
 }
 
 @freezed
@@ -4231,20 +4335,23 @@ abstract class TerminologyCapabilitiesValidateCode
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesValidateCode.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesValidateCode.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesValidateCode.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesValidateCode.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesValidateCode cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesValidateCode.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesValidateCode cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory TerminologyCapabilitiesValidateCode.fromJson(
-          Map<String, dynamic> json) =>
-      _$TerminologyCapabilitiesValidateCodeFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$TerminologyCapabilitiesValidateCodeFromJson(json);
 }
 
 @freezed
@@ -4323,25 +4430,29 @@ abstract class TerminologyCapabilitiesTranslation
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesTranslation.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesTranslation.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesTranslation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesTranslation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesTranslation cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesTranslation.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesTranslation cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   factory TerminologyCapabilitiesTranslation.fromJson(
-          Map<String, dynamic> json) =>
-      _$TerminologyCapabilitiesTranslationFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$TerminologyCapabilitiesTranslationFromJson(json);
 }
 
 /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
 @freezed
-abstract class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
+abstract class TerminologyCapabilitiesClosure
+    with _$TerminologyCapabilitiesClosure {
   /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
   const TerminologyCapabilitiesClosure._();
 
@@ -4416,16 +4527,19 @@ abstract class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClos
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilitiesClosure.fromYaml(dynamic yaml) => yaml
-          is String
+  factory TerminologyCapabilitiesClosure.fromYaml(dynamic yaml) =>
+      yaml is String
       ? TerminologyCapabilitiesClosure.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? TerminologyCapabilitiesClosure.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TerminologyCapabilitiesClosure cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? TerminologyCapabilitiesClosure.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'TerminologyCapabilitiesClosure cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =>
@@ -4438,8 +4552,10 @@ abstract class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClos
     if (json is Map<String, dynamic>) {
       return _$TerminologyCapabilitiesClosureFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -4616,7 +4732,6 @@ abstract class ValueSet with Resource, _$ValueSet {
   const factory ValueSet({
     @Default(R4ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
-
     /// [resourceType] This is a ValueSet resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -4818,13 +4933,14 @@ abstract class ValueSet with Resource, _$ValueSet {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String
       ? ValueSet.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSet.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSet cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSet.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+      : throw ArgumentError(
+          'ValueSet cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
@@ -4837,8 +4953,10 @@ abstract class ValueSet with Resource, _$ValueSet {
     if (json is Map<String, dynamic>) {
       return _$ValueSetFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -4967,13 +5085,16 @@ abstract class ValueSetCompose with _$ValueSetCompose {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetCompose.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSetCompose.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetCompose cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSetCompose.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ValueSetCompose cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
@@ -4986,8 +5107,10 @@ abstract class ValueSetCompose with _$ValueSetCompose {
     if (json is Map<String, dynamic>) {
       return _$ValueSetComposeFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -5116,13 +5239,16 @@ abstract class ValueSetInclude with _$ValueSetInclude {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetInclude.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetInclude.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSetInclude.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetInclude cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSetInclude.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ValueSetInclude cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
@@ -5135,8 +5261,10 @@ abstract class ValueSetInclude with _$ValueSetInclude {
     if (json is Map<String, dynamic>) {
       return _$ValueSetIncludeFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -5247,13 +5375,16 @@ abstract class ValueSetConcept with _$ValueSetConcept {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetConcept.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetConcept.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSetConcept.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetConcept cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSetConcept.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ValueSetConcept cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
@@ -5266,8 +5397,10 @@ abstract class ValueSetConcept with _$ValueSetConcept {
     if (json is Map<String, dynamic>) {
       return _$ValueSetConceptFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -5370,13 +5503,16 @@ abstract class ValueSetDesignation with _$ValueSetDesignation {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetDesignation.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetDesignation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSetDesignation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetDesignation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSetDesignation.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ValueSetDesignation cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
@@ -5389,8 +5525,10 @@ abstract class ValueSetDesignation with _$ValueSetDesignation {
     if (json is Map<String, dynamic>) {
       return _$ValueSetDesignationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -5510,13 +5648,16 @@ abstract class ValueSetFilter with _$ValueSetFilter {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetFilter.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetFilter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSetFilter.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetFilter cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSetFilter.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ValueSetFilter cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
@@ -5529,8 +5670,10 @@ abstract class ValueSetFilter with _$ValueSetFilter {
     if (json is Map<String, dynamic>) {
       return _$ValueSetFilterFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -5684,13 +5827,16 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetExpansion.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSetExpansion.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetExpansion cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSetExpansion.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ValueSetExpansion cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
@@ -5703,8 +5849,10 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     if (json is Map<String, dynamic>) {
       return _$ValueSetExpansionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -5866,13 +6014,16 @@ abstract class ValueSetParameter with _$ValueSetParameter {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetParameter.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetParameter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSetParameter.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetParameter cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSetParameter.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ValueSetParameter cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
@@ -5885,8 +6036,10 @@ abstract class ValueSetParameter with _$ValueSetParameter {
     if (json is Map<String, dynamic>) {
       return _$ValueSetParameterFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -6068,13 +6221,16 @@ abstract class ValueSetContains with _$ValueSetContains {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSetContains.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetContains.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? ValueSetContains.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetContains cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? ValueSetContains.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'ValueSetContains cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
@@ -6087,8 +6243,10 @@ abstract class ValueSetContains with _$ValueSetContains {
     if (json is Map<String, dynamic>) {
       return _$ValueSetContainsFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 

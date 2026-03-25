@@ -14,7 +14,8 @@ import 'primitive_types.dart';
 class FhirOid implements FhirPrimitiveBase {
   const FhirOid._(this._valueString, this._valueOid, this._isValid);
 
-  factory FhirOid(dynamic inValue) => inValue is String &&
+  factory FhirOid(dynamic inValue) =>
+      inValue is String &&
           RegExp(r'^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$').hasMatch(inValue)
       ? FhirOid._(inValue, inValue, true)
       : FhirOid._(inValue.toString(), null, false);
@@ -24,9 +25,10 @@ class FhirOid implements FhirPrimitiveBase {
   factory FhirOid.fromYaml(dynamic yaml) => yaml is String
       ? FhirOid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirOid.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirOid>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirOid.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirOid>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final String _valueString;
   final String? _valueOid;
@@ -46,8 +48,8 @@ class FhirOid implements FhirPrimitiveBase {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirOid
-          ? o.value == _valueOid
-          : o is String
-              ? o == _valueString
-              : false;
+      ? o.value == _valueOid
+      : o is String
+      ? o == _valueString
+      : false;
 }

@@ -123,7 +123,6 @@ abstract class FhirEndpoint with Resource, _$FhirEndpoint {
   const factory FhirEndpoint({
     @Default(R4ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-
     /// [resourceType] This is a Endpoint resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -253,13 +252,16 @@ abstract class FhirEndpoint with Resource, _$FhirEndpoint {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory FhirEndpoint.fromYaml(dynamic yaml) => yaml is String
       ? FhirEndpoint.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? FhirEndpoint.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'FhirEndpoint cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? FhirEndpoint.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'FhirEndpoint cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FhirEndpoint.fromJson(Map<String, dynamic> json) =>
@@ -272,8 +274,10 @@ abstract class FhirEndpoint with Resource, _$FhirEndpoint {
     if (json is Map<String, dynamic>) {
       return _$FhirEndpointFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -282,19 +286,27 @@ abstract class FhirEndpoint with Resource, _$FhirEndpoint {
   @override
   String toJsonString() => jsonEncode(toJson());
 
-  FhirEndpoint updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  FhirEndpoint updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (contact == null || contact!.isEmpty) {
       return copyWith(contact: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= contact!.length) {
       return copyWith(
-          contact: <ContactPoint>[...contact!, ContactPoint(system: system)]);
+        contact: <ContactPoint>[
+          ...contact!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(contact: <ContactPoint>[
-        ...contact!.sublist(0, index),
-        contact![index].copyWith(system: system),
-        ...contact!.sublist(index + 1)
-      ]);
+      return copyWith(
+        contact: <ContactPoint>[
+          ...contact!.sublist(0, index),
+          contact![index].copyWith(system: system),
+          ...contact!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -303,13 +315,19 @@ abstract class FhirEndpoint with Resource, _$FhirEndpoint {
       return copyWith(contact: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= contact!.length) {
       return copyWith(
-          contact: <ContactPoint>[...contact!, ContactPoint(value: value)]);
+        contact: <ContactPoint>[
+          ...contact!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(contact: <ContactPoint>[
-        ...contact!.sublist(0, index),
-        contact![index].copyWith(value: value),
-        ...contact!.sublist(index + 1)
-      ]);
+      return copyWith(
+        contact: <ContactPoint>[
+          ...contact!.sublist(0, index),
+          contact![index].copyWith(value: value),
+          ...contact!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -318,13 +336,19 @@ abstract class FhirEndpoint with Resource, _$FhirEndpoint {
       return copyWith(contact: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= contact!.length) {
       return copyWith(
-          contact: <ContactPoint>[...contact!, ContactPoint(use: use)]);
+        contact: <ContactPoint>[
+          ...contact!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(contact: <ContactPoint>[
-        ...contact!.sublist(0, index),
-        contact![index].copyWith(use: use),
-        ...contact!.sublist(index + 1)
-      ]);
+      return copyWith(
+        contact: <ContactPoint>[
+          ...contact!.sublist(0, index),
+          contact![index].copyWith(use: use),
+          ...contact!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -333,13 +357,19 @@ abstract class FhirEndpoint with Resource, _$FhirEndpoint {
       return copyWith(contact: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= contact!.length) {
       return copyWith(
-          contact: <ContactPoint>[...contact!, ContactPoint(rank: rank)]);
+        contact: <ContactPoint>[
+          ...contact!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(contact: <ContactPoint>[
-        ...contact!.sublist(0, index),
-        contact![index].copyWith(rank: rank),
-        ...contact!.sublist(index + 1)
-      ]);
+      return copyWith(
+        contact: <ContactPoint>[
+          ...contact!.sublist(0, index),
+          contact![index].copyWith(rank: rank),
+          ...contact!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -348,13 +378,19 @@ abstract class FhirEndpoint with Resource, _$FhirEndpoint {
       return copyWith(contact: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= contact!.length) {
       return copyWith(
-          contact: <ContactPoint>[...contact!, ContactPoint(period: period)]);
+        contact: <ContactPoint>[
+          ...contact!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(contact: <ContactPoint>[
-        ...contact!.sublist(0, index),
-        contact![index].copyWith(period: period),
-        ...contact!.sublist(index + 1)
-      ]);
+      return copyWith(
+        contact: <ContactPoint>[
+          ...contact!.sublist(0, index),
+          contact![index].copyWith(period: period),
+          ...contact!.sublist(index + 1),
+        ],
+      );
     }
   }
 }
@@ -508,7 +544,6 @@ abstract class HealthcareService with Resource, _$HealthcareService {
   const factory HealthcareService({
     @Default(R4ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-
     /// [resourceType] This is a HealthcareService resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -682,7 +717,6 @@ abstract class HealthcareService with Resource, _$HealthcareService {
     ///  and not available Times.
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-
     /// [availabilityExceptionsElement] Extensions for availabilityExceptions
     Element? availabilityExceptionsElement,
 
@@ -694,13 +728,16 @@ abstract class HealthcareService with Resource, _$HealthcareService {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareService.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? HealthcareService.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareService cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? HealthcareService.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'HealthcareService cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory HealthcareService.fromJson(Map<String, dynamic> json) =>
@@ -713,8 +750,10 @@ abstract class HealthcareService with Resource, _$HealthcareService {
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -723,19 +762,27 @@ abstract class HealthcareService with Resource, _$HealthcareService {
   @override
   String toJsonString() => jsonEncode(toJson());
 
-  HealthcareService updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  HealthcareService updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -744,45 +791,67 @@ abstract class HealthcareService with Resource, _$HealthcareService {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  HealthcareService updateContactPointUse(ContactPointUse use,
-      [int index = 0]) {
+  HealthcareService updateContactPointUse(
+    ContactPointUse use, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  HealthcareService updateContactPointRank(FhirPositiveInt rank,
-      [int index = 0]) {
+  HealthcareService updateContactPointRank(
+    FhirPositiveInt rank, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -791,20 +860,27 @@ abstract class HealthcareService with Resource, _$HealthcareService {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 }
 
 /// [HealthcareServiceEligibility] The details of a healthcare service
 @freezed
-abstract class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
+abstract class HealthcareServiceEligibility
+    with _$HealthcareServiceEligibility {
   /// [HealthcareServiceEligibility] The details of a healthcare service
   const HealthcareServiceEligibility._();
 
@@ -884,13 +960,16 @@ abstract class HealthcareServiceEligibility with _$HealthcareServiceEligibility 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareServiceEligibility.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceEligibility.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? HealthcareServiceEligibility.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareServiceEligibility cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? HealthcareServiceEligibility.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'HealthcareServiceEligibility cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
@@ -903,8 +982,10 @@ abstract class HealthcareServiceEligibility with _$HealthcareServiceEligibility 
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceEligibilityFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -915,7 +996,8 @@ abstract class HealthcareServiceEligibility with _$HealthcareServiceEligibility 
 
 /// [HealthcareServiceAvailableTime] The details of a healthcare service
 @freezed
-abstract class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
+abstract class HealthcareServiceAvailableTime
+    with _$HealthcareServiceAvailableTime {
   /// [HealthcareServiceAvailableTime] The details of a healthcare service
   const HealthcareServiceAvailableTime._();
 
@@ -1026,16 +1108,19 @@ abstract class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableT
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) => yaml
-          is String
+  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
+      yaml is String
       ? HealthcareServiceAvailableTime.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? HealthcareServiceAvailableTime.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareServiceAvailableTime cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+      ? HealthcareServiceAvailableTime.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'HealthcareServiceAvailableTime cannot be constructed from input provided,'
+          ' it is neither a yaml string or a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
@@ -1048,8 +1133,10 @@ abstract class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableT
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceAvailableTimeFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1060,7 +1147,8 @@ abstract class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableT
 
 /// [HealthcareServiceNotAvailable] The details of a healthcare service
 @freezed
-abstract class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
+abstract class HealthcareServiceNotAvailable
+    with _$HealthcareServiceNotAvailable {
   /// [HealthcareServiceNotAvailable] The details of a healthcare service
   const HealthcareServiceNotAvailable._();
 
@@ -1144,13 +1232,16 @@ abstract class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailabl
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceNotAvailable.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? HealthcareServiceNotAvailable.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareServiceNotAvailable cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? HealthcareServiceNotAvailable.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'HealthcareServiceNotAvailable cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
@@ -1163,8 +1254,10 @@ abstract class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailabl
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceNotAvailableFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1304,7 +1397,6 @@ abstract class Location with Resource, _$Location {
   const factory Location({
     @Default(R4ResourceType.Location)
     @JsonKey(unknownEnumValue: R4ResourceType.Location)
-
     /// [resourceType] This is a Location resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -1452,7 +1544,6 @@ abstract class Location with Resource, _$Location {
     ///  in the opening hours Times.
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-
     /// [availabilityExceptionsElement] Extensions for availabilityExceptions
     Element? availabilityExceptionsElement,
 
@@ -1464,13 +1555,14 @@ abstract class Location with Resource, _$Location {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Location.fromYaml(dynamic yaml) => yaml is String
       ? Location.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? Location.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Location cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? Location.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+      : throw ArgumentError(
+          'Location cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Location.fromJson(Map<String, dynamic> json) =>
@@ -1483,8 +1575,10 @@ abstract class Location with Resource, _$Location {
     if (json is Map<String, dynamic>) {
       return _$LocationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1493,19 +1587,27 @@ abstract class Location with Resource, _$Location {
   @override
   String toJsonString() => jsonEncode(toJson());
 
-  Location updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  Location updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1514,13 +1616,19 @@ abstract class Location with Resource, _$Location {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1529,13 +1637,19 @@ abstract class Location with Resource, _$Location {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1544,13 +1658,19 @@ abstract class Location with Resource, _$Location {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1559,13 +1679,19 @@ abstract class Location with Resource, _$Location {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1714,13 +1840,16 @@ abstract class LocationPosition with _$LocationPosition {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
       ? LocationPosition.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? LocationPosition.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'LocationPosition cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? LocationPosition.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'LocationPosition cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory LocationPosition.fromJson(Map<String, dynamic> json) =>
@@ -1733,8 +1862,10 @@ abstract class LocationPosition with _$LocationPosition {
     if (json is Map<String, dynamic>) {
       return _$LocationPositionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1853,13 +1984,16 @@ abstract class LocationHoursOfOperation with _$LocationHoursOfOperation {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory LocationHoursOfOperation.fromYaml(dynamic yaml) => yaml is String
       ? LocationHoursOfOperation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? LocationHoursOfOperation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'LocationHoursOfOperation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? LocationHoursOfOperation.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'LocationHoursOfOperation cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =>
@@ -1872,8 +2006,10 @@ abstract class LocationHoursOfOperation with _$LocationHoursOfOperation {
     if (json is Map<String, dynamic>) {
       return _$LocationHoursOfOperationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1977,7 +2113,6 @@ abstract class Organization with Resource, _$Organization {
   const factory Organization({
     @Default(R4ResourceType.Organization)
     @JsonKey(unknownEnumValue: R4ResourceType.Organization)
-
     /// [resourceType] This is a Organization resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -2089,13 +2224,16 @@ abstract class Organization with Resource, _$Organization {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Organization.fromYaml(dynamic yaml) => yaml is String
       ? Organization.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? Organization.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Organization cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? Organization.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'Organization cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Organization.fromJson(Map<String, dynamic> json) =>
@@ -2108,8 +2246,10 @@ abstract class Organization with Resource, _$Organization {
     if (json is Map<String, dynamic>) {
       return _$OrganizationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2118,19 +2258,27 @@ abstract class Organization with Resource, _$Organization {
   @override
   String toJsonString() => jsonEncode(toJson());
 
-  Organization updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  Organization updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2139,13 +2287,19 @@ abstract class Organization with Resource, _$Organization {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2154,13 +2308,19 @@ abstract class Organization with Resource, _$Organization {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2169,13 +2329,19 @@ abstract class Organization with Resource, _$Organization {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2184,13 +2350,19 @@ abstract class Organization with Resource, _$Organization {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2198,13 +2370,20 @@ abstract class Organization with Resource, _$Organization {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(use: use)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(use: use)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(use: use),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(use: use),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(use: use),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2212,13 +2391,20 @@ abstract class Organization with Resource, _$Organization {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(type: type)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(type: type)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(type: type),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(type: type),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(type: type),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2226,13 +2412,20 @@ abstract class Organization with Resource, _$Organization {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(text: text)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(text: text)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(text: text),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(text: text),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(text: text),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2240,13 +2433,20 @@ abstract class Organization with Resource, _$Organization {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(line: line)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(line: line)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(line: line),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(line: line),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(line: line),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2254,13 +2454,20 @@ abstract class Organization with Resource, _$Organization {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(city: city)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(city: city)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(city: city),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(city: city),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(city: city),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2269,13 +2476,19 @@ abstract class Organization with Resource, _$Organization {
       return copyWith(address: <Address>[Address(district: district)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(district: district)]);
+        address: <Address>[
+          ...address!,
+          Address(district: district),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(district: district),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(district: district),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2283,13 +2496,20 @@ abstract class Organization with Resource, _$Organization {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(state: state)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(state: state)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(state: state),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(state: state),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(state: state),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2298,13 +2518,19 @@ abstract class Organization with Resource, _$Organization {
       return copyWith(address: <Address>[Address(postalCode: postalCode)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(postalCode: postalCode)]);
+        address: <Address>[
+          ...address!,
+          Address(postalCode: postalCode),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(postalCode: postalCode),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(postalCode: postalCode),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2313,13 +2539,19 @@ abstract class Organization with Resource, _$Organization {
       return copyWith(address: <Address>[Address(country: country)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(country: country)]);
+        address: <Address>[
+          ...address!,
+          Address(country: country),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(country: country),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(country: country),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2327,13 +2559,20 @@ abstract class Organization with Resource, _$Organization {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(period: period)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(period: period)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(period: period),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(period: period),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(period: period),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 }
@@ -2430,13 +2669,16 @@ abstract class OrganizationContact with _$OrganizationContact {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
       ? OrganizationContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? OrganizationContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'OrganizationContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? OrganizationContact.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'OrganizationContact cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
@@ -2449,8 +2691,10 @@ abstract class OrganizationContact with _$OrganizationContact {
     if (json is Map<String, dynamic>) {
       return _$OrganizationContactFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2462,44 +2706,50 @@ abstract class OrganizationContact with _$OrganizationContact {
       copyWith(name: name == null ? HumanName(use: use) : name!.updateUse(use));
 
   OrganizationContact updateHumanNameText(String text) => copyWith(
-      name: name == null ? HumanName(text: text) : name!.updateText(text));
+    name: name == null ? HumanName(text: text) : name!.updateText(text),
+  );
 
   OrganizationContact updateHumanNameFamily(String family) => copyWith(
-      name: name == null
-          ? HumanName(family: family)
-          : name!.updateFamily(family));
+    name: name == null ? HumanName(family: family) : name!.updateFamily(family),
+  );
 
   OrganizationContact updateHumanNameGiven(List<String> given) => copyWith(
-      name: name == null ? HumanName(given: given) : name!.updateGiven(given));
+    name: name == null ? HumanName(given: given) : name!.updateGiven(given),
+  );
 
   OrganizationContact updateHumanNamePrefix(List<String> prefix) => copyWith(
-      name: name == null
-          ? HumanName(prefix: prefix)
-          : name!.updatePrefix(prefix));
+    name: name == null ? HumanName(prefix: prefix) : name!.updatePrefix(prefix),
+  );
 
   OrganizationContact updateHumanNameSuffix(List<String> suffix) => copyWith(
-      name: name == null
-          ? HumanName(suffix: suffix)
-          : name!.updateSuffix(suffix));
+    name: name == null ? HumanName(suffix: suffix) : name!.updateSuffix(suffix),
+  );
 
   OrganizationContact updateHumanNamePeriod(Period period) => copyWith(
-      name: name == null
-          ? HumanName(period: period)
-          : name!.updatePeriod(period));
+    name: name == null ? HumanName(period: period) : name!.updatePeriod(period),
+  );
 
-  OrganizationContact updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  OrganizationContact updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2508,45 +2758,67 @@ abstract class OrganizationContact with _$OrganizationContact {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  OrganizationContact updateContactPointUse(ContactPointUse use,
-      [int index = 0]) {
+  OrganizationContact updateContactPointUse(
+    ContactPointUse use, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  OrganizationContact updateContactPointRank(FhirPositiveInt rank,
-      [int index = 0]) {
+  OrganizationContact updateContactPointRank(
+    FhirPositiveInt rank, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2555,13 +2827,19 @@ abstract class OrganizationContact with _$OrganizationContact {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2595,8 +2873,8 @@ abstract class OrganizationContact with _$OrganizationContact {
 
   OrganizationContact updateAddressPostalCode(String postalCode) =>
       address == null
-          ? copyWith(address: Address(postalCode: postalCode))
-          : copyWith(address: address!.updatePostalCode(postalCode));
+      ? copyWith(address: Address(postalCode: postalCode))
+      : copyWith(address: address!.updatePostalCode(postalCode));
 
   OrganizationContact updateAddressCountry(String country) => address == null
       ? copyWith(address: Address(country: country))
@@ -2609,7 +2887,8 @@ abstract class OrganizationContact with _$OrganizationContact {
 
 /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
 @freezed
-abstract class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
+abstract class OrganizationAffiliation
+    with Resource, _$OrganizationAffiliation {
   /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
   const OrganizationAffiliation._();
 
@@ -2708,7 +2987,6 @@ abstract class OrganizationAffiliation with Resource, _$OrganizationAffiliation 
   const factory OrganizationAffiliation({
     @Default(R4ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-
     /// [resourceType] This is a OrganizationAffiliation resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -2827,13 +3105,16 @@ abstract class OrganizationAffiliation with Resource, _$OrganizationAffiliation 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OrganizationAffiliation.fromYaml(dynamic yaml) => yaml is String
       ? OrganizationAffiliation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? OrganizationAffiliation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'OrganizationAffiliation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? OrganizationAffiliation.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'OrganizationAffiliation cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
@@ -2846,8 +3127,10 @@ abstract class OrganizationAffiliation with Resource, _$OrganizationAffiliation 
     if (json is Map<String, dynamic>) {
       return _$OrganizationAffiliationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2856,83 +3139,123 @@ abstract class OrganizationAffiliation with Resource, _$OrganizationAffiliation 
   @override
   String toJsonString() => jsonEncode(toJson());
 
-  OrganizationAffiliation updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  OrganizationAffiliation updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  OrganizationAffiliation updateContactPointValue(String value,
-      [int index = 0]) {
+  OrganizationAffiliation updateContactPointValue(
+    String value, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  OrganizationAffiliation updateContactPointUse(ContactPointUse use,
-      [int index = 0]) {
+  OrganizationAffiliation updateContactPointUse(
+    ContactPointUse use, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  OrganizationAffiliation updateContactPointRank(FhirPositiveInt rank,
-      [int index = 0]) {
+  OrganizationAffiliation updateContactPointRank(
+    FhirPositiveInt rank, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  OrganizationAffiliation updateContactPointPeriod(Period period,
-      [int index = 0]) {
+  OrganizationAffiliation updateContactPointPeriod(
+    Period period, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 }

@@ -12,8 +12,12 @@ import 'package:yaml/yaml.dart';
 import 'primitive_types.dart';
 
 class FhirBoolean implements FhirPrimitiveBase {
-  const FhirBoolean._(this._valueString, this._valueBoolean, this._isValid,
-      this._isTrueBoolean);
+  const FhirBoolean._(
+    this._valueString,
+    this._valueBoolean,
+    this._isValid,
+    this._isTrueBoolean,
+  );
 
   factory FhirBoolean(dynamic inValue) {
     if (inValue is bool) {
@@ -24,8 +28,9 @@ class FhirBoolean implements FhirPrimitiveBase {
           : FhirBoolean._(inValue, null, false, false);
     } else {
       throw CannotBeConstructed<FhirBoolean>(
-          'Boolean cannot be constructed from $inValue of type '
-          "'${inValue.runtimeType}'.");
+        'Boolean cannot be constructed from $inValue of type '
+        "'${inValue.runtimeType}'.",
+      );
     }
   }
 
@@ -34,9 +39,10 @@ class FhirBoolean implements FhirPrimitiveBase {
   factory FhirBoolean.fromYaml(dynamic yaml) => yaml is String
       ? FhirBoolean.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirBoolean.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirBoolean>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirBoolean.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirBoolean>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final String _valueString;
   final bool? _valueBoolean;
@@ -57,10 +63,10 @@ class FhirBoolean implements FhirPrimitiveBase {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirBoolean
-          ? o.value == _valueBoolean
-          : o is bool
-              ? o == _valueBoolean
-              : o is String
-                  ? o == _valueString
-                  : false;
+      ? o.value == _valueBoolean
+      : o is bool
+      ? o == _valueBoolean
+      : o is String
+      ? o == _valueString
+      : false;
 }

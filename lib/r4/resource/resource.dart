@@ -52,8 +52,10 @@ abstract mixin class Resource {
     if (json is Map<String, dynamic>) {
       return _resourceFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -64,13 +66,14 @@ abstract mixin class Resource {
   /// Returns a Resource, accepts a [String] in YAML format as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
       ? Resource.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? Resource.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Resource cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? Resource.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+      : throw ArgumentError(
+          'Resource cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Returns a [Map<String, dynamic>] of the [Resource]
   Map<String, dynamic> toJson() {
@@ -92,8 +95,10 @@ abstract mixin class Resource {
     writeNotNull('text', text?.toJson());
     writeNotNull('contained', contained?.map((e) => e.toJson()).toList());
     writeNotNull('extension', extension_?.map((e) => e.toJson()).toList());
-    writeNotNull('modifierExtension',
-        modifierExtension?.map((e) => e.toJson()).toList());
+    writeNotNull(
+      'modifierExtension',
+      modifierExtension?.map((e) => e.toJson()).toList(),
+    );
     return val;
   }
 
@@ -105,8 +110,9 @@ abstract mixin class Resource {
 
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference get thisReference => Reference(
-      reference: path,
-      type: resourceTypeString == null ? null : FhirUri(resourceTypeString));
+    reference: path,
+    type: resourceTypeString == null ? null : FhirUri(resourceTypeString),
+  );
 
   /// Local Reference for this Resource, form is "ResourceType/Id"
   String get path => '$resourceTypeString/$fhirId';

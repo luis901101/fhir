@@ -8,8 +8,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.ActivityDefinition:
       return (resource as ActivityDefinition).copyWith(fhirId: newIdString());
     case R4ResourceType.AdministrableProductDefinition:
-      return (resource as AdministrableProductDefinition)
-          .copyWith(fhirId: newIdString());
+      return (resource as AdministrableProductDefinition).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.AdverseEvent:
       return (resource as AdverseEvent).copyWith(fhirId: newIdString());
     case R4ResourceType.AllergyIntolerance:
@@ -25,8 +26,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Binary:
       return (resource as Binary).copyWith(fhirId: newIdString());
     case R4ResourceType.BiologicallyDerivedProduct:
-      return (resource as BiologicallyDerivedProduct)
-          .copyWith(fhirId: newIdString());
+      return (resource as BiologicallyDerivedProduct).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.BodyStructure:
       return (resource as BodyStructure).copyWith(fhirId: newIdString());
     case R4ResourceType.Bundle:
@@ -52,8 +54,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.ClinicalImpression:
       return (resource as ClinicalImpression).copyWith(fhirId: newIdString());
     case R4ResourceType.ClinicalUseDefinition:
-      return (resource as ClinicalUseDefinition)
-          .copyWith(fhirId: newIdString());
+      return (resource as ClinicalUseDefinition).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.CodeSystem:
       return (resource as CodeSystem).copyWith(fhirId: newIdString());
     case R4ResourceType.Communication:
@@ -61,8 +64,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.CommunicationRequest:
       return (resource as CommunicationRequest).copyWith(fhirId: newIdString());
     case R4ResourceType.CompartmentDefinition:
-      return (resource as CompartmentDefinition)
-          .copyWith(fhirId: newIdString());
+      return (resource as CompartmentDefinition).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.Composition:
       return (resource as Composition).copyWith(fhirId: newIdString());
     case R4ResourceType.ConceptMap:
@@ -76,11 +80,13 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Coverage:
       return (resource as Coverage).copyWith(fhirId: newIdString());
     case R4ResourceType.CoverageEligibilityRequest:
-      return (resource as CoverageEligibilityRequest)
-          .copyWith(fhirId: newIdString());
+      return (resource as CoverageEligibilityRequest).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.CoverageEligibilityResponse:
-      return (resource as CoverageEligibilityResponse)
-          .copyWith(fhirId: newIdString());
+      return (resource as CoverageEligibilityResponse).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.DetectedIssue:
       return (resource as DetectedIssue).copyWith(fhirId: newIdString());
     case R4ResourceType.Device:
@@ -140,11 +146,13 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Immunization:
       return (resource as Immunization).copyWith(fhirId: newIdString());
     case R4ResourceType.ImmunizationEvaluation:
-      return (resource as ImmunizationEvaluation)
-          .copyWith(fhirId: newIdString());
+      return (resource as ImmunizationEvaluation).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.ImmunizationRecommendation:
-      return (resource as ImmunizationRecommendation)
-          .copyWith(fhirId: newIdString());
+      return (resource as ImmunizationRecommendation).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.ImplementationGuide:
       return (resource as ImplementationGuide).copyWith(fhirId: newIdString());
     case R4ResourceType.Ingredient:
@@ -162,8 +170,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Location:
       return (resource as Location).copyWith(fhirId: newIdString());
     case R4ResourceType.ManufacturedItemDefinition:
-      return (resource as ManufacturedItemDefinition)
-          .copyWith(fhirId: newIdString());
+      return (resource as ManufacturedItemDefinition).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.Measure:
       return (resource as Measure).copyWith(fhirId: newIdString());
     case R4ResourceType.MeasureReport:
@@ -173,8 +182,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Medication:
       return (resource as Medication).copyWith(fhirId: newIdString());
     case R4ResourceType.MedicationAdministration:
-      return (resource as MedicationAdministration)
-          .copyWith(fhirId: newIdString());
+      return (resource as MedicationAdministration).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.MedicationDispense:
       return (resource as MedicationDispense).copyWith(fhirId: newIdString());
     case R4ResourceType.MedicationKnowledge:
@@ -184,8 +194,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.MedicationStatement:
       return (resource as MedicationStatement).copyWith(fhirId: newIdString());
     case R4ResourceType.MedicinalProductDefinition:
-      return (resource as MedicinalProductDefinition)
-          .copyWith(fhirId: newIdString());
+      return (resource as MedicinalProductDefinition).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.MessageDefinition:
       return (resource as MessageDefinition).copyWith(fhirId: newIdString());
     case R4ResourceType.MessageHeader:
@@ -201,8 +212,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Observation:
       return (resource as Observation).copyWith(fhirId: newIdString());
     case R4ResourceType.ObservationDefinition:
-      return (resource as ObservationDefinition)
-          .copyWith(fhirId: newIdString());
+      return (resource as ObservationDefinition).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.OperationDefinition:
       return (resource as OperationDefinition).copyWith(fhirId: newIdString());
     case R4ResourceType.OperationOutcome:
@@ -210,11 +222,13 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Organization:
       return (resource as Organization).copyWith(fhirId: newIdString());
     case R4ResourceType.OrganizationAffiliation:
-      return (resource as OrganizationAffiliation)
-          .copyWith(fhirId: newIdString());
+      return (resource as OrganizationAffiliation).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.PackagedProductDefinition:
-      return (resource as PackagedProductDefinition)
-          .copyWith(fhirId: newIdString());
+      return (resource as PackagedProductDefinition).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.Parameters:
       return (resource as Parameters).copyWith(fhirId: newIdString());
     case R4ResourceType.Patient:
@@ -222,8 +236,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.PaymentNotice:
       return (resource as PaymentNotice).copyWith(fhirId: newIdString());
     case R4ResourceType.PaymentReconciliation:
-      return (resource as PaymentReconciliation)
-          .copyWith(fhirId: newIdString());
+      return (resource as PaymentReconciliation).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.Person:
       return (resource as Person).copyWith(fhirId: newIdString());
     case R4ResourceType.PlanDefinition:
@@ -239,11 +254,13 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Questionnaire:
       return (resource as Questionnaire).copyWith(fhirId: newIdString());
     case R4ResourceType.QuestionnaireResponse:
-      return (resource as QuestionnaireResponse)
-          .copyWith(fhirId: newIdString());
+      return (resource as QuestionnaireResponse).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.RegulatedAuthorization:
-      return (resource as RegulatedAuthorization)
-          .copyWith(fhirId: newIdString());
+      return (resource as RegulatedAuthorization).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.RelatedPerson:
       return (resource as RelatedPerson).copyWith(fhirId: newIdString());
     case R4ResourceType.RequestGroup:
@@ -251,8 +268,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.ResearchDefinition:
       return (resource as ResearchDefinition).copyWith(fhirId: newIdString());
     case R4ResourceType.ResearchElementDefinition:
-      return (resource as ResearchElementDefinition)
-          .copyWith(fhirId: newIdString());
+      return (resource as ResearchElementDefinition).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.ResearchStudy:
       return (resource as ResearchStudy).copyWith(fhirId: newIdString());
     case R4ResourceType.ResearchSubject:
@@ -292,8 +310,9 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Task:
       return (resource as Task).copyWith(fhirId: newIdString());
     case R4ResourceType.TerminologyCapabilities:
-      return (resource as TerminologyCapabilities)
-          .copyWith(fhirId: newIdString());
+      return (resource as TerminologyCapabilities).copyWith(
+        fhirId: newIdString(),
+      );
     case R4ResourceType.TestReport:
       return (resource as TestReport).copyWith(fhirId: newIdString());
     case R4ResourceType.TestScript:
@@ -306,6 +325,7 @@ Resource _newId(Resource resource) {
       return (resource as VisionPrescription).copyWith(fhirId: newIdString());
     case null:
       throw FormatException(
-          '${resource.resourceType} is not a defined resourceType');
+        '${resource.resourceType} is not a defined resourceType',
+      );
   }
 }

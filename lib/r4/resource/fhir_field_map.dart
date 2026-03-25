@@ -8,8 +8,8 @@ class FhirField {
 
 /// Because I don't want to root around in StructureDefinitions just to see
 /// what kind of an object something is or if it's a list, I'm using this
-final Map<String, Map<String, FhirField>> fhirFieldMap =
-    <String, Map<String, FhirField>>{
+final Map<String, Map<String, FhirField>>
+fhirFieldMap = <String, Map<String, FhirField>>{
   'Population': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
@@ -207,8 +207,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'defaultValueAnnotation': const FhirField(false, 'Annotation'),
     'defaultValueAttachment': const FhirField(false, 'Attachment'),
     'defaultValueCodeableConcept': const FhirField(false, 'CodeableConcept'),
-    'defaultValueCodeableReference':
-        const FhirField(false, 'CodeableReference'),
+    'defaultValueCodeableReference': const FhirField(
+      false,
+      'CodeableReference',
+    ),
     'defaultValueCoding': const FhirField(false, 'Coding'),
     'defaultValueContactPoint': const FhirField(false, 'ContactPoint'),
     'defaultValueCount': const FhirField(false, 'Count'),
@@ -230,11 +232,15 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'defaultValueContributor': const FhirField(false, 'Contributor'),
     'defaultValueDataRequirement': const FhirField(false, 'DataRequirement'),
     'defaultValueExpression': const FhirField(false, 'Expression'),
-    'defaultValueParameterDefinition':
-        const FhirField(false, 'ParameterDefinition'),
+    'defaultValueParameterDefinition': const FhirField(
+      false,
+      'ParameterDefinition',
+    ),
     'defaultValueRelatedArtifact': const FhirField(false, 'RelatedArtifact'),
-    'defaultValueTriggerDefinition':
-        const FhirField(false, 'TriggerDefinition'),
+    'defaultValueTriggerDefinition': const FhirField(
+      false,
+      'TriggerDefinition',
+    ),
     'defaultValueUsageContext': const FhirField(false, 'UsageContext'),
     'defaultValueDosage': const FhirField(false, 'Dosage'),
     'meaningWhenMissing': const FhirField(false, 'Markdown'),
@@ -813,8 +819,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_readCoverage': const FhirField(false, 'Element'),
     'repository': const FhirField(true, 'MolecularSequenceRepository'),
     'pointer': const FhirField(true, 'Reference'),
-    'structureVariant':
-        const FhirField(true, 'MolecularSequenceStructureVariant'),
+    'structureVariant': const FhirField(
+      true,
+      'MolecularSequenceStructureVariant',
+    ),
   },
   'MolecularSequenceReferenceSeq': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -1323,8 +1331,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'date': const FhirField(false, 'FhirDateTime'),
     '_date': const FhirField(false, 'Element'),
     'authority': const FhirField(false, 'Reference'),
-    'recommendation':
-        const FhirField(true, 'ImmunizationRecommendationRecommendation'),
+    'recommendation': const FhirField(
+      true,
+      'ImmunizationRecommendationRecommendation',
+    ),
   },
   'ImmunizationRecommendationRecommendation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -1335,8 +1345,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'contraindicatedVaccineCode': const FhirField(true, 'CodeableConcept'),
     'forecastStatus': const FhirField(false, 'CodeableConcept'),
     'forecastReason': const FhirField(true, 'CodeableConcept'),
-    'dateCriterion':
-        const FhirField(true, 'ImmunizationRecommendationDateCriterion'),
+    'dateCriterion': const FhirField(
+      true,
+      'ImmunizationRecommendationDateCriterion',
+    ),
     'description': const FhirField(false, 'String'),
     '_description': const FhirField(false, 'Element'),
     'series': const FhirField(false, 'String'),
@@ -1533,8 +1545,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'amount': const FhirField(false, 'Quantity'),
     'synonym': const FhirField(true, 'String'),
     '_synonym': const FhirField(true, 'Element'),
-    'relatedMedicationKnowledge':
-        const FhirField(true, 'MedicationKnowledgeRelatedMedicationKnowledge'),
+    'relatedMedicationKnowledge': const FhirField(
+      true,
+      'MedicationKnowledgeRelatedMedicationKnowledge',
+    ),
     'associatedMedication': const FhirField(true, 'Reference'),
     'productType': const FhirField(true, 'CodeableConcept'),
     'monograph': const FhirField(true, 'MedicationKnowledgeMonograph'),
@@ -1543,15 +1557,23 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_preparationInstruction': const FhirField(false, 'Element'),
     'intendedRoute': const FhirField(true, 'CodeableConcept'),
     'cost': const FhirField(true, 'MedicationKnowledgeCost'),
-    'monitoringProgram':
-        const FhirField(true, 'MedicationKnowledgeMonitoringProgram'),
-    'administrationGuidelines':
-        const FhirField(true, 'MedicationKnowledgeAdministrationGuidelines'),
-    'medicineClassification':
-        const FhirField(true, 'MedicationKnowledgeMedicineClassification'),
+    'monitoringProgram': const FhirField(
+      true,
+      'MedicationKnowledgeMonitoringProgram',
+    ),
+    'administrationGuidelines': const FhirField(
+      true,
+      'MedicationKnowledgeAdministrationGuidelines',
+    ),
+    'medicineClassification': const FhirField(
+      true,
+      'MedicationKnowledgeMedicineClassification',
+    ),
     'packaging': const FhirField(false, 'MedicationKnowledgePackaging'),
-    'drugCharacteristic':
-        const FhirField(true, 'MedicationKnowledgeDrugCharacteristic'),
+    'drugCharacteristic': const FhirField(
+      true,
+      'MedicationKnowledgeDrugCharacteristic',
+    ),
     'contraindication': const FhirField(true, 'Reference'),
     'regulatory': const FhirField(true, 'MedicationKnowledgeRegulatory'),
     'kinetics': const FhirField(true, 'MedicationKnowledgeKinetics'),
@@ -1604,8 +1626,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'dosage': const FhirField(true, 'MedicationKnowledgeDosage'),
     'indicationCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'indicationReference': const FhirField(false, 'Reference'),
-    'patientCharacteristics':
-        const FhirField(true, 'MedicationKnowledgePatientCharacteristics'),
+    'patientCharacteristics': const FhirField(
+      true,
+      'MedicationKnowledgePatientCharacteristics',
+    ),
   },
   'MedicationKnowledgeDosage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -1735,8 +1759,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'insurance': const FhirField(true, 'Reference'),
     'note': const FhirField(true, 'Annotation'),
     'dosageInstruction': const FhirField(true, 'Dosage'),
-    'dispenseRequest':
-        const FhirField(false, 'MedicationRequestDispenseRequest'),
+    'dispenseRequest': const FhirField(
+      false,
+      'MedicationRequestDispenseRequest',
+    ),
     'substitution': const FhirField(false, 'MedicationRequestSubstitution'),
     'priorPrescription': const FhirField(false, 'Reference'),
     'detectedIssue': const FhirField(true, 'Reference'),
@@ -2297,8 +2323,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'dateWritten': const FhirField(false, 'FhirDateTime'),
     '_dateWritten': const FhirField(false, 'Element'),
     'prescriber': const FhirField(false, 'Reference'),
-    'lensSpecification':
-        const FhirField(true, 'VisionPrescriptionLensSpecification'),
+    'lensSpecification': const FhirField(
+      true,
+      'VisionPrescriptionLensSpecification',
+    ),
   },
   'VisionPrescriptionLensSpecification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -3391,8 +3419,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_type': const FhirField(false, 'Element'),
     'eventsSinceSubscriptionStart': const FhirField(false, 'Integer64'),
     '_eventsSinceSubscriptionStart': const FhirField(false, 'Element'),
-    'notificationEvent':
-        const FhirField(true, 'SubscriptionStatusNotificationEvent'),
+    'notificationEvent': const FhirField(
+      true,
+      'SubscriptionStatusNotificationEvent',
+    ),
     'subscription': const FhirField(false, 'Reference'),
     'topic': const FhirField(false, 'Canonical'),
     'error': const FhirField(true, 'CodeableConcept'),
@@ -3449,12 +3479,16 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'lastReviewDate': const FhirField(false, 'Date'),
     '_lastReviewDate': const FhirField(false, 'Element'),
     'effectivePeriod': const FhirField(false, 'Period'),
-    'resourceTrigger':
-        const FhirField(true, 'SubscriptionTopicResourceTrigger'),
+    'resourceTrigger': const FhirField(
+      true,
+      'SubscriptionTopicResourceTrigger',
+    ),
     'eventTrigger': const FhirField(true, 'SubscriptionTopicEventTrigger'),
     'canFilterBy': const FhirField(true, 'SubscriptionTopicCanFilterBy'),
-    'notificationShape':
-        const FhirField(true, 'SubscriptionTopicNotificationShape'),
+    'notificationShape': const FhirField(
+      true,
+      'SubscriptionTopicNotificationShape',
+    ),
   },
   'SubscriptionTopicResourceTrigger': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -3843,16 +3877,20 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'kind': const FhirField(false, 'Code'),
     '_kind': const FhirField(false, 'Element'),
     'software': const FhirField(false, 'TerminologyCapabilitiesSoftware'),
-    'implementation':
-        const FhirField(false, 'TerminologyCapabilitiesImplementation'),
+    'implementation': const FhirField(
+      false,
+      'TerminologyCapabilitiesImplementation',
+    ),
     'lockedDate': const FhirField(false, 'Boolean'),
     '_lockedDate': const FhirField(false, 'Element'),
     'codeSystem': const FhirField(true, 'TerminologyCapabilitiesCodeSystem'),
     'expansion': const FhirField(false, 'TerminologyCapabilitiesExpansion'),
     'codeSearch': const FhirField(false, 'Code'),
     '_codeSearch': const FhirField(false, 'Element'),
-    'validateCode':
-        const FhirField(false, 'TerminologyCapabilitiesValidateCode'),
+    'validateCode': const FhirField(
+      false,
+      'TerminologyCapabilitiesValidateCode',
+    ),
     'translation': const FhirField(false, 'TerminologyCapabilitiesTranslation'),
     'closure': const FhirField(false, 'TerminologyCapabilitiesClosure'),
   },
@@ -4350,8 +4388,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'instantiates': const FhirField(true, 'Canonical'),
     'imports': const FhirField(true, 'Canonical'),
     'software': const FhirField(false, 'CapabilityStatementSoftware'),
-    'implementation':
-        const FhirField(false, 'CapabilityStatementImplementation'),
+    'implementation': const FhirField(
+      false,
+      'CapabilityStatementImplementation',
+    ),
     'fhirVersion': const FhirField(false, 'Code'),
     '_fhirVersion': const FhirField(false, 'Element'),
     'format': const FhirField(true, 'Code'),
@@ -4492,8 +4532,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_reliableCache': const FhirField(false, 'Element'),
     'documentation': const FhirField(false, 'Markdown'),
     '_documentation': const FhirField(false, 'Element'),
-    'supportedMessage':
-        const FhirField(true, 'CapabilityStatementSupportedMessage'),
+    'supportedMessage': const FhirField(
+      true,
+      'CapabilityStatementSupportedMessage',
+    ),
   },
   'CapabilityStatementEndpoint': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -4632,8 +4674,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'description': const FhirField(false, 'Markdown'),
     '_description': const FhirField(false, 'Element'),
     'version': const FhirField(true, 'ExampleScenarioVersion'),
-    'containedInstance':
-        const FhirField(true, 'ExampleScenarioContainedInstance'),
+    'containedInstance': const FhirField(
+      true,
+      'ExampleScenarioContainedInstance',
+    ),
   },
   'ExampleScenarioVersion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -5007,8 +5051,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'focus': const FhirField(true, 'MessageDefinitionFocus'),
     'responseRequired': const FhirField(false, 'Code'),
     '_responseRequired': const FhirField(false, 'Element'),
-    'allowedResponse':
-        const FhirField(true, 'MessageDefinitionAllowedResponse'),
+    'allowedResponse': const FhirField(
+      true,
+      'MessageDefinitionAllowedResponse',
+    ),
     'graph': const FhirField(true, 'Canonical'),
   },
   'MessageDefinitionFocus': <String, FhirField>{
@@ -5107,8 +5153,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'searchType': const FhirField(false, 'Code'),
     '_searchType': const FhirField(false, 'Element'),
     'binding': const FhirField(false, 'OperationDefinitionBinding'),
-    'referencedFrom':
-        const FhirField(true, 'OperationDefinitionReferencedFrom'),
+    'referencedFrom': const FhirField(
+      true,
+      'OperationDefinitionReferencedFrom',
+    ),
     'part': const FhirField(true, 'OperationDefinitionParameter'),
   },
   'OperationDefinitionBinding': <String, FhirField>{
@@ -5464,11 +5512,15 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'defaultValueContributor': const FhirField(false, 'Contributor'),
     'defaultValueDataRequirement': const FhirField(false, 'DataRequirement'),
     'defaultValueExpression': const FhirField(false, 'Expression'),
-    'defaultValueParameterDefinition':
-        const FhirField(false, 'ParameterDefinition'),
+    'defaultValueParameterDefinition': const FhirField(
+      false,
+      'ParameterDefinition',
+    ),
     'defaultValueRelatedArtifact': const FhirField(false, 'RelatedArtifact'),
-    'defaultValueTriggerDefinition':
-        const FhirField(false, 'TriggerDefinition'),
+    'defaultValueTriggerDefinition': const FhirField(
+      false,
+      'TriggerDefinition',
+    ),
     'defaultValueUsageContext': const FhirField(false, 'UsageContext'),
     'defaultValueDosage': const FhirField(false, 'Dosage'),
     'defaultValueMeta': const FhirField(false, 'Meta'),
@@ -5905,8 +5957,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'applicability': const FhirField(true, 'ChargeItemDefinitionApplicability'),
-    'priceComponent':
-        const FhirField(true, 'ChargeItemDefinitionPriceComponent'),
+    'priceComponent': const FhirField(
+      true,
+      'ChargeItemDefinitionPriceComponent',
+    ),
   },
   'ChargeItemDefinitionPriceComponent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -6246,8 +6300,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_preAuthRef': const FhirField(true, 'Element'),
     'preAuthRefPeriod': const FhirField(true, 'Period'),
     'careTeam': const FhirField(true, 'ExplanationOfBenefitCareTeam'),
-    'supportingInfo':
-        const FhirField(true, 'ExplanationOfBenefitSupportingInfo'),
+    'supportingInfo': const FhirField(
+      true,
+      'ExplanationOfBenefitSupportingInfo',
+    ),
     'diagnosis': const FhirField(true, 'ExplanationOfBenefitDiagnosis'),
     'procedure': const FhirField(true, 'ExplanationOfBenefitProcedure'),
     'precedence': const FhirField(false, 'PositiveInt'),
@@ -6263,8 +6319,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'form': const FhirField(false, 'Attachment'),
     'processNote': const FhirField(true, 'ExplanationOfBenefitProcessNote'),
     'benefitPeriod': const FhirField(false, 'Period'),
-    'benefitBalance':
-        const FhirField(true, 'ExplanationOfBenefitBenefitBalance'),
+    'benefitBalance': const FhirField(
+      true,
+      'ExplanationOfBenefitBenefitBalance',
+    ),
   },
   'ExplanationOfBenefitRelated': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -7332,8 +7390,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'provider': const FhirField(false, 'Reference'),
     'insurer': const FhirField(false, 'Reference'),
     'facility': const FhirField(false, 'Reference'),
-    'supportingInfo':
-        const FhirField(true, 'CoverageEligibilityRequestSupportingInfo'),
+    'supportingInfo': const FhirField(
+      true,
+      'CoverageEligibilityRequestSupportingInfo',
+    ),
     'insurance': const FhirField(true, 'CoverageEligibilityRequestInsurance'),
     'item': const FhirField(true, 'CoverageEligibilityRequestItem'),
   },
@@ -7754,11 +7814,15 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'quantity': const FhirField(false, 'Integer'),
     '_quantity': const FhirField(false, 'Element'),
     'parent': const FhirField(true, 'Reference'),
-    'collection':
-        const FhirField(false, 'BiologicallyDerivedProductCollection'),
+    'collection': const FhirField(
+      false,
+      'BiologicallyDerivedProductCollection',
+    ),
     'processing': const FhirField(true, 'BiologicallyDerivedProductProcessing'),
-    'manipulation':
-        const FhirField(false, 'BiologicallyDerivedProductManipulation'),
+    'manipulation': const FhirField(
+      false,
+      'BiologicallyDerivedProductManipulation',
+    ),
     'storage': const FhirField(true, 'BiologicallyDerivedProductStorage'),
   },
   'BiologicallyDerivedProductCollection': <String, FhirField>{
@@ -7959,8 +8023,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'nutrient': const FhirField(true, 'NutritionProductNutrient'),
     'ingredient': const FhirField(true, 'NutritionProductIngredient'),
     'knownAllergen': const FhirField(true, 'CodeableReference'),
-    'productCharacteristic':
-        const FhirField(true, 'NutritionProductCharacteristic'),
+    'productCharacteristic': const FhirField(
+      true,
+      'NutritionProductCharacteristic',
+    ),
     'instance': const FhirField(true, 'NutritionProductInstance'),
     'note': const FhirField(true, 'Annotation'),
   },
@@ -9107,7 +9173,9 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'device': const FhirField(false, 'Reference'),
     'property': const FhirField(true, 'AdministrableProductDefinitionProperty'),
     'routeOfAdministration': const FhirField(
-        true, 'AdministrableProductDefinitionRouteOfAdministration'),
+      true,
+      'AdministrableProductDefinitionRouteOfAdministration',
+    ),
   },
   'AdministrableProductDefinitionProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -9133,16 +9201,20 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'maxDosePerDay': const FhirField(false, 'Quantity'),
     'maxDosePerTreatmentPeriod': const FhirField(false, 'Ratio'),
     'maxTreatmentPeriod': const FhirField(false, 'FhirDuration'),
-    'targetSpecies':
-        const FhirField(true, 'AdministrableProductDefinitionTargetSpecies'),
+    'targetSpecies': const FhirField(
+      true,
+      'AdministrableProductDefinitionTargetSpecies',
+    ),
   },
   'AdministrableProductDefinitionTargetSpecies': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'CodeableConcept'),
-    'withdrawalPeriod':
-        const FhirField(true, 'AdministrableProductDefinitionWithdrawalPeriod'),
+    'withdrawalPeriod': const FhirField(
+      true,
+      'AdministrableProductDefinitionWithdrawalPeriod',
+    ),
   },
   'AdministrableProductDefinitionWithdrawalPeriod': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -9237,13 +9309,17 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'category': const FhirField(true, 'CodeableConcept'),
     'subject': const FhirField(true, 'Reference'),
     'status': const FhirField(false, 'CodeableConcept'),
-    'contraindication':
-        const FhirField(false, 'ClinicalUseDefinitionContraindication'),
+    'contraindication': const FhirField(
+      false,
+      'ClinicalUseDefinitionContraindication',
+    ),
     'indication': const FhirField(false, 'ClinicalUseDefinitionIndication'),
     'interaction': const FhirField(false, 'ClinicalUseDefinitionInteraction'),
     'population': const FhirField(true, 'Reference'),
-    'undesirableEffect':
-        const FhirField(false, 'ClinicalUseDefinitionUndesirableEffect'),
+    'undesirableEffect': const FhirField(
+      false,
+      'ClinicalUseDefinitionUndesirableEffect',
+    ),
     'warning': const FhirField(false, 'ClinicalUseDefinitionWarning'),
   },
   'ClinicalUseDefinitionContraindication': <String, FhirField>{
@@ -9383,11 +9459,15 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'clinicalTrial': const FhirField(true, 'Reference'),
     'code': const FhirField(true, 'Coding'),
     'name': const FhirField(true, 'MedicinalProductDefinitionName'),
-    'crossReference':
-        const FhirField(true, 'MedicinalProductDefinitionCrossReference'),
+    'crossReference': const FhirField(
+      true,
+      'MedicinalProductDefinitionCrossReference',
+    ),
     'operation': const FhirField(true, 'MedicinalProductDefinitionOperation'),
-    'characteristic':
-        const FhirField(true, 'MedicinalProductDefinitionCharacteristic'),
+    'characteristic': const FhirField(
+      true,
+      'MedicinalProductDefinitionCharacteristic',
+    ),
   },
   'MedicinalProductDefinitionContact': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -9404,8 +9484,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_productName': const FhirField(false, 'Element'),
     'type': const FhirField(false, 'CodeableConcept'),
     'namePart': const FhirField(true, 'MedicinalProductDefinitionNamePart'),
-    'countryLanguage':
-        const FhirField(true, 'MedicinalProductDefinitionCountryLanguage'),
+    'countryLanguage': const FhirField(
+      true,
+      'MedicinalProductDefinitionCountryLanguage',
+    ),
   },
   'MedicinalProductDefinitionNamePart': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -9474,8 +9556,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'containedItemQuantity': const FhirField(true, 'Quantity'),
     'description': const FhirField(false, 'Markdown'),
     '_description': const FhirField(false, 'Element'),
-    'legalStatusOfSupply':
-        const FhirField(true, 'PackagedProductDefinitionLegalStatusOfSupply'),
+    'legalStatusOfSupply': const FhirField(
+      true,
+      'PackagedProductDefinitionLegalStatusOfSupply',
+    ),
     'marketingStatus': const FhirField(true, 'MarketingStatus'),
     'characteristic': const FhirField(true, 'CodeableConcept'),
     'copackagedIndicator': const FhirField(false, 'Boolean'),
@@ -9500,12 +9584,16 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_quantity': const FhirField(false, 'Element'),
     'material': const FhirField(true, 'CodeableConcept'),
     'alternateMaterial': const FhirField(true, 'CodeableConcept'),
-    'shelfLifeStorage':
-        const FhirField(true, 'PackagedProductDefinitionShelfLifeStorage'),
+    'shelfLifeStorage': const FhirField(
+      true,
+      'PackagedProductDefinitionShelfLifeStorage',
+    ),
     'manufacturer': const FhirField(true, 'Reference'),
     'property': const FhirField(true, 'PackagedProductDefinitionProperty'),
-    'containedItem':
-        const FhirField(true, 'PackagedProductDefinitionContainedItem'),
+    'containedItem': const FhirField(
+      true,
+      'PackagedProductDefinitionContainedItem',
+    ),
     'package': const FhirField(true, 'PackagedProductDefinitionPackage'),
   },
   'PackagedProductDefinitionShelfLifeStorage': <String, FhirField>{
@@ -9605,14 +9693,18 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'supplier': const FhirField(true, 'Reference'),
     'moiety': const FhirField(true, 'SubstanceDefinitionMoiety'),
     'property': const FhirField(true, 'SubstanceDefinitionProperty'),
-    'molecularWeight':
-        const FhirField(true, 'SubstanceDefinitionMolecularWeight'),
+    'molecularWeight': const FhirField(
+      true,
+      'SubstanceDefinitionMolecularWeight',
+    ),
     'structure': const FhirField(false, 'SubstanceDefinitionStructure'),
     'code': const FhirField(true, 'SubstanceDefinitionCode'),
     'name': const FhirField(true, 'SubstanceDefinitionName'),
     'relationship': const FhirField(true, 'SubstanceDefinitionRelationship'),
-    'sourceMaterial':
-        const FhirField(false, 'SubstanceDefinitionSourceMaterial'),
+    'sourceMaterial': const FhirField(
+      false,
+      'SubstanceDefinitionSourceMaterial',
+    ),
   },
   'SubstanceDefinitionMoiety': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -9662,12 +9754,16 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_molecularFormula': const FhirField(false, 'Element'),
     'molecularFormulaByMoiety': const FhirField(false, 'String'),
     '_molecularFormulaByMoiety': const FhirField(false, 'Element'),
-    'molecularWeight':
-        const FhirField(false, 'SubstanceDefinitionMolecularWeight'),
+    'molecularWeight': const FhirField(
+      false,
+      'SubstanceDefinitionMolecularWeight',
+    ),
     'technique': const FhirField(true, 'CodeableConcept'),
     'sourceDocument': const FhirField(true, 'Reference'),
-    'representation':
-        const FhirField(true, 'SubstanceDefinitionRepresentation'),
+    'representation': const FhirField(
+      true,
+      'SubstanceDefinitionRepresentation',
+    ),
   },
   'SubstanceDefinitionRepresentation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -9722,8 +9818,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'substanceDefinitionReference': const FhirField(false, 'Reference'),
-    'substanceDefinitionCodeableConcept':
-        const FhirField(false, 'CodeableConcept'),
+    'substanceDefinitionCodeableConcept': const FhirField(
+      false,
+      'CodeableConcept',
+    ),
     'type': const FhirField(false, 'CodeableConcept'),
     'isDefining': const FhirField(false, 'Boolean'),
     '_isDefining': const FhirField(false, 'Element'),
@@ -9860,8 +9958,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'identifier': const FhirField(true, 'Identifier'),
-    'udiDeviceIdentifier':
-        const FhirField(true, 'DeviceDefinitionUdiDeviceIdentifier'),
+    'udiDeviceIdentifier': const FhirField(
+      true,
+      'DeviceDefinitionUdiDeviceIdentifier',
+    ),
     'manufacturerString': const FhirField(false, 'String'),
     '_manufacturerString': const FhirField(false, 'Element'),
     'manufacturerReference': const FhirField(false, 'Reference'),
@@ -10020,10 +10120,14 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'method': const FhirField(false, 'CodeableConcept'),
     'preferredReportName': const FhirField(false, 'String'),
     '_preferredReportName': const FhirField(false, 'Element'),
-    'quantitativeDetails':
-        const FhirField(false, 'ObservationDefinitionQuantitativeDetails'),
-    'qualifiedInterval':
-        const FhirField(true, 'ObservationDefinitionQualifiedInterval'),
+    'quantitativeDetails': const FhirField(
+      false,
+      'ObservationDefinitionQuantitativeDetails',
+    ),
+    'qualifiedInterval': const FhirField(
+      true,
+      'ObservationDefinitionQualifiedInterval',
+    ),
     'validCodedValueSet': const FhirField(false, 'Reference'),
     'normalCodedValueSet': const FhirField(false, 'Reference'),
     'abnormalCodedValueSet': const FhirField(false, 'Reference'),
@@ -11301,8 +11405,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'telecom': const FhirField(true, 'ContactPoint'),
     'contributionType': const FhirField(true, 'CodeableConcept'),
     'role': const FhirField(false, 'CodeableConcept'),
-    'contributionInstance':
-        const FhirField(true, 'CitationContributionInstance'),
+    'contributionInstance': const FhirField(
+      true,
+      'CitationContributionInstance',
+    ),
     'correspondingContact': const FhirField(false, 'Boolean'),
     '_correspondingContact': const FhirField(false, 'Element'),
     'listOrder': const FhirField(false, 'PositiveInt'),
@@ -11774,8 +11880,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     '_type': const FhirField(false, 'Element'),
     'variableType': const FhirField(false, 'Code'),
     '_variableType': const FhirField(false, 'Element'),
-    'characteristic':
-        const FhirField(true, 'ResearchElementDefinitionCharacteristic'),
+    'characteristic': const FhirField(
+      true,
+      'ResearchElementDefinitionCharacteristic',
+    ),
   },
   'ResearchElementDefinitionCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),

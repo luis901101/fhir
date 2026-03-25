@@ -120,7 +120,7 @@ void main() {
 dynamic loadAsJson(String result) => jsonDecode(jsonEncode(loadYaml(result)));
 
 const Map<String, String> basicStringJson = <String, String>{
-  'basic_string': 'basic string'
+  'basic_string': 'basic string',
 };
 const String basicStringYaml = 'basic_string: basic string';
 
@@ -129,7 +129,7 @@ const Map<String, dynamic> structuredDataJson = <String, dynamic>{
     'name': "Martin D'vloper",
     'job': 'Developer',
     'skill': 'Elite',
-  }
+  },
 };
 const String structuredDataYaml = '''
 martin:
@@ -141,7 +141,7 @@ const Map<String, dynamic> dataWithListJson = <String, dynamic>{
   'martin': <String, dynamic>{
     'name': "Martin D'vloper",
     'job': 'Developer',
-    'skills': <String>['python', 'perl', 'pascal']
+    'skills': <String>['python', 'perl', 'pascal'],
   },
 };
 const String dataWithListYaml = '''
@@ -157,7 +157,7 @@ const Map<String, dynamic> boolJson = <String, dynamic>{'dart_is_cool': true};
 const String boolYaml = 'dart_is_cool: true';
 
 const Map<String, dynamic> multilineStringJson = <String, dynamic>{
-  'fold_newlines': 'a b\nc d\n  e\nf'
+  'fold_newlines': 'a b\nc d\n  e\nf',
 };
 const String multilineStringYaml = '''fold_newlines: "a b\\nc d\\n  e\\nf"''';
 
@@ -172,7 +172,7 @@ const Map<String, dynamic> complexExampleJson = <String, dynamic>{
     'python': 'Elite',
     'pascal': 'Lame',
   },
-  'education': '4 GCSEs\n3 A-Levels\nBSc in the Internet of Things'
+  'education': '4 GCSEs\n3 A-Levels\nBSc in the Internet of Things',
 };
 const String complexExampleYaml = '''
 name: "Martin D'vloper"
@@ -191,13 +191,13 @@ languages:
 education: "4 GCSEs\\n3 A-Levels\\nBSc in the Internet of Things"''';
 
 const Map<String, dynamic> stringWithDotJson = <String, dynamic>{
-  'dot': '1.5.0'
+  'dot': '1.5.0',
 };
 const String stringWithDotWithQuotesYaml = 'dot: "1.5.0"';
 const String stringWithDotWithoutQuotesYaml = 'dot: 1.5.0';
 
 const Map<String, dynamic> stringWithSpecialCharactersJson = <String, dynamic>{
-  'url': 'https://pub.dartlang.org'
+  'url': 'https://pub.dartlang.org',
 };
 const String stringWithSpecialCharactersYaml =
     'url: "https://pub.dartlang.org"';

@@ -16,7 +16,8 @@ abstract class FhirDateTimeBase<T>
   });
 
   static ({bool isValid, Exception? parseError, DateTime value}) parse(
-      dynamic inValue) {
+    dynamic inValue,
+  ) {
     bool isValid = true;
     Exception? parseError;
     DateTime value = DateTime.now();

@@ -26,8 +26,9 @@ class FhirInteger64 implements FhirPrimitiveBase {
           : FhirInteger64._(inValue, tempInteger64, true);
     }
     throw CannotBeConstructed<FhirInteger64>(
-        'Integer64 cannot be constructed from '
-        '$inValue (which is an ${inValue.runtimeType}).');
+      'Integer64 cannot be constructed from '
+      '$inValue (which is an ${inValue.runtimeType}).',
+    );
   }
 
   factory FhirInteger64.fromJson(dynamic json) => FhirInteger64(json);
@@ -35,9 +36,10 @@ class FhirInteger64 implements FhirPrimitiveBase {
   factory FhirInteger64.fromYaml(dynamic yaml) => yaml is String
       ? FhirInteger64.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirInteger64.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirInteger64>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirInteger64.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirInteger64>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   BigInt? get value => valueNumber;
   final String valueString;
@@ -56,32 +58,36 @@ class FhirInteger64 implements FhirPrimitiveBase {
   bool operator ==(Object other) => identical(this, other)
       ? true
       : other is FhirInteger64
-          ? other.valueNumber == valueNumber
-          : other is BigInt
-              ? other == valueNumber
-              : false;
+      ? other.valueNumber == valueNumber
+      : other is BigInt
+      ? other == valueNumber
+      : false;
 
-  bool operator >(Object o) => valueNumber == null ||
+  bool operator >(Object o) =>
+      valueNumber == null ||
           (o is! FhirInteger64 && o is! BigInt) ||
           (o is FhirInteger64 && o.valueNumber == null)
       ? throw InvalidTypes<FhirInteger64>(
           'One of the values is not valid or null\n'
-          'This number is: ${toString()}, compared number is $o')
+          'This number is: ${toString()}, compared number is $o',
+        )
       : o is FhirInteger64
-          ? valueNumber! > o.valueNumber!
-          : valueNumber! > (o as BigInt);
+      ? valueNumber! > o.valueNumber!
+      : valueNumber! > (o as BigInt);
 
   bool operator >=(Object o) => this == o || this > o;
 
-  bool operator <(Object o) => valueNumber == null ||
+  bool operator <(Object o) =>
+      valueNumber == null ||
           (o is! FhirInteger64 && o is! BigInt) ||
           (o is FhirInteger64 && o.valueNumber == null)
       ? throw InvalidTypes<FhirInteger64>(
           'One of the values is not valid or null\n'
-          'This number is: ${toString()}, compared number is $o')
+          'This number is: ${toString()}, compared number is $o',
+        )
       : o is FhirInteger64
-          ? valueNumber! < o.valueNumber!
-          : valueNumber! < (o as BigInt);
+      ? valueNumber! < o.valueNumber!
+      : valueNumber! < (o as BigInt);
 
   bool operator <=(Object o) => this == o || this < o;
 }

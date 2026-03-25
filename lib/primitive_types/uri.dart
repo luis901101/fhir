@@ -22,7 +22,8 @@ class FhirUri implements FhirPrimitiveBase {
       return FhirUri._(inValue, tempUri, tempUri != null);
     }
     throw CannotBeConstructed<FhirUri>(
-        'FhirUri cannot be constructed from $inValue.');
+      'FhirUri cannot be constructed from $inValue.',
+    );
   }
 
   factory FhirUri.fromJson(dynamic json) => FhirUri(json);
@@ -30,9 +31,10 @@ class FhirUri implements FhirPrimitiveBase {
   factory FhirUri.fromYaml(dynamic yaml) => yaml is String
       ? FhirUri.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirUri.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirUri>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirUri.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirUri>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final String _valueString;
   final Uri? _valueUri;
@@ -52,10 +54,10 @@ class FhirUri implements FhirPrimitiveBase {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirUri
-          ? o.value == _valueUri
-          : o is Uri
-              ? o == _valueUri
-              : o is String
-                  ? o == _valueString
-                  : false;
+      ? o.value == _valueUri
+      : o is Uri
+      ? o == _valueUri
+      : o is String
+      ? o == _valueString
+      : false;
 }

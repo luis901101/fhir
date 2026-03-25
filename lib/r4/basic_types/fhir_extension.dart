@@ -484,62 +484,51 @@ abstract class FhirExtension with _$FhirExtension {
 
     /// [valueReference] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-
     Reference? valueReference,
 
     /// [valueSampledData] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-
     SampledData? valueSampledData,
 
     /// [valueSignature] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-
     Signature? valueSignature,
 
     /// [valueTiming] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-
     Timing? valueTiming,
 
     /// [valueContactDetail] Value of extension - must be one of a constrained
     /// set of the data types (see [Extensibility](extensibility.html) for a
     ///  list).
-
     ContactDetail? valueContactDetail,
 
     /// [valueContributor] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-
     Contributor? valueContributor,
 
     /// [valueDataRequirement] Value of extension - must be one of a constrained
     /// set of the data types (see [Extensibility](extensibility.html) for a
     ///  list).
-
     DataRequirement? valueDataRequirement,
 
     /// [valueExpression] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-
     FhirExpression? valueExpression,
 
     /// [valueParameterDefinition] Value of extension - must be one of a
     /// constrained set of the data types (see [Extensibility](extensibility.html)
     ///  for a list).
-
     ParameterDefinition? valueParameterDefinition,
 
     /// [valueRelatedArtifact] Value of extension - must be one of a constrained
     /// set of the data types (see [Extensibility](extensibility.html) for a
     ///  list).
-
     RelatedArtifact? valueRelatedArtifact,
 
     /// [valueTriggerDefinition] Value of extension - must be one of a
     /// constrained set of the data types (see [Extensibility](extensibility.html)
     ///  for a list).
-
     TriggerDefinition? valueTriggerDefinition,
 
     /// [valueUsageContext] Value of extension - must be one of a constrained set
@@ -548,7 +537,6 @@ abstract class FhirExtension with _$FhirExtension {
 
     /// [valueDosage] Value of extension - must be one of a constrained set of
     ///  the data types (see [Extensibility](extensibility.html) for a list).
-
     Dosage? valueDosage,
   }) = _FhirExtension;
 
@@ -558,13 +546,16 @@ abstract class FhirExtension with _$FhirExtension {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory FhirExtension.fromYaml(dynamic yaml) => yaml is String
       ? FhirExtension.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? FhirExtension.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'FhirExtension cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? FhirExtension.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'FhirExtension cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FhirExtension.fromJson(Map<String, dynamic> json) =>
@@ -577,8 +568,10 @@ abstract class FhirExtension with _$FhirExtension {
     if (json is Map<String, dynamic>) {
       return _$FhirExtensionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 

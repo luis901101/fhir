@@ -30,8 +30,9 @@ Resource _newId(Resource resource) {
     case R5ResourceType.BiologicallyDerivedProduct:
       return (resource as BiologicallyDerivedProduct).copyWith(id: newId());
     case R5ResourceType.BiologicallyDerivedProductDispense:
-      return (resource as BiologicallyDerivedProductDispense)
-          .copyWith(id: newId());
+      return (resource as BiologicallyDerivedProductDispense).copyWith(
+        id: newId(),
+      );
     case R5ResourceType.BodyStructure:
       return (resource as BodyStructure).copyWith(id: newId());
     case R5ResourceType.Bundle:

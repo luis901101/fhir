@@ -83,13 +83,16 @@ abstract class BackboneType with _$BackboneType {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BackboneType.fromYaml(dynamic yaml) => yaml is String
       ? BackboneType.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? BackboneType.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'BackboneType cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? BackboneType.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'BackboneType cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BackboneType.fromJson(Map<String, dynamic> json) =>
@@ -102,8 +105,10 @@ abstract class BackboneType with _$BackboneType {
     if (json is Map<String, dynamic>) {
       return _$BackboneTypeFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json '
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException: You passed $json '
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 

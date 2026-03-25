@@ -118,7 +118,6 @@ abstract class FhirGroup with Resource, _$FhirGroup {
   const factory FhirGroup({
     @Default(R4ResourceType.Group)
     @JsonKey(unknownEnumValue: R4ResourceType.Group)
-
     /// [resourceType] This is a Group resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -242,13 +241,14 @@ abstract class FhirGroup with Resource, _$FhirGroup {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory FhirGroup.fromYaml(dynamic yaml) => yaml is String
       ? FhirGroup.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? FhirGroup.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'FhirGroup cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? FhirGroup.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+      : throw ArgumentError(
+          'FhirGroup cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FhirGroup.fromJson(Map<String, dynamic> json) =>
@@ -261,8 +261,10 @@ abstract class FhirGroup with Resource, _$FhirGroup {
     if (json is Map<String, dynamic>) {
       return _$FhirGroupFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -405,13 +407,16 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
       ? GroupCharacteristic.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? GroupCharacteristic.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'GroupCharacteristic cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? GroupCharacteristic.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'GroupCharacteristic cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -424,8 +429,10 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
     if (json is Map<String, dynamic>) {
       return _$GroupCharacteristicFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -529,13 +536,16 @@ abstract class GroupMember with _$GroupMember {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GroupMember.fromYaml(dynamic yaml) => yaml is String
       ? GroupMember.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? GroupMember.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'GroupMember cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? GroupMember.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'GroupMember cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GroupMember.fromJson(Map<String, dynamic> json) =>
@@ -548,8 +558,10 @@ abstract class GroupMember with _$GroupMember {
     if (json is Map<String, dynamic>) {
       return _$GroupMemberFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -687,7 +699,6 @@ abstract class Patient with Resource, _$Patient {
   const factory Patient({
     @Default(R4ResourceType.Patient)
     @JsonKey(unknownEnumValue: R4ResourceType.Patient)
-
     /// [resourceType] This is a Patient resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -811,7 +822,6 @@ abstract class Patient with Resource, _$Patient {
     ///  multiple (boolean) or indicates the actual birth order (integer).
     FhirBoolean? multipleBirthBoolean,
     @JsonKey(name: '_multipleBirthBoolean')
-
     /// [multipleBirthBooleanElement] Extensions for multipleBirthBoolean
     Element? multipleBirthBooleanElement,
 
@@ -819,7 +829,6 @@ abstract class Patient with Resource, _$Patient {
     ///  multiple (boolean) or indicates the actual birth order (integer).
     FhirInteger? multipleBirthInteger,
     @JsonKey(name: '_multipleBirthInteger')
-
     /// [multipleBirthIntegerElement] Extensions for multipleBirthInteger
     Element? multipleBirthIntegerElement,
 
@@ -849,13 +858,14 @@ abstract class Patient with Resource, _$Patient {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Patient.fromYaml(dynamic yaml) => yaml is String
       ? Patient.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? Patient.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Patient cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? Patient.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+      : throw ArgumentError(
+          'Patient cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Patient.fromJson(Map<String, dynamic> json) =>
@@ -868,8 +878,10 @@ abstract class Patient with Resource, _$Patient {
     if (json is Map<String, dynamic>) {
       return _$PatientFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -880,26 +892,34 @@ abstract class Patient with Resource, _$Patient {
 
   Patient updateDob(DateTime newDob) => copyWith(birthDate: FhirDate(newDob));
 
-  Patient updateSexAtBirth(String sexAtBirth) => <String>[
+  Patient updateSexAtBirth(String sexAtBirth) =>
+      <String>[
         'male',
         'female',
         'other',
-        'unknown'
+        'unknown',
       ].contains(sexAtBirth.toLowerCase())
-          ? copyWith(gender: FhirCode(sexAtBirth))
-          : this;
+      ? copyWith(gender: FhirCode(sexAtBirth))
+      : this;
 
   Patient updateHumanNameUse(HumanNameUse use, [int index = 0]) {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(use: use)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(use: use)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(use: use),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(use: use),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(use: use),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -907,13 +927,20 @@ abstract class Patient with Resource, _$Patient {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(text: text)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(text: text)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(text: text),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(text: text),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(text: text),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -921,13 +948,20 @@ abstract class Patient with Resource, _$Patient {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(family: family)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(family: family)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(family: family),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(family: family),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(family: family),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -935,13 +969,20 @@ abstract class Patient with Resource, _$Patient {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(given: given)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(given: given)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(given: given),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(given: given),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(given: given),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -949,13 +990,20 @@ abstract class Patient with Resource, _$Patient {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(prefix: prefix)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(prefix: prefix)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(prefix: prefix),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(prefix: prefix),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(prefix: prefix),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -963,13 +1011,20 @@ abstract class Patient with Resource, _$Patient {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(suffix: suffix)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(suffix: suffix)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(suffix: suffix),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(suffix: suffix),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(suffix: suffix),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -977,13 +1032,20 @@ abstract class Patient with Resource, _$Patient {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(period: period)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(period: period)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(period: period),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(period: period),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(period: period),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -992,13 +1054,19 @@ abstract class Patient with Resource, _$Patient {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1007,13 +1075,19 @@ abstract class Patient with Resource, _$Patient {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1022,13 +1096,19 @@ abstract class Patient with Resource, _$Patient {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1037,13 +1117,19 @@ abstract class Patient with Resource, _$Patient {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1052,13 +1138,19 @@ abstract class Patient with Resource, _$Patient {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1066,13 +1158,20 @@ abstract class Patient with Resource, _$Patient {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(use: use)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(use: use)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(use: use),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(use: use),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(use: use),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1080,13 +1179,20 @@ abstract class Patient with Resource, _$Patient {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(type: type)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(type: type)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(type: type),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(type: type),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(type: type),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1094,13 +1200,20 @@ abstract class Patient with Resource, _$Patient {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(text: text)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(text: text)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(text: text),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(text: text),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(text: text),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1108,13 +1221,20 @@ abstract class Patient with Resource, _$Patient {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(line: line)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(line: line)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(line: line),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(line: line),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(line: line),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1122,13 +1242,20 @@ abstract class Patient with Resource, _$Patient {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(city: city)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(city: city)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(city: city),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(city: city),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(city: city),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1137,13 +1264,19 @@ abstract class Patient with Resource, _$Patient {
       return copyWith(address: <Address>[Address(district: district)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(district: district)]);
+        address: <Address>[
+          ...address!,
+          Address(district: district),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(district: district),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(district: district),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1151,13 +1284,20 @@ abstract class Patient with Resource, _$Patient {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(state: state)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(state: state)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(state: state),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(state: state),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(state: state),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1166,13 +1306,19 @@ abstract class Patient with Resource, _$Patient {
       return copyWith(address: <Address>[Address(postalCode: postalCode)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(postalCode: postalCode)]);
+        address: <Address>[
+          ...address!,
+          Address(postalCode: postalCode),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(postalCode: postalCode),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(postalCode: postalCode),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1181,13 +1327,19 @@ abstract class Patient with Resource, _$Patient {
       return copyWith(address: <Address>[Address(country: country)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(country: country)]);
+        address: <Address>[
+          ...address!,
+          Address(country: country),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(country: country),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(country: country),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1195,13 +1347,20 @@ abstract class Patient with Resource, _$Patient {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(period: period)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(period: period)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(period: period),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(period: period),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(period: period),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 }
@@ -1323,13 +1482,16 @@ abstract class PatientContact with _$PatientContact {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PatientContact.fromYaml(dynamic yaml) => yaml is String
       ? PatientContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PatientContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PatientContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PatientContact.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PatientContact cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientContact.fromJson(Map<String, dynamic> json) =>
@@ -1342,8 +1504,10 @@ abstract class PatientContact with _$PatientContact {
     if (json is Map<String, dynamic>) {
       return _$PatientContactFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1355,44 +1519,50 @@ abstract class PatientContact with _$PatientContact {
       copyWith(name: name == null ? HumanName(use: use) : name!.updateUse(use));
 
   PatientContact updateHumanNameText(String text) => copyWith(
-      name: name == null ? HumanName(text: text) : name!.updateText(text));
+    name: name == null ? HumanName(text: text) : name!.updateText(text),
+  );
 
   PatientContact updateHumanNameFamily(String family) => copyWith(
-      name: name == null
-          ? HumanName(family: family)
-          : name!.updateFamily(family));
+    name: name == null ? HumanName(family: family) : name!.updateFamily(family),
+  );
 
   PatientContact updateHumanNameGiven(List<String> given) => copyWith(
-      name: name == null ? HumanName(given: given) : name!.updateGiven(given));
+    name: name == null ? HumanName(given: given) : name!.updateGiven(given),
+  );
 
   PatientContact updateHumanNamePrefix(List<String> prefix) => copyWith(
-      name: name == null
-          ? HumanName(prefix: prefix)
-          : name!.updatePrefix(prefix));
+    name: name == null ? HumanName(prefix: prefix) : name!.updatePrefix(prefix),
+  );
 
   PatientContact updateHumanNameSuffix(List<String> suffix) => copyWith(
-      name: name == null
-          ? HumanName(suffix: suffix)
-          : name!.updateSuffix(suffix));
+    name: name == null ? HumanName(suffix: suffix) : name!.updateSuffix(suffix),
+  );
 
   PatientContact updateHumanNamePeriod(Period period) => copyWith(
-      name: name == null
-          ? HumanName(period: period)
-          : name!.updatePeriod(period));
+    name: name == null ? HumanName(period: period) : name!.updatePeriod(period),
+  );
 
-  PatientContact updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  PatientContact updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1401,13 +1571,19 @@ abstract class PatientContact with _$PatientContact {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1416,13 +1592,19 @@ abstract class PatientContact with _$PatientContact {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1431,13 +1613,19 @@ abstract class PatientContact with _$PatientContact {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1446,13 +1634,19 @@ abstract class PatientContact with _$PatientContact {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1588,13 +1782,16 @@ abstract class PatientCommunication with _$PatientCommunication {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PatientCommunication.fromYaml(dynamic yaml) => yaml is String
       ? PatientCommunication.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PatientCommunication.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PatientCommunication cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PatientCommunication.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PatientCommunication cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
@@ -1607,8 +1804,10 @@ abstract class PatientCommunication with _$PatientCommunication {
     if (json is Map<String, dynamic>) {
       return _$PatientCommunicationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1701,13 +1900,16 @@ abstract class PatientLink with _$PatientLink {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PatientLink.fromYaml(dynamic yaml) => yaml is String
       ? PatientLink.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PatientLink.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PatientLink cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PatientLink.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PatientLink cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
@@ -1720,8 +1922,10 @@ abstract class PatientLink with _$PatientLink {
     if (json is Map<String, dynamic>) {
       return _$PatientLinkFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1823,7 +2027,6 @@ abstract class Person with Resource, _$Person {
   const factory Person({
     @Default(R4ResourceType.Person)
     @JsonKey(unknownEnumValue: R4ResourceType.Person)
-
     /// [resourceType] This is a Person resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -1935,13 +2138,14 @@ abstract class Person with Resource, _$Person {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Person.fromYaml(dynamic yaml) => yaml is String
       ? Person.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? Person.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Person cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? Person.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+      : throw ArgumentError(
+          'Person cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
@@ -1953,8 +2157,10 @@ abstract class Person with Resource, _$Person {
     if (json is Map<String, dynamic>) {
       return _$PersonFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -1967,13 +2173,20 @@ abstract class Person with Resource, _$Person {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(use: use)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(use: use)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(use: use),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(use: use),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(use: use),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1981,13 +2194,20 @@ abstract class Person with Resource, _$Person {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(text: text)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(text: text)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(text: text),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(text: text),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(text: text),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -1995,13 +2215,20 @@ abstract class Person with Resource, _$Person {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(family: family)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(family: family)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(family: family),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(family: family),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(family: family),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2009,13 +2236,20 @@ abstract class Person with Resource, _$Person {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(given: given)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(given: given)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(given: given),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(given: given),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(given: given),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2023,13 +2257,20 @@ abstract class Person with Resource, _$Person {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(prefix: prefix)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(prefix: prefix)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(prefix: prefix),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(prefix: prefix),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(prefix: prefix),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2037,13 +2278,20 @@ abstract class Person with Resource, _$Person {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(suffix: suffix)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(suffix: suffix)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(suffix: suffix),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(suffix: suffix),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(suffix: suffix),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2051,13 +2299,20 @@ abstract class Person with Resource, _$Person {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(period: period)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(period: period)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(period: period),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(period: period),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(period: period),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2066,13 +2321,19 @@ abstract class Person with Resource, _$Person {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2081,13 +2342,19 @@ abstract class Person with Resource, _$Person {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2096,13 +2363,19 @@ abstract class Person with Resource, _$Person {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2111,13 +2384,19 @@ abstract class Person with Resource, _$Person {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2126,13 +2405,19 @@ abstract class Person with Resource, _$Person {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2140,13 +2425,20 @@ abstract class Person with Resource, _$Person {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(use: use)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(use: use)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(use: use),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(use: use),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(use: use),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2154,13 +2446,20 @@ abstract class Person with Resource, _$Person {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(type: type)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(type: type)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(type: type),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(type: type),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(type: type),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2168,13 +2467,20 @@ abstract class Person with Resource, _$Person {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(text: text)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(text: text)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(text: text),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(text: text),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(text: text),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2182,13 +2488,20 @@ abstract class Person with Resource, _$Person {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(line: line)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(line: line)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(line: line),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(line: line),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(line: line),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2196,13 +2509,20 @@ abstract class Person with Resource, _$Person {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(city: city)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(city: city)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(city: city),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(city: city),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(city: city),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2211,13 +2531,19 @@ abstract class Person with Resource, _$Person {
       return copyWith(address: <Address>[Address(district: district)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(district: district)]);
+        address: <Address>[
+          ...address!,
+          Address(district: district),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(district: district),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(district: district),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2225,13 +2551,20 @@ abstract class Person with Resource, _$Person {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(state: state)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(state: state)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(state: state),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(state: state),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(state: state),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2240,13 +2573,19 @@ abstract class Person with Resource, _$Person {
       return copyWith(address: <Address>[Address(postalCode: postalCode)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(postalCode: postalCode)]);
+        address: <Address>[
+          ...address!,
+          Address(postalCode: postalCode),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(postalCode: postalCode),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(postalCode: postalCode),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2255,13 +2594,19 @@ abstract class Person with Resource, _$Person {
       return copyWith(address: <Address>[Address(country: country)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(country: country)]);
+        address: <Address>[
+          ...address!,
+          Address(country: country),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(country: country),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(country: country),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2269,13 +2614,20 @@ abstract class Person with Resource, _$Person {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(period: period)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(period: period)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(period: period),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(period: period),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(period: period),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 }
@@ -2364,13 +2716,16 @@ abstract class PersonLink with _$PersonLink {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PersonLink.fromYaml(dynamic yaml) => yaml is String
       ? PersonLink.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PersonLink.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PersonLink cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PersonLink.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PersonLink cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
@@ -2383,8 +2738,10 @@ abstract class PersonLink with _$PersonLink {
     if (json is Map<String, dynamic>) {
       return _$PersonLinkFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2493,7 +2850,6 @@ abstract class Practitioner with Resource, _$Practitioner {
   const factory Practitioner({
     @Default(R4ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-
     /// [resourceType] This is a Practitioner resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -2612,13 +2968,16 @@ abstract class Practitioner with Resource, _$Practitioner {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Practitioner.fromYaml(dynamic yaml) => yaml is String
       ? Practitioner.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? Practitioner.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Practitioner cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? Practitioner.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'Practitioner cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -2631,8 +2990,10 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (json is Map<String, dynamic>) {
       return _$PractitionerFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -2645,13 +3006,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(use: use)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(use: use)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(use: use),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(use: use),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(use: use),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2659,13 +3027,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(text: text)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(text: text)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(text: text),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(text: text),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(text: text),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2673,13 +3048,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(family: family)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(family: family)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(family: family),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(family: family),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(family: family),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2687,13 +3069,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(given: given)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(given: given)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(given: given),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(given: given),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(given: given),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2701,13 +3090,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(prefix: prefix)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(prefix: prefix)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(prefix: prefix),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(prefix: prefix),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(prefix: prefix),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2715,13 +3111,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(suffix: suffix)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(suffix: suffix)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(suffix: suffix),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(suffix: suffix),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(suffix: suffix),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2729,29 +3132,44 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(period: period)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(period: period)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(period: period),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(period: period),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(period: period),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  Practitioner updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  Practitioner updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2760,13 +3178,19 @@ abstract class Practitioner with Resource, _$Practitioner {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2775,13 +3199,19 @@ abstract class Practitioner with Resource, _$Practitioner {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2790,13 +3220,19 @@ abstract class Practitioner with Resource, _$Practitioner {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2805,13 +3241,19 @@ abstract class Practitioner with Resource, _$Practitioner {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2819,13 +3261,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(use: use)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(use: use)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(use: use),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(use: use),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(use: use),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2833,13 +3282,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(type: type)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(type: type)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(type: type),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(type: type),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(type: type),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2847,13 +3303,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(text: text)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(text: text)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(text: text),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(text: text),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(text: text),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2861,13 +3324,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(line: line)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(line: line)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(line: line),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(line: line),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(line: line),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2875,13 +3345,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(city: city)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(city: city)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(city: city),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(city: city),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(city: city),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2890,13 +3367,19 @@ abstract class Practitioner with Resource, _$Practitioner {
       return copyWith(address: <Address>[Address(district: district)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(district: district)]);
+        address: <Address>[
+          ...address!,
+          Address(district: district),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(district: district),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(district: district),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2904,13 +3387,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(state: state)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(state: state)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(state: state),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(state: state),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(state: state),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2919,13 +3409,19 @@ abstract class Practitioner with Resource, _$Practitioner {
       return copyWith(address: <Address>[Address(postalCode: postalCode)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(postalCode: postalCode)]);
+        address: <Address>[
+          ...address!,
+          Address(postalCode: postalCode),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(postalCode: postalCode),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(postalCode: postalCode),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2934,13 +3430,19 @@ abstract class Practitioner with Resource, _$Practitioner {
       return copyWith(address: <Address>[Address(country: country)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(country: country)]);
+        address: <Address>[
+          ...address!,
+          Address(country: country),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(country: country),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(country: country),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -2948,13 +3450,20 @@ abstract class Practitioner with Resource, _$Practitioner {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(period: period)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(period: period)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(period: period),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(period: period),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(period: period),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 }
@@ -3048,13 +3557,16 @@ abstract class PractitionerQualification with _$PractitionerQualification {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerQualification.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PractitionerQualification.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PractitionerQualification cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PractitionerQualification.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PractitionerQualification cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
@@ -3067,8 +3579,10 @@ abstract class PractitionerQualification with _$PractitionerQualification {
     if (json is Map<String, dynamic>) {
       return _$PractitionerQualificationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3184,7 +3698,6 @@ abstract class PractitionerRole with Resource, _$PractitionerRole {
   const factory PractitionerRole({
     @Default(R4ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-
     /// [resourceType] This is a PractitionerRole resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -3302,7 +3815,6 @@ abstract class PractitionerRole with Resource, _$PractitionerRole {
     ///  and not available Times.
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-
     /// [availabilityExceptionsElement] Extensions for availabilityExceptions
     Element? availabilityExceptionsElement,
 
@@ -3314,13 +3826,16 @@ abstract class PractitionerRole with Resource, _$PractitionerRole {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PractitionerRole.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerRole.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PractitionerRole.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PractitionerRole cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PractitionerRole.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PractitionerRole cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
@@ -3333,8 +3848,10 @@ abstract class PractitionerRole with Resource, _$PractitionerRole {
     if (json is Map<String, dynamic>) {
       return _$PractitionerRoleFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3343,19 +3860,27 @@ abstract class PractitionerRole with Resource, _$PractitionerRole {
   @override
   String toJsonString() => jsonEncode(toJson());
 
-  PractitionerRole updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  PractitionerRole updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -3364,13 +3889,19 @@ abstract class PractitionerRole with Resource, _$PractitionerRole {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -3379,29 +3910,43 @@ abstract class PractitionerRole with Resource, _$PractitionerRole {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  PractitionerRole updateContactPointRank(FhirPositiveInt rank,
-      [int index = 0]) {
+  PractitionerRole updateContactPointRank(
+    FhirPositiveInt rank, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -3410,20 +3955,27 @@ abstract class PractitionerRole with Resource, _$PractitionerRole {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 }
 
 /// [PractitionerRoleAvailableTime] A specific set of
 @freezed
-abstract class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
+abstract class PractitionerRoleAvailableTime
+    with _$PractitionerRoleAvailableTime {
   /// [PractitionerRoleAvailableTime] A specific set of
   const PractitionerRoleAvailableTime._();
 
@@ -3537,13 +4089,16 @@ abstract class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTim
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PractitionerRoleAvailableTime.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerRoleAvailableTime.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PractitionerRoleAvailableTime.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PractitionerRoleAvailableTime cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PractitionerRoleAvailableTime.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PractitionerRoleAvailableTime cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
@@ -3556,8 +4111,10 @@ abstract class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTim
     if (json is Map<String, dynamic>) {
       return _$PractitionerRoleAvailableTimeFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3568,7 +4125,8 @@ abstract class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTim
 
 /// [PractitionerRoleNotAvailable] A specific set of
 @freezed
-abstract class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
+abstract class PractitionerRoleNotAvailable
+    with _$PractitionerRoleNotAvailable {
   /// [PractitionerRoleNotAvailable] A specific set of
   const PractitionerRoleNotAvailable._();
 
@@ -3653,13 +4211,16 @@ abstract class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PractitionerRoleNotAvailable.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerRoleNotAvailable.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PractitionerRoleNotAvailable.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PractitionerRoleNotAvailable cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PractitionerRoleNotAvailable.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PractitionerRoleNotAvailable cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
@@ -3672,8 +4233,10 @@ abstract class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable 
     if (json is Map<String, dynamic>) {
       return _$PractitionerRoleNotAvailableFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3782,7 +4345,6 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
   const factory RelatedPerson({
     @Default(R4ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-
     /// [resourceType] This is a RelatedPerson resource
     R4ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
@@ -3902,13 +4464,16 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RelatedPerson.fromYaml(dynamic yaml) => yaml is String
       ? RelatedPerson.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? RelatedPerson.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'RelatedPerson cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? RelatedPerson.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'RelatedPerson cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
@@ -3921,8 +4486,10 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (json is Map<String, dynamic>) {
       return _$RelatedPersonFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -3935,13 +4502,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(use: use)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(use: use)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(use: use),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(use: use),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(use: use),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -3949,13 +4523,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(text: text)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(text: text)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(text: text),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(text: text),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(text: text),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -3963,13 +4544,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(family: family)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(family: family)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(family: family),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(family: family),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(family: family),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -3977,13 +4565,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(given: given)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(given: given)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(given: given),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(given: given),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(given: given),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -3991,13 +4586,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(prefix: prefix)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(prefix: prefix)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(prefix: prefix),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(prefix: prefix),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(prefix: prefix),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4005,13 +4607,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(suffix: suffix)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(suffix: suffix)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(suffix: suffix),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(suffix: suffix),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(suffix: suffix),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4019,29 +4628,44 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (name == null || name!.isEmpty) {
       return copyWith(name: <HumanName>[HumanName(period: period)]);
     } else if (index >= name!.length) {
-      return copyWith(name: <HumanName>[...name!, HumanName(period: period)]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!,
+          HumanName(period: period),
+        ],
+      );
     } else {
-      return copyWith(name: <HumanName>[
-        ...name!.sublist(0, index),
-        name![index].copyWith(period: period),
-        ...name!.sublist(index + 1)
-      ]);
+      return copyWith(
+        name: <HumanName>[
+          ...name!.sublist(0, index),
+          name![index].copyWith(period: period),
+          ...name!.sublist(index + 1),
+        ],
+      );
     }
   }
 
-  RelatedPerson updateContactPointSystem(ContactPointSystem system,
-      [int index = 0]) {
+  RelatedPerson updateContactPointSystem(
+    ContactPointSystem system, [
+    int index = 0,
+  ]) {
     if (telecom == null || telecom!.isEmpty) {
       return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(system: system),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(system: system),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(system: system),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4050,13 +4674,19 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
       return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(value: value),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(value: value),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(value: value),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4065,13 +4695,19 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
       return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(use: use),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(use: use),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(use: use),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4080,13 +4716,19 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
       return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(rank: rank),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(rank: rank),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(rank: rank),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4095,13 +4737,19 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
       return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
     } else if (index >= telecom!.length) {
       return copyWith(
-          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+        telecom: <ContactPoint>[
+          ...telecom!,
+          ContactPoint(period: period),
+        ],
+      );
     } else {
-      return copyWith(telecom: <ContactPoint>[
-        ...telecom!.sublist(0, index),
-        telecom![index].copyWith(period: period),
-        ...telecom!.sublist(index + 1)
-      ]);
+      return copyWith(
+        telecom: <ContactPoint>[
+          ...telecom!.sublist(0, index),
+          telecom![index].copyWith(period: period),
+          ...telecom!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4109,13 +4757,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(use: use)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(use: use)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(use: use),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(use: use),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(use: use),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4123,13 +4778,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(type: type)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(type: type)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(type: type),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(type: type),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(type: type),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4137,13 +4799,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(text: text)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(text: text)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(text: text),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(text: text),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(text: text),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4151,13 +4820,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(line: line)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(line: line)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(line: line),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(line: line),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(line: line),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4165,13 +4841,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(city: city)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(city: city)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(city: city),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(city: city),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(city: city),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4180,13 +4863,19 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
       return copyWith(address: <Address>[Address(district: district)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(district: district)]);
+        address: <Address>[
+          ...address!,
+          Address(district: district),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(district: district),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(district: district),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4194,13 +4883,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(state: state)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(state: state)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(state: state),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(state: state),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(state: state),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4209,13 +4905,19 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
       return copyWith(address: <Address>[Address(postalCode: postalCode)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(postalCode: postalCode)]);
+        address: <Address>[
+          ...address!,
+          Address(postalCode: postalCode),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(postalCode: postalCode),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(postalCode: postalCode),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4224,13 +4926,19 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
       return copyWith(address: <Address>[Address(country: country)]);
     } else if (index >= address!.length) {
       return copyWith(
-          address: <Address>[...address!, Address(country: country)]);
+        address: <Address>[
+          ...address!,
+          Address(country: country),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(country: country),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(country: country),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 
@@ -4238,13 +4946,20 @@ abstract class RelatedPerson with Resource, _$RelatedPerson {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(period: period)]);
     } else if (index >= address!.length) {
-      return copyWith(address: <Address>[...address!, Address(period: period)]);
+      return copyWith(
+        address: <Address>[
+          ...address!,
+          Address(period: period),
+        ],
+      );
     } else {
-      return copyWith(address: <Address>[
-        ...address!.sublist(0, index),
-        address![index].copyWith(period: period),
-        ...address!.sublist(index + 1)
-      ]);
+      return copyWith(
+        address: <Address>[
+          ...address!.sublist(0, index),
+          address![index].copyWith(period: period),
+          ...address!.sublist(index + 1),
+        ],
+      );
     }
   }
 }
@@ -4340,13 +5055,16 @@ abstract class RelatedPersonCommunication with _$RelatedPersonCommunication {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RelatedPersonCommunication.fromYaml(dynamic yaml) => yaml is String
       ? RelatedPersonCommunication.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? RelatedPersonCommunication.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'RelatedPersonCommunication cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? RelatedPersonCommunication.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'RelatedPersonCommunication cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =>
@@ -4359,8 +5077,10 @@ abstract class RelatedPersonCommunication with _$RelatedPersonCommunication {
     if (json is Map<String, dynamic>) {
       return _$RelatedPersonCommunicationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 

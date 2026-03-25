@@ -232,13 +232,16 @@ abstract class PaymentNotice with Resource, _$PaymentNotice {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
       ? PaymentNotice.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PaymentNotice.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PaymentNotice cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PaymentNotice.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PaymentNotice cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
@@ -251,8 +254,10 @@ abstract class PaymentNotice with Resource, _$PaymentNotice {
     if (json is Map<String, dynamic>) {
       return _$PaymentNoticeFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -633,13 +638,16 @@ abstract class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PaymentReconciliation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PaymentReconciliation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PaymentReconciliation.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PaymentReconciliation cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
@@ -652,8 +660,10 @@ abstract class PaymentReconciliation with Resource, _$PaymentReconciliation {
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -666,7 +676,8 @@ abstract class PaymentReconciliation with Resource, _$PaymentReconciliation {
 /// [PaymentReconciliationAllocation] This resource provides the details
 ///  including amount of a payment and allocates the payment items being paid.
 @freezed
-abstract class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
+abstract class PaymentReconciliationAllocation
+    with _$PaymentReconciliationAllocation {
   /// [PaymentReconciliationAllocation] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
   const PaymentReconciliationAllocation._();
@@ -850,16 +861,19 @@ abstract class PaymentReconciliationAllocation with _$PaymentReconciliationAlloc
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory PaymentReconciliationAllocation.fromYaml(dynamic yaml) => yaml
-          is String
+  factory PaymentReconciliationAllocation.fromYaml(dynamic yaml) =>
+      yaml is String
       ? PaymentReconciliationAllocation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PaymentReconciliationAllocation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PaymentReconciliationAllocation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PaymentReconciliationAllocation.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PaymentReconciliationAllocation cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =>
@@ -873,8 +887,10 @@ abstract class PaymentReconciliationAllocation with _$PaymentReconciliationAlloc
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationAllocationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 
@@ -886,7 +902,8 @@ abstract class PaymentReconciliationAllocation with _$PaymentReconciliationAlloc
 /// [PaymentReconciliationProcessNote] This resource provides the details
 ///  including amount of a payment and allocates the payment items being paid.
 @freezed
-abstract class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
+abstract class PaymentReconciliationProcessNote
+    with _$PaymentReconciliationProcessNote {
   /// [PaymentReconciliationProcessNote] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
   const PaymentReconciliationProcessNote._();
@@ -969,21 +986,24 @@ abstract class PaymentReconciliationProcessNote with _$PaymentReconciliationProc
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) => yaml
-          is String
+  factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) =>
+      yaml is String
       ? PaymentReconciliationProcessNote.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? PaymentReconciliationProcessNote.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PaymentReconciliationProcessNote cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
+      ? PaymentReconciliationProcessNote.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw ArgumentError(
+          'PaymentReconciliationProcessNote cannot be constructed from input provided,'
+          ' it is neither a yaml string nor a yaml map.',
+        );
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationProcessNote.fromJson(
-          Map<String, dynamic> json) =>
-      _$PaymentReconciliationProcessNoteFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$PaymentReconciliationProcessNoteFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationProcessNote],
   ///  accepts a
@@ -993,8 +1013,10 @@ abstract class PaymentReconciliationProcessNote with _$PaymentReconciliationProc
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationProcessNoteFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
+      throw FormatException(
+        'FormatException:\nYou passed $json\n'
+        'This does not properly decode to a Map<String,dynamic>.',
+      );
     }
   }
 

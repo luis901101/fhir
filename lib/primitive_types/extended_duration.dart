@@ -155,16 +155,16 @@ class ExtendedDuration {
 
   @override
   String toString() => <String>[
-        if (years != 0) '$years years',
-        if (months != 0) '$months months',
-        if (weeks != 0) '$weeks weeks',
-        if (days != 0) '$days days',
-        if (hours != 0) '$hours hours',
-        if (minutes != 0) '$minutes minutes',
-        if (seconds != 0) '$seconds seconds',
-        if (milliseconds != 0) '$milliseconds milliseconds',
-        if (microseconds != 0) '$microseconds microseconds',
-      ].join(', ');
+    if (years != 0) '$years years',
+    if (months != 0) '$months months',
+    if (weeks != 0) '$weeks weeks',
+    if (days != 0) '$days days',
+    if (hours != 0) '$hours hours',
+    if (minutes != 0) '$minutes minutes',
+    if (seconds != 0) '$seconds seconds',
+    if (milliseconds != 0) '$milliseconds milliseconds',
+    if (microseconds != 0) '$microseconds microseconds',
+  ].join(', ');
 }
 
 extension DurationExtension on Duration {

@@ -22,17 +22,18 @@ class FhirId implements FhirPrimitiveBase {
 
   factory FhirId(dynamic inValue) =>
       inValue is String && RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(inValue)
-          ? FhirId._(inValue, inValue, true)
-          : FhirId._(inValue.toString(), null, false);
+      ? FhirId._(inValue, inValue, true)
+      : FhirId._(inValue.toString(), null, false);
 
   factory FhirId.fromJson(dynamic json) => FhirId(json);
 
   factory FhirId.fromYaml(dynamic yaml) => yaml is String
       ? FhirId.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirId.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirId>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirId.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirId>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final String _valueString;
   final String? _valueId;
@@ -52,8 +53,8 @@ class FhirId implements FhirPrimitiveBase {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirId
-          ? o.value == _valueId
-          : o is String
-              ? o == _valueString
-              : false;
+      ? o.value == _valueId
+      : o is String
+      ? o == _valueString
+      : false;
 }

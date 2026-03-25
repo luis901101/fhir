@@ -16,23 +16,24 @@ class FhirCode implements FhirPrimitiveBase {
 
   /// Construct a [FhirCode] constant at compile time
   const FhirCode.asConst(String code)
-      : _valueString = code,
-        _valueCode = code,
-        _isValid = true;
+    : _valueString = code,
+      _valueCode = code,
+      _isValid = true;
 
   factory FhirCode(dynamic inValue) =>
       inValue is String && RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(inValue)
-          ? FhirCode._(inValue, inValue, true)
-          : FhirCode._(inValue.toString(), null, false);
+      ? FhirCode._(inValue, inValue, true)
+      : FhirCode._(inValue.toString(), null, false);
 
   factory FhirCode.fromJson(dynamic json) => FhirCode(json);
 
   factory FhirCode.fromYaml(dynamic yaml) => yaml is String
       ? FhirCode.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirCode.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirCode>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirCode.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirCode>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final String _valueString;
   final String? _valueCode;
@@ -52,8 +53,8 @@ class FhirCode implements FhirPrimitiveBase {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirCode
-          ? o.value == _valueCode
-          : o is String
-              ? o == _valueString
-              : false;
+      ? o.value == _valueCode
+      : o is String
+      ? o == _valueString
+      : false;
 }

@@ -16,17 +16,18 @@ class FhirMarkdown implements FhirPrimitiveBase {
 
   factory FhirMarkdown(dynamic inValue) =>
       inValue is String && RegExp(r'[ \r\n\t\S]+').hasMatch(inValue)
-          ? FhirMarkdown._(inValue, inValue, true)
-          : FhirMarkdown._(inValue.toString(), null, false);
+      ? FhirMarkdown._(inValue, inValue, true)
+      : FhirMarkdown._(inValue.toString(), null, false);
 
   factory FhirMarkdown.fromJson(dynamic json) => FhirMarkdown(json);
 
   factory FhirMarkdown.fromYaml(dynamic yaml) => yaml is String
       ? FhirMarkdown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? FhirMarkdown.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw YamlFormatException<FhirMarkdown>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirMarkdown.fromJson(jsonDecode(jsonEncode(yaml)))
+      : throw YamlFormatException<FhirMarkdown>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   final String _valueString;
   final String? _valueMarkdown;
@@ -46,8 +47,8 @@ class FhirMarkdown implements FhirPrimitiveBase {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirMarkdown
-          ? o.value == _valueMarkdown
-          : o is String
-              ? o == _valueString
-              : false;
+      ? o.value == _valueMarkdown
+      : o is String
+      ? o == _valueString
+      : false;
 }

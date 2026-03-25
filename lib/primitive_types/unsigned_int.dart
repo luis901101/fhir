@@ -23,23 +23,27 @@ class FhirUnsignedInt extends FhirNumber {
       return tempUnsignedInt == null
           ? FhirUnsignedInt._(inValue.toString(), null, false)
           : tempUnsignedInt >= 0
-              ? FhirUnsignedInt._(inValue.toString(), tempUnsignedInt, true)
-              : FhirUnsignedInt._(inValue.toString(), null, false);
+          ? FhirUnsignedInt._(inValue.toString(), tempUnsignedInt, true)
+          : FhirUnsignedInt._(inValue.toString(), null, false);
     }
     throw CannotBeConstructed<FhirUnsignedInt>(
-        'UnsignedInt cannot be constructed from $inValue.');
+      'UnsignedInt cannot be constructed from $inValue.',
+    );
   }
 
   factory FhirUnsignedInt.fromJson(dynamic json) => FhirUnsignedInt(json);
 
   factory FhirUnsignedInt.fromYaml(dynamic yaml) => yaml is String
       ? FhirUnsignedInt.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>,
+        )
       : yaml is YamlMap
-          ? FhirUnsignedInt.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw YamlFormatException<FhirUnsignedInt>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+      ? FhirUnsignedInt.fromJson(
+          jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>,
+        )
+      : throw YamlFormatException<FhirUnsignedInt>(
+          'FormatException: "$json" is not a valid Yaml string or YamlMap.',
+        );
 
   @override
   int? get value => valueNumber as int?;

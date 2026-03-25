@@ -24,32 +24,36 @@ abstract class FhirNumber implements FhirPrimitiveBase {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirNumber
-          ? o.valueNumber == valueNumber
-          : o is num
-              ? o == valueNumber
-              : false;
+      ? o.valueNumber == valueNumber
+      : o is num
+      ? o == valueNumber
+      : false;
 
-  bool operator >(Object o) => valueNumber == null ||
+  bool operator >(Object o) =>
+      valueNumber == null ||
           (o is! FhirNumber && o is! num) ||
           (o is FhirNumber && o.valueNumber == null)
       ? throw InvalidTypes<FhirNumber>(
           'One of the values is not valid or null\n'
-          'This number is: ${toString()}, compared number is $o')
+          'This number is: ${toString()}, compared number is $o',
+        )
       : o is FhirNumber
-          ? valueNumber! > o.valueNumber!
-          : valueNumber! > (o as num);
+      ? valueNumber! > o.valueNumber!
+      : valueNumber! > (o as num);
 
   bool operator >=(Object o) => this == o || this > o;
 
-  bool operator <(Object o) => valueNumber == null ||
+  bool operator <(Object o) =>
+      valueNumber == null ||
           (o is! FhirNumber && o is! num) ||
           (o is FhirNumber && o.valueNumber == null)
       ? throw InvalidTypes<FhirNumber>(
           'One of the values is not valid or null\n'
-          'This number is: ${toString()}, compared number is $o')
+          'This number is: ${toString()}, compared number is $o',
+        )
       : o is FhirNumber
-          ? valueNumber! < o.valueNumber!
-          : valueNumber! < (o as num);
+      ? valueNumber! < o.valueNumber!
+      : valueNumber! < (o as num);
 
   bool operator <=(Object o) => this == o || this < o;
 }
