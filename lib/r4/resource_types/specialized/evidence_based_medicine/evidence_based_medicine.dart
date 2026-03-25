@@ -15,7 +15,7 @@ part 'evidence_based_medicine.g.dart';
 
 /// [Citation] The Citation Resource enables reference to any knowledge
 @freezed
-class Citation with Resource, _$Citation {
+abstract class Citation with Resource, _$Citation {
   /// [Citation] The Citation Resource enables reference to any knowledge
   const Citation._();
 
@@ -288,7 +288,7 @@ class Citation with Resource, _$Citation {
 
 /// [CitationSummary] The Citation Resource enables reference to any
 @freezed
-class CitationSummary with _$CitationSummary {
+abstract class CitationSummary with _$CitationSummary {
   /// [CitationSummary] The Citation Resource enables reference to any
   const CitationSummary._();
 
@@ -372,7 +372,7 @@ class CitationSummary with _$CitationSummary {
 
 /// [CitationClassification] The Citation Resource enables reference to any
 @freezed
-class CitationClassification with _$CitationClassification {
+abstract class CitationClassification with _$CitationClassification {
   /// [CitationClassification] The Citation Resource enables reference to any
   const CitationClassification._();
 
@@ -453,7 +453,7 @@ class CitationClassification with _$CitationClassification {
 
 /// [CitationStatusDate] The Citation Resource enables reference to any
 @freezed
-class CitationStatusDate with _$CitationStatusDate {
+abstract class CitationStatusDate with _$CitationStatusDate {
   /// [CitationStatusDate] The Citation Resource enables reference to any
   const CitationStatusDate._();
 
@@ -540,7 +540,7 @@ class CitationStatusDate with _$CitationStatusDate {
 
 /// [CitationRelatesTo] The Citation Resource enables reference to any
 @freezed
-class CitationRelatesTo with _$CitationRelatesTo {
+abstract class CitationRelatesTo with _$CitationRelatesTo {
   /// [CitationRelatesTo] The Citation Resource enables reference to any
   const CitationRelatesTo._();
 
@@ -640,7 +640,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
 
 /// [CitationCitedArtifact] The Citation Resource enables reference to any
 @freezed
-class CitationCitedArtifact with _$CitationCitedArtifact {
+abstract class CitationCitedArtifact with _$CitationCitedArtifact {
   /// [CitationCitedArtifact] The Citation Resource enables reference to any
   const CitationCitedArtifact._();
 
@@ -769,7 +769,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
 
 /// [CitationVersion] The Citation Resource enables reference to any
 @freezed
-class CitationVersion with _$CitationVersion {
+abstract class CitationVersion with _$CitationVersion {
   /// [CitationVersion] The Citation Resource enables reference to any
   const CitationVersion._();
 
@@ -853,7 +853,7 @@ class CitationVersion with _$CitationVersion {
 
 /// [CitationStatusDate1] The Citation Resource enables reference to any
 @freezed
-class CitationStatusDate1 with _$CitationStatusDate1 {
+abstract class CitationStatusDate1 with _$CitationStatusDate1 {
   /// [CitationStatusDate1] The Citation Resource enables reference to any
   const CitationStatusDate1._();
 
@@ -940,7 +940,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
 
 /// [CitationTitle] The Citation Resource enables reference to any knowledge
 @freezed
-class CitationTitle with _$CitationTitle {
+abstract class CitationTitle with _$CitationTitle {
   /// [CitationTitle] The Citation Resource enables reference to any knowledge
   const CitationTitle._();
 
@@ -1027,7 +1027,7 @@ class CitationTitle with _$CitationTitle {
 
 /// [CitationAbstract] The Citation Resource enables reference to any
 @freezed
-class CitationAbstract with _$CitationAbstract {
+abstract class CitationAbstract with _$CitationAbstract {
   /// [CitationAbstract] The Citation Resource enables reference to any
   const CitationAbstract._();
 
@@ -1120,7 +1120,7 @@ class CitationAbstract with _$CitationAbstract {
 
 /// [CitationPart] The Citation Resource enables reference to any knowledge
 @freezed
-class CitationPart with _$CitationPart {
+abstract class CitationPart with _$CitationPart {
   /// [CitationPart] The Citation Resource enables reference to any knowledge
   const CitationPart._();
 
@@ -1207,7 +1207,7 @@ class CitationPart with _$CitationPart {
 
 /// [CitationRelatesTo1] The Citation Resource enables reference to any
 @freezed
-class CitationRelatesTo1 with _$CitationRelatesTo1 {
+abstract class CitationRelatesTo1 with _$CitationRelatesTo1 {
   /// [CitationRelatesTo1] The Citation Resource enables reference to any
   const CitationRelatesTo1._();
 
@@ -1306,7 +1306,7 @@ class CitationRelatesTo1 with _$CitationRelatesTo1 {
 
 /// [CitationPublicationForm] The Citation Resource enables reference to any
 @freezed
-class CitationPublicationForm with _$CitationPublicationForm {
+abstract class CitationPublicationForm with _$CitationPublicationForm {
   /// [CitationPublicationForm] The Citation Resource enables reference to any
   const CitationPublicationForm._();
 
@@ -1442,7 +1442,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
 
 /// [CitationPublishedIn] The Citation Resource enables reference to any
 @freezed
-class CitationPublishedIn with _$CitationPublishedIn {
+abstract class CitationPublishedIn with _$CitationPublishedIn {
   /// [CitationPublishedIn] The Citation Resource enables reference to any
   const CitationPublishedIn._();
 
@@ -1540,7 +1540,7 @@ class CitationPublishedIn with _$CitationPublishedIn {
 
 /// [CitationPeriodicRelease] The Citation Resource enables reference to any
 @freezed
-class CitationPeriodicRelease with _$CitationPeriodicRelease {
+abstract class CitationPeriodicRelease with _$CitationPeriodicRelease {
   /// [CitationPeriodicRelease] The Citation Resource enables reference to any
   const CitationPeriodicRelease._();
 
@@ -1636,7 +1636,7 @@ class CitationPeriodicRelease with _$CitationPeriodicRelease {
 
 /// [CitationDateOfPublication] The Citation Resource enables reference to
 @freezed
-class CitationDateOfPublication with _$CitationDateOfPublication {
+abstract class CitationDateOfPublication with _$CitationDateOfPublication {
   /// [CitationDateOfPublication] The Citation Resource enables reference to
   const CitationDateOfPublication._();
 
@@ -1748,7 +1748,7 @@ class CitationDateOfPublication with _$CitationDateOfPublication {
 
 /// [CitationWebLocation] The Citation Resource enables reference to any
 @freezed
-class CitationWebLocation with _$CitationWebLocation {
+abstract class CitationWebLocation with _$CitationWebLocation {
   /// [CitationWebLocation] The Citation Resource enables reference to any
   const CitationWebLocation._();
 
@@ -1832,7 +1832,7 @@ class CitationWebLocation with _$CitationWebLocation {
 
 /// [CitationClassification1] The Citation Resource enables reference to any
 @freezed
-class CitationClassification1 with _$CitationClassification1 {
+abstract class CitationClassification1 with _$CitationClassification1 {
   /// [CitationClassification1] The Citation Resource enables reference to any
   const CitationClassification1._();
 
@@ -1917,7 +1917,7 @@ class CitationClassification1 with _$CitationClassification1 {
 
 /// [CitationWhoClassified] The Citation Resource enables reference to any
 @freezed
-class CitationWhoClassified with _$CitationWhoClassified {
+abstract class CitationWhoClassified with _$CitationWhoClassified {
   /// [CitationWhoClassified] The Citation Resource enables reference to any
   const CitationWhoClassified._();
 
@@ -2015,7 +2015,7 @@ class CitationWhoClassified with _$CitationWhoClassified {
 
 /// [CitationContributorship] The Citation Resource enables reference to any
 @freezed
-class CitationContributorship with _$CitationContributorship {
+abstract class CitationContributorship with _$CitationContributorship {
   /// [CitationContributorship] The Citation Resource enables reference to any
   const CitationContributorship._();
 
@@ -2103,7 +2103,7 @@ class CitationContributorship with _$CitationContributorship {
 
 /// [CitationEntry] The Citation Resource enables reference to any knowledge
 @freezed
-class CitationEntry with _$CitationEntry {
+abstract class CitationEntry with _$CitationEntry {
   /// [CitationEntry] The Citation Resource enables reference to any knowledge
   const CitationEntry._();
 
@@ -2478,7 +2478,7 @@ class CitationEntry with _$CitationEntry {
 
 /// [CitationAffiliationInfo] The Citation Resource enables reference to any
 @freezed
-class CitationAffiliationInfo with _$CitationAffiliationInfo {
+abstract class CitationAffiliationInfo with _$CitationAffiliationInfo {
   /// [CitationAffiliationInfo] The Citation Resource enables reference to any
   const CitationAffiliationInfo._();
 
@@ -2568,7 +2568,7 @@ class CitationAffiliationInfo with _$CitationAffiliationInfo {
 
 /// [CitationContributionInstance] The Citation Resource enables reference to
 @freezed
-class CitationContributionInstance with _$CitationContributionInstance {
+abstract class CitationContributionInstance with _$CitationContributionInstance {
   /// [CitationContributionInstance] The Citation Resource enables reference to
   const CitationContributionInstance._();
 
@@ -2652,7 +2652,7 @@ class CitationContributionInstance with _$CitationContributionInstance {
 
 /// [CitationSummary1] The Citation Resource enables reference to any
 @freezed
-class CitationSummary1 with _$CitationSummary1 {
+abstract class CitationSummary1 with _$CitationSummary1 {
   /// [CitationSummary1] The Citation Resource enables reference to any
   const CitationSummary1._();
 
@@ -2744,7 +2744,7 @@ class CitationSummary1 with _$CitationSummary1 {
 
 /// [Evidence] The Evidence resource describes the conditional state
 @freezed
-class Evidence with Resource, _$Evidence {
+abstract class Evidence with Resource, _$Evidence {
   /// [Evidence] The Evidence resource describes the conditional state
   const Evidence._();
 
@@ -3029,7 +3029,7 @@ class Evidence with Resource, _$Evidence {
 
 /// [EvidenceVariableDefinition] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 @freezed
-class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
+abstract class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   /// [EvidenceVariableDefinition] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
   const EvidenceVariableDefinition._();
 
@@ -3107,7 +3107,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
 
 /// [EvidenceStatistic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 @freezed
-class EvidenceStatistic with _$EvidenceStatistic {
+abstract class EvidenceStatistic with _$EvidenceStatistic {
   /// [EvidenceStatistic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
   const EvidenceStatistic._();
 
@@ -3201,7 +3201,7 @@ class EvidenceStatistic with _$EvidenceStatistic {
 
 /// [EvidenceSampleSize] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 @freezed
-class EvidenceSampleSize with _$EvidenceSampleSize {
+abstract class EvidenceSampleSize with _$EvidenceSampleSize {
   /// [EvidenceSampleSize] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
   const EvidenceSampleSize._();
 
@@ -3284,7 +3284,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
 
 /// [EvidenceAttributeEstimate] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 @freezed
-class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
+abstract class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
   /// [EvidenceAttributeEstimate] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
   const EvidenceAttributeEstimate._();
 
@@ -3366,7 +3366,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
 
 /// [EvidenceModelCharacteristic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 @freezed
-class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
+abstract class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
   /// [EvidenceModelCharacteristic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
   const EvidenceModelCharacteristic._();
 
@@ -3433,7 +3433,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
 
 /// [EvidenceVar] The Evidence Resource provides a machine-interpretable
 @freezed
-class EvidenceVar with _$EvidenceVar {
+abstract class EvidenceVar with _$EvidenceVar {
   /// [EvidenceVar] The Evidence Resource provides a machine-interpretable
   const EvidenceVar._();
 
@@ -3511,7 +3511,7 @@ class EvidenceVar with _$EvidenceVar {
 
 /// [EvidenceCertainty] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 @freezed
-class EvidenceCertainty with _$EvidenceCertainty {
+abstract class EvidenceCertainty with _$EvidenceCertainty {
   /// [EvidenceCertainty] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
   const EvidenceCertainty._();
 
@@ -3592,7 +3592,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
 
 /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 @freezed
-class EvidenceReport with Resource, _$EvidenceReport {
+abstract class EvidenceReport with Resource, _$EvidenceReport {
   /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
   const EvidenceReport._();
 
@@ -3787,7 +3787,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
 
 /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 @freezed
-class EvidenceReportSubject with _$EvidenceReportSubject {
+abstract class EvidenceReportSubject with _$EvidenceReportSubject {
   /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
   const EvidenceReportSubject._();
 
@@ -3850,7 +3850,7 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
 
 /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 @freezed
-class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
+abstract class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
   const EvidenceReportCharacteristic._();
 
@@ -3937,7 +3937,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
 
 /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 @freezed
-class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
+abstract class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
   const EvidenceReportRelatesTo._();
 
@@ -4004,7 +4004,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
 
 /// [EvidenceReportSection] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 @freezed
-class EvidenceReportSection with _$EvidenceReportSection {
+abstract class EvidenceReportSection with _$EvidenceReportSection {
   /// [EvidenceReportSection] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
   const EvidenceReportSection._();
 
@@ -4103,7 +4103,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
 
 /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
 @freezed
-class EvidenceVariable with Resource, _$EvidenceVariable {
+abstract class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
   const EvidenceVariable._();
 
@@ -4389,7 +4389,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
 
 /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
 @freezed
-class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
+abstract class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
   const EvidenceVariableCharacteristic._();
 
@@ -4543,7 +4543,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
 
 /// [EvidenceVariableTimeFromStart] The EvidenceVariable resource describes
 @freezed
-class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
+abstract class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
   /// [EvidenceVariableTimeFromStart] The EvidenceVariable resource describes
   const EvidenceVariableTimeFromStart._();
 
@@ -4632,7 +4632,7 @@ class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
 
 /// [EvidenceVariableCategory] The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
 @freezed
-class EvidenceVariableCategory with _$EvidenceVariableCategory {
+abstract class EvidenceVariableCategory with _$EvidenceVariableCategory {
   /// [EvidenceVariableCategory] The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
   const EvidenceVariableCategory._();
 
@@ -4704,7 +4704,7 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
 
 /// [ResearchDefinition] The ResearchDefinition resource describes the
 @freezed
-class ResearchDefinition with Resource, _$ResearchDefinition {
+abstract class ResearchDefinition with Resource, _$ResearchDefinition {
   /// [ResearchDefinition] The ResearchDefinition resource describes the
   const ResearchDefinition._();
 
@@ -5038,7 +5038,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
 
 /// [ResearchElementDefinition] The ResearchElementDefinition resource
 @freezed
-class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
+abstract class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [ResearchElementDefinition] The ResearchElementDefinition resource
   const ResearchElementDefinition._();
 
@@ -5379,7 +5379,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
 }
 
 @freezed
-class ResearchElementDefinitionCharacteristic
+abstract class ResearchElementDefinitionCharacteristic
     with _$ResearchElementDefinitionCharacteristic {
   const ResearchElementDefinitionCharacteristic._();
 

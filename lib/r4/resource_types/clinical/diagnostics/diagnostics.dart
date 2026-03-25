@@ -15,7 +15,7 @@ part 'diagnostics.g.dart';
 
 /// [BodyStructure] Record details about an anatomical structure.  This
 @freezed
-class BodyStructure with Resource, _$BodyStructure {
+abstract class BodyStructure with Resource, _$BodyStructure {
   /// [BodyStructure] Record details about an anatomical structure.  This
   const BodyStructure._();
 
@@ -242,7 +242,7 @@ class BodyStructure with Resource, _$BodyStructure {
 
 /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
 @freezed
-class DiagnosticReport with Resource, _$DiagnosticReport {
+abstract class DiagnosticReport with Resource, _$DiagnosticReport {
   /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
   const DiagnosticReport._();
 
@@ -585,7 +585,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 
 /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
 @freezed
-class DiagnosticReportMedia with _$DiagnosticReportMedia {
+abstract class DiagnosticReportMedia with _$DiagnosticReportMedia {
   /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
   const DiagnosticReportMedia._();
 
@@ -704,7 +704,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
 
 /// [ImagingStudy] Representation of the content produced in a DICOM imaging
 @freezed
-class ImagingStudy with Resource, _$ImagingStudy {
+abstract class ImagingStudy with Resource, _$ImagingStudy {
   /// [ImagingStudy] Representation of the content produced in a DICOM imaging
   const ImagingStudy._();
 
@@ -1045,7 +1045,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 
 /// [ImagingStudySeries] Representation of the content produced in a DICOM
 @freezed
-class ImagingStudySeries with _$ImagingStudySeries {
+abstract class ImagingStudySeries with _$ImagingStudySeries {
   /// [ImagingStudySeries] Representation of the content produced in a DICOM
   const ImagingStudySeries._();
 
@@ -1262,7 +1262,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
 
 /// [ImagingStudyPerformer] Representation of the content produced in a
 @freezed
-class ImagingStudyPerformer with _$ImagingStudyPerformer {
+abstract class ImagingStudyPerformer with _$ImagingStudyPerformer {
   /// [ImagingStudyPerformer] Representation of the content produced in a
   const ImagingStudyPerformer._();
 
@@ -1374,7 +1374,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
 
 /// [ImagingStudyInstance] Representation of the content produced in a DICOM
 @freezed
-class ImagingStudyInstance with _$ImagingStudyInstance {
+abstract class ImagingStudyInstance with _$ImagingStudyInstance {
   /// [ImagingStudyInstance] Representation of the content produced in a DICOM
   const ImagingStudyInstance._();
 
@@ -1509,7 +1509,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
 
 /// [Media] A photo, video, or audio recording acquired or used in
 @freezed
-class Media with Resource, _$Media {
+abstract class Media with Resource, _$Media {
   /// [Media] A photo, video, or audio recording acquired or used in
   const Media._();
 
@@ -1865,7 +1865,7 @@ class Media with Resource, _$Media {
 
 /// [MolecularSequence] Raw data describing a biological sequence.
 @freezed
-class MolecularSequence with Resource, _$MolecularSequence {
+abstract class MolecularSequence with Resource, _$MolecularSequence {
   /// [MolecularSequence] Raw data describing a biological sequence.
   const MolecularSequence._();
 
@@ -2166,7 +2166,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
 
 /// [MolecularSequenceReferenceSeq] Raw data describing a biological
 @freezed
-class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
+abstract class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   /// [MolecularSequenceReferenceSeq] Raw data describing a biological
   const MolecularSequenceReferenceSeq._();
 
@@ -2375,7 +2375,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
 
 /// [MolecularSequenceVariant] Raw data describing a biological sequence.
 @freezed
-class MolecularSequenceVariant with _$MolecularSequenceVariant {
+abstract class MolecularSequenceVariant with _$MolecularSequenceVariant {
   /// [MolecularSequenceVariant] Raw data describing a biological sequence.
   const MolecularSequenceVariant._();
 
@@ -2565,7 +2565,7 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
 
 /// [MolecularSequenceQuality] Raw data describing a biological sequence.
 @freezed
-class MolecularSequenceQuality with _$MolecularSequenceQuality {
+abstract class MolecularSequenceQuality with _$MolecularSequenceQuality {
   /// [MolecularSequenceQuality] Raw data describing a biological sequence.
   const MolecularSequenceQuality._();
 
@@ -2838,7 +2838,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
 
 /// [MolecularSequenceRoc] Raw data describing a biological sequence.
 @freezed
-class MolecularSequenceRoc with _$MolecularSequenceRoc {
+abstract class MolecularSequenceRoc with _$MolecularSequenceRoc {
   /// [MolecularSequenceRoc] Raw data describing a biological sequence.
   const MolecularSequenceRoc._();
 
@@ -3017,7 +3017,7 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
 
 /// [MolecularSequenceRepository] Raw data describing a biological sequence.
 @freezed
-class MolecularSequenceRepository with _$MolecularSequenceRepository {
+abstract class MolecularSequenceRepository with _$MolecularSequenceRepository {
   /// [MolecularSequenceRepository] Raw data describing a biological sequence.
   const MolecularSequenceRepository._();
 
@@ -3185,7 +3185,7 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
 }
 
 @freezed
-class MolecularSequenceStructureVariant
+abstract class MolecularSequenceStructureVariant
     with _$MolecularSequenceStructureVariant {
   const MolecularSequenceStructureVariant._();
 
@@ -3305,7 +3305,7 @@ class MolecularSequenceStructureVariant
 
 /// [MolecularSequenceOuter] Raw data describing a biological sequence.
 @freezed
-class MolecularSequenceOuter with _$MolecularSequenceOuter {
+abstract class MolecularSequenceOuter with _$MolecularSequenceOuter {
   /// [MolecularSequenceOuter] Raw data describing a biological sequence.
   const MolecularSequenceOuter._();
 
@@ -3428,7 +3428,7 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
 
 /// [MolecularSequenceInner] Raw data describing a biological sequence.
 @freezed
-class MolecularSequenceInner with _$MolecularSequenceInner {
+abstract class MolecularSequenceInner with _$MolecularSequenceInner {
   /// [MolecularSequenceInner] Raw data describing a biological sequence.
   const MolecularSequenceInner._();
 
@@ -3551,7 +3551,7 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
 
 /// [Observation] Measurements and simple assertions made about a patient,
 @freezed
-class Observation with Resource, _$Observation {
+abstract class Observation with Resource, _$Observation {
   /// [Observation] Measurements and simple assertions made about a patient,
   const Observation._();
 
@@ -4073,7 +4073,7 @@ class Observation with Resource, _$Observation {
 
 /// [ObservationReferenceRange] Measurements and simple assertions made
 @freezed
-class ObservationReferenceRange with _$ObservationReferenceRange {
+abstract class ObservationReferenceRange with _$ObservationReferenceRange {
   /// [ObservationReferenceRange] Measurements and simple assertions made
   const ObservationReferenceRange._();
 
@@ -4236,7 +4236,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 
 /// [ObservationComponent] Measurements and simple assertions made about a
 @freezed
-class ObservationComponent with _$ObservationComponent {
+abstract class ObservationComponent with _$ObservationComponent {
   /// [ObservationComponent] Measurements and simple assertions made about a
   const ObservationComponent._();
 
@@ -4462,7 +4462,7 @@ class ObservationComponent with _$ObservationComponent {
 
 /// [QuestionnaireResponse] A structured set of questions and their answers.
 @freezed
-class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
+abstract class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// [QuestionnaireResponse] A structured set of questions and their answers.
   const QuestionnaireResponse._();
 
@@ -4725,7 +4725,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
 /// [QuestionnaireResponseItem] A structured set of questions and their
 @freezed
-class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
+abstract class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   /// [QuestionnaireResponseItem] A structured set of questions and their
   const QuestionnaireResponseItem._();
 
@@ -4869,7 +4869,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 
 /// [QuestionnaireResponseAnswer] A structured set of questions and their
 @freezed
-class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
+abstract class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   /// [QuestionnaireResponseAnswer] A structured set of questions and their
   const QuestionnaireResponseAnswer._();
 
@@ -5098,7 +5098,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
 /// [Specimen] A sample to be used for analysis.
 @freezed
-class Specimen with Resource, _$Specimen {
+abstract class Specimen with Resource, _$Specimen {
   /// [Specimen] A sample to be used for analysis.
   const Specimen._();
 
@@ -5358,7 +5358,7 @@ class Specimen with Resource, _$Specimen {
 
 /// [SpecimenCollection] A sample to be used for analysis.
 @freezed
-class SpecimenCollection with _$SpecimenCollection {
+abstract class SpecimenCollection with _$SpecimenCollection {
   /// [SpecimenCollection] A sample to be used for analysis.
   const SpecimenCollection._();
 
@@ -5523,7 +5523,7 @@ class SpecimenCollection with _$SpecimenCollection {
 
 /// [SpecimenProcessing] A sample to be used for analysis.
 @freezed
-class SpecimenProcessing with _$SpecimenProcessing {
+abstract class SpecimenProcessing with _$SpecimenProcessing {
   /// [SpecimenProcessing] A sample to be used for analysis.
   const SpecimenProcessing._();
 
@@ -5663,7 +5663,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
 
 /// [SpecimenContainer] A sample to be used for analysis.
 @freezed
-class SpecimenContainer with _$SpecimenContainer {
+abstract class SpecimenContainer with _$SpecimenContainer {
   /// [SpecimenContainer] A sample to be used for analysis.
   const SpecimenContainer._();
 

@@ -67,7 +67,7 @@ class FhirTime implements FhirPrimitiveBase, Comparable<FhirTime> {
           _valueTime?.split(':')[2] == null ||
           _valueTime!.split(':')[2].split('.').length <= 1
       ? null
-      : int.tryParse(_valueTime!.split(':')[2].split('.')[1]);
+      : int.tryParse(_valueTime.split(':')[2].split('.')[1]);
 
   @override
   String toString() => _valueString;

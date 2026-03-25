@@ -6,8 +6,8 @@ part of 'backbone_type.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$BackboneTypeImpl _$$BackboneTypeImplFromJson(Map<String, dynamic> json) =>
-    _$BackboneTypeImpl(
+_BackboneType _$BackboneTypeFromJson(Map<String, dynamic> json) =>
+    _BackboneType(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -17,19 +17,11 @@ _$BackboneTypeImpl _$$BackboneTypeImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$BackboneTypeImplToJson(_$BackboneTypeImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$BackboneTypeToJson(_BackboneType instance) =>
+    <String, dynamic>{
+      'id': ?instance.fhirId,
+      'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+      'modifierExtension': ?instance.modifierExtension
+          ?.map((e) => e.toJson())
+          .toList(),
+    };

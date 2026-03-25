@@ -19,7 +19,7 @@ part 'care_provision.enums.dart';
 ///  of time, possibly limited to care for a specific condition or set of
 ///  conditions.
 @freezed
-class CarePlan with Resource, _$CarePlan {
+abstract class CarePlan with Resource, _$CarePlan {
   /// [CarePlan] Describes the intention of how one or more practitioners intend
   ///  to deliver care for a particular patient, group or community for a period
   ///  of time, possibly limited to care for a specific condition or set of
@@ -389,7 +389,7 @@ class CarePlan with Resource, _$CarePlan {
 ///  period of time, possibly limited to care for a specific condition or set
 ///  of conditions.
 @freezed
-class CarePlanActivity with _$CarePlanActivity {
+abstract class CarePlanActivity with _$CarePlanActivity {
   /// [CarePlanActivity] Describes the intention of how one or more practitioners
   ///  intend to deliver care for a particular patient, group or community for a
   ///  period of time, possibly limited to care for a specific condition or set
@@ -519,7 +519,7 @@ class CarePlanActivity with _$CarePlanActivity {
 /// [CareTeam] The Care Team includes all the people and organizations who plan
 ///  to participate in the coordination and delivery of care.
 @freezed
-class CareTeam with Resource, _$CareTeam {
+abstract class CareTeam with Resource, _$CareTeam {
   /// [CareTeam] The Care Team includes all the people and organizations who plan
   ///  to participate in the coordination and delivery of care.
   const CareTeam._();
@@ -772,7 +772,7 @@ class CareTeam with Resource, _$CareTeam {
 ///  organizations who plan to participate in the coordination and delivery of
 ///  care.
 @freezed
-class CareTeamParticipant with _$CareTeamParticipant {
+abstract class CareTeamParticipant with _$CareTeamParticipant {
   /// [CareTeamParticipant] The Care Team includes all the people and
   ///  organizations who plan to participate in the coordination and delivery of
   ///  care.
@@ -908,7 +908,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
 ///  daily living, obtaining herd immunity via immunization, meeting a process
 ///  improvement objective, etc.
 @freezed
-class Goal with Resource, _$Goal {
+abstract class Goal with Resource, _$Goal {
   /// [Goal] Describes the intended objective(s) for a patient, group or
   ///  organization care, for example, weight loss, restoring an activity of
   ///  daily living, obtaining herd immunity via immunization, meeting a process
@@ -1219,7 +1219,7 @@ class Goal with Resource, _$Goal {
 ///  daily living, obtaining herd immunity via immunization, meeting a process
 ///  improvement objective, etc.
 @freezed
-class GoalTarget with _$GoalTarget {
+abstract class GoalTarget with _$GoalTarget {
   /// [GoalTarget] Describes the intended objective(s) for a patient, group or
   ///  organization care, for example, weight loss, restoring an activity of
   ///  daily living, obtaining herd immunity via immunization, meeting a process
@@ -1476,7 +1476,7 @@ class GoalTarget with _$GoalTarget {
 ///  such as the patient's memory, from a nutrition label,  or from a clinician
 ///  documenting observed intake.
 @freezed
-class NutritionIntake with Resource, _$NutritionIntake {
+abstract class NutritionIntake with Resource, _$NutritionIntake {
   /// [NutritionIntake] A record of food or fluid that is being consumed by a
   ///  patient.   A NutritionIntake may indicate that the patient may be
   ///  consuming the food or fluid now or has consumed the food or fluid in the
@@ -1854,7 +1854,7 @@ class NutritionIntake with Resource, _$NutritionIntake {
 ///  from sources such as the patient's memory, from a nutrition label,  or
 ///  from a clinician documenting observed intake.
 @freezed
-class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
+abstract class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
   /// [NutritionIntakeConsumedItem] A record of food or fluid that is being
   ///  consumed by a patient.   A NutritionIntake may indicate that the patient
   ///  may be consuming the food or fluid now or has consumed the food or fluid
@@ -2032,7 +2032,7 @@ class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
 ///  from sources such as the patient's memory, from a nutrition label,  or
 ///  from a clinician documenting observed intake.
 @freezed
-class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
+abstract class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
   /// [NutritionIntakeIngredientLabel] A record of food or fluid that is being
   ///  consumed by a patient.   A NutritionIntake may indicate that the patient
   ///  may be consuming the food or fluid now or has consumed the food or fluid
@@ -2167,7 +2167,7 @@ class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
 ///  such as the patient's memory, from a nutrition label,  or from a clinician
 ///  documenting observed intake.
 @freezed
-class NutritionIntakePerformer with _$NutritionIntakePerformer {
+abstract class NutritionIntakePerformer with _$NutritionIntakePerformer {
   /// [NutritionIntakePerformer] A record of food or fluid that is being consumed
   ///  by a patient.   A NutritionIntake may indicate that the patient may be
   ///  consuming the food or fluid now or has consumed the food or fluid in the
@@ -2290,7 +2290,7 @@ class NutritionIntakePerformer with _$NutritionIntakePerformer {
 /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
 ///  oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrder with Resource, _$NutritionOrder {
+abstract class NutritionOrder with Resource, _$NutritionOrder {
   /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
   ///  oral nutritional supplement to a patient/resident.
   const NutritionOrder._();
@@ -2685,7 +2685,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
 /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
+abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderOralDiet._();
@@ -2829,7 +2829,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 /// [NutritionOrderSchedule] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderSchedule with _$NutritionOrderSchedule {
+abstract class NutritionOrderSchedule with _$NutritionOrderSchedule {
   /// [NutritionOrderSchedule] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderSchedule._();
@@ -2954,7 +2954,7 @@ class NutritionOrderSchedule with _$NutritionOrderSchedule {
 /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderNutrient with _$NutritionOrderNutrient {
+abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
   /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderNutrient._();
@@ -3063,7 +3063,7 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
 /// [NutritionOrderTexture] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderTexture with _$NutritionOrderTexture {
+abstract class NutritionOrderTexture with _$NutritionOrderTexture {
   /// [NutritionOrderTexture] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderTexture._();
@@ -3174,7 +3174,7 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
 /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderSupplement with _$NutritionOrderSupplement {
+abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
   /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderSupplement._();
@@ -3312,7 +3312,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
 /// [NutritionOrderSchedule1] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderSchedule1 with _$NutritionOrderSchedule1 {
+abstract class NutritionOrderSchedule1 with _$NutritionOrderSchedule1 {
   /// [NutritionOrderSchedule1] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderSchedule1._();
@@ -3437,7 +3437,7 @@ class NutritionOrderSchedule1 with _$NutritionOrderSchedule1 {
 /// [NutritionOrderEnteralFormula] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
+abstract class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   /// [NutritionOrderEnteralFormula] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderEnteralFormula._();
@@ -3628,7 +3628,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
 /// [NutritionOrderAdditive] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderAdditive with _$NutritionOrderAdditive {
+abstract class NutritionOrderAdditive with _$NutritionOrderAdditive {
   /// [NutritionOrderAdditive] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderAdditive._();
@@ -3753,7 +3753,7 @@ class NutritionOrderAdditive with _$NutritionOrderAdditive {
 /// [NutritionOrderAdministration] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderAdministration with _$NutritionOrderAdministration {
+abstract class NutritionOrderAdministration with _$NutritionOrderAdministration {
   /// [NutritionOrderAdministration] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderAdministration._();
@@ -3877,7 +3877,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
 /// [NutritionOrderSchedule2] A request to supply a diet, formula feeding
 ///  (enteral) or oral nutritional supplement to a patient/resident.
 @freezed
-class NutritionOrderSchedule2 with _$NutritionOrderSchedule2 {
+abstract class NutritionOrderSchedule2 with _$NutritionOrderSchedule2 {
   /// [NutritionOrderSchedule2] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
   const NutritionOrderSchedule2._();
@@ -4003,7 +4003,7 @@ class NutritionOrderSchedule2 with _$NutritionOrderSchedule2 {
 ///  capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
 @freezed
-class RequestOrchestration with Resource, _$RequestOrchestration {
+abstract class RequestOrchestration with Resource, _$RequestOrchestration {
   /// [RequestOrchestration] A set of related requests that can be used to
   ///  capture intended activities that have inter-dependencies such as "give
   ///  this medication after that one".
@@ -4336,7 +4336,7 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
 ///  capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
 @freezed
-class RequestOrchestrationAction with _$RequestOrchestrationAction {
+abstract class RequestOrchestrationAction with _$RequestOrchestrationAction {
   /// [RequestOrchestrationAction] A set of related requests that can be used to
   ///  capture intended activities that have inter-dependencies such as "give
   ///  this medication after that one".
@@ -4765,7 +4765,7 @@ class RequestOrchestrationAction with _$RequestOrchestrationAction {
 ///  to capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
 @freezed
-class RequestOrchestrationCondition with _$RequestOrchestrationCondition {
+abstract class RequestOrchestrationCondition with _$RequestOrchestrationCondition {
   /// [RequestOrchestrationCondition] A set of related requests that can be used
   ///  to capture intended activities that have inter-dependencies such as "give
   ///  this medication after that one".
@@ -4883,7 +4883,7 @@ class RequestOrchestrationCondition with _$RequestOrchestrationCondition {
 ///  capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
 @freezed
-class RequestOrchestrationInput with _$RequestOrchestrationInput {
+abstract class RequestOrchestrationInput with _$RequestOrchestrationInput {
   /// [RequestOrchestrationInput] A set of related requests that can be used to
   ///  capture intended activities that have inter-dependencies such as "give
   ///  this medication after that one".
@@ -5018,7 +5018,7 @@ class RequestOrchestrationInput with _$RequestOrchestrationInput {
 ///  capture intended activities that have inter-dependencies such as "give
 ///  this medication after that one".
 @freezed
-class RequestOrchestrationOutput with _$RequestOrchestrationOutput {
+abstract class RequestOrchestrationOutput with _$RequestOrchestrationOutput {
   /// [RequestOrchestrationOutput] A set of related requests that can be used to
   ///  capture intended activities that have inter-dependencies such as "give
   ///  this medication after that one".
@@ -5151,7 +5151,7 @@ class RequestOrchestrationOutput with _$RequestOrchestrationOutput {
 ///  used to capture intended activities that have inter-dependencies such as
 ///  "give this medication after that one".
 @freezed
-class RequestOrchestrationRelatedAction
+abstract class RequestOrchestrationRelatedAction
     with _$RequestOrchestrationRelatedAction {
   /// [RequestOrchestrationRelatedAction] A set of related requests that can be
   ///  used to capture intended activities that have inter-dependencies such as
@@ -5301,7 +5301,7 @@ class RequestOrchestrationRelatedAction
 ///  used to capture intended activities that have inter-dependencies such as
 ///  "give this medication after that one".
 @freezed
-class RequestOrchestrationParticipant with _$RequestOrchestrationParticipant {
+abstract class RequestOrchestrationParticipant with _$RequestOrchestrationParticipant {
   /// [RequestOrchestrationParticipant] A set of related requests that can be
   ///  used to capture intended activities that have inter-dependencies such as
   ///  "give this medication after that one".
@@ -5452,7 +5452,7 @@ class RequestOrchestrationParticipant with _$RequestOrchestrationParticipant {
 ///  used to capture intended activities that have inter-dependencies such as
 ///  "give this medication after that one".
 @freezed
-class RequestOrchestrationDynamicValue with _$RequestOrchestrationDynamicValue {
+abstract class RequestOrchestrationDynamicValue with _$RequestOrchestrationDynamicValue {
   /// [RequestOrchestrationDynamicValue] A set of related requests that can be
   ///  used to capture intended activities that have inter-dependencies such as
   ///  "give this medication after that one".
@@ -5583,7 +5583,7 @@ class RequestOrchestrationDynamicValue with _$RequestOrchestrationDynamicValue {
 /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
 ///  other subject as well as the likelihood of each outcome.
 @freezed
-class RiskAssessment with Resource, _$RiskAssessment {
+abstract class RiskAssessment with Resource, _$RiskAssessment {
   /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
   ///  other subject as well as the likelihood of each outcome.
   const RiskAssessment._();
@@ -5872,7 +5872,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
 /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
 ///  patient or other subject as well as the likelihood of each outcome.
 @freezed
-class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
+abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
   ///  patient or other subject as well as the likelihood of each outcome.
   const RiskAssessmentPrediction._();
@@ -6044,7 +6044,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 /// [ServiceRequest] A record of a request for service such as diagnostic
 ///  investigations, treatments, or operations to be performed.
 @freezed
-class ServiceRequest with Resource, _$ServiceRequest {
+abstract class ServiceRequest with Resource, _$ServiceRequest {
   /// [ServiceRequest] A record of a request for service such as diagnostic
   ///  investigations, treatments, or operations to be performed.
   const ServiceRequest._();
@@ -6559,7 +6559,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
 /// [ServiceRequestOrderDetail] A record of a request for service such as
 ///  diagnostic investigations, treatments, or operations to be performed.
 @freezed
-class ServiceRequestOrderDetail with _$ServiceRequestOrderDetail {
+abstract class ServiceRequestOrderDetail with _$ServiceRequestOrderDetail {
   /// [ServiceRequestOrderDetail] A record of a request for service such as
   ///  diagnostic investigations, treatments, or operations to be performed.
   const ServiceRequestOrderDetail._();
@@ -6666,7 +6666,7 @@ class ServiceRequestOrderDetail with _$ServiceRequestOrderDetail {
 /// [ServiceRequestParameter] A record of a request for service such as
 ///  diagnostic investigations, treatments, or operations to be performed.
 @freezed
-class ServiceRequestParameter with _$ServiceRequestParameter {
+abstract class ServiceRequestParameter with _$ServiceRequestParameter {
   /// [ServiceRequestParameter] A record of a request for service such as
   ///  diagnostic investigations, treatments, or operations to be performed.
   const ServiceRequestParameter._();
@@ -6817,7 +6817,7 @@ class ServiceRequestParameter with _$ServiceRequestParameter {
 /// [ServiceRequestPatientInstruction] A record of a request for service such
 ///  as diagnostic investigations, treatments, or operations to be performed.
 @freezed
-class ServiceRequestPatientInstruction with _$ServiceRequestPatientInstruction {
+abstract class ServiceRequestPatientInstruction with _$ServiceRequestPatientInstruction {
   /// [ServiceRequestPatientInstruction] A record of a request for service such
   ///  as diagnostic investigations, treatments, or operations to be performed.
   const ServiceRequestPatientInstruction._();
@@ -6938,7 +6938,7 @@ class ServiceRequestPatientInstruction with _$ServiceRequestPatientInstruction {
 /// [VisionPrescription] An authorization for the provision of glasses and/or
 ///  contact lenses to a patient.
 @freezed
-class VisionPrescription with Resource, _$VisionPrescription {
+abstract class VisionPrescription with Resource, _$VisionPrescription {
   /// [VisionPrescription] An authorization for the provision of glasses and/or
   ///  contact lenses to a patient.
   const VisionPrescription._();
@@ -7174,7 +7174,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
 /// [VisionPrescriptionLensSpecification] An authorization for the provision of
 ///  glasses and/or contact lenses to a patient.
 @freezed
-class VisionPrescriptionLensSpecification
+abstract class VisionPrescriptionLensSpecification
     with _$VisionPrescriptionLensSpecification {
   /// [VisionPrescriptionLensSpecification] An authorization for the provision of
   ///  glasses and/or contact lenses to a patient.
@@ -7401,7 +7401,7 @@ class VisionPrescriptionLensSpecification
 /// [VisionPrescriptionPrism] An authorization for the provision of glasses
 ///  and/or contact lenses to a patient.
 @freezed
-class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
+abstract class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   /// [VisionPrescriptionPrism] An authorization for the provision of glasses
   ///  and/or contact lenses to a patient.
   const VisionPrescriptionPrism._();

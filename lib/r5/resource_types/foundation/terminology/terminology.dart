@@ -18,7 +18,7 @@ part 'terminology.enums.dart';
 ///  and describe a code system or code system supplement and its key
 ///  properties, and optionally define a part or all of its content.
 @freezed
-class CodeSystem with Resource, _$CodeSystem {
+abstract class CodeSystem with Resource, _$CodeSystem {
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   ///  and describe a code system or code system supplement and its key
   ///  properties, and optionally define a part or all of its content.
@@ -622,7 +622,7 @@ class CodeSystem with Resource, _$CodeSystem {
 ///  of and describe a code system or code system supplement and its key
 ///  properties, and optionally define a part or all of its content.
 @freezed
-class CodeSystemFilter with _$CodeSystemFilter {
+abstract class CodeSystemFilter with _$CodeSystemFilter {
   /// [CodeSystemFilter] The CodeSystem resource is used to declare the existence
   ///  of and describe a code system or code system supplement and its key
   ///  properties, and optionally define a part or all of its content.
@@ -766,7 +766,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
 ///  existence of and describe a code system or code system supplement and its
 ///  key properties, and optionally define a part or all of its content.
 @freezed
-class CodeSystemProperty with _$CodeSystemProperty {
+abstract class CodeSystemProperty with _$CodeSystemProperty {
   /// [CodeSystemProperty] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
@@ -920,7 +920,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
 ///  existence of and describe a code system or code system supplement and its
 ///  key properties, and optionally define a part or all of its content.
 @freezed
-class CodeSystemConcept with _$CodeSystemConcept {
+abstract class CodeSystemConcept with _$CodeSystemConcept {
   /// [CodeSystemConcept] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
@@ -1081,7 +1081,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
 ///  existence of and describe a code system or code system supplement and its
 ///  key properties, and optionally define a part or all of its content.
 @freezed
-class CodeSystemDesignation with _$CodeSystemDesignation {
+abstract class CodeSystemDesignation with _$CodeSystemDesignation {
   /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
@@ -1213,7 +1213,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
 ///  existence of and describe a code system or code system supplement and its
 ///  key properties, and optionally define a part or all of its content.
 @freezed
-class CodeSystemProperty1 with _$CodeSystemProperty1 {
+abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
   /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and its
   ///  key properties, and optionally define a part or all of its content.
@@ -1388,7 +1388,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
 ///  or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMap with Resource, _$ConceptMap {
+abstract class ConceptMap with Resource, _$ConceptMap {
   /// [ConceptMap] A statement of relationships from one set of concepts to one
   ///  or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -1972,7 +1972,7 @@ class ConceptMap with Resource, _$ConceptMap {
 ///  to one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMapProperty with _$ConceptMapProperty {
+abstract class ConceptMapProperty with _$ConceptMapProperty {
   /// [ConceptMapProperty] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -2125,7 +2125,7 @@ class ConceptMapProperty with _$ConceptMapProperty {
 ///  of concepts to one or more other concepts - either concepts in code
 ///  systems, or data element/data element concepts, or classes in class models.
 @freezed
-class ConceptMapAdditionalAttribute with _$ConceptMapAdditionalAttribute {
+abstract class ConceptMapAdditionalAttribute with _$ConceptMapAdditionalAttribute {
   /// [ConceptMapAdditionalAttribute] A statement of relationships from one set
   ///  of concepts to one or more other concepts - either concepts in code
   ///  systems, or data element/data element concepts, or classes in class models.
@@ -2284,7 +2284,7 @@ class ConceptMapAdditionalAttribute with _$ConceptMapAdditionalAttribute {
 ///  one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMapGroup with _$ConceptMapGroup {
+abstract class ConceptMapGroup with _$ConceptMapGroup {
   /// [ConceptMapGroup] A statement of relationships from one set of concepts to
   ///  one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -2418,7 +2418,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
 ///  to one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMapElement with _$ConceptMapElement {
+abstract class ConceptMapElement with _$ConceptMapElement {
   /// [ConceptMapElement] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -2564,7 +2564,7 @@ class ConceptMapElement with _$ConceptMapElement {
 ///  one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMapTarget with _$ConceptMapTarget {
+abstract class ConceptMapTarget with _$ConceptMapTarget {
   /// [ConceptMapTarget] A statement of relationships from one set of concepts to
   ///  one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -2746,7 +2746,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
 ///  to one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMapProperty1 with _$ConceptMapProperty1 {
+abstract class ConceptMapProperty1 with _$ConceptMapProperty1 {
   /// [ConceptMapProperty1] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -2949,7 +2949,7 @@ class ConceptMapProperty1 with _$ConceptMapProperty1 {
 ///  to one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMapDependsOn with _$ConceptMapDependsOn {
+abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
   /// [ConceptMapDependsOn] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -3108,7 +3108,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
 ///  to one or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMapUnmapped with _$ConceptMapUnmapped {
+abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
   /// [ConceptMapUnmapped] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -3282,7 +3282,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
 ///  namespace for the identification of concepts, people, devices, etc.
 ///  Represents a "System" used within the Identifier and Coding data types.
 @freezed
-class NamingSystem with Resource, _$NamingSystem {
+abstract class NamingSystem with Resource, _$NamingSystem {
   /// [NamingSystem] A curated namespace that issues unique symbols within that
   ///  namespace for the identification of concepts, people, devices, etc.
   ///  Represents a "System" used within the Identifier and Coding data types.
@@ -3824,7 +3824,7 @@ class NamingSystem with Resource, _$NamingSystem {
 ///  etc.  Represents a "System" used within the Identifier and Coding data
 ///  types.
 @freezed
-class NamingSystemUniqueId with _$NamingSystemUniqueId {
+abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
   ///  within that namespace for the identification of concepts, people, devices,
   ///  etc.  Represents a "System" used within the Identifier and Coding data
@@ -3994,7 +3994,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 ///  used as a statement of actual server functionality or a statement of
 ///  required or desired server implementation.
 @freezed
-class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
+abstract class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   ///  set of capabilities (behaviors) of a FHIR Terminology Server that may be
   ///  used as a statement of actual server functionality or a statement of
@@ -4506,7 +4506,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
+abstract class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
@@ -4631,7 +4631,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesImplementation
+abstract class TerminologyCapabilitiesImplementation
     with _$TerminologyCapabilitiesImplementation {
   /// [TerminologyCapabilitiesImplementation] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -4760,7 +4760,7 @@ class TerminologyCapabilitiesImplementation
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesCodeSystem
+abstract class TerminologyCapabilitiesCodeSystem
     with _$TerminologyCapabilitiesCodeSystem {
   /// [TerminologyCapabilitiesCodeSystem] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -4903,7 +4903,7 @@ class TerminologyCapabilitiesCodeSystem
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
+abstract class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
@@ -5067,7 +5067,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
+abstract class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
@@ -5191,7 +5191,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
+abstract class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
@@ -5342,7 +5342,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
+abstract class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
@@ -5468,7 +5468,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesValidateCode
+abstract class TerminologyCapabilitiesValidateCode
     with _$TerminologyCapabilitiesValidateCode {
   /// [TerminologyCapabilitiesValidateCode] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5585,7 +5585,7 @@ class TerminologyCapabilitiesValidateCode
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesTranslation
+abstract class TerminologyCapabilitiesTranslation
     with _$TerminologyCapabilitiesTranslation {
   /// [TerminologyCapabilitiesTranslation] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5702,7 +5702,7 @@ class TerminologyCapabilitiesTranslation
 ///  that may be used as a statement of actual server functionality or a
 ///  statement of required or desired server implementation.
 @freezed
-class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
+abstract class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
@@ -5817,7 +5817,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
 ///  sets link between [CodeSystem](codesystem.html) definitions and their use
 ///  in [coded elements](terminologies.html).
 @freezed
-class ValueSet with Resource, _$ValueSet {
+abstract class ValueSet with Resource, _$ValueSet {
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn from
   ///  one or more code systems, intended for use in a particular context. Value
   ///  sets link between [CodeSystem](codesystem.html) definitions and their use
@@ -6352,7 +6352,7 @@ class ValueSet with Resource, _$ValueSet {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetCompose with _$ValueSetCompose {
+abstract class ValueSetCompose with _$ValueSetCompose {
   /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -6521,7 +6521,7 @@ class ValueSetCompose with _$ValueSetCompose {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetInclude with _$ValueSetInclude {
+abstract class ValueSetInclude with _$ValueSetInclude {
   /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -6693,7 +6693,7 @@ class ValueSetInclude with _$ValueSetInclude {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetConcept with _$ValueSetConcept {
+abstract class ValueSetConcept with _$ValueSetConcept {
   /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -6829,7 +6829,7 @@ class ValueSetConcept with _$ValueSetConcept {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetDesignation with _$ValueSetDesignation {
+abstract class ValueSetDesignation with _$ValueSetDesignation {
   /// [ValueSetDesignation] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -6964,7 +6964,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetFilter with _$ValueSetFilter {
+abstract class ValueSetFilter with _$ValueSetFilter {
   /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -7109,7 +7109,7 @@ class ValueSetFilter with _$ValueSetFilter {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetExpansion with _$ValueSetExpansion {
+abstract class ValueSetExpansion with _$ValueSetExpansion {
   /// [ValueSetExpansion] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -7307,7 +7307,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetParameter with _$ValueSetParameter {
+abstract class ValueSetParameter with _$ValueSetParameter {
   /// [ValueSetParameter] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -7494,7 +7494,7 @@ class ValueSetParameter with _$ValueSetParameter {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetProperty with _$ValueSetProperty {
+abstract class ValueSetProperty with _$ValueSetProperty {
   /// [ValueSetProperty] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -7623,7 +7623,7 @@ class ValueSetProperty with _$ValueSetProperty {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetContains with _$ValueSetContains {
+abstract class ValueSetContains with _$ValueSetContains {
   /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -7835,7 +7835,7 @@ class ValueSetContains with _$ValueSetContains {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetProperty1 with _$ValueSetProperty1 {
+abstract class ValueSetProperty1 with _$ValueSetProperty1 {
   /// [ValueSetProperty1] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -8018,7 +8018,7 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
 ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
 ///  and their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetSubProperty with _$ValueSetSubProperty {
+abstract class ValueSetSubProperty with _$ValueSetSubProperty {
   /// [ValueSetSubProperty] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html) definitions
@@ -8196,7 +8196,7 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
 ///  Value sets link between [CodeSystem](codesystem.html) definitions and
 ///  their use in [coded elements](terminologies.html).
 @freezed
-class ValueSetScope with _$ValueSetScope {
+abstract class ValueSetScope with _$ValueSetScope {
   /// [ValueSetScope] A ValueSet resource instance specifies a set of codes drawn
   ///  from one or more code systems, intended for use in a particular context.
   ///  Value sets link between [CodeSystem](codesystem.html) definitions and

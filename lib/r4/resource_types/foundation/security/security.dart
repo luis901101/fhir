@@ -15,7 +15,7 @@ part 'security.g.dart';
 
 /// [AuditEvent] A record of an event made for purposes of maintaining a
 @freezed
-class AuditEvent with Resource, _$AuditEvent {
+abstract class AuditEvent with Resource, _$AuditEvent {
   /// [AuditEvent] A record of an event made for purposes of maintaining a
   const AuditEvent._();
 
@@ -265,7 +265,7 @@ class AuditEvent with Resource, _$AuditEvent {
 
 /// [AuditEventAgent] A record of an event made for purposes of maintaining
 @freezed
-class AuditEventAgent with _$AuditEventAgent {
+abstract class AuditEventAgent with _$AuditEventAgent {
   /// [AuditEventAgent] A record of an event made for purposes of maintaining
   const AuditEventAgent._();
 
@@ -463,7 +463,7 @@ class AuditEventAgent with _$AuditEventAgent {
 
 /// [AuditEventNetwork] A record of an event made for purposes of
 @freezed
-class AuditEventNetwork with _$AuditEventNetwork {
+abstract class AuditEventNetwork with _$AuditEventNetwork {
   /// [AuditEventNetwork] A record of an event made for purposes of
   const AuditEventNetwork._();
 
@@ -584,7 +584,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
 
 /// [AuditEventSource] A record of an event made for purposes of maintaining
 @freezed
-class AuditEventSource with _$AuditEventSource {
+abstract class AuditEventSource with _$AuditEventSource {
   /// [AuditEventSource] A record of an event made for purposes of maintaining
   const AuditEventSource._();
 
@@ -705,7 +705,7 @@ class AuditEventSource with _$AuditEventSource {
 
 /// [AuditEventEntity] A record of an event made for purposes of maintaining
 @freezed
-class AuditEventEntity with _$AuditEventEntity {
+abstract class AuditEventEntity with _$AuditEventEntity {
   /// [AuditEventEntity] A record of an event made for purposes of maintaining
   const AuditEventEntity._();
 
@@ -868,7 +868,7 @@ class AuditEventEntity with _$AuditEventEntity {
 
 /// [AuditEventDetail] A record of an event made for purposes of maintaining
 @freezed
-class AuditEventDetail with _$AuditEventDetail {
+abstract class AuditEventDetail with _$AuditEventDetail {
   /// [AuditEventDetail] A record of an event made for purposes of maintaining
   const AuditEventDetail._();
 
@@ -995,7 +995,7 @@ class AuditEventDetail with _$AuditEventDetail {
 
 /// [Consent] A record of a healthcare consumer’s  choices, which permits or
 @freezed
-class Consent with Resource, _$Consent {
+abstract class Consent with Resource, _$Consent {
   /// [Consent] A record of a healthcare consumer’s  choices, which permits or
   const Consent._();
 
@@ -1281,7 +1281,7 @@ class Consent with Resource, _$Consent {
 
 /// [ConsentPolicy] A record of a healthcare consumer’s  choices, which
 @freezed
-class ConsentPolicy with _$ConsentPolicy {
+abstract class ConsentPolicy with _$ConsentPolicy {
   /// [ConsentPolicy] A record of a healthcare consumer’s  choices, which
   const ConsentPolicy._();
 
@@ -1405,7 +1405,7 @@ class ConsentPolicy with _$ConsentPolicy {
 
 /// [ConsentVerification] A record of a healthcare consumer’s  choices,
 @freezed
-class ConsentVerification with _$ConsentVerification {
+abstract class ConsentVerification with _$ConsentVerification {
   /// [ConsentVerification] A record of a healthcare consumer’s  choices,
   const ConsentVerification._();
 
@@ -1530,7 +1530,7 @@ class ConsentVerification with _$ConsentVerification {
 
 /// [ConsentProvision] A record of a healthcare consumer’s  choices, which
 @freezed
-class ConsentProvision with _$ConsentProvision {
+abstract class ConsentProvision with _$ConsentProvision {
   /// [ConsentProvision] A record of a healthcare consumer’s  choices, which
   const ConsentProvision._();
 
@@ -1706,7 +1706,7 @@ class ConsentProvision with _$ConsentProvision {
 
 /// [ConsentActor] A record of a healthcare consumer’s  choices, which
 @freezed
-class ConsentActor with _$ConsentActor {
+abstract class ConsentActor with _$ConsentActor {
   /// [ConsentActor] A record of a healthcare consumer’s  choices, which
   const ConsentActor._();
 
@@ -1820,7 +1820,7 @@ class ConsentActor with _$ConsentActor {
 
 /// [ConsentData] A record of a healthcare consumer’s  choices, which
 @freezed
-class ConsentData with _$ConsentData {
+abstract class ConsentData with _$ConsentData {
   /// [ConsentData] A record of a healthcare consumer’s  choices, which
   const ConsentData._();
 
@@ -1937,7 +1937,7 @@ class ConsentData with _$ConsentData {
 
 /// [Provenance] Provenance of a resource is a record that describes entities
 @freezed
-class Provenance with Resource, _$Provenance {
+abstract class Provenance with Resource, _$Provenance {
   /// [Provenance] Provenance of a resource is a record that describes entities
   const Provenance._();
 
@@ -2197,7 +2197,7 @@ class Provenance with Resource, _$Provenance {
 
 /// [ProvenanceAgent] Provenance of a resource is a record that describes
 @freezed
-class ProvenanceAgent with _$ProvenanceAgent {
+abstract class ProvenanceAgent with _$ProvenanceAgent {
   /// [ProvenanceAgent] Provenance of a resource is a record that describes
   const ProvenanceAgent._();
 
@@ -2327,7 +2327,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
 
 /// [ProvenanceEntity] Provenance of a resource is a record that describes
 @freezed
-class ProvenanceEntity with _$ProvenanceEntity {
+abstract class ProvenanceEntity with _$ProvenanceEntity {
   /// [ProvenanceEntity] Provenance of a resource is a record that describes
   const ProvenanceEntity._();
 

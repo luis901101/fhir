@@ -18,7 +18,7 @@ part 'workflow.enums.dart';
 ///  practitioner(s), related person(s) and/or device(s) for a specific
 ///  date/time. This may result in one or more Encounter(s).
 @freezed
-class Appointment with Resource, _$Appointment {
+abstract class Appointment with Resource, _$Appointment {
   /// [Appointment] A booking of a healthcare event among patient(s),
   ///  practitioner(s), related person(s) and/or device(s) for a specific
   ///  date/time. This may result in one or more Encounter(s).
@@ -505,7 +505,7 @@ class Appointment with Resource, _$Appointment {
 ///  practitioner(s), related person(s) and/or device(s) for a specific
 ///  date/time. This may result in one or more Encounter(s).
 @freezed
-class AppointmentParticipant with _$AppointmentParticipant {
+abstract class AppointmentParticipant with _$AppointmentParticipant {
   /// [AppointmentParticipant] A booking of a healthcare event among patient(s),
   ///  practitioner(s), related person(s) and/or device(s) for a specific
   ///  date/time. This may result in one or more Encounter(s).
@@ -644,7 +644,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
 ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
 ///  specific date/time. This may result in one or more Encounter(s).
 @freezed
-class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
+abstract class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
   /// [AppointmentRecurrenceTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
@@ -831,7 +831,7 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
 ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
 ///  specific date/time. This may result in one or more Encounter(s).
 @freezed
-class AppointmentWeeklyTemplate with _$AppointmentWeeklyTemplate {
+abstract class AppointmentWeeklyTemplate with _$AppointmentWeeklyTemplate {
   /// [AppointmentWeeklyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
@@ -1019,7 +1019,7 @@ class AppointmentWeeklyTemplate with _$AppointmentWeeklyTemplate {
 ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
 ///  specific date/time. This may result in one or more Encounter(s).
 @freezed
-class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
+abstract class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
   /// [AppointmentMonthlyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
@@ -1157,7 +1157,7 @@ class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
 ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
 ///  specific date/time. This may result in one or more Encounter(s).
 @freezed
-class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
+abstract class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
   /// [AppointmentYearlyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
@@ -1266,7 +1266,7 @@ class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
 /// [AppointmentResponse] A reply to an appointment request for a patient
 ///  and/or practitioner(s), such as a confirmation or rejection.
 @freezed
-class AppointmentResponse with Resource, _$AppointmentResponse {
+abstract class AppointmentResponse with Resource, _$AppointmentResponse {
   /// [AppointmentResponse] A reply to an appointment request for a patient
   ///  and/or practitioner(s), such as a confirmation or rejection.
   const AppointmentResponse._();
@@ -1573,7 +1573,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 /// [Schedule] A container for slots of time that may be available for booking
 ///  appointments.
 @freezed
-class Schedule with Resource, _$Schedule {
+abstract class Schedule with Resource, _$Schedule {
   /// [Schedule] A container for slots of time that may be available for booking
   ///  appointments.
   const Schedule._();
@@ -1826,7 +1826,7 @@ class Schedule with Resource, _$Schedule {
 /// [Slot] A slot of time on a schedule that may be available for booking
 ///  appointments.
 @freezed
-class Slot with Resource, _$Slot {
+abstract class Slot with Resource, _$Slot {
   /// [Slot] A slot of time on a schedule that may be available for booking
   ///  appointments.
   const Slot._();
@@ -2090,7 +2090,7 @@ class Slot with Resource, _$Slot {
 
 /// [Task] A task to be performed.
 @freezed
-class Task with Resource, _$Task {
+abstract class Task with Resource, _$Task {
   /// [Task] A task to be performed.
   const Task._();
 
@@ -2531,7 +2531,7 @@ class Task with Resource, _$Task {
 
 /// [TaskPerformer] A task to be performed.
 @freezed
-class TaskPerformer with _$TaskPerformer {
+abstract class TaskPerformer with _$TaskPerformer {
   /// [TaskPerformer] A task to be performed.
   const TaskPerformer._();
 
@@ -2635,7 +2635,7 @@ class TaskPerformer with _$TaskPerformer {
 
 /// [TaskRestriction] A task to be performed.
 @freezed
-class TaskRestriction with _$TaskRestriction {
+abstract class TaskRestriction with _$TaskRestriction {
   /// [TaskRestriction] A task to be performed.
   const TaskRestriction._();
 
@@ -2757,7 +2757,7 @@ class TaskRestriction with _$TaskRestriction {
 
 /// [TaskInput] A task to be performed.
 @freezed
-class TaskInput with _$TaskInput {
+abstract class TaskInput with _$TaskInput {
   /// [TaskInput] A task to be performed.
   const TaskInput._();
 
@@ -3236,7 +3236,7 @@ class TaskInput with _$TaskInput {
 
 /// [TaskOutput] A task to be performed.
 @freezed
-class TaskOutput with _$TaskOutput {
+abstract class TaskOutput with _$TaskOutput {
   /// [TaskOutput] A task to be performed.
   const TaskOutput._();
 
@@ -3715,7 +3715,7 @@ class TaskOutput with _$TaskOutput {
 
 /// [Transport] Record of transport of item.
 @freezed
-class Transport with Resource, _$Transport {
+abstract class Transport with Resource, _$Transport {
   /// [Transport] Record of transport of item.
   const Transport._();
 
@@ -4153,7 +4153,7 @@ class Transport with Resource, _$Transport {
 
 /// [TransportRestriction] Record of transport of item.
 @freezed
-class TransportRestriction with _$TransportRestriction {
+abstract class TransportRestriction with _$TransportRestriction {
   /// [TransportRestriction] Record of transport of item.
   const TransportRestriction._();
 
@@ -4271,7 +4271,7 @@ class TransportRestriction with _$TransportRestriction {
 
 /// [TransportInput] Record of transport of item.
 @freezed
-class TransportInput with _$TransportInput {
+abstract class TransportInput with _$TransportInput {
   /// [TransportInput] Record of transport of item.
   const TransportInput._();
 
@@ -4750,7 +4750,7 @@ class TransportInput with _$TransportInput {
 
 /// [TransportOutput] Record of transport of item.
 @freezed
-class TransportOutput with _$TransportOutput {
+abstract class TransportOutput with _$TransportOutput {
   /// [TransportOutput] Record of transport of item.
   const TransportOutput._();
 
@@ -5230,7 +5230,7 @@ class TransportOutput with _$TransportOutput {
 /// [VerificationResult] Describes validation requirements, source(s), status
 ///  and dates for one or more elements.
 @freezed
-class VerificationResult with Resource, _$VerificationResult {
+abstract class VerificationResult with Resource, _$VerificationResult {
   /// [VerificationResult] Describes validation requirements, source(s), status
   ///  and dates for one or more elements.
   const VerificationResult._();
@@ -5512,7 +5512,7 @@ class VerificationResult with Resource, _$VerificationResult {
 /// [VerificationResultPrimarySource] Describes validation requirements,
 ///  source(s), status and dates for one or more elements.
 @freezed
-class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
+abstract class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   /// [VerificationResultPrimarySource] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
   const VerificationResultPrimarySource._();
@@ -5663,7 +5663,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
 /// [VerificationResultAttestation] Describes validation requirements,
 ///  source(s), status and dates for one or more elements.
 @freezed
-class VerificationResultAttestation with _$VerificationResultAttestation {
+abstract class VerificationResultAttestation with _$VerificationResultAttestation {
   /// [VerificationResultAttestation] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
   const VerificationResultAttestation._();
@@ -5838,7 +5838,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
 /// [VerificationResultValidator] Describes validation requirements, source(s),
 ///  status and dates for one or more elements.
 @freezed
-class VerificationResultValidator with _$VerificationResultValidator {
+abstract class VerificationResultValidator with _$VerificationResultValidator {
   /// [VerificationResultValidator] Describes validation requirements, source(s),
   ///  status and dates for one or more elements.
   const VerificationResultValidator._();

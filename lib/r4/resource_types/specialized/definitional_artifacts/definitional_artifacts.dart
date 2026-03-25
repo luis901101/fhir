@@ -15,7 +15,7 @@ part 'definitional_artifacts.g.dart';
 
 /// [ActivityDefinition] This resource allows for the definition of some
 @freezed
-class ActivityDefinition with Resource, _$ActivityDefinition {
+abstract class ActivityDefinition with Resource, _$ActivityDefinition {
   /// [ActivityDefinition] This resource allows for the definition of some
   const ActivityDefinition._();
 
@@ -723,7 +723,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 
 /// [ActivityDefinitionParticipant] This resource allows for the definition
 @freezed
-class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
+abstract class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   /// [ActivityDefinitionParticipant] This resource allows for the definition
   const ActivityDefinitionParticipant._();
 
@@ -837,7 +837,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
 
 /// [ActivityDefinitionDynamicValue] This resource allows for the definition
 @freezed
-class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
+abstract class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   /// [ActivityDefinitionDynamicValue] This resource allows for the definition
   const ActivityDefinitionDynamicValue._();
 
@@ -966,7 +966,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
 
 /// [DeviceDefinition] The characteristics, operational status and
 @freezed
-class DeviceDefinition with Resource, _$DeviceDefinition {
+abstract class DeviceDefinition with Resource, _$DeviceDefinition {
   /// [DeviceDefinition] The characteristics, operational status and
   const DeviceDefinition._();
 
@@ -1376,7 +1376,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
 }
 
 @freezed
-class DeviceDefinitionUdiDeviceIdentifier
+abstract class DeviceDefinitionUdiDeviceIdentifier
     with _$DeviceDefinitionUdiDeviceIdentifier {
   const DeviceDefinitionUdiDeviceIdentifier._();
 
@@ -1492,7 +1492,7 @@ class DeviceDefinitionUdiDeviceIdentifier
 
 /// [DeviceDefinitionDeviceName] The characteristics, operational status and
 @freezed
-class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
+abstract class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   /// [DeviceDefinitionDeviceName] The characteristics, operational status and
   const DeviceDefinitionDeviceName._();
 
@@ -1612,7 +1612,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
 
 /// [DeviceDefinitionSpecialization] The characteristics, operational status
 @freezed
-class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
+abstract class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
   /// [DeviceDefinitionSpecialization] The characteristics, operational status
   const DeviceDefinitionSpecialization._();
 
@@ -1731,7 +1731,7 @@ class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
 
 /// [DeviceDefinitionCapability] The characteristics, operational status and
 @freezed
-class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
+abstract class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
   /// [DeviceDefinitionCapability] The characteristics, operational status and
   const DeviceDefinitionCapability._();
 
@@ -1837,7 +1837,7 @@ class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
 
 /// [DeviceDefinitionProperty] The characteristics, operational status and
 @freezed
-class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
+abstract class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   /// [DeviceDefinitionProperty] The characteristics, operational status and
   const DeviceDefinitionProperty._();
 
@@ -1950,7 +1950,7 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
 
 /// [DeviceDefinitionMaterial] The characteristics, operational status and
 @freezed
-class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
+abstract class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   /// [DeviceDefinitionMaterial] The characteristics, operational status and
   const DeviceDefinitionMaterial._();
 
@@ -2073,7 +2073,7 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
 
 /// [EventDefinition] The EventDefinition resource provides a reusable
 @freezed
-class EventDefinition with Resource, _$EventDefinition {
+abstract class EventDefinition with Resource, _$EventDefinition {
   /// [EventDefinition] The EventDefinition resource provides a reusable
   const EventDefinition._();
 
@@ -2561,7 +2561,7 @@ class EventDefinition with Resource, _$EventDefinition {
 
 /// [ObservationDefinition] Set of definitional characteristics for a kind of
 @freezed
-class ObservationDefinition with Resource, _$ObservationDefinition {
+abstract class ObservationDefinition with Resource, _$ObservationDefinition {
   /// [ObservationDefinition] Set of definitional characteristics for a kind of
   const ObservationDefinition._();
 
@@ -2831,7 +2831,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
 }
 
 @freezed
-class ObservationDefinitionQuantitativeDetails
+abstract class ObservationDefinitionQuantitativeDetails
     with _$ObservationDefinitionQuantitativeDetails {
   const ObservationDefinitionQuantitativeDetails._();
 
@@ -2950,7 +2950,7 @@ class ObservationDefinitionQuantitativeDetails
 }
 
 @freezed
-class ObservationDefinitionQualifiedInterval
+abstract class ObservationDefinitionQualifiedInterval
     with _$ObservationDefinitionQualifiedInterval {
   const ObservationDefinitionQualifiedInterval._();
 
@@ -3099,7 +3099,7 @@ class ObservationDefinitionQualifiedInterval
 
 /// [PlanDefinition] This resource allows for the definition of various types
 @freezed
-class PlanDefinition with Resource, _$PlanDefinition {
+abstract class PlanDefinition with Resource, _$PlanDefinition {
   /// [PlanDefinition] This resource allows for the definition of various types
   const PlanDefinition._();
 
@@ -3621,7 +3621,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
 
 /// [PlanDefinitionGoal] This resource allows for the definition of various
 @freezed
-class PlanDefinitionGoal with _$PlanDefinitionGoal {
+abstract class PlanDefinitionGoal with _$PlanDefinitionGoal {
   /// [PlanDefinitionGoal] This resource allows for the definition of various
   const PlanDefinitionGoal._();
 
@@ -3769,7 +3769,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
 
 /// [PlanDefinitionTarget] This resource allows for the definition of
 @freezed
-class PlanDefinitionTarget with _$PlanDefinitionTarget {
+abstract class PlanDefinitionTarget with _$PlanDefinitionTarget {
   /// [PlanDefinitionTarget] This resource allows for the definition of
   const PlanDefinitionTarget._();
 
@@ -3927,7 +3927,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
 
 /// [PlanDefinitionAction] This resource allows for the definition of
 @freezed
-class PlanDefinitionAction with _$PlanDefinitionAction {
+abstract class PlanDefinitionAction with _$PlanDefinitionAction {
   /// [PlanDefinitionAction] This resource allows for the definition of
   const PlanDefinitionAction._();
 
@@ -4346,7 +4346,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
 
 /// [PlanDefinitionCondition] This resource allows for the definition of
 @freezed
-class PlanDefinitionCondition with _$PlanDefinitionCondition {
+abstract class PlanDefinitionCondition with _$PlanDefinitionCondition {
   /// [PlanDefinitionCondition] This resource allows for the definition of
   const PlanDefinitionCondition._();
 
@@ -4462,7 +4462,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
 
 /// [PlanDefinitionRelatedAction] This resource allows for the definition of
 @freezed
-class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
+abstract class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   /// [PlanDefinitionRelatedAction] This resource allows for the definition of
   const PlanDefinitionRelatedAction._();
 
@@ -4595,7 +4595,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
 
 /// [PlanDefinitionParticipant] This resource allows for the definition of
 @freezed
-class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
+abstract class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   /// [PlanDefinitionParticipant] This resource allows for the definition of
   const PlanDefinitionParticipant._();
 
@@ -4711,7 +4711,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
 
 /// [PlanDefinitionDynamicValue] This resource allows for the definition of
 @freezed
-class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
+abstract class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   /// [PlanDefinitionDynamicValue] This resource allows for the definition of
   const PlanDefinitionDynamicValue._();
 
@@ -4841,7 +4841,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
 
 /// [Questionnaire] A structured set of questions intended to guide the
 @freezed
-class Questionnaire with Resource, _$Questionnaire {
+abstract class Questionnaire with Resource, _$Questionnaire {
   /// [Questionnaire] A structured set of questions intended to guide the
   const Questionnaire._();
 
@@ -5271,7 +5271,7 @@ class Questionnaire with Resource, _$Questionnaire {
 
 /// [QuestionnaireItem] A structured set of questions intended to guide the
 @freezed
-class QuestionnaireItem with _$QuestionnaireItem {
+abstract class QuestionnaireItem with _$QuestionnaireItem {
   /// [QuestionnaireItem] A structured set of questions intended to guide the
   const QuestionnaireItem._();
 
@@ -5357,7 +5357,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   ///
   /// [enableBehaviorElement] Extensions for enableBehavior
   ///
-  /// [required] An indication, if true, that the item must be present in a
+  /// [required_] An indication, if true, that the item must be present in a
   /// "completed" QuestionnaireResponse.  If false, the item may be skipped when
   ///  answering the questionnaire.
   ///
@@ -5470,7 +5470,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
     /// [enableBehaviorElement] Extensions for enableBehavior
     @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
 
-    /// [required] An indication, if true, that the item must be present in a
+    /// [required_] An indication, if true, that the item must be present in a
     /// "completed" QuestionnaireResponse.  If false, the item may be skipped when
     ///  answering the questionnaire.
     @JsonKey(name: 'required') FhirBoolean? required_,
@@ -5554,7 +5554,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
 
 /// [QuestionnaireEnableWhen] A structured set of questions intended to
 @freezed
-class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
+abstract class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   /// [QuestionnaireEnableWhen] A structured set of questions intended to
   const QuestionnaireEnableWhen._();
 
@@ -5779,7 +5779,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
 
 /// [QuestionnaireAnswerOption] A structured set of questions intended to
 @freezed
-class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
+abstract class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   /// [QuestionnaireAnswerOption] A structured set of questions intended to
   const QuestionnaireAnswerOption._();
 
@@ -5951,7 +5951,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
 
 /// [QuestionnaireInitial] A structured set of questions intended to guide
 @freezed
-class QuestionnaireInitial with _$QuestionnaireInitial {
+abstract class QuestionnaireInitial with _$QuestionnaireInitial {
   /// [QuestionnaireInitial] A structured set of questions intended to guide
   const QuestionnaireInitial._();
 
@@ -6149,7 +6149,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
 
 /// [SpecimenDefinition] A kind of specimen with associated set of
 @freezed
-class SpecimenDefinition with Resource, _$SpecimenDefinition {
+abstract class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// [SpecimenDefinition] A kind of specimen with associated set of
   const SpecimenDefinition._();
 
@@ -6350,7 +6350,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
 
 /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
 @freezed
-class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
+abstract class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
   const SpecimenDefinitionTypeTested._();
 
@@ -6511,7 +6511,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
 
 /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
 @freezed
-class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
+abstract class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
   const SpecimenDefinitionContainer._();
 
@@ -6677,7 +6677,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
 
 /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
 @freezed
-class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
+abstract class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
   const SpecimenDefinitionAdditive._();
 
@@ -6791,7 +6791,7 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
 
 /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
 @freezed
-class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
+abstract class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
   const SpecimenDefinitionHandling._();
 

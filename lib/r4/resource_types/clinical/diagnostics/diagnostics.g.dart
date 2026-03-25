@@ -6,106 +6,99 @@ part of 'diagnostics.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$BodyStructureImpl _$$BodyStructureImplFromJson(Map<String, dynamic> json) =>
-    _$BodyStructureImpl(
-      resourceType: $enumDecodeNullable(
-              _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.BodyStructure) ??
-          R4ResourceType.BodyStructure,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] as String?,
-      meta: json['meta'] == null
-          ? null
-          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : FhirCode.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      active:
-          json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
-      activeElement: json['_active'] == null
-          ? null
-          : Element.fromJson(json['_active'] as Map<String, dynamic>),
-      morphology: json['morphology'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['morphology'] as Map<String, dynamic>),
-      location: json['location'] == null
-          ? null
-          : CodeableConcept.fromJson(json['location'] as Map<String, dynamic>),
-      locationQualifier: (json['locationQualifier'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      image: (json['image'] as List<dynamic>?)
-          ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    );
+_BodyStructure _$BodyStructureFromJson(
+  Map<String, dynamic> json,
+) => _BodyStructure(
+  resourceType:
+      $enumDecodeNullable(
+        _$R4ResourceTypeEnumMap,
+        json['resourceType'],
+        unknownValue: R4ResourceType.BodyStructure,
+      ) ??
+      R4ResourceType.BodyStructure,
+  dbId: (json['dbId'] as num?)?.toInt(),
+  fhirId: json['id'] as String?,
+  meta: json['meta'] == null
+      ? null
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+  implicitRules: json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules']),
+  implicitRulesElement: json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+  language: json['language'] == null
+      ? null
+      : FhirCode.fromJson(json['language']),
+  languageElement: json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>),
+  text: json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+  contained: (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  identifier: (json['identifier'] as List<dynamic>?)
+      ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  active: json['active'] == null ? null : FhirBoolean.fromJson(json['active']),
+  activeElement: json['_active'] == null
+      ? null
+      : Element.fromJson(json['_active'] as Map<String, dynamic>),
+  morphology: json['morphology'] == null
+      ? null
+      : CodeableConcept.fromJson(json['morphology'] as Map<String, dynamic>),
+  location: json['location'] == null
+      ? null
+      : CodeableConcept.fromJson(json['location'] as Map<String, dynamic>),
+  locationQualifier: (json['locationQualifier'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  description: json['description'] as String?,
+  descriptionElement: json['_description'] == null
+      ? null
+      : Element.fromJson(json['_description'] as Map<String, dynamic>),
+  image: (json['image'] as List<dynamic>?)
+      ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
+);
 
-Map<String, dynamic> _$$BodyStructureImplToJson(_$BodyStructureImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('active', instance.active?.toJson());
-  writeNotNull('_active', instance.activeElement?.toJson());
-  writeNotNull('morphology', instance.morphology?.toJson());
-  writeNotNull('location', instance.location?.toJson());
-  writeNotNull('locationQualifier',
-      instance.locationQualifier?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('image', instance.image?.map((e) => e.toJson()).toList());
-  val['patient'] = instance.patient.toJson();
-  return val;
-}
+Map<String, dynamic> _$BodyStructureToJson(_BodyStructure instance) =>
+    <String, dynamic>{
+      'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+      'id': ?instance.fhirId,
+      'meta': ?instance.meta?.toJson(),
+      'implicitRules': ?instance.implicitRules?.toJson(),
+      '_implicitRules': ?instance.implicitRulesElement?.toJson(),
+      'language': ?instance.language?.toJson(),
+      '_language': ?instance.languageElement?.toJson(),
+      'text': ?instance.text?.toJson(),
+      'contained': ?instance.contained?.map((e) => e.toJson()).toList(),
+      'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+      'modifierExtension': ?instance.modifierExtension
+          ?.map((e) => e.toJson())
+          .toList(),
+      'identifier': ?instance.identifier?.map((e) => e.toJson()).toList(),
+      'active': ?instance.active?.toJson(),
+      '_active': ?instance.activeElement?.toJson(),
+      'morphology': ?instance.morphology?.toJson(),
+      'location': ?instance.location?.toJson(),
+      'locationQualifier': ?instance.locationQualifier
+          ?.map((e) => e.toJson())
+          .toList(),
+      'description': ?instance.description,
+      '_description': ?instance.descriptionElement?.toJson(),
+      'image': ?instance.image?.map((e) => e.toJson()).toList(),
+      'patient': instance.patient.toJson(),
+    };
 
 const _$R4ResourceTypeEnumMap = {
   R4ResourceType.Account: 'Account',
@@ -252,2319 +245,2099 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$DiagnosticReportImpl _$$DiagnosticReportImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DiagnosticReportImpl(
-      resourceType: $enumDecodeNullable(
-              _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.DiagnosticReport) ??
-          R4ResourceType.DiagnosticReport,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] as String?,
-      meta: json['meta'] == null
-          ? null
-          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : FhirCode.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      basedOn: (json['basedOn'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      category: (json['category'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      subject: json['subject'] == null
-          ? null
-          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      encounter: json['encounter'] == null
-          ? null
-          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      effectiveDateTime: json['effectiveDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
-      effectiveDateTimeElement: json['_effectiveDateTime'] == null
-          ? null
-          : Element.fromJson(
-              json['_effectiveDateTime'] as Map<String, dynamic>),
-      effectivePeriod: json['effectivePeriod'] == null
-          ? null
-          : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-      issued: json['issued'] == null
-          ? null
-          : FhirInstant.fromJson(json['issued'] as String),
-      issuedElement: json['_issued'] == null
-          ? null
-          : Element.fromJson(json['_issued'] as Map<String, dynamic>),
-      performer: (json['performer'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      resultsInterpreter: (json['resultsInterpreter'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      specimen: (json['specimen'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      result: (json['result'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      imagingStudy: (json['imagingStudy'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      media: (json['media'] as List<dynamic>?)
-          ?.map(
-              (e) => DiagnosticReportMedia.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      conclusion: json['conclusion'] as String?,
-      conclusionElement: json['_conclusion'] == null
-          ? null
-          : Element.fromJson(json['_conclusion'] as Map<String, dynamic>),
-      conclusionCode: (json['conclusionCode'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      presentedForm: (json['presentedForm'] as List<dynamic>?)
-          ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$DiagnosticReportImplToJson(
-    _$DiagnosticReportImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
-  val['code'] = instance.code.toJson();
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
-  writeNotNull(
-      '_effectiveDateTime', instance.effectiveDateTimeElement?.toJson());
-  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull('issued', instance.issued?.toJson());
-  writeNotNull('_issued', instance.issuedElement?.toJson());
-  writeNotNull(
-      'performer', instance.performer?.map((e) => e.toJson()).toList());
-  writeNotNull('resultsInterpreter',
-      instance.resultsInterpreter?.map((e) => e.toJson()).toList());
-  writeNotNull('specimen', instance.specimen?.map((e) => e.toJson()).toList());
-  writeNotNull('result', instance.result?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'imagingStudy', instance.imagingStudy?.map((e) => e.toJson()).toList());
-  writeNotNull('media', instance.media?.map((e) => e.toJson()).toList());
-  writeNotNull('conclusion', instance.conclusion);
-  writeNotNull('_conclusion', instance.conclusionElement?.toJson());
-  writeNotNull('conclusionCode',
-      instance.conclusionCode?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'presentedForm', instance.presentedForm?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$DiagnosticReportMediaImpl _$$DiagnosticReportMediaImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DiagnosticReportMediaImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      comment: json['comment'] as String?,
-      commentElement: json['_comment'] == null
-          ? null
-          : Element.fromJson(json['_comment'] as Map<String, dynamic>),
-      link: Reference.fromJson(json['link'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$DiagnosticReportMediaImplToJson(
-    _$DiagnosticReportMediaImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('comment', instance.comment);
-  writeNotNull('_comment', instance.commentElement?.toJson());
-  val['link'] = instance.link.toJson();
-  return val;
-}
-
-_$ImagingStudyImpl _$$ImagingStudyImplFromJson(Map<String, dynamic> json) =>
-    _$ImagingStudyImpl(
-      resourceType: $enumDecodeNullable(
-              _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.ImagingStudy) ??
-          R4ResourceType.ImagingStudy,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] as String?,
-      meta: json['meta'] == null
-          ? null
-          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : FhirCode.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      modality: (json['modality'] as List<dynamic>?)
-          ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      encounter: json['encounter'] == null
-          ? null
-          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      started: json['started'] == null
-          ? null
-          : FhirDateTime.fromJson(json['started'] as String),
-      startedElement: json['_started'] == null
-          ? null
-          : Element.fromJson(json['_started'] as Map<String, dynamic>),
-      basedOn: (json['basedOn'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      referrer: json['referrer'] == null
-          ? null
-          : Reference.fromJson(json['referrer'] as Map<String, dynamic>),
-      interpreter: (json['interpreter'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      endpoint: (json['endpoint'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      numberOfSeries: json['numberOfSeries'] == null
-          ? null
-          : FhirUnsignedInt.fromJson(json['numberOfSeries']),
-      numberOfSeriesElement: json['_numberOfSeries'] == null
-          ? null
-          : Element.fromJson(json['_numberOfSeries'] as Map<String, dynamic>),
-      numberOfInstances: json['numberOfInstances'] == null
-          ? null
-          : FhirUnsignedInt.fromJson(json['numberOfInstances']),
-      numberOfInstancesElement: json['_numberOfInstances'] == null
-          ? null
-          : Element.fromJson(
-              json['_numberOfInstances'] as Map<String, dynamic>),
-      procedureReference: json['procedureReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['procedureReference'] as Map<String, dynamic>),
-      procedureCode: (json['procedureCode'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      location: json['location'] == null
-          ? null
-          : Reference.fromJson(json['location'] as Map<String, dynamic>),
-      reasonCode: (json['reasonCode'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      reasonReference: (json['reasonReference'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      note: (json['note'] as List<dynamic>?)
-          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      series: (json['series'] as List<dynamic>?)
-          ?.map((e) => ImagingStudySeries.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$ImagingStudyImplToJson(_$ImagingStudyImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('modality', instance.modality?.map((e) => e.toJson()).toList());
-  val['subject'] = instance.subject.toJson();
-  writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('started', instance.started?.toJson());
-  writeNotNull('_started', instance.startedElement?.toJson());
-  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('referrer', instance.referrer?.toJson());
-  writeNotNull(
-      'interpreter', instance.interpreter?.map((e) => e.toJson()).toList());
-  writeNotNull('endpoint', instance.endpoint?.map((e) => e.toJson()).toList());
-  writeNotNull('numberOfSeries', instance.numberOfSeries?.toJson());
-  writeNotNull('_numberOfSeries', instance.numberOfSeriesElement?.toJson());
-  writeNotNull('numberOfInstances', instance.numberOfInstances?.toJson());
-  writeNotNull(
-      '_numberOfInstances', instance.numberOfInstancesElement?.toJson());
-  writeNotNull('procedureReference', instance.procedureReference?.toJson());
-  writeNotNull(
-      'procedureCode', instance.procedureCode?.map((e) => e.toJson()).toList());
-  writeNotNull('location', instance.location?.toJson());
-  writeNotNull(
-      'reasonCode', instance.reasonCode?.map((e) => e.toJson()).toList());
-  writeNotNull('reasonReference',
-      instance.reasonReference?.map((e) => e.toJson()).toList());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('series', instance.series?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$ImagingStudySeriesImpl _$$ImagingStudySeriesImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ImagingStudySeriesImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
-      uidElement: json['_uid'] == null
-          ? null
-          : Element.fromJson(json['_uid'] as Map<String, dynamic>),
-      number: json['number'] == null
-          ? null
-          : FhirUnsignedInt.fromJson(json['number']),
-      numberElement: json['_number'] == null
-          ? null
-          : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      modality: Coding.fromJson(json['modality'] as Map<String, dynamic>),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      numberOfInstances: json['numberOfInstances'] == null
-          ? null
-          : FhirUnsignedInt.fromJson(json['numberOfInstances']),
-      numberOfInstancesElement: json['_numberOfInstances'] == null
-          ? null
-          : Element.fromJson(
-              json['_numberOfInstances'] as Map<String, dynamic>),
-      endpoint: (json['endpoint'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      bodySite: json['bodySite'] == null
-          ? null
-          : Coding.fromJson(json['bodySite'] as Map<String, dynamic>),
-      laterality: json['laterality'] == null
-          ? null
-          : Coding.fromJson(json['laterality'] as Map<String, dynamic>),
-      specimen: (json['specimen'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      started: json['started'] == null
-          ? null
-          : FhirDateTime.fromJson(json['started'] as String),
-      startedElement: json['_started'] == null
-          ? null
-          : Element.fromJson(json['_started'] as Map<String, dynamic>),
-      performer: (json['performer'] as List<dynamic>?)
-          ?.map(
-              (e) => ImagingStudyPerformer.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      instance: (json['instance'] as List<dynamic>?)
-          ?.map((e) => ImagingStudyInstance.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$ImagingStudySeriesImplToJson(
-    _$ImagingStudySeriesImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('uid', instance.uid?.toJson());
-  writeNotNull('_uid', instance.uidElement?.toJson());
-  writeNotNull('number', instance.number?.toJson());
-  writeNotNull('_number', instance.numberElement?.toJson());
-  val['modality'] = instance.modality.toJson();
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('numberOfInstances', instance.numberOfInstances?.toJson());
-  writeNotNull(
-      '_numberOfInstances', instance.numberOfInstancesElement?.toJson());
-  writeNotNull('endpoint', instance.endpoint?.map((e) => e.toJson()).toList());
-  writeNotNull('bodySite', instance.bodySite?.toJson());
-  writeNotNull('laterality', instance.laterality?.toJson());
-  writeNotNull('specimen', instance.specimen?.map((e) => e.toJson()).toList());
-  writeNotNull('started', instance.started?.toJson());
-  writeNotNull('_started', instance.startedElement?.toJson());
-  writeNotNull(
-      'performer', instance.performer?.map((e) => e.toJson()).toList());
-  writeNotNull('instance', instance.instance?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$ImagingStudyPerformerImpl _$$ImagingStudyPerformerImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ImagingStudyPerformerImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      function: json['function'] == null
-          ? null
-          : CodeableConcept.fromJson(json['function'] as Map<String, dynamic>),
-      actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$ImagingStudyPerformerImplToJson(
-    _$ImagingStudyPerformerImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('function', instance.function?.toJson());
-  val['actor'] = instance.actor.toJson();
-  return val;
-}
-
-_$ImagingStudyInstanceImpl _$$ImagingStudyInstanceImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ImagingStudyInstanceImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
-      uidElement: json['_uid'] == null
-          ? null
-          : Element.fromJson(json['_uid'] as Map<String, dynamic>),
-      sopClass: Coding.fromJson(json['sopClass'] as Map<String, dynamic>),
-      number: json['number'] == null
-          ? null
-          : FhirUnsignedInt.fromJson(json['number']),
-      numberElement: json['_number'] == null
-          ? null
-          : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      title: json['title'] as String?,
-      titleElement: json['_title'] == null
-          ? null
-          : Element.fromJson(json['_title'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$ImagingStudyInstanceImplToJson(
-    _$ImagingStudyInstanceImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('uid', instance.uid?.toJson());
-  writeNotNull('_uid', instance.uidElement?.toJson());
-  val['sopClass'] = instance.sopClass.toJson();
-  writeNotNull('number', instance.number?.toJson());
-  writeNotNull('_number', instance.numberElement?.toJson());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  return val;
-}
-
-_$MediaImpl _$$MediaImplFromJson(Map<String, dynamic> json) => _$MediaImpl(
-      resourceType: $enumDecodeNullable(
-              _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.Media) ??
-          R4ResourceType.Media,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] as String?,
-      meta: json['meta'] == null
-          ? null
-          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : FhirCode.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      basedOn: (json['basedOn'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      partOf: (json['partOf'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      type: json['type'] == null
-          ? null
-          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      modality: json['modality'] == null
-          ? null
-          : CodeableConcept.fromJson(json['modality'] as Map<String, dynamic>),
-      view: json['view'] == null
-          ? null
-          : CodeableConcept.fromJson(json['view'] as Map<String, dynamic>),
-      subject: json['subject'] == null
-          ? null
-          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      encounter: json['encounter'] == null
-          ? null
-          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      createdDateTime: json['createdDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['createdDateTime'] as String),
-      createdDateTimeElement: json['_createdDateTime'] == null
-          ? null
-          : Element.fromJson(json['_createdDateTime'] as Map<String, dynamic>),
-      createdPeriod: json['createdPeriod'] == null
-          ? null
-          : Period.fromJson(json['createdPeriod'] as Map<String, dynamic>),
-      issued: json['issued'] == null
-          ? null
-          : FhirInstant.fromJson(json['issued'] as String),
-      issuedElement: json['_issued'] == null
-          ? null
-          : Element.fromJson(json['_issued'] as Map<String, dynamic>),
-      operator_: json['operator'] == null
-          ? null
-          : Reference.fromJson(json['operator'] as Map<String, dynamic>),
-      reasonCode: (json['reasonCode'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      bodySite: json['bodySite'] == null
-          ? null
-          : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
-      deviceName: json['deviceName'] as String?,
-      deviceNameElement: json['_deviceName'] == null
-          ? null
-          : Element.fromJson(json['_deviceName'] as Map<String, dynamic>),
-      device: json['device'] == null
-          ? null
-          : Reference.fromJson(json['device'] as Map<String, dynamic>),
-      height: json['height'] == null
-          ? null
-          : FhirPositiveInt.fromJson(json['height']),
-      heightElement: json['_height'] == null
-          ? null
-          : Element.fromJson(json['_height'] as Map<String, dynamic>),
-      width: json['width'] == null
-          ? null
-          : FhirPositiveInt.fromJson(json['width']),
-      widthElement: json['_width'] == null
-          ? null
-          : Element.fromJson(json['_width'] as Map<String, dynamic>),
-      frames: json['frames'] == null
-          ? null
-          : FhirPositiveInt.fromJson(json['frames']),
-      framesElement: json['_frames'] == null
-          ? null
-          : Element.fromJson(json['_frames'] as Map<String, dynamic>),
-      duration: json['duration'] == null
-          ? null
-          : FhirDecimal.fromJson(json['duration']),
-      durationElement: json['_duration'] == null
-          ? null
-          : Element.fromJson(json['_duration'] as Map<String, dynamic>),
-      content: Attachment.fromJson(json['content'] as Map<String, dynamic>),
-      note: (json['note'] as List<dynamic>?)
-          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$MediaImplToJson(_$MediaImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('modality', instance.modality?.toJson());
-  writeNotNull('view', instance.view?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('createdDateTime', instance.createdDateTime?.toJson());
-  writeNotNull('_createdDateTime', instance.createdDateTimeElement?.toJson());
-  writeNotNull('createdPeriod', instance.createdPeriod?.toJson());
-  writeNotNull('issued', instance.issued?.toJson());
-  writeNotNull('_issued', instance.issuedElement?.toJson());
-  writeNotNull('operator', instance.operator_?.toJson());
-  writeNotNull(
-      'reasonCode', instance.reasonCode?.map((e) => e.toJson()).toList());
-  writeNotNull('bodySite', instance.bodySite?.toJson());
-  writeNotNull('deviceName', instance.deviceName);
-  writeNotNull('_deviceName', instance.deviceNameElement?.toJson());
-  writeNotNull('device', instance.device?.toJson());
-  writeNotNull('height', instance.height?.toJson());
-  writeNotNull('_height', instance.heightElement?.toJson());
-  writeNotNull('width', instance.width?.toJson());
-  writeNotNull('_width', instance.widthElement?.toJson());
-  writeNotNull('frames', instance.frames?.toJson());
-  writeNotNull('_frames', instance.framesElement?.toJson());
-  writeNotNull('duration', instance.duration?.toJson());
-  writeNotNull('_duration', instance.durationElement?.toJson());
-  val['content'] = instance.content.toJson();
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$MolecularSequenceImpl _$$MolecularSequenceImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MolecularSequenceImpl(
-      resourceType: $enumDecodeNullable(
-              _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.MolecularSequence) ??
-          R4ResourceType.MolecularSequence,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] as String?,
-      meta: json['meta'] == null
-          ? null
-          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : FhirCode.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      coordinateSystem: json['coordinateSystem'] == null
-          ? null
-          : FhirInteger.fromJson(json['coordinateSystem']),
-      coordinateSystemElement: json['_coordinateSystem'] == null
-          ? null
-          : Element.fromJson(json['_coordinateSystem'] as Map<String, dynamic>),
-      patient: json['patient'] == null
-          ? null
-          : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-      specimen: json['specimen'] == null
-          ? null
-          : Reference.fromJson(json['specimen'] as Map<String, dynamic>),
-      device: json['device'] == null
-          ? null
-          : Reference.fromJson(json['device'] as Map<String, dynamic>),
-      performer: json['performer'] == null
-          ? null
-          : Reference.fromJson(json['performer'] as Map<String, dynamic>),
-      quantity: json['quantity'] == null
-          ? null
-          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-      referenceSeq: json['referenceSeq'] == null
-          ? null
-          : MolecularSequenceReferenceSeq.fromJson(
-              json['referenceSeq'] as Map<String, dynamic>),
-      variant: (json['variant'] as List<dynamic>?)
-          ?.map((e) =>
-              MolecularSequenceVariant.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      observedSeq: json['observedSeq'] as String?,
-      observedSeqElement: json['_observedSeq'] == null
-          ? null
-          : Element.fromJson(json['_observedSeq'] as Map<String, dynamic>),
-      quality: (json['quality'] as List<dynamic>?)
-          ?.map((e) =>
-              MolecularSequenceQuality.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      readCoverage: json['readCoverage'] == null
-          ? null
-          : FhirInteger.fromJson(json['readCoverage']),
-      readCoverageElement: json['_readCoverage'] == null
-          ? null
-          : Element.fromJson(json['_readCoverage'] as Map<String, dynamic>),
-      repository: (json['repository'] as List<dynamic>?)
-          ?.map((e) =>
-              MolecularSequenceRepository.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      pointer: (json['pointer'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      structureVariant: (json['structureVariant'] as List<dynamic>?)
-          ?.map((e) => MolecularSequenceStructureVariant.fromJson(
-              e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$MolecularSequenceImplToJson(
-    _$MolecularSequenceImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('coordinateSystem', instance.coordinateSystem?.toJson());
-  writeNotNull('_coordinateSystem', instance.coordinateSystemElement?.toJson());
-  writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('specimen', instance.specimen?.toJson());
-  writeNotNull('device', instance.device?.toJson());
-  writeNotNull('performer', instance.performer?.toJson());
-  writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('referenceSeq', instance.referenceSeq?.toJson());
-  writeNotNull('variant', instance.variant?.map((e) => e.toJson()).toList());
-  writeNotNull('observedSeq', instance.observedSeq);
-  writeNotNull('_observedSeq', instance.observedSeqElement?.toJson());
-  writeNotNull('quality', instance.quality?.map((e) => e.toJson()).toList());
-  writeNotNull('readCoverage', instance.readCoverage?.toJson());
-  writeNotNull('_readCoverage', instance.readCoverageElement?.toJson());
-  writeNotNull(
-      'repository', instance.repository?.map((e) => e.toJson()).toList());
-  writeNotNull('pointer', instance.pointer?.map((e) => e.toJson()).toList());
-  writeNotNull('structureVariant',
-      instance.structureVariant?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$MolecularSequenceReferenceSeqImpl
-    _$$MolecularSequenceReferenceSeqImplFromJson(Map<String, dynamic> json) =>
-        _$MolecularSequenceReferenceSeqImpl(
-          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-          extension_: (json['extension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          chromosome: json['chromosome'] == null
-              ? null
-              : CodeableConcept.fromJson(
-                  json['chromosome'] as Map<String, dynamic>),
-          genomeBuild: json['genomeBuild'] as String?,
-          genomeBuildElement: json['_genomeBuild'] == null
-              ? null
-              : Element.fromJson(json['_genomeBuild'] as Map<String, dynamic>),
-          orientation: json['orientation'] == null
-              ? null
-              : FhirCode.fromJson(json['orientation']),
-          orientationElement: json['_orientation'] == null
-              ? null
-              : Element.fromJson(json['_orientation'] as Map<String, dynamic>),
-          referenceSeqId: json['referenceSeqId'] == null
-              ? null
-              : CodeableConcept.fromJson(
-                  json['referenceSeqId'] as Map<String, dynamic>),
-          referenceSeqPointer: json['referenceSeqPointer'] == null
-              ? null
-              : Reference.fromJson(
-                  json['referenceSeqPointer'] as Map<String, dynamic>),
-          referenceSeqString: json['referenceSeqString'] as String?,
-          referenceSeqStringElement: json['_referenceSeqString'] == null
-              ? null
-              : Element.fromJson(
-                  json['_referenceSeqString'] as Map<String, dynamic>),
-          strand:
-              json['strand'] == null ? null : FhirCode.fromJson(json['strand']),
-          strandElement: json['_strand'] == null
-              ? null
-              : Element.fromJson(json['_strand'] as Map<String, dynamic>),
-          windowStart: json['windowStart'] == null
-              ? null
-              : FhirInteger.fromJson(json['windowStart']),
-          windowStartElement: json['_windowStart'] == null
-              ? null
-              : Element.fromJson(json['_windowStart'] as Map<String, dynamic>),
-          windowEnd: json['windowEnd'] == null
-              ? null
-              : FhirInteger.fromJson(json['windowEnd']),
-          windowEndElement: json['_windowEnd'] == null
-              ? null
-              : Element.fromJson(json['_windowEnd'] as Map<String, dynamic>),
-        );
-
-Map<String, dynamic> _$$MolecularSequenceReferenceSeqImplToJson(
-    _$MolecularSequenceReferenceSeqImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('chromosome', instance.chromosome?.toJson());
-  writeNotNull('genomeBuild', instance.genomeBuild);
-  writeNotNull('_genomeBuild', instance.genomeBuildElement?.toJson());
-  writeNotNull('orientation', instance.orientation?.toJson());
-  writeNotNull('_orientation', instance.orientationElement?.toJson());
-  writeNotNull('referenceSeqId', instance.referenceSeqId?.toJson());
-  writeNotNull('referenceSeqPointer', instance.referenceSeqPointer?.toJson());
-  writeNotNull('referenceSeqString', instance.referenceSeqString);
-  writeNotNull(
-      '_referenceSeqString', instance.referenceSeqStringElement?.toJson());
-  writeNotNull('strand', instance.strand?.toJson());
-  writeNotNull('_strand', instance.strandElement?.toJson());
-  writeNotNull('windowStart', instance.windowStart?.toJson());
-  writeNotNull('_windowStart', instance.windowStartElement?.toJson());
-  writeNotNull('windowEnd', instance.windowEnd?.toJson());
-  writeNotNull('_windowEnd', instance.windowEndElement?.toJson());
-  return val;
-}
-
-_$MolecularSequenceVariantImpl _$$MolecularSequenceVariantImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MolecularSequenceVariantImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      start: json['start'] == null ? null : FhirInteger.fromJson(json['start']),
-      startElement: json['_start'] == null
-          ? null
-          : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: json['end'] == null ? null : FhirInteger.fromJson(json['end']),
-      endElement: json['_end'] == null
-          ? null
-          : Element.fromJson(json['_end'] as Map<String, dynamic>),
-      observedAllele: json['observedAllele'] as String?,
-      observedAlleleElement: json['_observedAllele'] == null
-          ? null
-          : Element.fromJson(json['_observedAllele'] as Map<String, dynamic>),
-      referenceAllele: json['referenceAllele'] as String?,
-      referenceAlleleElement: json['_referenceAllele'] == null
-          ? null
-          : Element.fromJson(json['_referenceAllele'] as Map<String, dynamic>),
-      cigar: json['cigar'] as String?,
-      cigarElement: json['_cigar'] == null
-          ? null
-          : Element.fromJson(json['_cigar'] as Map<String, dynamic>),
-      variantPointer: json['variantPointer'] == null
-          ? null
-          : Reference.fromJson(json['variantPointer'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$MolecularSequenceVariantImplToJson(
-    _$MolecularSequenceVariantImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('start', instance.start?.toJson());
-  writeNotNull('_start', instance.startElement?.toJson());
-  writeNotNull('end', instance.end?.toJson());
-  writeNotNull('_end', instance.endElement?.toJson());
-  writeNotNull('observedAllele', instance.observedAllele);
-  writeNotNull('_observedAllele', instance.observedAlleleElement?.toJson());
-  writeNotNull('referenceAllele', instance.referenceAllele);
-  writeNotNull('_referenceAllele', instance.referenceAlleleElement?.toJson());
-  writeNotNull('cigar', instance.cigar);
-  writeNotNull('_cigar', instance.cigarElement?.toJson());
-  writeNotNull('variantPointer', instance.variantPointer?.toJson());
-  return val;
-}
-
-_$MolecularSequenceQualityImpl _$$MolecularSequenceQualityImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MolecularSequenceQualityImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      standardSequence: json['standardSequence'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['standardSequence'] as Map<String, dynamic>),
-      start: json['start'] == null ? null : FhirInteger.fromJson(json['start']),
-      startElement: json['_start'] == null
-          ? null
-          : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: json['end'] == null ? null : FhirInteger.fromJson(json['end']),
-      endElement: json['_end'] == null
-          ? null
-          : Element.fromJson(json['_end'] as Map<String, dynamic>),
-      score: json['score'] == null
-          ? null
-          : Quantity.fromJson(json['score'] as Map<String, dynamic>),
-      method: json['method'] == null
-          ? null
-          : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
-      truthTP: json['truthTP'] == null
-          ? null
-          : FhirDecimal.fromJson(json['truthTP']),
-      truthTPElement: json['_truthTP'] == null
-          ? null
-          : Element.fromJson(json['_truthTP'] as Map<String, dynamic>),
-      queryTP: json['queryTP'] == null
-          ? null
-          : FhirDecimal.fromJson(json['queryTP']),
-      queryTPElement: json['_queryTP'] == null
-          ? null
-          : Element.fromJson(json['_queryTP'] as Map<String, dynamic>),
-      truthFN: json['truthFN'] == null
-          ? null
-          : FhirDecimal.fromJson(json['truthFN']),
-      truthFNElement: json['_truthFN'] == null
-          ? null
-          : Element.fromJson(json['_truthFN'] as Map<String, dynamic>),
-      queryFP: json['queryFP'] == null
-          ? null
-          : FhirDecimal.fromJson(json['queryFP']),
-      queryFPElement: json['_queryFP'] == null
-          ? null
-          : Element.fromJson(json['_queryFP'] as Map<String, dynamic>),
-      gtFP: json['gtFP'] == null ? null : FhirDecimal.fromJson(json['gtFP']),
-      gtFPElement: json['_gtFP'] == null
-          ? null
-          : Element.fromJson(json['_gtFP'] as Map<String, dynamic>),
-      precision: json['precision'] == null
-          ? null
-          : FhirDecimal.fromJson(json['precision']),
-      precisionElement: json['_precision'] == null
-          ? null
-          : Element.fromJson(json['_precision'] as Map<String, dynamic>),
-      recall:
-          json['recall'] == null ? null : FhirDecimal.fromJson(json['recall']),
-      recallElement: json['_recall'] == null
-          ? null
-          : Element.fromJson(json['_recall'] as Map<String, dynamic>),
-      fScore:
-          json['fScore'] == null ? null : FhirDecimal.fromJson(json['fScore']),
-      fScoreElement: json['_fScore'] == null
-          ? null
-          : Element.fromJson(json['_fScore'] as Map<String, dynamic>),
-      roc: json['roc'] == null
-          ? null
-          : MolecularSequenceRoc.fromJson(json['roc'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$MolecularSequenceQualityImplToJson(
-    _$MolecularSequenceQualityImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('standardSequence', instance.standardSequence?.toJson());
-  writeNotNull('start', instance.start?.toJson());
-  writeNotNull('_start', instance.startElement?.toJson());
-  writeNotNull('end', instance.end?.toJson());
-  writeNotNull('_end', instance.endElement?.toJson());
-  writeNotNull('score', instance.score?.toJson());
-  writeNotNull('method', instance.method?.toJson());
-  writeNotNull('truthTP', instance.truthTP?.toJson());
-  writeNotNull('_truthTP', instance.truthTPElement?.toJson());
-  writeNotNull('queryTP', instance.queryTP?.toJson());
-  writeNotNull('_queryTP', instance.queryTPElement?.toJson());
-  writeNotNull('truthFN', instance.truthFN?.toJson());
-  writeNotNull('_truthFN', instance.truthFNElement?.toJson());
-  writeNotNull('queryFP', instance.queryFP?.toJson());
-  writeNotNull('_queryFP', instance.queryFPElement?.toJson());
-  writeNotNull('gtFP', instance.gtFP?.toJson());
-  writeNotNull('_gtFP', instance.gtFPElement?.toJson());
-  writeNotNull('precision', instance.precision?.toJson());
-  writeNotNull('_precision', instance.precisionElement?.toJson());
-  writeNotNull('recall', instance.recall?.toJson());
-  writeNotNull('_recall', instance.recallElement?.toJson());
-  writeNotNull('fScore', instance.fScore?.toJson());
-  writeNotNull('_fScore', instance.fScoreElement?.toJson());
-  writeNotNull('roc', instance.roc?.toJson());
-  return val;
-}
-
-_$MolecularSequenceRocImpl _$$MolecularSequenceRocImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MolecularSequenceRocImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      score:
-          (json['score'] as List<dynamic>?)?.map(FhirInteger.fromJson).toList(),
-      scoreElement: (json['_score'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      numTP:
-          (json['numTP'] as List<dynamic>?)?.map(FhirInteger.fromJson).toList(),
-      numTPElement: (json['_numTP'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      numFP:
-          (json['numFP'] as List<dynamic>?)?.map(FhirInteger.fromJson).toList(),
-      numFPElement: (json['_numFP'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      numFN:
-          (json['numFN'] as List<dynamic>?)?.map(FhirInteger.fromJson).toList(),
-      numFNElement: (json['_numFN'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      precision: (json['precision'] as List<dynamic>?)
-          ?.map(FhirDecimal.fromJson)
-          .toList(),
-      precisionElement: (json['_precision'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      sensitivity: (json['sensitivity'] as List<dynamic>?)
-          ?.map(FhirDecimal.fromJson)
-          .toList(),
-      sensitivityElement: (json['_sensitivity'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      fMeasure: (json['fMeasure'] as List<dynamic>?)
-          ?.map(FhirDecimal.fromJson)
-          .toList(),
-      fMeasureElement: (json['_fMeasure'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$MolecularSequenceRocImplToJson(
-    _$MolecularSequenceRocImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('score', instance.score?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      '_score', instance.scoreElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('numTP', instance.numTP?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      '_numTP', instance.numTPElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('numFP', instance.numFP?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      '_numFP', instance.numFPElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('numFN', instance.numFN?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      '_numFN', instance.numFNElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'precision', instance.precision?.map((e) => e.toJson()).toList());
-  writeNotNull('_precision',
-      instance.precisionElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'sensitivity', instance.sensitivity?.map((e) => e.toJson()).toList());
-  writeNotNull('_sensitivity',
-      instance.sensitivityElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('fMeasure', instance.fMeasure?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      '_fMeasure', instance.fMeasureElement?.map((e) => e?.toJson()).toList());
-  return val;
-}
-
-_$MolecularSequenceRepositoryImpl _$$MolecularSequenceRepositoryImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MolecularSequenceRepositoryImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
-      urlElement: json['_url'] == null
-          ? null
-          : Element.fromJson(json['_url'] as Map<String, dynamic>),
-      name: json['name'] as String?,
-      nameElement: json['_name'] == null
-          ? null
-          : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      datasetId: json['datasetId'] as String?,
-      datasetIdElement: json['_datasetId'] == null
-          ? null
-          : Element.fromJson(json['_datasetId'] as Map<String, dynamic>),
-      variantsetId: json['variantsetId'] as String?,
-      variantsetIdElement: json['_variantsetId'] == null
-          ? null
-          : Element.fromJson(json['_variantsetId'] as Map<String, dynamic>),
-      readsetId: json['readsetId'] as String?,
-      readsetIdElement: json['_readsetId'] == null
-          ? null
-          : Element.fromJson(json['_readsetId'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$MolecularSequenceRepositoryImplToJson(
-    _$MolecularSequenceRepositoryImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('url', instance.url?.toJson());
-  writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('datasetId', instance.datasetId);
-  writeNotNull('_datasetId', instance.datasetIdElement?.toJson());
-  writeNotNull('variantsetId', instance.variantsetId);
-  writeNotNull('_variantsetId', instance.variantsetIdElement?.toJson());
-  writeNotNull('readsetId', instance.readsetId);
-  writeNotNull('_readsetId', instance.readsetIdElement?.toJson());
-  return val;
-}
-
-_$MolecularSequenceStructureVariantImpl
-    _$$MolecularSequenceStructureVariantImplFromJson(
-            Map<String, dynamic> json) =>
-        _$MolecularSequenceStructureVariantImpl(
-          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-          extension_: (json['extension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-              .toList(),
-          variantType: json['variantType'] == null
-              ? null
-              : CodeableConcept.fromJson(
-                  json['variantType'] as Map<String, dynamic>),
-          exact: json['exact'] == null
-              ? null
-              : FhirBoolean.fromJson(json['exact']),
-          exactElement: json['_exact'] == null
-              ? null
-              : Element.fromJson(json['_exact'] as Map<String, dynamic>),
-          length: json['length'] == null
-              ? null
-              : FhirInteger.fromJson(json['length']),
-          lengthElement: json['_length'] == null
-              ? null
-              : Element.fromJson(json['_length'] as Map<String, dynamic>),
-          outer: json['outer'] == null
-              ? null
-              : MolecularSequenceOuter.fromJson(
-                  json['outer'] as Map<String, dynamic>),
-          inner: json['inner'] == null
-              ? null
-              : MolecularSequenceInner.fromJson(
-                  json['inner'] as Map<String, dynamic>),
-        );
-
-Map<String, dynamic> _$$MolecularSequenceStructureVariantImplToJson(
-    _$MolecularSequenceStructureVariantImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('variantType', instance.variantType?.toJson());
-  writeNotNull('exact', instance.exact?.toJson());
-  writeNotNull('_exact', instance.exactElement?.toJson());
-  writeNotNull('length', instance.length?.toJson());
-  writeNotNull('_length', instance.lengthElement?.toJson());
-  writeNotNull('outer', instance.outer?.toJson());
-  writeNotNull('inner', instance.inner?.toJson());
-  return val;
-}
-
-_$MolecularSequenceOuterImpl _$$MolecularSequenceOuterImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MolecularSequenceOuterImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      start: json['start'] == null ? null : FhirInteger.fromJson(json['start']),
-      startElement: json['_start'] == null
-          ? null
-          : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: json['end'] == null ? null : FhirInteger.fromJson(json['end']),
-      endElement: json['_end'] == null
-          ? null
-          : Element.fromJson(json['_end'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$MolecularSequenceOuterImplToJson(
-    _$MolecularSequenceOuterImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('start', instance.start?.toJson());
-  writeNotNull('_start', instance.startElement?.toJson());
-  writeNotNull('end', instance.end?.toJson());
-  writeNotNull('_end', instance.endElement?.toJson());
-  return val;
-}
-
-_$MolecularSequenceInnerImpl _$$MolecularSequenceInnerImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MolecularSequenceInnerImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      start: json['start'] == null ? null : FhirInteger.fromJson(json['start']),
-      startElement: json['_start'] == null
-          ? null
-          : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: json['end'] == null ? null : FhirInteger.fromJson(json['end']),
-      endElement: json['_end'] == null
-          ? null
-          : Element.fromJson(json['_end'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$MolecularSequenceInnerImplToJson(
-    _$MolecularSequenceInnerImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('start', instance.start?.toJson());
-  writeNotNull('_start', instance.startElement?.toJson());
-  writeNotNull('end', instance.end?.toJson());
-  writeNotNull('_end', instance.endElement?.toJson());
-  return val;
-}
-
-_$ObservationImpl _$$ObservationImplFromJson(Map<String, dynamic> json) =>
-    _$ObservationImpl(
-      resourceType: $enumDecodeNullable(
-              _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.Observation) ??
-          R4ResourceType.Observation,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] as String?,
-      meta: json['meta'] == null
-          ? null
-          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : FhirCode.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      basedOn: (json['basedOn'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      partOf: (json['partOf'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      category: (json['category'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      subject: json['subject'] == null
-          ? null
-          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      focus: (json['focus'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      encounter: json['encounter'] == null
-          ? null
-          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      effectiveDateTime: json['effectiveDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
-      effectiveDateTimeElement: json['_effectiveDateTime'] == null
-          ? null
-          : Element.fromJson(
-              json['_effectiveDateTime'] as Map<String, dynamic>),
-      effectivePeriod: json['effectivePeriod'] == null
-          ? null
-          : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-      effectiveTiming: json['effectiveTiming'] == null
-          ? null
-          : Timing.fromJson(json['effectiveTiming'] as Map<String, dynamic>),
-      effectiveInstant: json['effectiveInstant'] == null
-          ? null
-          : FhirInstant.fromJson(json['effectiveInstant'] as String),
-      effectiveInstantElement: json['_effectiveInstant'] == null
-          ? null
-          : Element.fromJson(json['_effectiveInstant'] as Map<String, dynamic>),
-      issued: json['issued'] == null
-          ? null
-          : FhirInstant.fromJson(json['issued'] as String),
-      issuedElement: json['_issued'] == null
-          ? null
-          : Element.fromJson(json['_issued'] as Map<String, dynamic>),
-      performer: (json['performer'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      valueQuantity: json['valueQuantity'] == null
-          ? null
-          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-      valueCodeableConcept: json['valueCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['valueCodeableConcept'] as Map<String, dynamic>),
-      valueString: json['valueString'] as String?,
-      valueStringElement: json['_valueString'] == null
-          ? null
-          : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-      valueBoolean: json['valueBoolean'] == null
-          ? null
-          : FhirBoolean.fromJson(json['valueBoolean']),
-      valueBooleanElement: json['_valueBoolean'] == null
-          ? null
-          : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
-      valueInteger: json['valueInteger'] == null
-          ? null
-          : FhirInteger.fromJson(json['valueInteger']),
-      valueIntegerElement: json['_valueInteger'] == null
-          ? null
-          : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-      valueRange: json['valueRange'] == null
-          ? null
-          : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
-      valueRatio: json['valueRatio'] == null
-          ? null
-          : Ratio.fromJson(json['valueRatio'] as Map<String, dynamic>),
-      valueSampledData: json['valueSampledData'] == null
-          ? null
-          : SampledData.fromJson(
-              json['valueSampledData'] as Map<String, dynamic>),
-      valueTime: json['valueTime'] == null
-          ? null
-          : FhirTime.fromJson(json['valueTime']),
-      valueTimeElement: json['_valueTime'] == null
-          ? null
-          : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
-      valueDateTime: json['valueDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['valueDateTime'] as String),
-      valueDateTimeElement: json['_valueDateTime'] == null
-          ? null
-          : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
-      valuePeriod: json['valuePeriod'] == null
-          ? null
-          : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
-      dataAbsentReason: json['dataAbsentReason'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['dataAbsentReason'] as Map<String, dynamic>),
-      interpretation: (json['interpretation'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      note: (json['note'] as List<dynamic>?)
-          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      bodySite: json['bodySite'] == null
-          ? null
-          : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
-      method: json['method'] == null
-          ? null
-          : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
-      specimen: json['specimen'] == null
-          ? null
-          : Reference.fromJson(json['specimen'] as Map<String, dynamic>),
-      device: json['device'] == null
-          ? null
-          : Reference.fromJson(json['device'] as Map<String, dynamic>),
-      referenceRange: (json['referenceRange'] as List<dynamic>?)
-          ?.map((e) =>
-              ObservationReferenceRange.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      hasMember: (json['hasMember'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      derivedFrom: (json['derivedFrom'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      component: (json['component'] as List<dynamic>?)
-          ?.map((e) => ObservationComponent.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$ObservationImplToJson(_$ObservationImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
-  val['code'] = instance.code.toJson();
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('focus', instance.focus?.map((e) => e.toJson()).toList());
-  writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('effectiveDateTime', instance.effectiveDateTime?.toJson());
-  writeNotNull(
-      '_effectiveDateTime', instance.effectiveDateTimeElement?.toJson());
-  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull('effectiveTiming', instance.effectiveTiming?.toJson());
-  writeNotNull('effectiveInstant', instance.effectiveInstant?.toJson());
-  writeNotNull('_effectiveInstant', instance.effectiveInstantElement?.toJson());
-  writeNotNull('issued', instance.issued?.toJson());
-  writeNotNull('_issued', instance.issuedElement?.toJson());
-  writeNotNull(
-      'performer', instance.performer?.map((e) => e.toJson()).toList());
-  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
-  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
-  writeNotNull('valueString', instance.valueString);
-  writeNotNull('_valueString', instance.valueStringElement?.toJson());
-  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
-  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
-  writeNotNull('valueInteger', instance.valueInteger?.toJson());
-  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
-  writeNotNull('valueRange', instance.valueRange?.toJson());
-  writeNotNull('valueRatio', instance.valueRatio?.toJson());
-  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
-  writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
-  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
-  writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
-  writeNotNull('interpretation',
-      instance.interpretation?.map((e) => e.toJson()).toList());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('bodySite', instance.bodySite?.toJson());
-  writeNotNull('method', instance.method?.toJson());
-  writeNotNull('specimen', instance.specimen?.toJson());
-  writeNotNull('device', instance.device?.toJson());
-  writeNotNull('referenceRange',
-      instance.referenceRange?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'hasMember', instance.hasMember?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'derivedFrom', instance.derivedFrom?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'component', instance.component?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$ObservationReferenceRangeImpl _$$ObservationReferenceRangeImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ObservationReferenceRangeImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      low: json['low'] == null
-          ? null
-          : Quantity.fromJson(json['low'] as Map<String, dynamic>),
-      high: json['high'] == null
-          ? null
-          : Quantity.fromJson(json['high'] as Map<String, dynamic>),
-      type: json['type'] == null
-          ? null
-          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      appliesTo: (json['appliesTo'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      age: json['age'] == null
-          ? null
-          : Range.fromJson(json['age'] as Map<String, dynamic>),
-      text: json['text'] as String?,
-      textElement: json['_text'] == null
-          ? null
-          : Element.fromJson(json['_text'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$ObservationReferenceRangeImplToJson(
-    _$ObservationReferenceRangeImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('low', instance.low?.toJson());
-  writeNotNull('high', instance.high?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull(
-      'appliesTo', instance.appliesTo?.map((e) => e.toJson()).toList());
-  writeNotNull('age', instance.age?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  return val;
-}
-
-_$ObservationComponentImpl _$$ObservationComponentImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ObservationComponentImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      valueQuantity: json['valueQuantity'] == null
-          ? null
-          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-      valueCodeableConcept: json['valueCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['valueCodeableConcept'] as Map<String, dynamic>),
-      valueString: json['valueString'] as String?,
-      valueStringElement: json['_valueString'] == null
-          ? null
-          : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-      valueBoolean: json['valueBoolean'] == null
-          ? null
-          : FhirBoolean.fromJson(json['valueBoolean']),
-      valueBooleanElement: json['_valueBoolean'] == null
-          ? null
-          : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
-      valueInteger: json['valueInteger'] == null
-          ? null
-          : FhirInteger.fromJson(json['valueInteger']),
-      valueIntegerElement: json['_valueInteger'] == null
-          ? null
-          : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-      valueRange: json['valueRange'] == null
-          ? null
-          : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
-      valueRatio: json['valueRatio'] == null
-          ? null
-          : Ratio.fromJson(json['valueRatio'] as Map<String, dynamic>),
-      valueSampledData: json['valueSampledData'] == null
-          ? null
-          : SampledData.fromJson(
-              json['valueSampledData'] as Map<String, dynamic>),
-      valueTime: json['valueTime'] == null
-          ? null
-          : FhirTime.fromJson(json['valueTime']),
-      valueTimeElement: json['_valueTime'] == null
-          ? null
-          : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
-      valueDateTime: json['valueDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['valueDateTime'] as String),
-      valueDateTimeElement: json['_valueDateTime'] == null
-          ? null
-          : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
-      valuePeriod: json['valuePeriod'] == null
-          ? null
-          : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
-      dataAbsentReason: json['dataAbsentReason'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['dataAbsentReason'] as Map<String, dynamic>),
-      interpretation: (json['interpretation'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      referenceRange: (json['referenceRange'] as List<dynamic>?)
-          ?.map((e) =>
-              ObservationReferenceRange.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$ObservationComponentImplToJson(
-    _$ObservationComponentImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['code'] = instance.code.toJson();
-  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
-  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
-  writeNotNull('valueString', instance.valueString);
-  writeNotNull('_valueString', instance.valueStringElement?.toJson());
-  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
-  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
-  writeNotNull('valueInteger', instance.valueInteger?.toJson());
-  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
-  writeNotNull('valueRange', instance.valueRange?.toJson());
-  writeNotNull('valueRatio', instance.valueRatio?.toJson());
-  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
-  writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
-  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
-  writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
-  writeNotNull('interpretation',
-      instance.interpretation?.map((e) => e.toJson()).toList());
-  writeNotNull('referenceRange',
-      instance.referenceRange?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$QuestionnaireResponseImpl _$$QuestionnaireResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$QuestionnaireResponseImpl(
-      resourceType: $enumDecodeNullable(
-              _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.QuestionnaireResponse) ??
-          R4ResourceType.QuestionnaireResponse,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] as String?,
-      meta: json['meta'] == null
-          ? null
-          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : FhirCode.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: json['identifier'] == null
-          ? null
-          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      basedOn: (json['basedOn'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      partOf: (json['partOf'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      questionnaire: json['questionnaire'] == null
-          ? null
-          : FhirCanonical.fromJson(json['questionnaire']),
-      questionnaireElement: json['_questionnaire'] == null
-          ? null
-          : Element.fromJson(json['_questionnaire'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      subject: json['subject'] == null
-          ? null
-          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      encounter: json['encounter'] == null
-          ? null
-          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      authored: json['authored'] == null
-          ? null
-          : FhirDateTime.fromJson(json['authored'] as String),
-      authoredElement: json['_authored'] == null
-          ? null
-          : Element.fromJson(json['_authored'] as Map<String, dynamic>),
-      author: json['author'] == null
-          ? null
-          : Reference.fromJson(json['author'] as Map<String, dynamic>),
-      source: json['source'] == null
-          ? null
-          : Reference.fromJson(json['source'] as Map<String, dynamic>),
-      item: (json['item'] as List<dynamic>?)
-          ?.map((e) =>
-              QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$QuestionnaireResponseImplToJson(
-    _$QuestionnaireResponseImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
-  writeNotNull('questionnaire', instance.questionnaire?.toJson());
-  writeNotNull('_questionnaire', instance.questionnaireElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('authored', instance.authored?.toJson());
-  writeNotNull('_authored', instance.authoredElement?.toJson());
-  writeNotNull('author', instance.author?.toJson());
-  writeNotNull('source', instance.source?.toJson());
-  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$QuestionnaireResponseItemImpl _$$QuestionnaireResponseItemImplFromJson(
-        Map<String, dynamic> json) =>
-    _$QuestionnaireResponseItemImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      linkId: json['linkId'] as String?,
-      linkIdElement: json['_linkId'] == null
-          ? null
-          : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
-      definition: json['definition'] == null
-          ? null
-          : FhirUri.fromJson(json['definition']),
-      definitionElement: json['_definition'] == null
-          ? null
-          : Element.fromJson(json['_definition'] as Map<String, dynamic>),
-      text: json['text'] as String?,
-      textElement: json['_text'] == null
-          ? null
-          : Element.fromJson(json['_text'] as Map<String, dynamic>),
-      answer: (json['answer'] as List<dynamic>?)
-          ?.map((e) =>
-              QuestionnaireResponseAnswer.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      item: (json['item'] as List<dynamic>?)
-          ?.map((e) =>
-              QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$QuestionnaireResponseItemImplToJson(
-    _$QuestionnaireResponseItemImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('linkId', instance.linkId);
-  writeNotNull('_linkId', instance.linkIdElement?.toJson());
-  writeNotNull('definition', instance.definition?.toJson());
-  writeNotNull('_definition', instance.definitionElement?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  writeNotNull('answer', instance.answer?.map((e) => e.toJson()).toList());
-  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$QuestionnaireResponseAnswerImpl _$$QuestionnaireResponseAnswerImplFromJson(
-        Map<String, dynamic> json) =>
-    _$QuestionnaireResponseAnswerImpl(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      valueBoolean: json['valueBoolean'] == null
-          ? null
-          : FhirBoolean.fromJson(json['valueBoolean']),
-      valueBooleanElement: json['_valueBoolean'] == null
-          ? null
-          : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
-      valueDecimal: json['valueDecimal'] == null
-          ? null
-          : FhirDecimal.fromJson(json['valueDecimal']),
-      valueDecimalElement: json['_valueDecimal'] == null
-          ? null
-          : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
-      valueInteger: json['valueInteger'] == null
-          ? null
-          : FhirInteger.fromJson(json['valueInteger']),
-      valueIntegerElement: json['_valueInteger'] == null
-          ? null
-          : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-      valueDate: json['valueDate'] == null
-          ? null
-          : FhirDate.fromJson(json['valueDate'] as String),
-      valueDateElement: json['_valueDate'] == null
-          ? null
-          : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
-      valueDateTime: json['valueDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['valueDateTime'] as String),
-      valueDateTimeElement: json['_valueDateTime'] == null
-          ? null
-          : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
-      valueTime: json['valueTime'] == null
-          ? null
-          : FhirTime.fromJson(json['valueTime']),
-      valueTimeElement: json['_valueTime'] == null
-          ? null
-          : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
-      valueString: json['valueString'] as String?,
-      valueStringElement: json['_valueString'] == null
-          ? null
-          : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-      valueUri:
-          json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
-      valueUriElement: json['_valueUri'] == null
-          ? null
-          : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
-      valueAttachment: json['valueAttachment'] == null
-          ? null
-          : Attachment.fromJson(
-              json['valueAttachment'] as Map<String, dynamic>),
-      valueCoding: json['valueCoding'] == null
-          ? null
-          : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
-      valueQuantity: json['valueQuantity'] == null
-          ? null
-          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-      valueReference: json['valueReference'] == null
-          ? null
-          : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
-      item: (json['item'] as List<dynamic>?)
-          ?.map((e) =>
-              QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$QuestionnaireResponseAnswerImplToJson(
-    _$QuestionnaireResponseAnswerImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
-  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
-  writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
-  writeNotNull('valueInteger', instance.valueInteger?.toJson());
-  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
-  writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
-  writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
-  writeNotNull('valueString', instance.valueString);
-  writeNotNull('_valueString', instance.valueStringElement?.toJson());
-  writeNotNull('valueUri', instance.valueUri?.toJson());
-  writeNotNull('_valueUri', instance.valueUriElement?.toJson());
-  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
-  writeNotNull('valueCoding', instance.valueCoding?.toJson());
-  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
-  writeNotNull('valueReference', instance.valueReference?.toJson());
-  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$SpecimenImpl _$$SpecimenImplFromJson(Map<String, dynamic> json) =>
-    _$SpecimenImpl(
-      resourceType: $enumDecodeNullable(
-              _$R4ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R4ResourceType.Specimen) ??
-          R4ResourceType.Specimen,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] as String?,
-      meta: json['meta'] == null
-          ? null
-          : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : FhirCode.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      accessionIdentifier: json['accessionIdentifier'] == null
-          ? null
-          : Identifier.fromJson(
-              json['accessionIdentifier'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      type: json['type'] == null
-          ? null
-          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      subject: json['subject'] == null
-          ? null
-          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      receivedTime: json['receivedTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['receivedTime'] as String),
-      receivedTimeElement: json['_receivedTime'] == null
-          ? null
-          : Element.fromJson(json['_receivedTime'] as Map<String, dynamic>),
-      parent: (json['parent'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      request: (json['request'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      collection: json['collection'] == null
-          ? null
-          : SpecimenCollection.fromJson(
-              json['collection'] as Map<String, dynamic>),
-      processing: (json['processing'] as List<dynamic>?)
-          ?.map((e) => SpecimenProcessing.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      container: (json['container'] as List<dynamic>?)
-          ?.map((e) => SpecimenContainer.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      condition: (json['condition'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      note: (json['note'] as List<dynamic>?)
-          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$SpecimenImplToJson(_$SpecimenImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('accessionIdentifier', instance.accessionIdentifier?.toJson());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('receivedTime', instance.receivedTime?.toJson());
-  writeNotNull('_receivedTime', instance.receivedTimeElement?.toJson());
-  writeNotNull('parent', instance.parent?.map((e) => e.toJson()).toList());
-  writeNotNull('request', instance.request?.map((e) => e.toJson()).toList());
-  writeNotNull('collection', instance.collection?.toJson());
-  writeNotNull(
-      'processing', instance.processing?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'container', instance.container?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'condition', instance.condition?.map((e) => e.toJson()).toList());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$SpecimenCollectionImpl _$$SpecimenCollectionImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SpecimenCollectionImpl(
+_DiagnosticReport _$DiagnosticReportFromJson(
+  Map<String, dynamic> json,
+) => _DiagnosticReport(
+  resourceType:
+      $enumDecodeNullable(
+        _$R4ResourceTypeEnumMap,
+        json['resourceType'],
+        unknownValue: R4ResourceType.DiagnosticReport,
+      ) ??
+      R4ResourceType.DiagnosticReport,
+  dbId: (json['dbId'] as num?)?.toInt(),
+  fhirId: json['id'] as String?,
+  meta: json['meta'] == null
+      ? null
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+  implicitRules: json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules']),
+  implicitRulesElement: json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+  language: json['language'] == null
+      ? null
+      : FhirCode.fromJson(json['language']),
+  languageElement: json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>),
+  text: json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+  contained: (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  identifier: (json['identifier'] as List<dynamic>?)
+      ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  basedOn: (json['basedOn'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+  statusElement: json['_status'] == null
+      ? null
+      : Element.fromJson(json['_status'] as Map<String, dynamic>),
+  category: (json['category'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+  subject: json['subject'] == null
+      ? null
+      : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+  encounter: json['encounter'] == null
+      ? null
+      : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+  effectiveDateTime: json['effectiveDateTime'] == null
+      ? null
+      : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
+  effectiveDateTimeElement: json['_effectiveDateTime'] == null
+      ? null
+      : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
+  effectivePeriod: json['effectivePeriod'] == null
+      ? null
+      : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+  issued: json['issued'] == null
+      ? null
+      : FhirInstant.fromJson(json['issued'] as String),
+  issuedElement: json['_issued'] == null
+      ? null
+      : Element.fromJson(json['_issued'] as Map<String, dynamic>),
+  performer: (json['performer'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  resultsInterpreter: (json['resultsInterpreter'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  specimen: (json['specimen'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  result: (json['result'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  imagingStudy: (json['imagingStudy'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  media: (json['media'] as List<dynamic>?)
+      ?.map((e) => DiagnosticReportMedia.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  conclusion: json['conclusion'] as String?,
+  conclusionElement: json['_conclusion'] == null
+      ? null
+      : Element.fromJson(json['_conclusion'] as Map<String, dynamic>),
+  conclusionCode: (json['conclusionCode'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  presentedForm: (json['presentedForm'] as List<dynamic>?)
+      ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$DiagnosticReportToJson(
+  _DiagnosticReport instance,
+) => <String, dynamic>{
+  'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+  'id': ?instance.fhirId,
+  'meta': ?instance.meta?.toJson(),
+  'implicitRules': ?instance.implicitRules?.toJson(),
+  '_implicitRules': ?instance.implicitRulesElement?.toJson(),
+  'language': ?instance.language?.toJson(),
+  '_language': ?instance.languageElement?.toJson(),
+  'text': ?instance.text?.toJson(),
+  'contained': ?instance.contained?.map((e) => e.toJson()).toList(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'identifier': ?instance.identifier?.map((e) => e.toJson()).toList(),
+  'basedOn': ?instance.basedOn?.map((e) => e.toJson()).toList(),
+  'status': ?instance.status?.toJson(),
+  '_status': ?instance.statusElement?.toJson(),
+  'category': ?instance.category?.map((e) => e.toJson()).toList(),
+  'code': instance.code.toJson(),
+  'subject': ?instance.subject?.toJson(),
+  'encounter': ?instance.encounter?.toJson(),
+  'effectiveDateTime': ?instance.effectiveDateTime?.toJson(),
+  '_effectiveDateTime': ?instance.effectiveDateTimeElement?.toJson(),
+  'effectivePeriod': ?instance.effectivePeriod?.toJson(),
+  'issued': ?instance.issued?.toJson(),
+  '_issued': ?instance.issuedElement?.toJson(),
+  'performer': ?instance.performer?.map((e) => e.toJson()).toList(),
+  'resultsInterpreter': ?instance.resultsInterpreter
+      ?.map((e) => e.toJson())
+      .toList(),
+  'specimen': ?instance.specimen?.map((e) => e.toJson()).toList(),
+  'result': ?instance.result?.map((e) => e.toJson()).toList(),
+  'imagingStudy': ?instance.imagingStudy?.map((e) => e.toJson()).toList(),
+  'media': ?instance.media?.map((e) => e.toJson()).toList(),
+  'conclusion': ?instance.conclusion,
+  '_conclusion': ?instance.conclusionElement?.toJson(),
+  'conclusionCode': ?instance.conclusionCode?.map((e) => e.toJson()).toList(),
+  'presentedForm': ?instance.presentedForm?.map((e) => e.toJson()).toList(),
+};
+
+_DiagnosticReportMedia _$DiagnosticReportMediaFromJson(
+  Map<String, dynamic> json,
+) => _DiagnosticReportMedia(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  comment: json['comment'] as String?,
+  commentElement: json['_comment'] == null
+      ? null
+      : Element.fromJson(json['_comment'] as Map<String, dynamic>),
+  link: Reference.fromJson(json['link'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$DiagnosticReportMediaToJson(
+  _DiagnosticReportMedia instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'comment': ?instance.comment,
+  '_comment': ?instance.commentElement?.toJson(),
+  'link': instance.link.toJson(),
+};
+
+_ImagingStudy _$ImagingStudyFromJson(
+  Map<String, dynamic> json,
+) => _ImagingStudy(
+  resourceType:
+      $enumDecodeNullable(
+        _$R4ResourceTypeEnumMap,
+        json['resourceType'],
+        unknownValue: R4ResourceType.ImagingStudy,
+      ) ??
+      R4ResourceType.ImagingStudy,
+  dbId: (json['dbId'] as num?)?.toInt(),
+  fhirId: json['id'] as String?,
+  meta: json['meta'] == null
+      ? null
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+  implicitRules: json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules']),
+  implicitRulesElement: json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+  language: json['language'] == null
+      ? null
+      : FhirCode.fromJson(json['language']),
+  languageElement: json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>),
+  text: json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+  contained: (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  identifier: (json['identifier'] as List<dynamic>?)
+      ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+  statusElement: json['_status'] == null
+      ? null
+      : Element.fromJson(json['_status'] as Map<String, dynamic>),
+  modality: (json['modality'] as List<dynamic>?)
+      ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+  encounter: json['encounter'] == null
+      ? null
+      : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+  started: json['started'] == null
+      ? null
+      : FhirDateTime.fromJson(json['started'] as String),
+  startedElement: json['_started'] == null
+      ? null
+      : Element.fromJson(json['_started'] as Map<String, dynamic>),
+  basedOn: (json['basedOn'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  referrer: json['referrer'] == null
+      ? null
+      : Reference.fromJson(json['referrer'] as Map<String, dynamic>),
+  interpreter: (json['interpreter'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  endpoint: (json['endpoint'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  numberOfSeries: json['numberOfSeries'] == null
+      ? null
+      : FhirUnsignedInt.fromJson(json['numberOfSeries']),
+  numberOfSeriesElement: json['_numberOfSeries'] == null
+      ? null
+      : Element.fromJson(json['_numberOfSeries'] as Map<String, dynamic>),
+  numberOfInstances: json['numberOfInstances'] == null
+      ? null
+      : FhirUnsignedInt.fromJson(json['numberOfInstances']),
+  numberOfInstancesElement: json['_numberOfInstances'] == null
+      ? null
+      : Element.fromJson(json['_numberOfInstances'] as Map<String, dynamic>),
+  procedureReference: json['procedureReference'] == null
+      ? null
+      : Reference.fromJson(json['procedureReference'] as Map<String, dynamic>),
+  procedureCode: (json['procedureCode'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  location: json['location'] == null
+      ? null
+      : Reference.fromJson(json['location'] as Map<String, dynamic>),
+  reasonCode: (json['reasonCode'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  reasonReference: (json['reasonReference'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  note: (json['note'] as List<dynamic>?)
+      ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  description: json['description'] as String?,
+  descriptionElement: json['_description'] == null
+      ? null
+      : Element.fromJson(json['_description'] as Map<String, dynamic>),
+  series: (json['series'] as List<dynamic>?)
+      ?.map((e) => ImagingStudySeries.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$ImagingStudyToJson(
+  _ImagingStudy instance,
+) => <String, dynamic>{
+  'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+  'id': ?instance.fhirId,
+  'meta': ?instance.meta?.toJson(),
+  'implicitRules': ?instance.implicitRules?.toJson(),
+  '_implicitRules': ?instance.implicitRulesElement?.toJson(),
+  'language': ?instance.language?.toJson(),
+  '_language': ?instance.languageElement?.toJson(),
+  'text': ?instance.text?.toJson(),
+  'contained': ?instance.contained?.map((e) => e.toJson()).toList(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'identifier': ?instance.identifier?.map((e) => e.toJson()).toList(),
+  'status': ?instance.status?.toJson(),
+  '_status': ?instance.statusElement?.toJson(),
+  'modality': ?instance.modality?.map((e) => e.toJson()).toList(),
+  'subject': instance.subject.toJson(),
+  'encounter': ?instance.encounter?.toJson(),
+  'started': ?instance.started?.toJson(),
+  '_started': ?instance.startedElement?.toJson(),
+  'basedOn': ?instance.basedOn?.map((e) => e.toJson()).toList(),
+  'referrer': ?instance.referrer?.toJson(),
+  'interpreter': ?instance.interpreter?.map((e) => e.toJson()).toList(),
+  'endpoint': ?instance.endpoint?.map((e) => e.toJson()).toList(),
+  'numberOfSeries': ?instance.numberOfSeries?.toJson(),
+  '_numberOfSeries': ?instance.numberOfSeriesElement?.toJson(),
+  'numberOfInstances': ?instance.numberOfInstances?.toJson(),
+  '_numberOfInstances': ?instance.numberOfInstancesElement?.toJson(),
+  'procedureReference': ?instance.procedureReference?.toJson(),
+  'procedureCode': ?instance.procedureCode?.map((e) => e.toJson()).toList(),
+  'location': ?instance.location?.toJson(),
+  'reasonCode': ?instance.reasonCode?.map((e) => e.toJson()).toList(),
+  'reasonReference': ?instance.reasonReference?.map((e) => e.toJson()).toList(),
+  'note': ?instance.note?.map((e) => e.toJson()).toList(),
+  'description': ?instance.description,
+  '_description': ?instance.descriptionElement?.toJson(),
+  'series': ?instance.series?.map((e) => e.toJson()).toList(),
+};
+
+_ImagingStudySeries _$ImagingStudySeriesFromJson(
+  Map<String, dynamic> json,
+) => _ImagingStudySeries(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
+  uidElement: json['_uid'] == null
+      ? null
+      : Element.fromJson(json['_uid'] as Map<String, dynamic>),
+  number: json['number'] == null
+      ? null
+      : FhirUnsignedInt.fromJson(json['number']),
+  numberElement: json['_number'] == null
+      ? null
+      : Element.fromJson(json['_number'] as Map<String, dynamic>),
+  modality: Coding.fromJson(json['modality'] as Map<String, dynamic>),
+  description: json['description'] as String?,
+  descriptionElement: json['_description'] == null
+      ? null
+      : Element.fromJson(json['_description'] as Map<String, dynamic>),
+  numberOfInstances: json['numberOfInstances'] == null
+      ? null
+      : FhirUnsignedInt.fromJson(json['numberOfInstances']),
+  numberOfInstancesElement: json['_numberOfInstances'] == null
+      ? null
+      : Element.fromJson(json['_numberOfInstances'] as Map<String, dynamic>),
+  endpoint: (json['endpoint'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  bodySite: json['bodySite'] == null
+      ? null
+      : Coding.fromJson(json['bodySite'] as Map<String, dynamic>),
+  laterality: json['laterality'] == null
+      ? null
+      : Coding.fromJson(json['laterality'] as Map<String, dynamic>),
+  specimen: (json['specimen'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  started: json['started'] == null
+      ? null
+      : FhirDateTime.fromJson(json['started'] as String),
+  startedElement: json['_started'] == null
+      ? null
+      : Element.fromJson(json['_started'] as Map<String, dynamic>),
+  performer: (json['performer'] as List<dynamic>?)
+      ?.map((e) => ImagingStudyPerformer.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  instance: (json['instance'] as List<dynamic>?)
+      ?.map((e) => ImagingStudyInstance.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$ImagingStudySeriesToJson(_ImagingStudySeries instance) =>
+    <String, dynamic>{
+      'id': ?instance.fhirId?.toJson(),
+      'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+      'modifierExtension': ?instance.modifierExtension
+          ?.map((e) => e.toJson())
+          .toList(),
+      'uid': ?instance.uid?.toJson(),
+      '_uid': ?instance.uidElement?.toJson(),
+      'number': ?instance.number?.toJson(),
+      '_number': ?instance.numberElement?.toJson(),
+      'modality': instance.modality.toJson(),
+      'description': ?instance.description,
+      '_description': ?instance.descriptionElement?.toJson(),
+      'numberOfInstances': ?instance.numberOfInstances?.toJson(),
+      '_numberOfInstances': ?instance.numberOfInstancesElement?.toJson(),
+      'endpoint': ?instance.endpoint?.map((e) => e.toJson()).toList(),
+      'bodySite': ?instance.bodySite?.toJson(),
+      'laterality': ?instance.laterality?.toJson(),
+      'specimen': ?instance.specimen?.map((e) => e.toJson()).toList(),
+      'started': ?instance.started?.toJson(),
+      '_started': ?instance.startedElement?.toJson(),
+      'performer': ?instance.performer?.map((e) => e.toJson()).toList(),
+      'instance': ?instance.instance?.map((e) => e.toJson()).toList(),
+    };
+
+_ImagingStudyPerformer _$ImagingStudyPerformerFromJson(
+  Map<String, dynamic> json,
+) => _ImagingStudyPerformer(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  function: json['function'] == null
+      ? null
+      : CodeableConcept.fromJson(json['function'] as Map<String, dynamic>),
+  actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$ImagingStudyPerformerToJson(
+  _ImagingStudyPerformer instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'function': ?instance.function?.toJson(),
+  'actor': instance.actor.toJson(),
+};
+
+_ImagingStudyInstance _$ImagingStudyInstanceFromJson(
+  Map<String, dynamic> json,
+) => _ImagingStudyInstance(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
+  uidElement: json['_uid'] == null
+      ? null
+      : Element.fromJson(json['_uid'] as Map<String, dynamic>),
+  sopClass: Coding.fromJson(json['sopClass'] as Map<String, dynamic>),
+  number: json['number'] == null
+      ? null
+      : FhirUnsignedInt.fromJson(json['number']),
+  numberElement: json['_number'] == null
+      ? null
+      : Element.fromJson(json['_number'] as Map<String, dynamic>),
+  title: json['title'] as String?,
+  titleElement: json['_title'] == null
+      ? null
+      : Element.fromJson(json['_title'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$ImagingStudyInstanceToJson(
+  _ImagingStudyInstance instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'uid': ?instance.uid?.toJson(),
+  '_uid': ?instance.uidElement?.toJson(),
+  'sopClass': instance.sopClass.toJson(),
+  'number': ?instance.number?.toJson(),
+  '_number': ?instance.numberElement?.toJson(),
+  'title': ?instance.title,
+  '_title': ?instance.titleElement?.toJson(),
+};
+
+_Media _$MediaFromJson(Map<String, dynamic> json) => _Media(
+  resourceType:
+      $enumDecodeNullable(
+        _$R4ResourceTypeEnumMap,
+        json['resourceType'],
+        unknownValue: R4ResourceType.Media,
+      ) ??
+      R4ResourceType.Media,
+  dbId: (json['dbId'] as num?)?.toInt(),
+  fhirId: json['id'] as String?,
+  meta: json['meta'] == null
+      ? null
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+  implicitRules: json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules']),
+  implicitRulesElement: json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+  language: json['language'] == null
+      ? null
+      : FhirCode.fromJson(json['language']),
+  languageElement: json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>),
+  text: json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+  contained: (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  identifier: (json['identifier'] as List<dynamic>?)
+      ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  basedOn: (json['basedOn'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  partOf: (json['partOf'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+  statusElement: json['_status'] == null
+      ? null
+      : Element.fromJson(json['_status'] as Map<String, dynamic>),
+  type: json['type'] == null
+      ? null
+      : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+  modality: json['modality'] == null
+      ? null
+      : CodeableConcept.fromJson(json['modality'] as Map<String, dynamic>),
+  view: json['view'] == null
+      ? null
+      : CodeableConcept.fromJson(json['view'] as Map<String, dynamic>),
+  subject: json['subject'] == null
+      ? null
+      : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+  encounter: json['encounter'] == null
+      ? null
+      : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+  createdDateTime: json['createdDateTime'] == null
+      ? null
+      : FhirDateTime.fromJson(json['createdDateTime'] as String),
+  createdDateTimeElement: json['_createdDateTime'] == null
+      ? null
+      : Element.fromJson(json['_createdDateTime'] as Map<String, dynamic>),
+  createdPeriod: json['createdPeriod'] == null
+      ? null
+      : Period.fromJson(json['createdPeriod'] as Map<String, dynamic>),
+  issued: json['issued'] == null
+      ? null
+      : FhirInstant.fromJson(json['issued'] as String),
+  issuedElement: json['_issued'] == null
+      ? null
+      : Element.fromJson(json['_issued'] as Map<String, dynamic>),
+  operator_: json['operator'] == null
+      ? null
+      : Reference.fromJson(json['operator'] as Map<String, dynamic>),
+  reasonCode: (json['reasonCode'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  bodySite: json['bodySite'] == null
+      ? null
+      : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
+  deviceName: json['deviceName'] as String?,
+  deviceNameElement: json['_deviceName'] == null
+      ? null
+      : Element.fromJson(json['_deviceName'] as Map<String, dynamic>),
+  device: json['device'] == null
+      ? null
+      : Reference.fromJson(json['device'] as Map<String, dynamic>),
+  height: json['height'] == null
+      ? null
+      : FhirPositiveInt.fromJson(json['height']),
+  heightElement: json['_height'] == null
+      ? null
+      : Element.fromJson(json['_height'] as Map<String, dynamic>),
+  width: json['width'] == null ? null : FhirPositiveInt.fromJson(json['width']),
+  widthElement: json['_width'] == null
+      ? null
+      : Element.fromJson(json['_width'] as Map<String, dynamic>),
+  frames: json['frames'] == null
+      ? null
+      : FhirPositiveInt.fromJson(json['frames']),
+  framesElement: json['_frames'] == null
+      ? null
+      : Element.fromJson(json['_frames'] as Map<String, dynamic>),
+  duration: json['duration'] == null
+      ? null
+      : FhirDecimal.fromJson(json['duration']),
+  durationElement: json['_duration'] == null
+      ? null
+      : Element.fromJson(json['_duration'] as Map<String, dynamic>),
+  content: Attachment.fromJson(json['content'] as Map<String, dynamic>),
+  note: (json['note'] as List<dynamic>?)
+      ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$MediaToJson(_Media instance) => <String, dynamic>{
+  'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+  'id': ?instance.fhirId,
+  'meta': ?instance.meta?.toJson(),
+  'implicitRules': ?instance.implicitRules?.toJson(),
+  '_implicitRules': ?instance.implicitRulesElement?.toJson(),
+  'language': ?instance.language?.toJson(),
+  '_language': ?instance.languageElement?.toJson(),
+  'text': ?instance.text?.toJson(),
+  'contained': ?instance.contained?.map((e) => e.toJson()).toList(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'identifier': ?instance.identifier?.map((e) => e.toJson()).toList(),
+  'basedOn': ?instance.basedOn?.map((e) => e.toJson()).toList(),
+  'partOf': ?instance.partOf?.map((e) => e.toJson()).toList(),
+  'status': ?instance.status?.toJson(),
+  '_status': ?instance.statusElement?.toJson(),
+  'type': ?instance.type?.toJson(),
+  'modality': ?instance.modality?.toJson(),
+  'view': ?instance.view?.toJson(),
+  'subject': ?instance.subject?.toJson(),
+  'encounter': ?instance.encounter?.toJson(),
+  'createdDateTime': ?instance.createdDateTime?.toJson(),
+  '_createdDateTime': ?instance.createdDateTimeElement?.toJson(),
+  'createdPeriod': ?instance.createdPeriod?.toJson(),
+  'issued': ?instance.issued?.toJson(),
+  '_issued': ?instance.issuedElement?.toJson(),
+  'operator': ?instance.operator_?.toJson(),
+  'reasonCode': ?instance.reasonCode?.map((e) => e.toJson()).toList(),
+  'bodySite': ?instance.bodySite?.toJson(),
+  'deviceName': ?instance.deviceName,
+  '_deviceName': ?instance.deviceNameElement?.toJson(),
+  'device': ?instance.device?.toJson(),
+  'height': ?instance.height?.toJson(),
+  '_height': ?instance.heightElement?.toJson(),
+  'width': ?instance.width?.toJson(),
+  '_width': ?instance.widthElement?.toJson(),
+  'frames': ?instance.frames?.toJson(),
+  '_frames': ?instance.framesElement?.toJson(),
+  'duration': ?instance.duration?.toJson(),
+  '_duration': ?instance.durationElement?.toJson(),
+  'content': instance.content.toJson(),
+  'note': ?instance.note?.map((e) => e.toJson()).toList(),
+};
+
+_MolecularSequence _$MolecularSequenceFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequence(
+  resourceType:
+      $enumDecodeNullable(
+        _$R4ResourceTypeEnumMap,
+        json['resourceType'],
+        unknownValue: R4ResourceType.MolecularSequence,
+      ) ??
+      R4ResourceType.MolecularSequence,
+  dbId: (json['dbId'] as num?)?.toInt(),
+  fhirId: json['id'] as String?,
+  meta: json['meta'] == null
+      ? null
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+  implicitRules: json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules']),
+  implicitRulesElement: json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+  language: json['language'] == null
+      ? null
+      : FhirCode.fromJson(json['language']),
+  languageElement: json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>),
+  text: json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+  contained: (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  identifier: (json['identifier'] as List<dynamic>?)
+      ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
+  typeElement: json['_type'] == null
+      ? null
+      : Element.fromJson(json['_type'] as Map<String, dynamic>),
+  coordinateSystem: json['coordinateSystem'] == null
+      ? null
+      : FhirInteger.fromJson(json['coordinateSystem']),
+  coordinateSystemElement: json['_coordinateSystem'] == null
+      ? null
+      : Element.fromJson(json['_coordinateSystem'] as Map<String, dynamic>),
+  patient: json['patient'] == null
+      ? null
+      : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+  specimen: json['specimen'] == null
+      ? null
+      : Reference.fromJson(json['specimen'] as Map<String, dynamic>),
+  device: json['device'] == null
+      ? null
+      : Reference.fromJson(json['device'] as Map<String, dynamic>),
+  performer: json['performer'] == null
+      ? null
+      : Reference.fromJson(json['performer'] as Map<String, dynamic>),
+  quantity: json['quantity'] == null
+      ? null
+      : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+  referenceSeq: json['referenceSeq'] == null
+      ? null
+      : MolecularSequenceReferenceSeq.fromJson(
+          json['referenceSeq'] as Map<String, dynamic>,
+        ),
+  variant: (json['variant'] as List<dynamic>?)
+      ?.map((e) => MolecularSequenceVariant.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  observedSeq: json['observedSeq'] as String?,
+  observedSeqElement: json['_observedSeq'] == null
+      ? null
+      : Element.fromJson(json['_observedSeq'] as Map<String, dynamic>),
+  quality: (json['quality'] as List<dynamic>?)
+      ?.map((e) => MolecularSequenceQuality.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  readCoverage: json['readCoverage'] == null
+      ? null
+      : FhirInteger.fromJson(json['readCoverage']),
+  readCoverageElement: json['_readCoverage'] == null
+      ? null
+      : Element.fromJson(json['_readCoverage'] as Map<String, dynamic>),
+  repository: (json['repository'] as List<dynamic>?)
+      ?.map(
+        (e) => MolecularSequenceRepository.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  pointer: (json['pointer'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  structureVariant: (json['structureVariant'] as List<dynamic>?)
+      ?.map(
+        (e) => MolecularSequenceStructureVariant.fromJson(
+          e as Map<String, dynamic>,
+        ),
+      )
+      .toList(),
+);
+
+Map<String, dynamic> _$MolecularSequenceToJson(_MolecularSequence instance) =>
+    <String, dynamic>{
+      'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+      'id': ?instance.fhirId,
+      'meta': ?instance.meta?.toJson(),
+      'implicitRules': ?instance.implicitRules?.toJson(),
+      '_implicitRules': ?instance.implicitRulesElement?.toJson(),
+      'language': ?instance.language?.toJson(),
+      '_language': ?instance.languageElement?.toJson(),
+      'text': ?instance.text?.toJson(),
+      'contained': ?instance.contained?.map((e) => e.toJson()).toList(),
+      'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+      'modifierExtension': ?instance.modifierExtension
+          ?.map((e) => e.toJson())
+          .toList(),
+      'identifier': ?instance.identifier?.map((e) => e.toJson()).toList(),
+      'type': ?instance.type?.toJson(),
+      '_type': ?instance.typeElement?.toJson(),
+      'coordinateSystem': ?instance.coordinateSystem?.toJson(),
+      '_coordinateSystem': ?instance.coordinateSystemElement?.toJson(),
+      'patient': ?instance.patient?.toJson(),
+      'specimen': ?instance.specimen?.toJson(),
+      'device': ?instance.device?.toJson(),
+      'performer': ?instance.performer?.toJson(),
+      'quantity': ?instance.quantity?.toJson(),
+      'referenceSeq': ?instance.referenceSeq?.toJson(),
+      'variant': ?instance.variant?.map((e) => e.toJson()).toList(),
+      'observedSeq': ?instance.observedSeq,
+      '_observedSeq': ?instance.observedSeqElement?.toJson(),
+      'quality': ?instance.quality?.map((e) => e.toJson()).toList(),
+      'readCoverage': ?instance.readCoverage?.toJson(),
+      '_readCoverage': ?instance.readCoverageElement?.toJson(),
+      'repository': ?instance.repository?.map((e) => e.toJson()).toList(),
+      'pointer': ?instance.pointer?.map((e) => e.toJson()).toList(),
+      'structureVariant': ?instance.structureVariant
+          ?.map((e) => e.toJson())
+          .toList(),
+    };
+
+_MolecularSequenceReferenceSeq _$MolecularSequenceReferenceSeqFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequenceReferenceSeq(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  chromosome: json['chromosome'] == null
+      ? null
+      : CodeableConcept.fromJson(json['chromosome'] as Map<String, dynamic>),
+  genomeBuild: json['genomeBuild'] as String?,
+  genomeBuildElement: json['_genomeBuild'] == null
+      ? null
+      : Element.fromJson(json['_genomeBuild'] as Map<String, dynamic>),
+  orientation: json['orientation'] == null
+      ? null
+      : FhirCode.fromJson(json['orientation']),
+  orientationElement: json['_orientation'] == null
+      ? null
+      : Element.fromJson(json['_orientation'] as Map<String, dynamic>),
+  referenceSeqId: json['referenceSeqId'] == null
+      ? null
+      : CodeableConcept.fromJson(
+          json['referenceSeqId'] as Map<String, dynamic>,
+        ),
+  referenceSeqPointer: json['referenceSeqPointer'] == null
+      ? null
+      : Reference.fromJson(json['referenceSeqPointer'] as Map<String, dynamic>),
+  referenceSeqString: json['referenceSeqString'] as String?,
+  referenceSeqStringElement: json['_referenceSeqString'] == null
+      ? null
+      : Element.fromJson(json['_referenceSeqString'] as Map<String, dynamic>),
+  strand: json['strand'] == null ? null : FhirCode.fromJson(json['strand']),
+  strandElement: json['_strand'] == null
+      ? null
+      : Element.fromJson(json['_strand'] as Map<String, dynamic>),
+  windowStart: json['windowStart'] == null
+      ? null
+      : FhirInteger.fromJson(json['windowStart']),
+  windowStartElement: json['_windowStart'] == null
+      ? null
+      : Element.fromJson(json['_windowStart'] as Map<String, dynamic>),
+  windowEnd: json['windowEnd'] == null
+      ? null
+      : FhirInteger.fromJson(json['windowEnd']),
+  windowEndElement: json['_windowEnd'] == null
+      ? null
+      : Element.fromJson(json['_windowEnd'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$MolecularSequenceReferenceSeqToJson(
+  _MolecularSequenceReferenceSeq instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'chromosome': ?instance.chromosome?.toJson(),
+  'genomeBuild': ?instance.genomeBuild,
+  '_genomeBuild': ?instance.genomeBuildElement?.toJson(),
+  'orientation': ?instance.orientation?.toJson(),
+  '_orientation': ?instance.orientationElement?.toJson(),
+  'referenceSeqId': ?instance.referenceSeqId?.toJson(),
+  'referenceSeqPointer': ?instance.referenceSeqPointer?.toJson(),
+  'referenceSeqString': ?instance.referenceSeqString,
+  '_referenceSeqString': ?instance.referenceSeqStringElement?.toJson(),
+  'strand': ?instance.strand?.toJson(),
+  '_strand': ?instance.strandElement?.toJson(),
+  'windowStart': ?instance.windowStart?.toJson(),
+  '_windowStart': ?instance.windowStartElement?.toJson(),
+  'windowEnd': ?instance.windowEnd?.toJson(),
+  '_windowEnd': ?instance.windowEndElement?.toJson(),
+};
+
+_MolecularSequenceVariant _$MolecularSequenceVariantFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequenceVariant(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  start: json['start'] == null ? null : FhirInteger.fromJson(json['start']),
+  startElement: json['_start'] == null
+      ? null
+      : Element.fromJson(json['_start'] as Map<String, dynamic>),
+  end: json['end'] == null ? null : FhirInteger.fromJson(json['end']),
+  endElement: json['_end'] == null
+      ? null
+      : Element.fromJson(json['_end'] as Map<String, dynamic>),
+  observedAllele: json['observedAllele'] as String?,
+  observedAlleleElement: json['_observedAllele'] == null
+      ? null
+      : Element.fromJson(json['_observedAllele'] as Map<String, dynamic>),
+  referenceAllele: json['referenceAllele'] as String?,
+  referenceAlleleElement: json['_referenceAllele'] == null
+      ? null
+      : Element.fromJson(json['_referenceAllele'] as Map<String, dynamic>),
+  cigar: json['cigar'] as String?,
+  cigarElement: json['_cigar'] == null
+      ? null
+      : Element.fromJson(json['_cigar'] as Map<String, dynamic>),
+  variantPointer: json['variantPointer'] == null
+      ? null
+      : Reference.fromJson(json['variantPointer'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$MolecularSequenceVariantToJson(
+  _MolecularSequenceVariant instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'start': ?instance.start?.toJson(),
+  '_start': ?instance.startElement?.toJson(),
+  'end': ?instance.end?.toJson(),
+  '_end': ?instance.endElement?.toJson(),
+  'observedAllele': ?instance.observedAllele,
+  '_observedAllele': ?instance.observedAlleleElement?.toJson(),
+  'referenceAllele': ?instance.referenceAllele,
+  '_referenceAllele': ?instance.referenceAlleleElement?.toJson(),
+  'cigar': ?instance.cigar,
+  '_cigar': ?instance.cigarElement?.toJson(),
+  'variantPointer': ?instance.variantPointer?.toJson(),
+};
+
+_MolecularSequenceQuality _$MolecularSequenceQualityFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequenceQuality(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
+  typeElement: json['_type'] == null
+      ? null
+      : Element.fromJson(json['_type'] as Map<String, dynamic>),
+  standardSequence: json['standardSequence'] == null
+      ? null
+      : CodeableConcept.fromJson(
+          json['standardSequence'] as Map<String, dynamic>,
+        ),
+  start: json['start'] == null ? null : FhirInteger.fromJson(json['start']),
+  startElement: json['_start'] == null
+      ? null
+      : Element.fromJson(json['_start'] as Map<String, dynamic>),
+  end: json['end'] == null ? null : FhirInteger.fromJson(json['end']),
+  endElement: json['_end'] == null
+      ? null
+      : Element.fromJson(json['_end'] as Map<String, dynamic>),
+  score: json['score'] == null
+      ? null
+      : Quantity.fromJson(json['score'] as Map<String, dynamic>),
+  method: json['method'] == null
+      ? null
+      : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
+  truthTP: json['truthTP'] == null
+      ? null
+      : FhirDecimal.fromJson(json['truthTP']),
+  truthTPElement: json['_truthTP'] == null
+      ? null
+      : Element.fromJson(json['_truthTP'] as Map<String, dynamic>),
+  queryTP: json['queryTP'] == null
+      ? null
+      : FhirDecimal.fromJson(json['queryTP']),
+  queryTPElement: json['_queryTP'] == null
+      ? null
+      : Element.fromJson(json['_queryTP'] as Map<String, dynamic>),
+  truthFN: json['truthFN'] == null
+      ? null
+      : FhirDecimal.fromJson(json['truthFN']),
+  truthFNElement: json['_truthFN'] == null
+      ? null
+      : Element.fromJson(json['_truthFN'] as Map<String, dynamic>),
+  queryFP: json['queryFP'] == null
+      ? null
+      : FhirDecimal.fromJson(json['queryFP']),
+  queryFPElement: json['_queryFP'] == null
+      ? null
+      : Element.fromJson(json['_queryFP'] as Map<String, dynamic>),
+  gtFP: json['gtFP'] == null ? null : FhirDecimal.fromJson(json['gtFP']),
+  gtFPElement: json['_gtFP'] == null
+      ? null
+      : Element.fromJson(json['_gtFP'] as Map<String, dynamic>),
+  precision: json['precision'] == null
+      ? null
+      : FhirDecimal.fromJson(json['precision']),
+  precisionElement: json['_precision'] == null
+      ? null
+      : Element.fromJson(json['_precision'] as Map<String, dynamic>),
+  recall: json['recall'] == null ? null : FhirDecimal.fromJson(json['recall']),
+  recallElement: json['_recall'] == null
+      ? null
+      : Element.fromJson(json['_recall'] as Map<String, dynamic>),
+  fScore: json['fScore'] == null ? null : FhirDecimal.fromJson(json['fScore']),
+  fScoreElement: json['_fScore'] == null
+      ? null
+      : Element.fromJson(json['_fScore'] as Map<String, dynamic>),
+  roc: json['roc'] == null
+      ? null
+      : MolecularSequenceRoc.fromJson(json['roc'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$MolecularSequenceQualityToJson(
+  _MolecularSequenceQuality instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'type': ?instance.type?.toJson(),
+  '_type': ?instance.typeElement?.toJson(),
+  'standardSequence': ?instance.standardSequence?.toJson(),
+  'start': ?instance.start?.toJson(),
+  '_start': ?instance.startElement?.toJson(),
+  'end': ?instance.end?.toJson(),
+  '_end': ?instance.endElement?.toJson(),
+  'score': ?instance.score?.toJson(),
+  'method': ?instance.method?.toJson(),
+  'truthTP': ?instance.truthTP?.toJson(),
+  '_truthTP': ?instance.truthTPElement?.toJson(),
+  'queryTP': ?instance.queryTP?.toJson(),
+  '_queryTP': ?instance.queryTPElement?.toJson(),
+  'truthFN': ?instance.truthFN?.toJson(),
+  '_truthFN': ?instance.truthFNElement?.toJson(),
+  'queryFP': ?instance.queryFP?.toJson(),
+  '_queryFP': ?instance.queryFPElement?.toJson(),
+  'gtFP': ?instance.gtFP?.toJson(),
+  '_gtFP': ?instance.gtFPElement?.toJson(),
+  'precision': ?instance.precision?.toJson(),
+  '_precision': ?instance.precisionElement?.toJson(),
+  'recall': ?instance.recall?.toJson(),
+  '_recall': ?instance.recallElement?.toJson(),
+  'fScore': ?instance.fScore?.toJson(),
+  '_fScore': ?instance.fScoreElement?.toJson(),
+  'roc': ?instance.roc?.toJson(),
+};
+
+_MolecularSequenceRoc _$MolecularSequenceRocFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequenceRoc(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  score: (json['score'] as List<dynamic>?)?.map(FhirInteger.fromJson).toList(),
+  scoreElement: (json['_score'] as List<dynamic>?)
+      ?.map(
+        (e) => e == null ? null : Element.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  numTP: (json['numTP'] as List<dynamic>?)?.map(FhirInteger.fromJson).toList(),
+  numTPElement: (json['_numTP'] as List<dynamic>?)
+      ?.map(
+        (e) => e == null ? null : Element.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  numFP: (json['numFP'] as List<dynamic>?)?.map(FhirInteger.fromJson).toList(),
+  numFPElement: (json['_numFP'] as List<dynamic>?)
+      ?.map(
+        (e) => e == null ? null : Element.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  numFN: (json['numFN'] as List<dynamic>?)?.map(FhirInteger.fromJson).toList(),
+  numFNElement: (json['_numFN'] as List<dynamic>?)
+      ?.map(
+        (e) => e == null ? null : Element.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  precision: (json['precision'] as List<dynamic>?)
+      ?.map(FhirDecimal.fromJson)
+      .toList(),
+  precisionElement: (json['_precision'] as List<dynamic>?)
+      ?.map(
+        (e) => e == null ? null : Element.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  sensitivity: (json['sensitivity'] as List<dynamic>?)
+      ?.map(FhirDecimal.fromJson)
+      .toList(),
+  sensitivityElement: (json['_sensitivity'] as List<dynamic>?)
+      ?.map(
+        (e) => e == null ? null : Element.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  fMeasure: (json['fMeasure'] as List<dynamic>?)
+      ?.map(FhirDecimal.fromJson)
+      .toList(),
+  fMeasureElement: (json['_fMeasure'] as List<dynamic>?)
+      ?.map(
+        (e) => e == null ? null : Element.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+);
+
+Map<String, dynamic> _$MolecularSequenceRocToJson(
+  _MolecularSequenceRoc instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'score': ?instance.score?.map((e) => e.toJson()).toList(),
+  '_score': ?instance.scoreElement?.map((e) => e?.toJson()).toList(),
+  'numTP': ?instance.numTP?.map((e) => e.toJson()).toList(),
+  '_numTP': ?instance.numTPElement?.map((e) => e?.toJson()).toList(),
+  'numFP': ?instance.numFP?.map((e) => e.toJson()).toList(),
+  '_numFP': ?instance.numFPElement?.map((e) => e?.toJson()).toList(),
+  'numFN': ?instance.numFN?.map((e) => e.toJson()).toList(),
+  '_numFN': ?instance.numFNElement?.map((e) => e?.toJson()).toList(),
+  'precision': ?instance.precision?.map((e) => e.toJson()).toList(),
+  '_precision': ?instance.precisionElement?.map((e) => e?.toJson()).toList(),
+  'sensitivity': ?instance.sensitivity?.map((e) => e.toJson()).toList(),
+  '_sensitivity': ?instance.sensitivityElement
+      ?.map((e) => e?.toJson())
+      .toList(),
+  'fMeasure': ?instance.fMeasure?.map((e) => e.toJson()).toList(),
+  '_fMeasure': ?instance.fMeasureElement?.map((e) => e?.toJson()).toList(),
+};
+
+_MolecularSequenceRepository _$MolecularSequenceRepositoryFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequenceRepository(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  type: json['type'] == null ? null : FhirCode.fromJson(json['type']),
+  typeElement: json['_type'] == null
+      ? null
+      : Element.fromJson(json['_type'] as Map<String, dynamic>),
+  url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+  urlElement: json['_url'] == null
+      ? null
+      : Element.fromJson(json['_url'] as Map<String, dynamic>),
+  name: json['name'] as String?,
+  nameElement: json['_name'] == null
+      ? null
+      : Element.fromJson(json['_name'] as Map<String, dynamic>),
+  datasetId: json['datasetId'] as String?,
+  datasetIdElement: json['_datasetId'] == null
+      ? null
+      : Element.fromJson(json['_datasetId'] as Map<String, dynamic>),
+  variantsetId: json['variantsetId'] as String?,
+  variantsetIdElement: json['_variantsetId'] == null
+      ? null
+      : Element.fromJson(json['_variantsetId'] as Map<String, dynamic>),
+  readsetId: json['readsetId'] as String?,
+  readsetIdElement: json['_readsetId'] == null
+      ? null
+      : Element.fromJson(json['_readsetId'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$MolecularSequenceRepositoryToJson(
+  _MolecularSequenceRepository instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'type': ?instance.type?.toJson(),
+  '_type': ?instance.typeElement?.toJson(),
+  'url': ?instance.url?.toJson(),
+  '_url': ?instance.urlElement?.toJson(),
+  'name': ?instance.name,
+  '_name': ?instance.nameElement?.toJson(),
+  'datasetId': ?instance.datasetId,
+  '_datasetId': ?instance.datasetIdElement?.toJson(),
+  'variantsetId': ?instance.variantsetId,
+  '_variantsetId': ?instance.variantsetIdElement?.toJson(),
+  'readsetId': ?instance.readsetId,
+  '_readsetId': ?instance.readsetIdElement?.toJson(),
+};
+
+_MolecularSequenceStructureVariant _$MolecularSequenceStructureVariantFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequenceStructureVariant(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  variantType: json['variantType'] == null
+      ? null
+      : CodeableConcept.fromJson(json['variantType'] as Map<String, dynamic>),
+  exact: json['exact'] == null ? null : FhirBoolean.fromJson(json['exact']),
+  exactElement: json['_exact'] == null
+      ? null
+      : Element.fromJson(json['_exact'] as Map<String, dynamic>),
+  length: json['length'] == null ? null : FhirInteger.fromJson(json['length']),
+  lengthElement: json['_length'] == null
+      ? null
+      : Element.fromJson(json['_length'] as Map<String, dynamic>),
+  outer: json['outer'] == null
+      ? null
+      : MolecularSequenceOuter.fromJson(json['outer'] as Map<String, dynamic>),
+  inner: json['inner'] == null
+      ? null
+      : MolecularSequenceInner.fromJson(json['inner'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$MolecularSequenceStructureVariantToJson(
+  _MolecularSequenceStructureVariant instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'variantType': ?instance.variantType?.toJson(),
+  'exact': ?instance.exact?.toJson(),
+  '_exact': ?instance.exactElement?.toJson(),
+  'length': ?instance.length?.toJson(),
+  '_length': ?instance.lengthElement?.toJson(),
+  'outer': ?instance.outer?.toJson(),
+  'inner': ?instance.inner?.toJson(),
+};
+
+_MolecularSequenceOuter _$MolecularSequenceOuterFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequenceOuter(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  start: json['start'] == null ? null : FhirInteger.fromJson(json['start']),
+  startElement: json['_start'] == null
+      ? null
+      : Element.fromJson(json['_start'] as Map<String, dynamic>),
+  end: json['end'] == null ? null : FhirInteger.fromJson(json['end']),
+  endElement: json['_end'] == null
+      ? null
+      : Element.fromJson(json['_end'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$MolecularSequenceOuterToJson(
+  _MolecularSequenceOuter instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'start': ?instance.start?.toJson(),
+  '_start': ?instance.startElement?.toJson(),
+  'end': ?instance.end?.toJson(),
+  '_end': ?instance.endElement?.toJson(),
+};
+
+_MolecularSequenceInner _$MolecularSequenceInnerFromJson(
+  Map<String, dynamic> json,
+) => _MolecularSequenceInner(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  start: json['start'] == null ? null : FhirInteger.fromJson(json['start']),
+  startElement: json['_start'] == null
+      ? null
+      : Element.fromJson(json['_start'] as Map<String, dynamic>),
+  end: json['end'] == null ? null : FhirInteger.fromJson(json['end']),
+  endElement: json['_end'] == null
+      ? null
+      : Element.fromJson(json['_end'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$MolecularSequenceInnerToJson(
+  _MolecularSequenceInner instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'start': ?instance.start?.toJson(),
+  '_start': ?instance.startElement?.toJson(),
+  'end': ?instance.end?.toJson(),
+  '_end': ?instance.endElement?.toJson(),
+};
+
+_Observation _$ObservationFromJson(Map<String, dynamic> json) => _Observation(
+  resourceType:
+      $enumDecodeNullable(
+        _$R4ResourceTypeEnumMap,
+        json['resourceType'],
+        unknownValue: R4ResourceType.Observation,
+      ) ??
+      R4ResourceType.Observation,
+  dbId: (json['dbId'] as num?)?.toInt(),
+  fhirId: json['id'] as String?,
+  meta: json['meta'] == null
+      ? null
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+  implicitRules: json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules']),
+  implicitRulesElement: json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+  language: json['language'] == null
+      ? null
+      : FhirCode.fromJson(json['language']),
+  languageElement: json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>),
+  text: json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+  contained: (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  identifier: (json['identifier'] as List<dynamic>?)
+      ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  basedOn: (json['basedOn'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  partOf: (json['partOf'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+  statusElement: json['_status'] == null
+      ? null
+      : Element.fromJson(json['_status'] as Map<String, dynamic>),
+  category: (json['category'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+  subject: json['subject'] == null
+      ? null
+      : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+  focus: (json['focus'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  encounter: json['encounter'] == null
+      ? null
+      : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+  effectiveDateTime: json['effectiveDateTime'] == null
+      ? null
+      : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
+  effectiveDateTimeElement: json['_effectiveDateTime'] == null
+      ? null
+      : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
+  effectivePeriod: json['effectivePeriod'] == null
+      ? null
+      : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+  effectiveTiming: json['effectiveTiming'] == null
+      ? null
+      : Timing.fromJson(json['effectiveTiming'] as Map<String, dynamic>),
+  effectiveInstant: json['effectiveInstant'] == null
+      ? null
+      : FhirInstant.fromJson(json['effectiveInstant'] as String),
+  effectiveInstantElement: json['_effectiveInstant'] == null
+      ? null
+      : Element.fromJson(json['_effectiveInstant'] as Map<String, dynamic>),
+  issued: json['issued'] == null
+      ? null
+      : FhirInstant.fromJson(json['issued'] as String),
+  issuedElement: json['_issued'] == null
+      ? null
+      : Element.fromJson(json['_issued'] as Map<String, dynamic>),
+  performer: (json['performer'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  valueQuantity: json['valueQuantity'] == null
+      ? null
+      : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+  valueCodeableConcept: json['valueCodeableConcept'] == null
+      ? null
+      : CodeableConcept.fromJson(
+          json['valueCodeableConcept'] as Map<String, dynamic>,
+        ),
+  valueString: json['valueString'] as String?,
+  valueStringElement: json['_valueString'] == null
+      ? null
+      : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+  valueBoolean: json['valueBoolean'] == null
+      ? null
+      : FhirBoolean.fromJson(json['valueBoolean']),
+  valueBooleanElement: json['_valueBoolean'] == null
+      ? null
+      : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+  valueInteger: json['valueInteger'] == null
+      ? null
+      : FhirInteger.fromJson(json['valueInteger']),
+  valueIntegerElement: json['_valueInteger'] == null
+      ? null
+      : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+  valueRange: json['valueRange'] == null
+      ? null
+      : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+  valueRatio: json['valueRatio'] == null
+      ? null
+      : Ratio.fromJson(json['valueRatio'] as Map<String, dynamic>),
+  valueSampledData: json['valueSampledData'] == null
+      ? null
+      : SampledData.fromJson(json['valueSampledData'] as Map<String, dynamic>),
+  valueTime: json['valueTime'] == null
+      ? null
+      : FhirTime.fromJson(json['valueTime']),
+  valueTimeElement: json['_valueTime'] == null
+      ? null
+      : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+  valueDateTime: json['valueDateTime'] == null
+      ? null
+      : FhirDateTime.fromJson(json['valueDateTime'] as String),
+  valueDateTimeElement: json['_valueDateTime'] == null
+      ? null
+      : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+  valuePeriod: json['valuePeriod'] == null
+      ? null
+      : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
+  dataAbsentReason: json['dataAbsentReason'] == null
+      ? null
+      : CodeableConcept.fromJson(
+          json['dataAbsentReason'] as Map<String, dynamic>,
+        ),
+  interpretation: (json['interpretation'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  note: (json['note'] as List<dynamic>?)
+      ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  bodySite: json['bodySite'] == null
+      ? null
+      : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
+  method: json['method'] == null
+      ? null
+      : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
+  specimen: json['specimen'] == null
+      ? null
+      : Reference.fromJson(json['specimen'] as Map<String, dynamic>),
+  device: json['device'] == null
+      ? null
+      : Reference.fromJson(json['device'] as Map<String, dynamic>),
+  referenceRange: (json['referenceRange'] as List<dynamic>?)
+      ?.map(
+        (e) => ObservationReferenceRange.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  hasMember: (json['hasMember'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  derivedFrom: (json['derivedFrom'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  component: (json['component'] as List<dynamic>?)
+      ?.map((e) => ObservationComponent.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$ObservationToJson(
+  _Observation instance,
+) => <String, dynamic>{
+  'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+  'id': ?instance.fhirId,
+  'meta': ?instance.meta?.toJson(),
+  'implicitRules': ?instance.implicitRules?.toJson(),
+  '_implicitRules': ?instance.implicitRulesElement?.toJson(),
+  'language': ?instance.language?.toJson(),
+  '_language': ?instance.languageElement?.toJson(),
+  'text': ?instance.text?.toJson(),
+  'contained': ?instance.contained?.map((e) => e.toJson()).toList(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'identifier': ?instance.identifier?.map((e) => e.toJson()).toList(),
+  'basedOn': ?instance.basedOn?.map((e) => e.toJson()).toList(),
+  'partOf': ?instance.partOf?.map((e) => e.toJson()).toList(),
+  'status': ?instance.status?.toJson(),
+  '_status': ?instance.statusElement?.toJson(),
+  'category': ?instance.category?.map((e) => e.toJson()).toList(),
+  'code': instance.code.toJson(),
+  'subject': ?instance.subject?.toJson(),
+  'focus': ?instance.focus?.map((e) => e.toJson()).toList(),
+  'encounter': ?instance.encounter?.toJson(),
+  'effectiveDateTime': ?instance.effectiveDateTime?.toJson(),
+  '_effectiveDateTime': ?instance.effectiveDateTimeElement?.toJson(),
+  'effectivePeriod': ?instance.effectivePeriod?.toJson(),
+  'effectiveTiming': ?instance.effectiveTiming?.toJson(),
+  'effectiveInstant': ?instance.effectiveInstant?.toJson(),
+  '_effectiveInstant': ?instance.effectiveInstantElement?.toJson(),
+  'issued': ?instance.issued?.toJson(),
+  '_issued': ?instance.issuedElement?.toJson(),
+  'performer': ?instance.performer?.map((e) => e.toJson()).toList(),
+  'valueQuantity': ?instance.valueQuantity?.toJson(),
+  'valueCodeableConcept': ?instance.valueCodeableConcept?.toJson(),
+  'valueString': ?instance.valueString,
+  '_valueString': ?instance.valueStringElement?.toJson(),
+  'valueBoolean': ?instance.valueBoolean?.toJson(),
+  '_valueBoolean': ?instance.valueBooleanElement?.toJson(),
+  'valueInteger': ?instance.valueInteger?.toJson(),
+  '_valueInteger': ?instance.valueIntegerElement?.toJson(),
+  'valueRange': ?instance.valueRange?.toJson(),
+  'valueRatio': ?instance.valueRatio?.toJson(),
+  'valueSampledData': ?instance.valueSampledData?.toJson(),
+  'valueTime': ?instance.valueTime?.toJson(),
+  '_valueTime': ?instance.valueTimeElement?.toJson(),
+  'valueDateTime': ?instance.valueDateTime?.toJson(),
+  '_valueDateTime': ?instance.valueDateTimeElement?.toJson(),
+  'valuePeriod': ?instance.valuePeriod?.toJson(),
+  'dataAbsentReason': ?instance.dataAbsentReason?.toJson(),
+  'interpretation': ?instance.interpretation?.map((e) => e.toJson()).toList(),
+  'note': ?instance.note?.map((e) => e.toJson()).toList(),
+  'bodySite': ?instance.bodySite?.toJson(),
+  'method': ?instance.method?.toJson(),
+  'specimen': ?instance.specimen?.toJson(),
+  'device': ?instance.device?.toJson(),
+  'referenceRange': ?instance.referenceRange?.map((e) => e.toJson()).toList(),
+  'hasMember': ?instance.hasMember?.map((e) => e.toJson()).toList(),
+  'derivedFrom': ?instance.derivedFrom?.map((e) => e.toJson()).toList(),
+  'component': ?instance.component?.map((e) => e.toJson()).toList(),
+};
+
+_ObservationReferenceRange _$ObservationReferenceRangeFromJson(
+  Map<String, dynamic> json,
+) => _ObservationReferenceRange(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  low: json['low'] == null
+      ? null
+      : Quantity.fromJson(json['low'] as Map<String, dynamic>),
+  high: json['high'] == null
+      ? null
+      : Quantity.fromJson(json['high'] as Map<String, dynamic>),
+  type: json['type'] == null
+      ? null
+      : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+  appliesTo: (json['appliesTo'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  age: json['age'] == null
+      ? null
+      : Range.fromJson(json['age'] as Map<String, dynamic>),
+  text: json['text'] as String?,
+  textElement: json['_text'] == null
+      ? null
+      : Element.fromJson(json['_text'] as Map<String, dynamic>),
+);
+
+Map<String, dynamic> _$ObservationReferenceRangeToJson(
+  _ObservationReferenceRange instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'low': ?instance.low?.toJson(),
+  'high': ?instance.high?.toJson(),
+  'type': ?instance.type?.toJson(),
+  'appliesTo': ?instance.appliesTo?.map((e) => e.toJson()).toList(),
+  'age': ?instance.age?.toJson(),
+  'text': ?instance.text,
+  '_text': ?instance.textElement?.toJson(),
+};
+
+_ObservationComponent _$ObservationComponentFromJson(
+  Map<String, dynamic> json,
+) => _ObservationComponent(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+  valueQuantity: json['valueQuantity'] == null
+      ? null
+      : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+  valueCodeableConcept: json['valueCodeableConcept'] == null
+      ? null
+      : CodeableConcept.fromJson(
+          json['valueCodeableConcept'] as Map<String, dynamic>,
+        ),
+  valueString: json['valueString'] as String?,
+  valueStringElement: json['_valueString'] == null
+      ? null
+      : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+  valueBoolean: json['valueBoolean'] == null
+      ? null
+      : FhirBoolean.fromJson(json['valueBoolean']),
+  valueBooleanElement: json['_valueBoolean'] == null
+      ? null
+      : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+  valueInteger: json['valueInteger'] == null
+      ? null
+      : FhirInteger.fromJson(json['valueInteger']),
+  valueIntegerElement: json['_valueInteger'] == null
+      ? null
+      : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+  valueRange: json['valueRange'] == null
+      ? null
+      : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+  valueRatio: json['valueRatio'] == null
+      ? null
+      : Ratio.fromJson(json['valueRatio'] as Map<String, dynamic>),
+  valueSampledData: json['valueSampledData'] == null
+      ? null
+      : SampledData.fromJson(json['valueSampledData'] as Map<String, dynamic>),
+  valueTime: json['valueTime'] == null
+      ? null
+      : FhirTime.fromJson(json['valueTime']),
+  valueTimeElement: json['_valueTime'] == null
+      ? null
+      : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+  valueDateTime: json['valueDateTime'] == null
+      ? null
+      : FhirDateTime.fromJson(json['valueDateTime'] as String),
+  valueDateTimeElement: json['_valueDateTime'] == null
+      ? null
+      : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+  valuePeriod: json['valuePeriod'] == null
+      ? null
+      : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
+  dataAbsentReason: json['dataAbsentReason'] == null
+      ? null
+      : CodeableConcept.fromJson(
+          json['dataAbsentReason'] as Map<String, dynamic>,
+        ),
+  interpretation: (json['interpretation'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  referenceRange: (json['referenceRange'] as List<dynamic>?)
+      ?.map(
+        (e) => ObservationReferenceRange.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+);
+
+Map<String, dynamic> _$ObservationComponentToJson(
+  _ObservationComponent instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'code': instance.code.toJson(),
+  'valueQuantity': ?instance.valueQuantity?.toJson(),
+  'valueCodeableConcept': ?instance.valueCodeableConcept?.toJson(),
+  'valueString': ?instance.valueString,
+  '_valueString': ?instance.valueStringElement?.toJson(),
+  'valueBoolean': ?instance.valueBoolean?.toJson(),
+  '_valueBoolean': ?instance.valueBooleanElement?.toJson(),
+  'valueInteger': ?instance.valueInteger?.toJson(),
+  '_valueInteger': ?instance.valueIntegerElement?.toJson(),
+  'valueRange': ?instance.valueRange?.toJson(),
+  'valueRatio': ?instance.valueRatio?.toJson(),
+  'valueSampledData': ?instance.valueSampledData?.toJson(),
+  'valueTime': ?instance.valueTime?.toJson(),
+  '_valueTime': ?instance.valueTimeElement?.toJson(),
+  'valueDateTime': ?instance.valueDateTime?.toJson(),
+  '_valueDateTime': ?instance.valueDateTimeElement?.toJson(),
+  'valuePeriod': ?instance.valuePeriod?.toJson(),
+  'dataAbsentReason': ?instance.dataAbsentReason?.toJson(),
+  'interpretation': ?instance.interpretation?.map((e) => e.toJson()).toList(),
+  'referenceRange': ?instance.referenceRange?.map((e) => e.toJson()).toList(),
+};
+
+_QuestionnaireResponse _$QuestionnaireResponseFromJson(
+  Map<String, dynamic> json,
+) => _QuestionnaireResponse(
+  resourceType:
+      $enumDecodeNullable(
+        _$R4ResourceTypeEnumMap,
+        json['resourceType'],
+        unknownValue: R4ResourceType.QuestionnaireResponse,
+      ) ??
+      R4ResourceType.QuestionnaireResponse,
+  dbId: (json['dbId'] as num?)?.toInt(),
+  fhirId: json['id'] as String?,
+  meta: json['meta'] == null
+      ? null
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+  implicitRules: json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules']),
+  implicitRulesElement: json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+  language: json['language'] == null
+      ? null
+      : FhirCode.fromJson(json['language']),
+  languageElement: json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>),
+  text: json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+  contained: (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  identifier: json['identifier'] == null
+      ? null
+      : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+  basedOn: (json['basedOn'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  partOf: (json['partOf'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  questionnaire: json['questionnaire'] == null
+      ? null
+      : FhirCanonical.fromJson(json['questionnaire']),
+  questionnaireElement: json['_questionnaire'] == null
+      ? null
+      : Element.fromJson(json['_questionnaire'] as Map<String, dynamic>),
+  status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+  statusElement: json['_status'] == null
+      ? null
+      : Element.fromJson(json['_status'] as Map<String, dynamic>),
+  subject: json['subject'] == null
+      ? null
+      : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+  encounter: json['encounter'] == null
+      ? null
+      : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+  authored: json['authored'] == null
+      ? null
+      : FhirDateTime.fromJson(json['authored'] as String),
+  authoredElement: json['_authored'] == null
+      ? null
+      : Element.fromJson(json['_authored'] as Map<String, dynamic>),
+  author: json['author'] == null
+      ? null
+      : Reference.fromJson(json['author'] as Map<String, dynamic>),
+  source: json['source'] == null
+      ? null
+      : Reference.fromJson(json['source'] as Map<String, dynamic>),
+  item: (json['item'] as List<dynamic>?)
+      ?.map(
+        (e) => QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+);
+
+Map<String, dynamic> _$QuestionnaireResponseToJson(
+  _QuestionnaireResponse instance,
+) => <String, dynamic>{
+  'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+  'id': ?instance.fhirId,
+  'meta': ?instance.meta?.toJson(),
+  'implicitRules': ?instance.implicitRules?.toJson(),
+  '_implicitRules': ?instance.implicitRulesElement?.toJson(),
+  'language': ?instance.language?.toJson(),
+  '_language': ?instance.languageElement?.toJson(),
+  'text': ?instance.text?.toJson(),
+  'contained': ?instance.contained?.map((e) => e.toJson()).toList(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'identifier': ?instance.identifier?.toJson(),
+  'basedOn': ?instance.basedOn?.map((e) => e.toJson()).toList(),
+  'partOf': ?instance.partOf?.map((e) => e.toJson()).toList(),
+  'questionnaire': ?instance.questionnaire?.toJson(),
+  '_questionnaire': ?instance.questionnaireElement?.toJson(),
+  'status': ?instance.status?.toJson(),
+  '_status': ?instance.statusElement?.toJson(),
+  'subject': ?instance.subject?.toJson(),
+  'encounter': ?instance.encounter?.toJson(),
+  'authored': ?instance.authored?.toJson(),
+  '_authored': ?instance.authoredElement?.toJson(),
+  'author': ?instance.author?.toJson(),
+  'source': ?instance.source?.toJson(),
+  'item': ?instance.item?.map((e) => e.toJson()).toList(),
+};
+
+_QuestionnaireResponseItem _$QuestionnaireResponseItemFromJson(
+  Map<String, dynamic> json,
+) => _QuestionnaireResponseItem(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  linkId: json['linkId'] as String?,
+  linkIdElement: json['_linkId'] == null
+      ? null
+      : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
+  definition: json['definition'] == null
+      ? null
+      : FhirUri.fromJson(json['definition']),
+  definitionElement: json['_definition'] == null
+      ? null
+      : Element.fromJson(json['_definition'] as Map<String, dynamic>),
+  text: json['text'] as String?,
+  textElement: json['_text'] == null
+      ? null
+      : Element.fromJson(json['_text'] as Map<String, dynamic>),
+  answer: (json['answer'] as List<dynamic>?)
+      ?.map(
+        (e) => QuestionnaireResponseAnswer.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+  item: (json['item'] as List<dynamic>?)
+      ?.map(
+        (e) => QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+);
+
+Map<String, dynamic> _$QuestionnaireResponseItemToJson(
+  _QuestionnaireResponseItem instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'linkId': ?instance.linkId,
+  '_linkId': ?instance.linkIdElement?.toJson(),
+  'definition': ?instance.definition?.toJson(),
+  '_definition': ?instance.definitionElement?.toJson(),
+  'text': ?instance.text,
+  '_text': ?instance.textElement?.toJson(),
+  'answer': ?instance.answer?.map((e) => e.toJson()).toList(),
+  'item': ?instance.item?.map((e) => e.toJson()).toList(),
+};
+
+_QuestionnaireResponseAnswer _$QuestionnaireResponseAnswerFromJson(
+  Map<String, dynamic> json,
+) => _QuestionnaireResponseAnswer(
+  fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  valueBoolean: json['valueBoolean'] == null
+      ? null
+      : FhirBoolean.fromJson(json['valueBoolean']),
+  valueBooleanElement: json['_valueBoolean'] == null
+      ? null
+      : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+  valueDecimal: json['valueDecimal'] == null
+      ? null
+      : FhirDecimal.fromJson(json['valueDecimal']),
+  valueDecimalElement: json['_valueDecimal'] == null
+      ? null
+      : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
+  valueInteger: json['valueInteger'] == null
+      ? null
+      : FhirInteger.fromJson(json['valueInteger']),
+  valueIntegerElement: json['_valueInteger'] == null
+      ? null
+      : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+  valueDate: json['valueDate'] == null
+      ? null
+      : FhirDate.fromJson(json['valueDate'] as String),
+  valueDateElement: json['_valueDate'] == null
+      ? null
+      : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+  valueDateTime: json['valueDateTime'] == null
+      ? null
+      : FhirDateTime.fromJson(json['valueDateTime'] as String),
+  valueDateTimeElement: json['_valueDateTime'] == null
+      ? null
+      : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+  valueTime: json['valueTime'] == null
+      ? null
+      : FhirTime.fromJson(json['valueTime']),
+  valueTimeElement: json['_valueTime'] == null
+      ? null
+      : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+  valueString: json['valueString'] as String?,
+  valueStringElement: json['_valueString'] == null
+      ? null
+      : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+  valueUri: json['valueUri'] == null
+      ? null
+      : FhirUri.fromJson(json['valueUri']),
+  valueUriElement: json['_valueUri'] == null
+      ? null
+      : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
+  valueAttachment: json['valueAttachment'] == null
+      ? null
+      : Attachment.fromJson(json['valueAttachment'] as Map<String, dynamic>),
+  valueCoding: json['valueCoding'] == null
+      ? null
+      : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
+  valueQuantity: json['valueQuantity'] == null
+      ? null
+      : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+  valueReference: json['valueReference'] == null
+      ? null
+      : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
+  item: (json['item'] as List<dynamic>?)
+      ?.map(
+        (e) => QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>),
+      )
+      .toList(),
+);
+
+Map<String, dynamic> _$QuestionnaireResponseAnswerToJson(
+  _QuestionnaireResponseAnswer instance,
+) => <String, dynamic>{
+  'id': ?instance.fhirId?.toJson(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'valueBoolean': ?instance.valueBoolean?.toJson(),
+  '_valueBoolean': ?instance.valueBooleanElement?.toJson(),
+  'valueDecimal': ?instance.valueDecimal?.toJson(),
+  '_valueDecimal': ?instance.valueDecimalElement?.toJson(),
+  'valueInteger': ?instance.valueInteger?.toJson(),
+  '_valueInteger': ?instance.valueIntegerElement?.toJson(),
+  'valueDate': ?instance.valueDate?.toJson(),
+  '_valueDate': ?instance.valueDateElement?.toJson(),
+  'valueDateTime': ?instance.valueDateTime?.toJson(),
+  '_valueDateTime': ?instance.valueDateTimeElement?.toJson(),
+  'valueTime': ?instance.valueTime?.toJson(),
+  '_valueTime': ?instance.valueTimeElement?.toJson(),
+  'valueString': ?instance.valueString,
+  '_valueString': ?instance.valueStringElement?.toJson(),
+  'valueUri': ?instance.valueUri?.toJson(),
+  '_valueUri': ?instance.valueUriElement?.toJson(),
+  'valueAttachment': ?instance.valueAttachment?.toJson(),
+  'valueCoding': ?instance.valueCoding?.toJson(),
+  'valueQuantity': ?instance.valueQuantity?.toJson(),
+  'valueReference': ?instance.valueReference?.toJson(),
+  'item': ?instance.item?.map((e) => e.toJson()).toList(),
+};
+
+_Specimen _$SpecimenFromJson(Map<String, dynamic> json) => _Specimen(
+  resourceType:
+      $enumDecodeNullable(
+        _$R4ResourceTypeEnumMap,
+        json['resourceType'],
+        unknownValue: R4ResourceType.Specimen,
+      ) ??
+      R4ResourceType.Specimen,
+  dbId: (json['dbId'] as num?)?.toInt(),
+  fhirId: json['id'] as String?,
+  meta: json['meta'] == null
+      ? null
+      : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
+  implicitRules: json['implicitRules'] == null
+      ? null
+      : FhirUri.fromJson(json['implicitRules']),
+  implicitRulesElement: json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+  language: json['language'] == null
+      ? null
+      : FhirCode.fromJson(json['language']),
+  languageElement: json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>),
+  text: json['text'] == null
+      ? null
+      : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+  contained: (json['contained'] as List<dynamic>?)
+      ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  identifier: (json['identifier'] as List<dynamic>?)
+      ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  accessionIdentifier: json['accessionIdentifier'] == null
+      ? null
+      : Identifier.fromJson(
+          json['accessionIdentifier'] as Map<String, dynamic>,
+        ),
+  status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+  statusElement: json['_status'] == null
+      ? null
+      : Element.fromJson(json['_status'] as Map<String, dynamic>),
+  type: json['type'] == null
+      ? null
+      : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+  subject: json['subject'] == null
+      ? null
+      : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+  receivedTime: json['receivedTime'] == null
+      ? null
+      : FhirDateTime.fromJson(json['receivedTime'] as String),
+  receivedTimeElement: json['_receivedTime'] == null
+      ? null
+      : Element.fromJson(json['_receivedTime'] as Map<String, dynamic>),
+  parent: (json['parent'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  request: (json['request'] as List<dynamic>?)
+      ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  collection: json['collection'] == null
+      ? null
+      : SpecimenCollection.fromJson(json['collection'] as Map<String, dynamic>),
+  processing: (json['processing'] as List<dynamic>?)
+      ?.map((e) => SpecimenProcessing.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  container: (json['container'] as List<dynamic>?)
+      ?.map((e) => SpecimenContainer.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  condition: (json['condition'] as List<dynamic>?)
+      ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  note: (json['note'] as List<dynamic>?)
+      ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$SpecimenToJson(_Specimen instance) => <String, dynamic>{
+  'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
+  'id': ?instance.fhirId,
+  'meta': ?instance.meta?.toJson(),
+  'implicitRules': ?instance.implicitRules?.toJson(),
+  '_implicitRules': ?instance.implicitRulesElement?.toJson(),
+  'language': ?instance.language?.toJson(),
+  '_language': ?instance.languageElement?.toJson(),
+  'text': ?instance.text?.toJson(),
+  'contained': ?instance.contained?.map((e) => e.toJson()).toList(),
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'modifierExtension': ?instance.modifierExtension
+      ?.map((e) => e.toJson())
+      .toList(),
+  'identifier': ?instance.identifier?.map((e) => e.toJson()).toList(),
+  'accessionIdentifier': ?instance.accessionIdentifier?.toJson(),
+  'status': ?instance.status?.toJson(),
+  '_status': ?instance.statusElement?.toJson(),
+  'type': ?instance.type?.toJson(),
+  'subject': ?instance.subject?.toJson(),
+  'receivedTime': ?instance.receivedTime?.toJson(),
+  '_receivedTime': ?instance.receivedTimeElement?.toJson(),
+  'parent': ?instance.parent?.map((e) => e.toJson()).toList(),
+  'request': ?instance.request?.map((e) => e.toJson()).toList(),
+  'collection': ?instance.collection?.toJson(),
+  'processing': ?instance.processing?.map((e) => e.toJson()).toList(),
+  'container': ?instance.container?.map((e) => e.toJson()).toList(),
+  'condition': ?instance.condition?.map((e) => e.toJson()).toList(),
+  'note': ?instance.note?.map((e) => e.toJson()).toList(),
+};
+
+_SpecimenCollection _$SpecimenCollectionFromJson(Map<String, dynamic> json) =>
+    _SpecimenCollection(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2581,7 +2354,8 @@ _$SpecimenCollectionImpl _$$SpecimenCollectionImplFromJson(
       collectedDateTimeElement: json['_collectedDateTime'] == null
           ? null
           : Element.fromJson(
-              json['_collectedDateTime'] as Map<String, dynamic>),
+              json['_collectedDateTime'] as Map<String, dynamic>,
+            ),
       collectedPeriod: json['collectedPeriod'] == null
           ? null
           : Period.fromJson(json['collectedPeriod'] as Map<String, dynamic>),
@@ -2600,47 +2374,37 @@ _$SpecimenCollectionImpl _$$SpecimenCollectionImplFromJson(
       fastingStatusCodeableConcept: json['fastingStatusCodeableConcept'] == null
           ? null
           : CodeableConcept.fromJson(
-              json['fastingStatusCodeableConcept'] as Map<String, dynamic>),
+              json['fastingStatusCodeableConcept'] as Map<String, dynamic>,
+            ),
       fastingStatusDuration: json['fastingStatusDuration'] == null
           ? null
           : FhirDuration.fromJson(
-              json['fastingStatusDuration'] as Map<String, dynamic>),
+              json['fastingStatusDuration'] as Map<String, dynamic>,
+            ),
     );
 
-Map<String, dynamic> _$$SpecimenCollectionImplToJson(
-    _$SpecimenCollectionImpl instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$SpecimenCollectionToJson(_SpecimenCollection instance) =>
+    <String, dynamic>{
+      'id': ?instance.fhirId?.toJson(),
+      'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+      'modifierExtension': ?instance.modifierExtension
+          ?.map((e) => e.toJson())
+          .toList(),
+      'collector': ?instance.collector?.toJson(),
+      'collectedDateTime': ?instance.collectedDateTime?.toJson(),
+      '_collectedDateTime': ?instance.collectedDateTimeElement?.toJson(),
+      'collectedPeriod': ?instance.collectedPeriod?.toJson(),
+      'duration': ?instance.duration?.toJson(),
+      'quantity': ?instance.quantity?.toJson(),
+      'method': ?instance.method?.toJson(),
+      'bodySite': ?instance.bodySite?.toJson(),
+      'fastingStatusCodeableConcept': ?instance.fastingStatusCodeableConcept
+          ?.toJson(),
+      'fastingStatusDuration': ?instance.fastingStatusDuration?.toJson(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('collector', instance.collector?.toJson());
-  writeNotNull('collectedDateTime', instance.collectedDateTime?.toJson());
-  writeNotNull(
-      '_collectedDateTime', instance.collectedDateTimeElement?.toJson());
-  writeNotNull('collectedPeriod', instance.collectedPeriod?.toJson());
-  writeNotNull('duration', instance.duration?.toJson());
-  writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('method', instance.method?.toJson());
-  writeNotNull('bodySite', instance.bodySite?.toJson());
-  writeNotNull('fastingStatusCodeableConcept',
-      instance.fastingStatusCodeableConcept?.toJson());
-  writeNotNull(
-      'fastingStatusDuration', instance.fastingStatusDuration?.toJson());
-  return val;
-}
-
-_$SpecimenProcessingImpl _$$SpecimenProcessingImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SpecimenProcessingImpl(
+_SpecimenProcessing _$SpecimenProcessingFromJson(Map<String, dynamic> json) =>
+    _SpecimenProcessing(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2669,34 +2433,24 @@ _$SpecimenProcessingImpl _$$SpecimenProcessingImplFromJson(
           : Period.fromJson(json['timePeriod'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$SpecimenProcessingImplToJson(
-    _$SpecimenProcessingImpl instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$SpecimenProcessingToJson(_SpecimenProcessing instance) =>
+    <String, dynamic>{
+      'id': ?instance.fhirId?.toJson(),
+      'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+      'modifierExtension': ?instance.modifierExtension
+          ?.map((e) => e.toJson())
+          .toList(),
+      'description': ?instance.description,
+      '_description': ?instance.descriptionElement?.toJson(),
+      'procedure': ?instance.procedure?.toJson(),
+      'additive': ?instance.additive?.map((e) => e.toJson()).toList(),
+      'timeDateTime': ?instance.timeDateTime?.toJson(),
+      '_timeDateTime': ?instance.timeDateTimeElement?.toJson(),
+      'timePeriod': ?instance.timePeriod?.toJson(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('procedure', instance.procedure?.toJson());
-  writeNotNull('additive', instance.additive?.map((e) => e.toJson()).toList());
-  writeNotNull('timeDateTime', instance.timeDateTime?.toJson());
-  writeNotNull('_timeDateTime', instance.timeDateTimeElement?.toJson());
-  writeNotNull('timePeriod', instance.timePeriod?.toJson());
-  return val;
-}
-
-_$SpecimenContainerImpl _$$SpecimenContainerImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SpecimenContainerImpl(
+_SpecimenContainer _$SpecimenContainerFromJson(Map<String, dynamic> json) =>
+    _SpecimenContainer(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2723,37 +2477,28 @@ _$SpecimenContainerImpl _$$SpecimenContainerImplFromJson(
       additiveCodeableConcept: json['additiveCodeableConcept'] == null
           ? null
           : CodeableConcept.fromJson(
-              json['additiveCodeableConcept'] as Map<String, dynamic>),
+              json['additiveCodeableConcept'] as Map<String, dynamic>,
+            ),
       additiveReference: json['additiveReference'] == null
           ? null
           : Reference.fromJson(
-              json['additiveReference'] as Map<String, dynamic>),
+              json['additiveReference'] as Map<String, dynamic>,
+            ),
     );
 
-Map<String, dynamic> _$$SpecimenContainerImplToJson(
-    _$SpecimenContainerImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('capacity', instance.capacity?.toJson());
-  writeNotNull('specimenQuantity', instance.specimenQuantity?.toJson());
-  writeNotNull(
-      'additiveCodeableConcept', instance.additiveCodeableConcept?.toJson());
-  writeNotNull('additiveReference', instance.additiveReference?.toJson());
-  return val;
-}
+Map<String, dynamic> _$SpecimenContainerToJson(_SpecimenContainer instance) =>
+    <String, dynamic>{
+      'id': ?instance.fhirId?.toJson(),
+      'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+      'modifierExtension': ?instance.modifierExtension
+          ?.map((e) => e.toJson())
+          .toList(),
+      'identifier': ?instance.identifier?.map((e) => e.toJson()).toList(),
+      'description': ?instance.description,
+      '_description': ?instance.descriptionElement?.toJson(),
+      'type': ?instance.type?.toJson(),
+      'capacity': ?instance.capacity?.toJson(),
+      'specimenQuantity': ?instance.specimenQuantity?.toJson(),
+      'additiveCodeableConcept': ?instance.additiveCodeableConcept?.toJson(),
+      'additiveReference': ?instance.additiveReference?.toJson(),
+    };

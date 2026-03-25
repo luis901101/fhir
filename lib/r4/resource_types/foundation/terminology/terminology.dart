@@ -15,7 +15,7 @@ part 'terminology.g.dart';
 
 /// [CodeSystem] The CodeSystem resource is used to declare the existence of
 @freezed
-class CodeSystem with Resource, _$CodeSystem {
+abstract class CodeSystem with Resource, _$CodeSystem {
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   const CodeSystem._();
 
@@ -491,7 +491,7 @@ class CodeSystem with Resource, _$CodeSystem {
 
 /// [CodeSystemFilter] The CodeSystem resource is used to declare the
 @freezed
-class CodeSystemFilter with _$CodeSystemFilter {
+abstract class CodeSystemFilter with _$CodeSystemFilter {
   /// [CodeSystemFilter] The CodeSystem resource is used to declare the
   const CodeSystemFilter._();
 
@@ -630,7 +630,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
 
 /// [CodeSystemProperty] The CodeSystem resource is used to declare the
 @freezed
-class CodeSystemProperty with _$CodeSystemProperty {
+abstract class CodeSystemProperty with _$CodeSystemProperty {
   /// [CodeSystemProperty] The CodeSystem resource is used to declare the
   const CodeSystemProperty._();
 
@@ -781,7 +781,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
 
 /// [CodeSystemConcept] The CodeSystem resource is used to declare the
 @freezed
-class CodeSystemConcept with _$CodeSystemConcept {
+abstract class CodeSystemConcept with _$CodeSystemConcept {
   /// [CodeSystemConcept] The CodeSystem resource is used to declare the
   const CodeSystemConcept._();
 
@@ -941,7 +941,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
 
 /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
 @freezed
-class CodeSystemDesignation with _$CodeSystemDesignation {
+abstract class CodeSystemDesignation with _$CodeSystemDesignation {
   /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
   const CodeSystemDesignation._();
 
@@ -1063,7 +1063,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
 
 /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
 @freezed
-class CodeSystemProperty1 with _$CodeSystemProperty1 {
+abstract class CodeSystemProperty1 with _$CodeSystemProperty1 {
   /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
   const CodeSystemProperty1._();
 
@@ -1235,7 +1235,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
 
 /// [ConceptMap] A statement of relationships from one set of concepts to one
 @freezed
-class ConceptMap with Resource, _$ConceptMap {
+abstract class ConceptMap with Resource, _$ConceptMap {
   /// [ConceptMap] A statement of relationships from one set of concepts to one
   const ConceptMap._();
 
@@ -1659,7 +1659,7 @@ class ConceptMap with Resource, _$ConceptMap {
 
 /// [ConceptMapGroup] A statement of relationships from one set of concepts
 @freezed
-class ConceptMapGroup with _$ConceptMapGroup {
+abstract class ConceptMapGroup with _$ConceptMapGroup {
   /// [ConceptMapGroup] A statement of relationships from one set of concepts
   const ConceptMapGroup._();
 
@@ -1822,7 +1822,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
 
 /// [ConceptMapElement] A statement of relationships from one set of
 @freezed
-class ConceptMapElement with _$ConceptMapElement {
+abstract class ConceptMapElement with _$ConceptMapElement {
   /// [ConceptMapElement] A statement of relationships from one set of
   const ConceptMapElement._();
 
@@ -1946,7 +1946,7 @@ class ConceptMapElement with _$ConceptMapElement {
 
 /// [ConceptMapTarget] A statement of relationships from one set of concepts
 @freezed
-class ConceptMapTarget with _$ConceptMapTarget {
+abstract class ConceptMapTarget with _$ConceptMapTarget {
   /// [ConceptMapTarget] A statement of relationships from one set of concepts
   const ConceptMapTarget._();
 
@@ -2115,7 +2115,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
 
 /// [ConceptMapDependsOn] A statement of relationships from one set of
 @freezed
-class ConceptMapDependsOn with _$ConceptMapDependsOn {
+abstract class ConceptMapDependsOn with _$ConceptMapDependsOn {
   /// [ConceptMapDependsOn] A statement of relationships from one set of
   const ConceptMapDependsOn._();
 
@@ -2261,7 +2261,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
 
 /// [ConceptMapUnmapped] A statement of relationships from one set of
 @freezed
-class ConceptMapUnmapped with _$ConceptMapUnmapped {
+abstract class ConceptMapUnmapped with _$ConceptMapUnmapped {
   /// [ConceptMapUnmapped] A statement of relationships from one set of
   const ConceptMapUnmapped._();
 
@@ -2411,7 +2411,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
 
 /// [NamingSystem] A curated namespace that issues unique symbols within that
 @freezed
-class NamingSystem with Resource, _$NamingSystem {
+abstract class NamingSystem with Resource, _$NamingSystem {
   /// [NamingSystem] A curated namespace that issues unique symbols within that
   const NamingSystem._();
 
@@ -2723,7 +2723,7 @@ class NamingSystem with Resource, _$NamingSystem {
 
 /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
 @freezed
-class NamingSystemUniqueId with _$NamingSystemUniqueId {
+abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
   const NamingSystemUniqueId._();
 
@@ -2876,7 +2876,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 
 /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
 @freezed
-class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
+abstract class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   const TerminologyCapabilities._();
 
@@ -3318,7 +3318,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
 
 /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
 @freezed
-class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
+abstract class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
   const TerminologyCapabilitiesSoftware._();
 
@@ -3439,7 +3439,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
 }
 
 @freezed
-class TerminologyCapabilitiesImplementation
+abstract class TerminologyCapabilitiesImplementation
     with _$TerminologyCapabilitiesImplementation {
   const TerminologyCapabilitiesImplementation._();
 
@@ -3543,7 +3543,7 @@ class TerminologyCapabilitiesImplementation
 }
 
 @freezed
-class TerminologyCapabilitiesCodeSystem
+abstract class TerminologyCapabilitiesCodeSystem
     with _$TerminologyCapabilitiesCodeSystem {
   const TerminologyCapabilitiesCodeSystem._();
 
@@ -3650,7 +3650,7 @@ class TerminologyCapabilitiesCodeSystem
 
 /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
 @freezed
-class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
+abstract class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
   const TerminologyCapabilitiesVersion._();
 
@@ -3808,7 +3808,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
 
 /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
 @freezed
-class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
+abstract class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
   const TerminologyCapabilitiesFilter._();
 
@@ -3926,7 +3926,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
 
 /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
 @freezed
-class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
+abstract class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
   const TerminologyCapabilitiesExpansion._();
 
@@ -4054,7 +4054,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
 
 /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
 @freezed
-class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
+abstract class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
   const TerminologyCapabilitiesParameter._();
 
@@ -4156,7 +4156,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
 }
 
 @freezed
-class TerminologyCapabilitiesValidateCode
+abstract class TerminologyCapabilitiesValidateCode
     with _$TerminologyCapabilitiesValidateCode {
   const TerminologyCapabilitiesValidateCode._();
 
@@ -4248,7 +4248,7 @@ class TerminologyCapabilitiesValidateCode
 }
 
 @freezed
-class TerminologyCapabilitiesTranslation
+abstract class TerminologyCapabilitiesTranslation
     with _$TerminologyCapabilitiesTranslation {
   const TerminologyCapabilitiesTranslation._();
 
@@ -4341,7 +4341,7 @@ class TerminologyCapabilitiesTranslation
 
 /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
 @freezed
-class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
+abstract class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
   const TerminologyCapabilitiesClosure._();
 
@@ -4450,7 +4450,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
 
 /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
 @freezed
-class ValueSet with Resource, _$ValueSet {
+abstract class ValueSet with Resource, _$ValueSet {
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
   const ValueSet._();
 
@@ -4850,7 +4850,7 @@ class ValueSet with Resource, _$ValueSet {
 
 /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
 @freezed
-class ValueSetCompose with _$ValueSetCompose {
+abstract class ValueSetCompose with _$ValueSetCompose {
   /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
   const ValueSetCompose._();
 
@@ -4998,7 +4998,7 @@ class ValueSetCompose with _$ValueSetCompose {
 
 /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
 @freezed
-class ValueSetInclude with _$ValueSetInclude {
+abstract class ValueSetInclude with _$ValueSetInclude {
   /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
   const ValueSetInclude._();
 
@@ -5147,7 +5147,7 @@ class ValueSetInclude with _$ValueSetInclude {
 
 /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
 @freezed
-class ValueSetConcept with _$ValueSetConcept {
+abstract class ValueSetConcept with _$ValueSetConcept {
   /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
   const ValueSetConcept._();
 
@@ -5278,7 +5278,7 @@ class ValueSetConcept with _$ValueSetConcept {
 
 /// [ValueSetDesignation] A ValueSet resource instance specifies a set of
 @freezed
-class ValueSetDesignation with _$ValueSetDesignation {
+abstract class ValueSetDesignation with _$ValueSetDesignation {
   /// [ValueSetDesignation] A ValueSet resource instance specifies a set of
   const ValueSetDesignation._();
 
@@ -5401,7 +5401,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
 
 /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
 @freezed
-class ValueSetFilter with _$ValueSetFilter {
+abstract class ValueSetFilter with _$ValueSetFilter {
   /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
   const ValueSetFilter._();
 
@@ -5541,7 +5541,7 @@ class ValueSetFilter with _$ValueSetFilter {
 
 /// [ValueSetExpansion] A ValueSet resource instance specifies a set of
 @freezed
-class ValueSetExpansion with _$ValueSetExpansion {
+abstract class ValueSetExpansion with _$ValueSetExpansion {
   /// [ValueSetExpansion] A ValueSet resource instance specifies a set of
   const ValueSetExpansion._();
 
@@ -5715,7 +5715,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
 
 /// [ValueSetParameter] A ValueSet resource instance specifies a set of
 @freezed
-class ValueSetParameter with _$ValueSetParameter {
+abstract class ValueSetParameter with _$ValueSetParameter {
   /// [ValueSetParameter] A ValueSet resource instance specifies a set of
   const ValueSetParameter._();
 
@@ -5897,7 +5897,7 @@ class ValueSetParameter with _$ValueSetParameter {
 
 /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
 @freezed
-class ValueSetContains with _$ValueSetContains {
+abstract class ValueSetContains with _$ValueSetContains {
   /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
   const ValueSetContains._();
 

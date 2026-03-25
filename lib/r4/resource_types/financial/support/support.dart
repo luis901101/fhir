@@ -15,7 +15,7 @@ part 'support.g.dart';
 
 /// [Coverage] Financial instrument which may be used to reimburse or pay for
 @freezed
-class Coverage with Resource, _$Coverage {
+abstract class Coverage with Resource, _$Coverage {
   /// [Coverage] Financial instrument which may be used to reimburse or pay for
   const Coverage._();
 
@@ -333,7 +333,7 @@ class Coverage with Resource, _$Coverage {
 
 /// [CoverageClass] Financial instrument which may be used to reimburse or
 @freezed
-class CoverageClass with _$CoverageClass {
+abstract class CoverageClass with _$CoverageClass {
   /// [CoverageClass] Financial instrument which may be used to reimburse or
   const CoverageClass._();
 
@@ -461,7 +461,7 @@ class CoverageClass with _$CoverageClass {
 
 /// [CoverageCostToBeneficiary] Financial instrument which may be used to
 @freezed
-class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
+abstract class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// [CoverageCostToBeneficiary] Financial instrument which may be used to
   const CoverageCostToBeneficiary._();
 
@@ -580,7 +580,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
 
 /// [CoverageException] Financial instrument which may be used to reimburse
 @freezed
-class CoverageException with _$CoverageException {
+abstract class CoverageException with _$CoverageException {
   /// [CoverageException] Financial instrument which may be used to reimburse
   const CoverageException._();
 
@@ -687,7 +687,7 @@ class CoverageException with _$CoverageException {
 
 /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
 @freezed
-class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
+abstract class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
   const CoverageEligibilityRequest._();
 
@@ -978,7 +978,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
 }
 
 @freezed
-class CoverageEligibilityRequestSupportingInfo
+abstract class CoverageEligibilityRequestSupportingInfo
     with _$CoverageEligibilityRequestSupportingInfo {
   const CoverageEligibilityRequestSupportingInfo._();
 
@@ -1093,7 +1093,7 @@ class CoverageEligibilityRequestSupportingInfo
 }
 
 @freezed
-class CoverageEligibilityRequestInsurance
+abstract class CoverageEligibilityRequestInsurance
     with _$CoverageEligibilityRequestInsurance {
   const CoverageEligibilityRequestInsurance._();
 
@@ -1212,7 +1212,7 @@ class CoverageEligibilityRequestInsurance
 
 /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
 @freezed
-class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
+abstract class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
   const CoverageEligibilityRequestItem._();
 
@@ -1381,7 +1381,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
 }
 
 @freezed
-class CoverageEligibilityRequestDiagnosis
+abstract class CoverageEligibilityRequestDiagnosis
     with _$CoverageEligibilityRequestDiagnosis {
   const CoverageEligibilityRequestDiagnosis._();
 
@@ -1479,7 +1479,7 @@ class CoverageEligibilityRequestDiagnosis
 
 /// [CoverageEligibilityResponse] This resource provides eligibility and plan
 @freezed
-class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
+abstract class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// [CoverageEligibilityResponse] This resource provides eligibility and plan
   const CoverageEligibilityResponse._();
 
@@ -1783,7 +1783,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
 }
 
 @freezed
-class CoverageEligibilityResponseInsurance
+abstract class CoverageEligibilityResponseInsurance
     with _$CoverageEligibilityResponseInsurance {
   const CoverageEligibilityResponseInsurance._();
 
@@ -1902,7 +1902,7 @@ class CoverageEligibilityResponseInsurance
 
 /// [CoverageEligibilityResponseItem] This resource provides eligibility and
 @freezed
-class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
+abstract class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// [CoverageEligibilityResponseItem] This resource provides eligibility and
   const CoverageEligibilityResponseItem._();
 
@@ -2117,7 +2117,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
 }
 
 @freezed
-class CoverageEligibilityResponseBenefit
+abstract class CoverageEligibilityResponseBenefit
     with _$CoverageEligibilityResponseBenefit {
   const CoverageEligibilityResponseBenefit._();
 
@@ -2264,7 +2264,7 @@ class CoverageEligibilityResponseBenefit
 
 /// [CoverageEligibilityResponseError] This resource provides eligibility
 @freezed
-class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
+abstract class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   /// [CoverageEligibilityResponseError] This resource provides eligibility
   const CoverageEligibilityResponseError._();
 
@@ -2353,7 +2353,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
 
 /// [EnrollmentRequest] This resource provides the insurance enrollment
 @freezed
-class EnrollmentRequest with Resource, _$EnrollmentRequest {
+abstract class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// [EnrollmentRequest] This resource provides the insurance enrollment
   const EnrollmentRequest._();
 
@@ -2566,7 +2566,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 
 /// [EnrollmentResponse] This resource provides enrollment and plan details
 @freezed
-class EnrollmentResponse with Resource, _$EnrollmentResponse {
+abstract class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// [EnrollmentResponse] This resource provides enrollment and plan details
   const EnrollmentResponse._();
 

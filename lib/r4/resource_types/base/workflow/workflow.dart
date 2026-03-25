@@ -15,7 +15,7 @@ part 'workflow.g.dart';
 
 /// [Appointment] A booking of a healthcare event among patient(s),
 @freezed
-class Appointment with Resource, _$Appointment {
+abstract class Appointment with Resource, _$Appointment {
   /// [Appointment] A booking of a healthcare event among patient(s),
   const Appointment._();
 
@@ -415,7 +415,7 @@ class Appointment with Resource, _$Appointment {
 
 /// [AppointmentParticipant] A booking of a healthcare event among
 @freezed
-class AppointmentParticipant with _$AppointmentParticipant {
+abstract class AppointmentParticipant with _$AppointmentParticipant {
   /// [AppointmentParticipant] A booking of a healthcare event among
   const AppointmentParticipant._();
 
@@ -452,7 +452,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   /// [actor] A Person, Location/HealthcareService or Device that is
   ///  participating in the appointment.
   ///
-  /// [required] Whether this participant is required to be present at the
+  /// [required_] Whether this participant is required to be present at the
   /// meeting. This covers a use-case where two doctors need to meet to discuss
   /// the results for a specific patient, and the patient is not required to be
   ///  present.
@@ -499,7 +499,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
     ///  participating in the appointment.
     Reference? actor,
 
-    /// [required] Whether this participant is required to be present at the
+    /// [required_] Whether this participant is required to be present at the
     /// meeting. This covers a use-case where two doctors need to meet to discuss
     /// the results for a specific patient, and the patient is not required to be
     ///  present.
@@ -555,7 +555,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
 
 /// [AppointmentResponse] A reply to an appointment request for a patient
 @freezed
-class AppointmentResponse with Resource, _$AppointmentResponse {
+abstract class AppointmentResponse with Resource, _$AppointmentResponse {
   /// [AppointmentResponse] A reply to an appointment request for a patient
   const AppointmentResponse._();
 
@@ -801,7 +801,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 
 /// [Schedule] A container for slots of time that may be available for
 @freezed
-class Schedule with Resource, _$Schedule {
+abstract class Schedule with Resource, _$Schedule {
   /// [Schedule] A container for slots of time that may be available for
   const Schedule._();
 
@@ -1037,7 +1037,7 @@ class Schedule with Resource, _$Schedule {
 
 /// [Slot] A slot of time on a schedule that may be available for booking
 @freezed
-class Slot with Resource, _$Slot {
+abstract class Slot with Resource, _$Slot {
   /// [Slot] A slot of time on a schedule that may be available for booking
   const Slot._();
 
@@ -1299,7 +1299,7 @@ class Slot with Resource, _$Slot {
 
 /// [Task] A task to be performed.
 @freezed
-class Task with Resource, _$Task {
+abstract class Task with Resource, _$Task {
   /// [Task] A task to be performed.
   const Task._();
 
@@ -1714,7 +1714,7 @@ class Task with Resource, _$Task {
 
 /// [TaskRestriction] A task to be performed.
 @freezed
-class TaskRestriction with _$TaskRestriction {
+abstract class TaskRestriction with _$TaskRestriction {
   /// [TaskRestriction] A task to be performed.
   const TaskRestriction._();
 
@@ -1833,7 +1833,7 @@ class TaskRestriction with _$TaskRestriction {
 
 /// [TaskInput] A task to be performed.
 @freezed
-class TaskInput with _$TaskInput {
+abstract class TaskInput with _$TaskInput {
   /// [TaskInput] A task to be performed.
   const TaskInput._();
 
@@ -2284,7 +2284,7 @@ class TaskInput with _$TaskInput {
 
 /// [TaskOutput] A task to be performed.
 @freezed
-class TaskOutput with _$TaskOutput {
+abstract class TaskOutput with _$TaskOutput {
   /// [TaskOutput] A task to be performed.
   const TaskOutput._();
 
@@ -2733,7 +2733,7 @@ class TaskOutput with _$TaskOutput {
 
 /// [VerificationResult] Describes validation requirements, source(s), status
 @freezed
-class VerificationResult with Resource, _$VerificationResult {
+abstract class VerificationResult with Resource, _$VerificationResult {
   /// [VerificationResult] Describes validation requirements, source(s), status
   const VerificationResult._();
 
@@ -3010,7 +3010,7 @@ class VerificationResult with Resource, _$VerificationResult {
 
 /// [VerificationResultPrimarySource] Describes validation requirements,
 @freezed
-class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
+abstract class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   /// [VerificationResultPrimarySource] Describes validation requirements,
   const VerificationResultPrimarySource._();
 
@@ -3161,7 +3161,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
 
 /// [VerificationResultAttestation] Describes validation requirements,
 @freezed
-class VerificationResultAttestation with _$VerificationResultAttestation {
+abstract class VerificationResultAttestation with _$VerificationResultAttestation {
   /// [VerificationResultAttestation] Describes validation requirements,
   const VerificationResultAttestation._();
 
@@ -3330,7 +3330,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
 
 /// [VerificationResultValidator] Describes validation requirements,
 @freezed
-class VerificationResultValidator with _$VerificationResultValidator {
+abstract class VerificationResultValidator with _$VerificationResultValidator {
   /// [VerificationResultValidator] Describes validation requirements,
   const VerificationResultValidator._();
 

@@ -16,7 +16,7 @@ part 'backbone_type.g.dart';
 /// [BackboneType] Base definition for the few data types that are allowed to
 /// carry modifier extensions.
 @freezed
-class BackboneType with _$BackboneType {
+abstract class BackboneType with _$BackboneType {
   const BackboneType._();
 
   /// [BackboneType] Base definition for the few data types that are allowed to

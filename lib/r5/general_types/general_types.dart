@@ -17,7 +17,7 @@ part 'general_types.g.dart';
 /// [Annotation] A  text note which also  contains information about who made
 ///  the statement and when.
 @freezed
-class Annotation with _$Annotation {
+abstract class Annotation with _$Annotation {
   /// [Annotation] A  text note which also  contains information about who made
   ///  the statement and when.
   const Annotation._();
@@ -122,7 +122,7 @@ class Annotation with _$Annotation {
 
 /// [Attachment] For referring to data content defined in other formats.
 @freezed
-class Attachment with _$Attachment {
+abstract class Attachment with _$Attachment {
   /// [Attachment] For referring to data content defined in other formats.
   const Attachment._();
 
@@ -341,7 +341,7 @@ class Attachment with _$Attachment {
 /// [Identifier] An identifier - identifies some entity uniquely and
 ///  unambiguously. Typically this is used for business identifiers.
 @freezed
-class Identifier with _$Identifier {
+abstract class Identifier with _$Identifier {
   /// [Identifier] An identifier - identifies some entity uniquely and
   ///  unambiguously. Typically this is used for business identifiers.
   const Identifier._();
@@ -463,7 +463,7 @@ class Identifier with _$Identifier {
 /// [CodeableConcept] A concept that may be defined by a formal reference to a
 ///  terminology or ontology or may be provided by text.
 @freezed
-class CodeableConcept with _$CodeableConcept {
+abstract class CodeableConcept with _$CodeableConcept {
   /// [CodeableConcept] A concept that may be defined by a formal reference to a
   ///  terminology or ontology or may be provided by text.
   const CodeableConcept._();
@@ -552,7 +552,7 @@ class CodeableConcept with _$CodeableConcept {
 
 /// [Coding] A reference to a code defined by a terminology system.
 @freezed
-class Coding with _$Coding {
+abstract class Coding with _$Coding {
   /// [Coding] A reference to a code defined by a terminology system.
   const Coding._();
 
@@ -690,7 +690,7 @@ class Coding with _$Coding {
 ///  precisely quantified, including amounts involving arbitrary units and
 ///  floating currencies.
 @freezed
-class Quantity with _$Quantity {
+abstract class Quantity with _$Quantity {
   /// [Quantity] A measured amount (or an amount that can potentially be
   ///  measured). Note that measured amounts include amounts that are not
   ///  precisely quantified, including amounts involving arbitrary units and
@@ -826,7 +826,7 @@ class Quantity with _$Quantity {
 
 /// [FhirDuration] A length of time.
 @freezed
-class FhirDuration with _$FhirDuration {
+abstract class FhirDuration with _$FhirDuration {
   /// [FhirDuration] A length of time.
   const FhirDuration._();
 
@@ -956,7 +956,7 @@ class FhirDuration with _$FhirDuration {
 
 /// [Distance] A length - a value with a unit that is a physical distance.
 @freezed
-class Distance with _$Distance {
+abstract class Distance with _$Distance {
   /// [Distance] A length - a value with a unit that is a physical distance.
   const Distance._();
 
@@ -1089,7 +1089,7 @@ class Distance with _$Distance {
 ///  quantified, including amounts involving arbitrary units and floating
 ///  currencies.
 @freezed
-class Count with _$Count {
+abstract class Count with _$Count {
   /// [Count] A measured amount (or an amount that can potentially be measured).
   ///  Note that measured amounts include amounts that are not precisely
   ///  quantified, including amounts involving arbitrary units and floating
@@ -1223,7 +1223,7 @@ class Count with _$Count {
 
 /// [Money] An amount of economic utility in some recognized currency.
 @freezed
-class Money with _$Money {
+abstract class Money with _$Money {
   /// [Money] An amount of economic utility in some recognized currency.
   const Money._();
 
@@ -1310,7 +1310,7 @@ class Money with _$Money {
 /// [Age] A duration of time during which an organism (or a process) has
 ///  existed.
 @freezed
-class Age with _$Age {
+abstract class Age with _$Age {
   /// [Age] A duration of time during which an organism (or a process) has
   ///  existed.
   const Age._();
@@ -1439,7 +1439,7 @@ class Age with _$Age {
 
 /// [Range] A set of ordered Quantities defined by a low and high limit.
 @freezed
-class Range with _$Range {
+abstract class Range with _$Range {
   /// [Range] A set of ordered Quantities defined by a low and high limit.
   const Range._();
 
@@ -1515,7 +1515,7 @@ class Range with _$Range {
 
 /// [Period] A time period defined by a start and end date and optionally time.
 @freezed
-class Period with _$Period {
+abstract class Period with _$Period {
   /// [Period] A time period defined by a start and end date and optionally time.
   const Period._();
 
@@ -1609,7 +1609,7 @@ class Period with _$Period {
 /// [Ratio] A relationship of two Quantity values - expressed as a numerator
 ///  and a denominator.
 @freezed
-class Ratio with _$Ratio {
+abstract class Ratio with _$Ratio {
   /// [Ratio] A relationship of two Quantity values - expressed as a numerator
   ///  and a denominator.
   const Ratio._();
@@ -1688,7 +1688,7 @@ class Ratio with _$Ratio {
 /// [RatioRange] A range of ratios expressed as a low and high numerator and a
 ///  denominator.
 @freezed
-class RatioRange with _$RatioRange {
+abstract class RatioRange with _$RatioRange {
   /// [RatioRange] A range of ratios expressed as a low and high numerator and a
   ///  denominator.
   const RatioRange._();
@@ -1774,7 +1774,7 @@ class RatioRange with _$RatioRange {
 /// [SampledData] A series of measurements taken by a device, with upper and
 ///  lower limits. There may be more than one dimension in the data.
 @freezed
-class SampledData with _$SampledData {
+abstract class SampledData with _$SampledData {
   /// [SampledData] A series of measurements taken by a device, with upper and
   ///  lower limits. There may be more than one dimension in the data.
   const SampledData._();
@@ -1972,7 +1972,7 @@ class SampledData with _$SampledData {
 ///  as a graphical image representing a hand-written signature, or a signature
 ///  ceremony Different signature approaches have different utilities.
 @freezed
-class Signature with _$Signature {
+abstract class Signature with _$Signature {
   /// [Signature] A signature along with supporting context. The signature may be
   ///  a digital signature that is cryptographic in nature, or some other
   ///  signature acceptable to the domain. This other signature may be as simple
@@ -2126,7 +2126,7 @@ class Signature with _$Signature {
 ///  names by a human and may need the use of name parts or the need for usage
 ///  information.
 @freezed
-class HumanName with _$HumanName {
+abstract class HumanName with _$HumanName {
   /// [HumanName] A name, normally of a human, that can be used for other living
   ///  entities (e.g. animals but not organizations) that have been assigned
   ///  names by a human and may need the use of name parts or the need for usage
@@ -2287,7 +2287,7 @@ class HumanName with _$HumanName {
 ///  ISO21090-codedString may be used to provide a coded representation of the
 ///  contents of strings in an Address.
 @freezed
-class Address with _$Address {
+abstract class Address with _$Address {
   /// [Address] An address expressed using postal conventions (as opposed to GPS
   ///  or other location definition formats).  This data type may be used to
   ///  convey addresses for use in delivering mail as well as for visiting
@@ -2483,7 +2483,7 @@ class Address with _$Address {
 /// [ContactPoint] Details for all kinds of technology mediated contact points
 ///  for a person or organization, including telephone, email, etc.
 @freezed
-class ContactPoint with _$ContactPoint {
+abstract class ContactPoint with _$ContactPoint {
   /// [ContactPoint] Details for all kinds of technology mediated contact points
   ///  for a person or organization, including telephone, email, etc.
   const ContactPoint._();
@@ -2611,7 +2611,7 @@ class ContactPoint with _$ContactPoint {
 ///  for reporting the schedule to which past regular activities were carried
 ///  out.
 @freezed
-class Timing with _$Timing {
+abstract class Timing with _$Timing {
   /// [Timing] Specifies an event that may occur multiple times. Timing schedules
   ///  are used to record when things are planned, expected or requested to
   ///  occur. The most common usage is in dosage instructions for medications.
@@ -2752,7 +2752,7 @@ class Timing with _$Timing {
 ///  may be used for reporting the schedule to which past regular activities
 ///  were carried out.
 @freezed
-class TimingRepeat with _$TimingRepeat {
+abstract class TimingRepeat with _$TimingRepeat {
   /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
   ///  schedules are used to record when things are planned, expected or
   ///  requested to occur. The most common usage is in dosage instructions for

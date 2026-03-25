@@ -17,7 +17,7 @@ part 'security.enums.dart';
 /// [AuditEvent] A record of an event relevant for purposes such as operations,
 ///  privacy, security, maintenance, and performance analysis.
 @freezed
-class AuditEvent with Resource, _$AuditEvent {
+abstract class AuditEvent with Resource, _$AuditEvent {
   /// [AuditEvent] A record of an event relevant for purposes such as operations,
   ///  privacy, security, maintenance, and performance analysis.
   const AuditEvent._();
@@ -305,7 +305,7 @@ class AuditEvent with Resource, _$AuditEvent {
 /// [AuditEventOutcome] A record of an event relevant for purposes such as
 ///  operations, privacy, security, maintenance, and performance analysis.
 @freezed
-class AuditEventOutcome with _$AuditEventOutcome {
+abstract class AuditEventOutcome with _$AuditEventOutcome {
   /// [AuditEventOutcome] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
   const AuditEventOutcome._();
@@ -414,7 +414,7 @@ class AuditEventOutcome with _$AuditEventOutcome {
 /// [AuditEventAgent] A record of an event relevant for purposes such as
 ///  operations, privacy, security, maintenance, and performance analysis.
 @freezed
-class AuditEventAgent with _$AuditEventAgent {
+abstract class AuditEventAgent with _$AuditEventAgent {
   /// [AuditEventAgent] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
   const AuditEventAgent._();
@@ -607,7 +607,7 @@ class AuditEventAgent with _$AuditEventAgent {
 /// [AuditEventSource] A record of an event relevant for purposes such as
 ///  operations, privacy, security, maintenance, and performance analysis.
 @freezed
-class AuditEventSource with _$AuditEventSource {
+abstract class AuditEventSource with _$AuditEventSource {
   /// [AuditEventSource] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
   const AuditEventSource._();
@@ -723,7 +723,7 @@ class AuditEventSource with _$AuditEventSource {
 /// [AuditEventEntity] A record of an event relevant for purposes such as
 ///  operations, privacy, security, maintenance, and performance analysis.
 @freezed
-class AuditEventEntity with _$AuditEventEntity {
+abstract class AuditEventEntity with _$AuditEventEntity {
   /// [AuditEventEntity] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
   const AuditEventEntity._();
@@ -871,7 +871,7 @@ class AuditEventEntity with _$AuditEventEntity {
 /// [AuditEventDetail] A record of an event relevant for purposes such as
 ///  operations, privacy, security, maintenance, and performance analysis.
 @freezed
-class AuditEventDetail with _$AuditEventDetail {
+abstract class AuditEventDetail with _$AuditEventDetail {
   /// [AuditEventDetail] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
   const AuditEventDetail._();
@@ -1062,7 +1062,7 @@ class AuditEventDetail with _$AuditEventDetail {
 ///  recipient(s) or recipient role(s) to perform one or more actions within a
 ///  given policy context, for specific purposes and periods of time.
 @freezed
-class Consent with Resource, _$Consent {
+abstract class Consent with Resource, _$Consent {
   /// [Consent] A record of a healthcare consumer’s  choices  or choices made on
   ///  their behalf by a third party, which permits or denies identified
   ///  recipient(s) or recipient role(s) to perform one or more actions within a
@@ -1379,7 +1379,7 @@ class Consent with Resource, _$Consent {
 ///  actions within a given policy context, for specific purposes and periods
 ///  of time.
 @freezed
-class ConsentPolicyBasis with _$ConsentPolicyBasis {
+abstract class ConsentPolicyBasis with _$ConsentPolicyBasis {
   /// [ConsentPolicyBasis] A record of a healthcare consumer’s  choices  or
   ///  choices made on their behalf by a third party, which permits or denies
   ///  identified recipient(s) or recipient role(s) to perform one or more
@@ -1504,7 +1504,7 @@ class ConsentPolicyBasis with _$ConsentPolicyBasis {
 ///  actions within a given policy context, for specific purposes and periods
 ///  of time.
 @freezed
-class ConsentVerification with _$ConsentVerification {
+abstract class ConsentVerification with _$ConsentVerification {
   /// [ConsentVerification] A record of a healthcare consumer’s  choices  or
   ///  choices made on their behalf by a third party, which permits or denies
   ///  identified recipient(s) or recipient role(s) to perform one or more
@@ -1652,7 +1652,7 @@ class ConsentVerification with _$ConsentVerification {
 ///  recipient(s) or recipient role(s) to perform one or more actions within a
 ///  given policy context, for specific purposes and periods of time.
 @freezed
-class ConsentProvision with _$ConsentProvision {
+abstract class ConsentProvision with _$ConsentProvision {
   /// [ConsentProvision] A record of a healthcare consumer’s  choices  or choices
   ///  made on their behalf by a third party, which permits or denies identified
   ///  recipient(s) or recipient role(s) to perform one or more actions within a
@@ -1839,7 +1839,7 @@ class ConsentProvision with _$ConsentProvision {
 ///  recipient(s) or recipient role(s) to perform one or more actions within a
 ///  given policy context, for specific purposes and periods of time.
 @freezed
-class ConsentActor with _$ConsentActor {
+abstract class ConsentActor with _$ConsentActor {
   /// [ConsentActor] A record of a healthcare consumer’s  choices  or choices
   ///  made on their behalf by a third party, which permits or denies identified
   ///  recipient(s) or recipient role(s) to perform one or more actions within a
@@ -1958,7 +1958,7 @@ class ConsentActor with _$ConsentActor {
 ///  recipient(s) or recipient role(s) to perform one or more actions within a
 ///  given policy context, for specific purposes and periods of time.
 @freezed
-class ConsentData with _$ConsentData {
+abstract class ConsentData with _$ConsentData {
   /// [ConsentData] A record of a healthcare consumer’s  choices  or choices made
   ///  on their behalf by a third party, which permits or denies identified
   ///  recipient(s) or recipient role(s) to perform one or more actions within a
@@ -2078,7 +2078,7 @@ class ConsentData with _$ConsentData {
 /// [Permission] Permission resource holds access rules for a given data and
 ///  context.
 @freezed
-class Permission with Resource, _$Permission {
+abstract class Permission with Resource, _$Permission {
   /// [Permission] Permission resource holds access rules for a given data and
   ///  context.
   const Permission._();
@@ -2299,7 +2299,7 @@ class Permission with Resource, _$Permission {
 /// [PermissionJustification] Permission resource holds access rules for a
 ///  given data and context.
 @freezed
-class PermissionJustification with _$PermissionJustification {
+abstract class PermissionJustification with _$PermissionJustification {
   /// [PermissionJustification] Permission resource holds access rules for a
   ///  given data and context.
   const PermissionJustification._();
@@ -2408,7 +2408,7 @@ class PermissionJustification with _$PermissionJustification {
 /// [PermissionRule] Permission resource holds access rules for a given data
 ///  and context.
 @freezed
-class PermissionRule with _$PermissionRule {
+abstract class PermissionRule with _$PermissionRule {
   /// [PermissionRule] Permission resource holds access rules for a given data
   ///  and context.
   const PermissionRule._();
@@ -2534,7 +2534,7 @@ class PermissionRule with _$PermissionRule {
 /// [PermissionData] Permission resource holds access rules for a given data
 ///  and context.
 @freezed
-class PermissionData with _$PermissionData {
+abstract class PermissionData with _$PermissionData {
   /// [PermissionData] Permission resource holds access rules for a given data
   ///  and context.
   const PermissionData._();
@@ -2655,7 +2655,7 @@ class PermissionData with _$PermissionData {
 /// [PermissionResource] Permission resource holds access rules for a given
 ///  data and context.
 @freezed
-class PermissionResource with _$PermissionResource {
+abstract class PermissionResource with _$PermissionResource {
   /// [PermissionResource] Permission resource holds access rules for a given
   ///  data and context.
   const PermissionResource._();
@@ -2771,7 +2771,7 @@ class PermissionResource with _$PermissionResource {
 /// [PermissionActivity] Permission resource holds access rules for a given
 ///  data and context.
 @freezed
-class PermissionActivity with _$PermissionActivity {
+abstract class PermissionActivity with _$PermissionActivity {
   /// [PermissionActivity] Permission resource holds access rules for a given
   ///  data and context.
   const PermissionActivity._();
@@ -2891,7 +2891,7 @@ class PermissionActivity with _$PermissionActivity {
 ///  Document Completion - has the artifact been legally authenticated), all of
 ///  which may impact security, privacy, and trust policies.
 @freezed
-class Provenance with Resource, _$Provenance {
+abstract class Provenance with Resource, _$Provenance {
   /// [Provenance] Provenance of a resource is a record that describes entities
   ///  and processes involved in producing and delivering or otherwise
   ///  influencing that resource. Provenance provides a critical foundation for
@@ -3201,7 +3201,7 @@ class Provenance with Resource, _$Provenance {
 ///  Document Completion - has the artifact been legally authenticated), all of
 ///  which may impact security, privacy, and trust policies.
 @freezed
-class ProvenanceAgent with _$ProvenanceAgent {
+abstract class ProvenanceAgent with _$ProvenanceAgent {
   /// [ProvenanceAgent] Provenance of a resource is a record that describes
   ///  entities and processes involved in producing and delivering or otherwise
   ///  influencing that resource. Provenance provides a critical foundation for
@@ -3346,7 +3346,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
 ///  Document Completion - has the artifact been legally authenticated), all of
 ///  which may impact security, privacy, and trust policies.
 @freezed
-class ProvenanceEntity with _$ProvenanceEntity {
+abstract class ProvenanceEntity with _$ProvenanceEntity {
   /// [ProvenanceEntity] Provenance of a resource is a record that describes
   ///  entities and processes involved in producing and delivering or otherwise
   ///  influencing that resource. Provenance provides a critical foundation for

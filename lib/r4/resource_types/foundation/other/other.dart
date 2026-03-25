@@ -15,7 +15,7 @@ part 'other.g.dart';
 
 /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
 @freezed
-class Basic with Resource, _$Basic {
+abstract class Basic with Resource, _$Basic {
   /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
   const Basic._();
 
@@ -216,7 +216,7 @@ class Basic with Resource, _$Basic {
 
 /// [Binary] A resource that represents the data of a single raw artifact as
 @freezed
-class Binary with Resource, _$Binary {
+abstract class Binary with Resource, _$Binary {
   /// [Binary] A resource that represents the data of a single raw artifact as
   const Binary._();
 
@@ -394,7 +394,7 @@ class Binary with Resource, _$Binary {
 
 /// [Bundle] A container for a collection of resources.
 @freezed
-class Bundle with Resource, _$Bundle {
+abstract class Bundle with Resource, _$Bundle {
   /// [Bundle] A container for a collection of resources.
   const Bundle._();
 
@@ -587,7 +587,7 @@ class Bundle with Resource, _$Bundle {
 
 /// [BundleLink] A container for a collection of resources.
 @freezed
-class BundleLink with _$BundleLink {
+abstract class BundleLink with _$BundleLink {
   /// [BundleLink] A container for a collection of resources.
   const BundleLink._();
 
@@ -704,7 +704,7 @@ class BundleLink with _$BundleLink {
 
 /// [BundleEntry] A container for a collection of resources.
 @freezed
-class BundleEntry with _$BundleEntry {
+abstract class BundleEntry with _$BundleEntry {
   /// [BundleEntry] A container for a collection of resources.
   const BundleEntry._();
 
@@ -916,7 +916,7 @@ class BundleEntry with _$BundleEntry {
 
 /// [BundleSearch] A container for a collection of resources.
 @freezed
-class BundleSearch with _$BundleSearch {
+abstract class BundleSearch with _$BundleSearch {
   /// [BundleSearch] A container for a collection of resources.
   const BundleSearch._();
 
@@ -1035,7 +1035,7 @@ class BundleSearch with _$BundleSearch {
 
 /// [BundleRequest] A container for a collection of resources.
 @freezed
-class BundleRequest with _$BundleRequest {
+abstract class BundleRequest with _$BundleRequest {
   /// [BundleRequest] A container for a collection of resources.
   const BundleRequest._();
 
@@ -1214,7 +1214,7 @@ class BundleRequest with _$BundleRequest {
 
 /// [BundleResponse] A container for a collection of resources.
 @freezed
-class BundleResponse with _$BundleResponse {
+abstract class BundleResponse with _$BundleResponse {
   /// [BundleResponse] A container for a collection of resources.
   const BundleResponse._();
 
@@ -1370,7 +1370,7 @@ class BundleResponse with _$BundleResponse {
 
 /// [Linkage] Identifies two or more records (resource instances) that refer
 @freezed
-class Linkage with Resource, _$Linkage {
+abstract class Linkage with Resource, _$Linkage {
   /// [Linkage] Identifies two or more records (resource instances) that refer
   const Linkage._();
 
@@ -1564,7 +1564,7 @@ class Linkage with Resource, _$Linkage {
 
 /// [LinkageItem] Identifies two or more records (resource instances) that
 @freezed
-class LinkageItem with _$LinkageItem {
+abstract class LinkageItem with _$LinkageItem {
   /// [LinkageItem] Identifies two or more records (resource instances) that
   const LinkageItem._();
 
@@ -1677,7 +1677,7 @@ class LinkageItem with _$LinkageItem {
 
 /// [MessageHeader] The header for a message exchange that is either
 @freezed
-class MessageHeader with Resource, _$MessageHeader {
+abstract class MessageHeader with Resource, _$MessageHeader {
   /// [MessageHeader] The header for a message exchange that is either
   const MessageHeader._();
 
@@ -1949,7 +1949,7 @@ class MessageHeader with Resource, _$MessageHeader {
 
 /// [MessageHeaderDestination] The header for a message exchange that is
 @freezed
-class MessageHeaderDestination with _$MessageHeaderDestination {
+abstract class MessageHeaderDestination with _$MessageHeaderDestination {
   /// [MessageHeaderDestination] The header for a message exchange that is
   const MessageHeaderDestination._();
 
@@ -2084,7 +2084,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
 
 /// [MessageHeaderSource] The header for a message exchange that is either
 @freezed
-class MessageHeaderSource with _$MessageHeaderSource {
+abstract class MessageHeaderSource with _$MessageHeaderSource {
   /// [MessageHeaderSource] The header for a message exchange that is either
   const MessageHeaderSource._();
 
@@ -2269,7 +2269,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 
 /// [MessageHeaderResponse] The header for a message exchange that is either
 @freezed
-class MessageHeaderResponse with _$MessageHeaderResponse {
+abstract class MessageHeaderResponse with _$MessageHeaderResponse {
   /// [MessageHeaderResponse] The header for a message exchange that is either
   const MessageHeaderResponse._();
 
@@ -2397,7 +2397,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
 /// [OperationOutcome] A collection of error, warning, or information
 @freezed
-class OperationOutcome with Resource, _$OperationOutcome {
+abstract class OperationOutcome with Resource, _$OperationOutcome {
   /// [OperationOutcome] A collection of error, warning, or information
   const OperationOutcome._();
 
@@ -2571,7 +2571,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 
 /// [OperationOutcomeIssue] A collection of error, warning, or information
 @freezed
-class OperationOutcomeIssue with _$OperationOutcomeIssue {
+abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// [OperationOutcomeIssue] A collection of error, warning, or information
   const OperationOutcomeIssue._();
 
@@ -2750,7 +2750,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
 /// [Parameters] This resource is a non-persisted resource used to pass
 @freezed
-class Parameters with Resource, _$Parameters {
+abstract class Parameters with Resource, _$Parameters {
   /// [Parameters] This resource is a non-persisted resource used to pass
   const Parameters._();
 
@@ -2887,7 +2887,7 @@ class Parameters with Resource, _$Parameters {
 
 /// [ParametersParameter] This resource is a non-persisted resource used to
 @freezed
-class ParametersParameter with _$ParametersParameter {
+abstract class ParametersParameter with _$ParametersParameter {
   /// [ParametersParameter] This resource is a non-persisted resource used to
   const ParametersParameter._();
 
@@ -3349,7 +3349,7 @@ class ParametersParameter with _$ParametersParameter {
 
 /// [Subscription] The subscription resource is used to define a push-based
 @freezed
-class Subscription with Resource, _$Subscription {
+abstract class Subscription with Resource, _$Subscription {
   /// [Subscription] The subscription resource is used to define a push-based
   const Subscription._();
 
@@ -3663,7 +3663,7 @@ class Subscription with Resource, _$Subscription {
 
 /// [SubscriptionChannel] The subscription resource is used to define a
 @freezed
-class SubscriptionChannel with _$SubscriptionChannel {
+abstract class SubscriptionChannel with _$SubscriptionChannel {
   /// [SubscriptionChannel] The subscription resource is used to define a
   const SubscriptionChannel._();
 
@@ -3815,7 +3815,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
 
 /// [SubscriptionStatus] The SubscriptionStatus resource describes the state of a Subscription during notifications.
 @freezed
-class SubscriptionStatus with Resource, _$SubscriptionStatus {
+abstract class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [SubscriptionStatus] The SubscriptionStatus resource describes the state of a Subscription during notifications.
   const SubscriptionStatus._();
 
@@ -3967,7 +3967,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
 }
 
 @freezed
-class SubscriptionStatusNotificationEvent
+abstract class SubscriptionStatusNotificationEvent
     with _$SubscriptionStatusNotificationEvent {
   const SubscriptionStatusNotificationEvent._();
 
@@ -4059,7 +4059,7 @@ class SubscriptionStatusNotificationEvent
 
 /// [SubscriptionTopic] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
-class SubscriptionTopic with Resource, _$SubscriptionTopic {
+abstract class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [SubscriptionTopic] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
   const SubscriptionTopic._();
 
@@ -4311,7 +4311,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
 
 /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
-class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
+abstract class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
   const SubscriptionTopicResourceTrigger._();
 
@@ -4398,7 +4398,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
 
 /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
-class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
+abstract class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
   const SubscriptionTopicQueryCriteria._();
 
@@ -4486,7 +4486,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
 
 /// [SubscriptionTopicEventTrigger] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
-class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
+abstract class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   /// [SubscriptionTopicEventTrigger] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
   const SubscriptionTopicEventTrigger._();
 
@@ -4558,7 +4558,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
 
 /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
 @freezed
-class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
+abstract class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
   const SubscriptionTopicCanFilterBy._();
 
@@ -4644,7 +4644,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
 }
 
 @freezed
-class SubscriptionTopicNotificationShape
+abstract class SubscriptionTopicNotificationShape
     with _$SubscriptionTopicNotificationShape {
   const SubscriptionTopicNotificationShape._();
 

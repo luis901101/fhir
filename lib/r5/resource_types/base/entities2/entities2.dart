@@ -19,7 +19,7 @@ part 'entities2.enums.dart';
 ///  biological entity intended to be transplanted or infused into another
 ///  (possibly the same) biological entity.
 @freezed
-class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
+abstract class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   /// [BiologicallyDerivedProduct] This resource reflects an instance of a
   ///  biologically derived product. A material substance originating from a
   ///  biological entity intended to be transplanted or infused into another
@@ -291,7 +291,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
 ///  biological entity intended to be transplanted or infused into another
 ///  (possibly the same) biological entity.
 @freezed
-class BiologicallyDerivedProductCollection
+abstract class BiologicallyDerivedProductCollection
     with _$BiologicallyDerivedProductCollection {
   /// [BiologicallyDerivedProductCollection] This resource reflects an instance
   ///  of a biologically derived product. A material substance originating from a
@@ -427,7 +427,7 @@ class BiologicallyDerivedProductCollection
 ///  biological entity intended to be transplanted or infused into another
 ///  (possibly the same) biological entity.
 @freezed
-class BiologicallyDerivedProductProperty
+abstract class BiologicallyDerivedProductProperty
     with _$BiologicallyDerivedProductProperty {
   /// [BiologicallyDerivedProductProperty] This resource reflects an instance of
   ///  a biologically derived product. A material substance originating from a
@@ -602,7 +602,7 @@ class BiologicallyDerivedProductProperty
 ///  (e.g. hospital transfusion laboratory) to the clinical team responsible
 ///  for clinical application.
 @freezed
-class BiologicallyDerivedProductDispense
+abstract class BiologicallyDerivedProductDispense
     with Resource, _$BiologicallyDerivedProductDispense {
   /// [BiologicallyDerivedProductDispense] This resource reflects an instance of
   ///  a biologically derived product dispense. The supply or dispense of a
@@ -905,7 +905,7 @@ class BiologicallyDerivedProductDispense
 ///  department (e.g. hospital transfusion laboratory) to the clinical team
 ///  responsible for clinical application.
 @freezed
-class BiologicallyDerivedProductDispensePerformer
+abstract class BiologicallyDerivedProductDispensePerformer
     with _$BiologicallyDerivedProductDispensePerformer {
   /// [BiologicallyDerivedProductDispensePerformer] This resource reflects an
   ///  instance of a biologically derived product dispense. The supply or
@@ -1026,7 +1026,7 @@ class BiologicallyDerivedProductDispensePerformer
 ///  healthcare without being substantially changed through that activity. The
 ///  device may be a medical or non-medical device.
 @freezed
-class Device with Resource, _$Device {
+abstract class Device with Resource, _$Device {
   /// [Device] A type of a manufactured item that is used in the provision of
   ///  healthcare without being substantially changed through that activity. The
   ///  device may be a medical or non-medical device.
@@ -1475,7 +1475,7 @@ class Device with Resource, _$Device {
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
 @freezed
-class DeviceUdiCarrier with _$DeviceUdiCarrier {
+abstract class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
@@ -1681,7 +1681,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
 ///  healthcare without being substantially changed through that activity. The
 ///  device may be a medical or non-medical device.
 @freezed
-class DeviceName with _$DeviceName {
+abstract class DeviceName with _$DeviceName {
   /// [DeviceName] A type of a manufactured item that is used in the provision of
   ///  healthcare without being substantially changed through that activity. The
   ///  device may be a medical or non-medical device.
@@ -1813,7 +1813,7 @@ class DeviceName with _$DeviceName {
 ///  of healthcare without being substantially changed through that activity.
 ///  The device may be a medical or non-medical device.
 @freezed
-class DeviceVersion with _$DeviceVersion {
+abstract class DeviceVersion with _$DeviceVersion {
   /// [DeviceVersion] A type of a manufactured item that is used in the provision
   ///  of healthcare without being substantially changed through that activity.
   ///  The device may be a medical or non-medical device.
@@ -1947,7 +1947,7 @@ class DeviceVersion with _$DeviceVersion {
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
 @freezed
-class DeviceConformsTo with _$DeviceConformsTo {
+abstract class DeviceConformsTo with _$DeviceConformsTo {
   /// [DeviceConformsTo] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
@@ -2077,7 +2077,7 @@ class DeviceConformsTo with _$DeviceConformsTo {
 ///  provision of healthcare without being substantially changed through that
 ///  activity. The device may be a medical or non-medical device.
 @freezed
-class DeviceProperty with _$DeviceProperty {
+abstract class DeviceProperty with _$DeviceProperty {
   /// [DeviceProperty] A type of a manufactured item that is used in the
   ///  provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
@@ -2247,7 +2247,7 @@ class DeviceProperty with _$DeviceProperty {
 /// [DeviceMetric] Describes a measurement, calculation or setting capability
 ///  of a device.
 @freezed
-class DeviceMetric with Resource, _$DeviceMetric {
+abstract class DeviceMetric with Resource, _$DeviceMetric {
   /// [DeviceMetric] Describes a measurement, calculation or setting capability
   ///  of a device.
   const DeviceMetric._();
@@ -2516,7 +2516,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 /// [DeviceMetricCalibration] Describes a measurement, calculation or setting
 ///  capability of a device.
 @freezed
-class DeviceMetricCalibration with _$DeviceMetricCalibration {
+abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// [DeviceMetricCalibration] Describes a measurement, calculation or setting
   ///  capability of a device.
   const DeviceMetricCalibration._();
@@ -2642,7 +2642,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
 
 /// [NutritionProduct] A food or supplement that is consumed by patients.
 @freezed
-class NutritionProduct with Resource, _$NutritionProduct {
+abstract class NutritionProduct with Resource, _$NutritionProduct {
   /// [NutritionProduct] A food or supplement that is consumed by patients.
   const NutritionProduct._();
 
@@ -2874,7 +2874,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
 /// [NutritionProductNutrient] A food or supplement that is consumed by
 ///  patients.
 @freezed
-class NutritionProductNutrient with _$NutritionProductNutrient {
+abstract class NutritionProductNutrient with _$NutritionProductNutrient {
   /// [NutritionProductNutrient] A food or supplement that is consumed by
   ///  patients.
   const NutritionProductNutrient._();
@@ -2983,7 +2983,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
 /// [NutritionProductIngredient] A food or supplement that is consumed by
 ///  patients.
 @freezed
-class NutritionProductIngredient with _$NutritionProductIngredient {
+abstract class NutritionProductIngredient with _$NutritionProductIngredient {
   /// [NutritionProductIngredient] A food or supplement that is consumed by
   ///  patients.
   const NutritionProductIngredient._();
@@ -3090,7 +3090,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
 /// [NutritionProductCharacteristic] A food or supplement that is consumed by
 ///  patients.
 @freezed
-class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
+abstract class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   /// [NutritionProductCharacteristic] A food or supplement that is consumed by
   ///  patients.
   const NutritionProductCharacteristic._();
@@ -3247,7 +3247,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
 /// [NutritionProductInstance] A food or supplement that is consumed by
 ///  patients.
 @freezed
-class NutritionProductInstance with _$NutritionProductInstance {
+abstract class NutritionProductInstance with _$NutritionProductInstance {
   /// [NutritionProductInstance] A food or supplement that is consumed by
   ///  patients.
   const NutritionProductInstance._();
@@ -3410,7 +3410,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
 
 /// [Substance] A homogeneous material with a definite composition.
 @freezed
-class Substance with Resource, _$Substance {
+abstract class Substance with Resource, _$Substance {
   /// [Substance] A homogeneous material with a definite composition.
   const Substance._();
 
@@ -3653,7 +3653,7 @@ class Substance with Resource, _$Substance {
 
 /// [SubstanceIngredient] A homogeneous material with a definite composition.
 @freezed
-class SubstanceIngredient with _$SubstanceIngredient {
+abstract class SubstanceIngredient with _$SubstanceIngredient {
   /// [SubstanceIngredient] A homogeneous material with a definite composition.
   const SubstanceIngredient._();
 

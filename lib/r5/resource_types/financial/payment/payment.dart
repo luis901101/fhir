@@ -17,7 +17,7 @@ part 'payment.enums.dart';
 /// [PaymentNotice] This resource provides the status of the payment for goods
 ///  and services rendered, and the request and response resource references.
 @freezed
-class PaymentNotice with Resource, _$PaymentNotice {
+abstract class PaymentNotice with Resource, _$PaymentNotice {
   /// [PaymentNotice] This resource provides the status of the payment for goods
   ///  and services rendered, and the request and response resource references.
   const PaymentNotice._();
@@ -265,7 +265,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
 /// [PaymentReconciliation] This resource provides the details including amount
 ///  of a payment and allocates the payment items being paid.
 @freezed
-class PaymentReconciliation with Resource, _$PaymentReconciliation {
+abstract class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// [PaymentReconciliation] This resource provides the details including amount
   ///  of a payment and allocates the payment items being paid.
   const PaymentReconciliation._();
@@ -666,7 +666,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 /// [PaymentReconciliationAllocation] This resource provides the details
 ///  including amount of a payment and allocates the payment items being paid.
 @freezed
-class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
+abstract class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   /// [PaymentReconciliationAllocation] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
   const PaymentReconciliationAllocation._();
@@ -886,7 +886,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
 /// [PaymentReconciliationProcessNote] This resource provides the details
 ///  including amount of a payment and allocates the payment items being paid.
 @freezed
-class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
+abstract class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   /// [PaymentReconciliationProcessNote] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
   const PaymentReconciliationProcessNote._();

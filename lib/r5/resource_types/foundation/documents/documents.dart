@@ -25,7 +25,7 @@ part 'documents.enums.dart';
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
 @freezed
-class Composition with Resource, _$Composition {
+abstract class Composition with Resource, _$Composition {
   /// [Composition] A set of healthcare-related information that is assembled
   ///  together into a single logical package that provides a single coherent
   ///  statement of meaning, establishes its own context and that has clinical
@@ -401,7 +401,7 @@ class Composition with Resource, _$Composition {
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
 @freezed
-class CompositionAttester with _$CompositionAttester {
+abstract class CompositionAttester with _$CompositionAttester {
   /// [CompositionAttester] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
   ///  coherent statement of meaning, establishes its own context and that has
@@ -542,7 +542,7 @@ class CompositionAttester with _$CompositionAttester {
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
 @freezed
-class CompositionEvent with _$CompositionEvent {
+abstract class CompositionEvent with _$CompositionEvent {
   /// [CompositionEvent] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
   ///  coherent statement of meaning, establishes its own context and that has
@@ -687,7 +687,7 @@ class CompositionEvent with _$CompositionEvent {
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
 @freezed
-class CompositionSection with _$CompositionSection {
+abstract class CompositionSection with _$CompositionSection {
   /// [CompositionSection] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
   ///  coherent statement of meaning, establishes its own context and that has
@@ -891,7 +891,7 @@ class CompositionSection with _$CompositionSection {
 ///  the document can be discovered and managed.  The actual content may be
 ///  inline base64 encoded data or provided by direct reference.
 @freezed
-class DocumentReference with Resource, _$DocumentReference {
+abstract class DocumentReference with Resource, _$DocumentReference {
   /// [DocumentReference] A reference to a document of any kind for any purpose.
   ///  While the term “document” implies a more narrow focus, for this resource
   ///  this "document" encompasses *any* serialized object with a mime-type, it
@@ -1289,7 +1289,7 @@ class DocumentReference with Resource, _$DocumentReference {
 ///  that the document can be discovered and managed.  The actual content may
 ///  be inline base64 encoded data or provided by direct reference.
 @freezed
-class DocumentReferenceAttester with _$DocumentReferenceAttester {
+abstract class DocumentReferenceAttester with _$DocumentReferenceAttester {
   /// [DocumentReferenceAttester] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
   ///  resource this "document" encompasses *any* serialized object with a
@@ -1427,7 +1427,7 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
 ///  that the document can be discovered and managed.  The actual content may
 ///  be inline base64 encoded data or provided by direct reference.
 @freezed
-class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
+abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   /// [DocumentReferenceRelatesTo] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
   ///  resource this "document" encompasses *any* serialized object with a
@@ -1555,7 +1555,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 ///  that the document can be discovered and managed.  The actual content may
 ///  be inline base64 encoded data or provided by direct reference.
 @freezed
-class DocumentReferenceContent with _$DocumentReferenceContent {
+abstract class DocumentReferenceContent with _$DocumentReferenceContent {
   /// [DocumentReferenceContent] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
   ///  resource this "document" encompasses *any* serialized object with a
@@ -1689,7 +1689,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
 ///  that the document can be discovered and managed.  The actual content may
 ///  be inline base64 encoded data or provided by direct reference.
 @freezed
-class DocumentReferenceProfile with _$DocumentReferenceProfile {
+abstract class DocumentReferenceProfile with _$DocumentReferenceProfile {
   /// [DocumentReferenceProfile] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
   ///  resource this "document" encompasses *any* serialized object with a

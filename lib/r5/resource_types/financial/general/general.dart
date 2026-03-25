@@ -18,7 +18,7 @@ part 'general.enums.dart';
 ///  purpose.  In the healthcare field, used to track charges for a patient,
 ///  cost centers, etc.
 @freezed
-class Account with Resource, _$Account {
+abstract class Account with Resource, _$Account {
   /// [Account] A financial tool for tracking value accrued for a particular
   ///  purpose.  In the healthcare field, used to track charges for a patient,
   ///  cost centers, etc.
@@ -333,7 +333,7 @@ class Account with Resource, _$Account {
 ///  particular purpose.  In the healthcare field, used to track charges for a
 ///  patient, cost centers, etc.
 @freezed
-class AccountCoverage with _$AccountCoverage {
+abstract class AccountCoverage with _$AccountCoverage {
   /// [AccountCoverage] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
@@ -454,7 +454,7 @@ class AccountCoverage with _$AccountCoverage {
 ///  particular purpose.  In the healthcare field, used to track charges for a
 ///  patient, cost centers, etc.
 @freezed
-class AccountGuarantor with _$AccountGuarantor {
+abstract class AccountGuarantor with _$AccountGuarantor {
   /// [AccountGuarantor] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
@@ -578,7 +578,7 @@ class AccountGuarantor with _$AccountGuarantor {
 ///  particular purpose.  In the healthcare field, used to track charges for a
 ///  patient, cost centers, etc.
 @freezed
-class AccountDiagnosis with _$AccountDiagnosis {
+abstract class AccountDiagnosis with _$AccountDiagnosis {
   /// [AccountDiagnosis] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
@@ -729,7 +729,7 @@ class AccountDiagnosis with _$AccountDiagnosis {
 ///  particular purpose.  In the healthcare field, used to track charges for a
 ///  patient, cost centers, etc.
 @freezed
-class AccountProcedure with _$AccountProcedure {
+abstract class AccountProcedure with _$AccountProcedure {
   /// [AccountProcedure] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
@@ -877,7 +877,7 @@ class AccountProcedure with _$AccountProcedure {
 ///  particular purpose.  In the healthcare field, used to track charges for a
 ///  patient, cost centers, etc.
 @freezed
-class AccountRelatedAccount with _$AccountRelatedAccount {
+abstract class AccountRelatedAccount with _$AccountRelatedAccount {
   /// [AccountRelatedAccount] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
@@ -987,7 +987,7 @@ class AccountRelatedAccount with _$AccountRelatedAccount {
 ///  particular purpose.  In the healthcare field, used to track charges for a
 ///  patient, cost centers, etc.
 @freezed
-class AccountBalance with _$AccountBalance {
+abstract class AccountBalance with _$AccountBalance {
   /// [AccountBalance] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
@@ -1123,7 +1123,7 @@ class AccountBalance with _$AccountBalance {
 ///  Usage of the ChargeItem is to enable the billing process and internal cost
 ///  allocation.
 @freezed
-class ChargeItem with Resource, _$ChargeItem {
+abstract class ChargeItem with Resource, _$ChargeItem {
   /// [ChargeItem] The resource ChargeItem describes the provision of healthcare
   ///  provider products for a certain patient, therefore referring not only to
   ///  the product, but containing in addition details of the provision, like
@@ -1498,7 +1498,7 @@ class ChargeItem with Resource, _$ChargeItem {
 ///  persons. Main Usage of the ChargeItem is to enable the billing process and
 ///  internal cost allocation.
 @freezed
-class ChargeItemPerformer with _$ChargeItemPerformer {
+abstract class ChargeItemPerformer with _$ChargeItemPerformer {
   /// [ChargeItemPerformer] The resource ChargeItem describes the provision of
   ///  healthcare provider products for a certain patient, therefore referring
   ///  not only to the product, but containing in addition details of the
@@ -1620,7 +1620,7 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
 ///  therefore this resource gives only a rough structure and requires
 ///  profiling for each type of billing code system.
 @freezed
-class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
+abstract class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
   ///  properties that apply to the (billing) codes necessary to calculate costs
   ///  and prices. The properties may differ largely depending on type and realm,
@@ -2179,7 +2179,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
 ///  type and realm, therefore this resource gives only a rough structure and
 ///  requires profiling for each type of billing code system.
 @freezed
-class ChargeItemDefinitionApplicability
+abstract class ChargeItemDefinitionApplicability
     with _$ChargeItemDefinitionApplicability {
   /// [ChargeItemDefinitionApplicability] The ChargeItemDefinition resource
   ///  provides the properties that apply to the (billing) codes necessary to
@@ -2314,7 +2314,7 @@ class ChargeItemDefinitionApplicability
 ///  type and realm, therefore this resource gives only a rough structure and
 ///  requires profiling for each type of billing code system.
 @freezed
-class ChargeItemDefinitionPropertyGroup
+abstract class ChargeItemDefinitionPropertyGroup
     with _$ChargeItemDefinitionPropertyGroup {
   /// [ChargeItemDefinitionPropertyGroup] The ChargeItemDefinition resource
   ///  provides the properties that apply to the (billing) codes necessary to
@@ -2443,7 +2443,7 @@ class ChargeItemDefinitionPropertyGroup
 /// [Contract] Legally enforceable, formally recorded unilateral or bilateral
 ///  directive i.e., a policy or agreement.
 @freezed
-class Contract with Resource, _$Contract {
+abstract class Contract with Resource, _$Contract {
   /// [Contract] Legally enforceable, formally recorded unilateral or bilateral
   ///  directive i.e., a policy or agreement.
   const Contract._();
@@ -2956,7 +2956,7 @@ class Contract with Resource, _$Contract {
 /// [ContractContentDefinition] Legally enforceable, formally recorded
 ///  unilateral or bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractContentDefinition with _$ContractContentDefinition {
+abstract class ContractContentDefinition with _$ContractContentDefinition {
   /// [ContractContentDefinition] Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
   const ContractContentDefinition._();
@@ -3118,7 +3118,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
 /// [ContractTerm] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractTerm with _$ContractTerm {
+abstract class ContractTerm with _$ContractTerm {
   /// [ContractTerm] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractTerm._();
@@ -3306,7 +3306,7 @@ class ContractTerm with _$ContractTerm {
 /// [ContractSecurityLabel] Legally enforceable, formally recorded unilateral
 ///  or bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractSecurityLabel with _$ContractSecurityLabel {
+abstract class ContractSecurityLabel with _$ContractSecurityLabel {
   /// [ContractSecurityLabel] Legally enforceable, formally recorded unilateral
   ///  or bilateral directive i.e., a policy or agreement.
   const ContractSecurityLabel._();
@@ -3436,7 +3436,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
 /// [ContractOffer] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractOffer with _$ContractOffer {
+abstract class ContractOffer with _$ContractOffer {
   /// [ContractOffer] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractOffer._();
@@ -3611,7 +3611,7 @@ class ContractOffer with _$ContractOffer {
 /// [ContractParty] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractParty with _$ContractParty {
+abstract class ContractParty with _$ContractParty {
   /// [ContractParty] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractParty._();
@@ -3718,7 +3718,7 @@ class ContractParty with _$ContractParty {
 /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractAnswer with _$ContractAnswer {
+abstract class ContractAnswer with _$ContractAnswer {
   /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractAnswer._();
@@ -3987,7 +3987,7 @@ class ContractAnswer with _$ContractAnswer {
 /// [ContractAsset] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractAsset with _$ContractAsset {
+abstract class ContractAsset with _$ContractAsset {
   /// [ContractAsset] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractAsset._();
@@ -4194,7 +4194,7 @@ class ContractAsset with _$ContractAsset {
 /// [ContractContext] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractContext with _$ContractContext {
+abstract class ContractContext with _$ContractContext {
   /// [ContractContext] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractContext._();
@@ -4317,7 +4317,7 @@ class ContractContext with _$ContractContext {
 /// [ContractValuedItem] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractValuedItem with _$ContractValuedItem {
+abstract class ContractValuedItem with _$ContractValuedItem {
   /// [ContractValuedItem] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractValuedItem._();
@@ -4559,7 +4559,7 @@ class ContractValuedItem with _$ContractValuedItem {
 /// [ContractAction] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractAction with _$ContractAction {
+abstract class ContractAction with _$ContractAction {
   /// [ContractAction] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractAction._();
@@ -4846,7 +4846,7 @@ class ContractAction with _$ContractAction {
 /// [ContractSubject] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractSubject with _$ContractSubject {
+abstract class ContractSubject with _$ContractSubject {
   /// [ContractSubject] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractSubject._();
@@ -4953,7 +4953,7 @@ class ContractSubject with _$ContractSubject {
 /// [ContractSigner] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractSigner with _$ContractSigner {
+abstract class ContractSigner with _$ContractSigner {
   /// [ContractSigner] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractSigner._();
@@ -5065,7 +5065,7 @@ class ContractSigner with _$ContractSigner {
 /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractFriendly with _$ContractFriendly {
+abstract class ContractFriendly with _$ContractFriendly {
   /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractFriendly._();
@@ -5180,7 +5180,7 @@ class ContractFriendly with _$ContractFriendly {
 /// [ContractLegal] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractLegal with _$ContractLegal {
+abstract class ContractLegal with _$ContractLegal {
   /// [ContractLegal] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractLegal._();
@@ -5287,7 +5287,7 @@ class ContractLegal with _$ContractLegal {
 /// [ContractRule] Legally enforceable, formally recorded unilateral or
 ///  bilateral directive i.e., a policy or agreement.
 @freezed
-class ContractRule with _$ContractRule {
+abstract class ContractRule with _$ContractRule {
   /// [ContractRule] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   const ContractRule._();
@@ -5400,7 +5400,7 @@ class ContractRule with _$ContractRule {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
+abstract class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// [ExplanationOfBenefit] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -5967,7 +5967,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
+abstract class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   /// [ExplanationOfBenefitRelated] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -6088,7 +6088,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitEvent with _$ExplanationOfBenefitEvent {
+abstract class ExplanationOfBenefitEvent with _$ExplanationOfBenefitEvent {
   /// [ExplanationOfBenefitEvent] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -6215,7 +6215,7 @@ class ExplanationOfBenefitEvent with _$ExplanationOfBenefitEvent {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
+abstract class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   /// [ExplanationOfBenefitPayee] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -6330,7 +6330,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
+abstract class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   /// [ExplanationOfBenefitCareTeam] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -6475,7 +6475,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
 ///  optionally account balance information, for informing the subscriber of
 ///  the benefits provided.
 @freezed
-class ExplanationOfBenefitSupportingInfo
+abstract class ExplanationOfBenefitSupportingInfo
     with _$ExplanationOfBenefitSupportingInfo {
   /// [ExplanationOfBenefitSupportingInfo] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -6694,7 +6694,7 @@ class ExplanationOfBenefitSupportingInfo
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
+abstract class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   /// [ExplanationOfBenefitDiagnosis] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -6834,7 +6834,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
+abstract class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   /// [ExplanationOfBenefitProcedure] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -6982,7 +6982,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
+abstract class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   /// [ExplanationOfBenefitInsurance] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -7123,7 +7123,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
+abstract class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   /// [ExplanationOfBenefitAccident] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -7258,7 +7258,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
+abstract class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   /// [ExplanationOfBenefitItem] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -7625,7 +7625,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitBodySite with _$ExplanationOfBenefitBodySite {
+abstract class ExplanationOfBenefitBodySite with _$ExplanationOfBenefitBodySite {
   /// [ExplanationOfBenefitBodySite] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -7741,7 +7741,7 @@ class ExplanationOfBenefitBodySite with _$ExplanationOfBenefitBodySite {
 ///  optionally account balance information, for informing the subscriber of
 ///  the benefits provided.
 @freezed
-class ExplanationOfBenefitReviewOutcome
+abstract class ExplanationOfBenefitReviewOutcome
     with _$ExplanationOfBenefitReviewOutcome {
   /// [ExplanationOfBenefitReviewOutcome] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -7879,7 +7879,7 @@ class ExplanationOfBenefitReviewOutcome
 ///  optionally account balance information, for informing the subscriber of
 ///  the benefits provided.
 @freezed
-class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
+abstract class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   /// [ExplanationOfBenefitAdjudication] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
@@ -8017,7 +8017,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
+abstract class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// [ExplanationOfBenefitDetail] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -8280,7 +8280,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
+abstract class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// [ExplanationOfBenefitSubDetail] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -8539,7 +8539,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
+abstract class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -8867,7 +8867,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitBodySite1 with _$ExplanationOfBenefitBodySite1 {
+abstract class ExplanationOfBenefitBodySite1 with _$ExplanationOfBenefitBodySite1 {
   /// [ExplanationOfBenefitBodySite1] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -8983,7 +8983,7 @@ class ExplanationOfBenefitBodySite1 with _$ExplanationOfBenefitBodySite1 {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
+abstract class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   /// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -9218,7 +9218,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
+abstract class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   /// [ExplanationOfBenefitSubDetail1] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -9449,7 +9449,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
+abstract class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   /// [ExplanationOfBenefitTotal] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -9570,7 +9570,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
+abstract class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   /// [ExplanationOfBenefitPayment] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -9715,7 +9715,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 ///  optionally account balance information, for informing the subscriber of
 ///  the benefits provided.
 @freezed
-class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
+abstract class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   /// [ExplanationOfBenefitProcessNote] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
@@ -9850,7 +9850,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
 ///  optionally account balance information, for informing the subscriber of
 ///  the benefits provided.
 @freezed
-class ExplanationOfBenefitBenefitBalance
+abstract class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
   /// [ExplanationOfBenefitBenefitBalance] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -10022,7 +10022,7 @@ class ExplanationOfBenefitBenefitBalance
 ///  account balance information, for informing the subscriber of the benefits
 ///  provided.
 @freezed
-class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
+abstract class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   /// [ExplanationOfBenefitFinancial] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the benefits
@@ -10179,7 +10179,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
 /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
 ///  organization.
 @freezed
-class InsurancePlan with Resource, _$InsurancePlan {
+abstract class InsurancePlan with Resource, _$InsurancePlan {
   /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
   ///  organization.
   const InsurancePlan._();
@@ -10459,7 +10459,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
 /// [InsurancePlanCoverage] Details of a Health Insurance product/plan provided
 ///  by an organization.
 @freezed
-class InsurancePlanCoverage with _$InsurancePlanCoverage {
+abstract class InsurancePlanCoverage with _$InsurancePlanCoverage {
   /// [InsurancePlanCoverage] Details of a Health Insurance product/plan provided
   ///  by an organization.
   const InsurancePlanCoverage._();
@@ -10573,7 +10573,7 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
 /// [InsurancePlanBenefit] Details of a Health Insurance product/plan provided
 ///  by an organization.
 @freezed
-class InsurancePlanBenefit with _$InsurancePlanBenefit {
+abstract class InsurancePlanBenefit with _$InsurancePlanBenefit {
   /// [InsurancePlanBenefit] Details of a Health Insurance product/plan provided
   ///  by an organization.
   const InsurancePlanBenefit._();
@@ -10694,7 +10694,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
 /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided by
 ///  an organization.
 @freezed
-class InsurancePlanLimit with _$InsurancePlanLimit {
+abstract class InsurancePlanLimit with _$InsurancePlanLimit {
   /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided by
   ///  an organization.
   const InsurancePlanLimit._();
@@ -10803,7 +10803,7 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
 /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided by
 ///  an organization.
 @freezed
-class InsurancePlanPlan with _$InsurancePlanPlan {
+abstract class InsurancePlanPlan with _$InsurancePlanPlan {
   /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided by
   ///  an organization.
   const InsurancePlanPlan._();
@@ -10936,7 +10936,7 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
 /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
 ///  provided by an organization.
 @freezed
-class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
+abstract class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
   ///  provided by an organization.
   const InsurancePlanGeneralCost._();
@@ -11065,7 +11065,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
 /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
 ///  provided by an organization.
 @freezed
-class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
+abstract class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
   ///  provided by an organization.
   const InsurancePlanSpecificCost._();
@@ -11174,7 +11174,7 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
 /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan provided
 ///  by an organization.
 @freezed
-class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
+abstract class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan provided
   ///  by an organization.
   const InsurancePlanBenefit1._();
@@ -11283,7 +11283,7 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
 /// [InsurancePlanCost] Details of a Health Insurance product/plan provided by
 ///  an organization.
 @freezed
-class InsurancePlanCost with _$InsurancePlanCost {
+abstract class InsurancePlanCost with _$InsurancePlanCost {
   /// [InsurancePlanCost] Details of a Health Insurance product/plan provided by
   ///  an organization.
   const InsurancePlanCost._();

@@ -14,7 +14,7 @@ part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
 
 @freezed
-class AdministrableProductDefinition
+abstract class AdministrableProductDefinition
     with Resource, _$AdministrableProductDefinition {
   const AdministrableProductDefinition._();
 
@@ -140,7 +140,7 @@ class AdministrableProductDefinition
 }
 
 @freezed
-class AdministrableProductDefinitionProperty
+abstract class AdministrableProductDefinitionProperty
     with _$AdministrableProductDefinitionProperty {
   const AdministrableProductDefinitionProperty._();
 
@@ -249,7 +249,7 @@ class AdministrableProductDefinitionProperty
 }
 
 @freezed
-class AdministrableProductDefinitionRouteOfAdministration
+abstract class AdministrableProductDefinitionRouteOfAdministration
     with _$AdministrableProductDefinitionRouteOfAdministration {
   const AdministrableProductDefinitionRouteOfAdministration._();
 
@@ -351,7 +351,7 @@ class AdministrableProductDefinitionRouteOfAdministration
 }
 
 @freezed
-class AdministrableProductDefinitionTargetSpecies
+abstract class AdministrableProductDefinitionTargetSpecies
     with _$AdministrableProductDefinitionTargetSpecies {
   const AdministrableProductDefinitionTargetSpecies._();
 
@@ -426,7 +426,7 @@ class AdministrableProductDefinitionTargetSpecies
 }
 
 @freezed
-class AdministrableProductDefinitionWithdrawalPeriod
+abstract class AdministrableProductDefinitionWithdrawalPeriod
     with _$AdministrableProductDefinitionWithdrawalPeriod {
   const AdministrableProductDefinitionWithdrawalPeriod._();
 
@@ -514,7 +514,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
 
 /// [Ingredient] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
-class Ingredient with Resource, _$Ingredient {
+abstract class Ingredient with Resource, _$Ingredient {
   /// [Ingredient] An ingredient of a manufactured item or pharmaceutical product.
   const Ingredient._();
 
@@ -671,7 +671,7 @@ class Ingredient with Resource, _$Ingredient {
 
 /// [IngredientManufacturer] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
-class IngredientManufacturer with _$IngredientManufacturer {
+abstract class IngredientManufacturer with _$IngredientManufacturer {
   /// [IngredientManufacturer] An ingredient of a manufactured item or pharmaceutical product.
   const IngredientManufacturer._();
 
@@ -746,7 +746,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
 
 /// [IngredientSubstance] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
-class IngredientSubstance with _$IngredientSubstance {
+abstract class IngredientSubstance with _$IngredientSubstance {
   /// [IngredientSubstance] An ingredient of a manufactured item or pharmaceutical product.
   const IngredientSubstance._();
 
@@ -819,7 +819,7 @@ class IngredientSubstance with _$IngredientSubstance {
 
 /// [IngredientStrength] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
-class IngredientStrength with _$IngredientStrength {
+abstract class IngredientStrength with _$IngredientStrength {
   /// [IngredientStrength] An ingredient of a manufactured item or pharmaceutical product.
   const IngredientStrength._();
 
@@ -942,7 +942,7 @@ class IngredientStrength with _$IngredientStrength {
 
 /// [IngredientReferenceStrength] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
-class IngredientReferenceStrength with _$IngredientReferenceStrength {
+abstract class IngredientReferenceStrength with _$IngredientReferenceStrength {
   /// [IngredientReferenceStrength] An ingredient of a manufactured item or pharmaceutical product.
   const IngredientReferenceStrength._();
 
@@ -1040,7 +1040,7 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
 
 /// [ClinicalUseDefinition] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
+abstract class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   /// [ClinicalUseDefinition] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
   const ClinicalUseDefinition._();
 
@@ -1198,7 +1198,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
 }
 
 @freezed
-class ClinicalUseDefinitionContraindication
+abstract class ClinicalUseDefinitionContraindication
     with _$ClinicalUseDefinitionContraindication {
   const ClinicalUseDefinitionContraindication._();
 
@@ -1284,7 +1284,7 @@ class ClinicalUseDefinitionContraindication
 }
 
 @freezed
-class ClinicalUseDefinitionOtherTherapy
+abstract class ClinicalUseDefinitionOtherTherapy
     with _$ClinicalUseDefinitionOtherTherapy {
   const ClinicalUseDefinitionOtherTherapy._();
 
@@ -1356,7 +1356,7 @@ class ClinicalUseDefinitionOtherTherapy
 
 /// [ClinicalUseDefinitionIndication] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
+abstract class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
   /// [ClinicalUseDefinitionIndication] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
   const ClinicalUseDefinitionIndication._();
 
@@ -1462,7 +1462,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
 
 /// [ClinicalUseDefinitionInteraction] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
+abstract class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
   /// [ClinicalUseDefinitionInteraction] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
   const ClinicalUseDefinitionInteraction._();
 
@@ -1549,7 +1549,7 @@ class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
 
 /// [ClinicalUseDefinitionInteractant] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
+abstract class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
   /// [ClinicalUseDefinitionInteractant] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
   const ClinicalUseDefinitionInteractant._();
 
@@ -1620,7 +1620,7 @@ class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
 }
 
 @freezed
-class ClinicalUseDefinitionUndesirableEffect
+abstract class ClinicalUseDefinitionUndesirableEffect
     with _$ClinicalUseDefinitionUndesirableEffect {
   const ClinicalUseDefinitionUndesirableEffect._();
 
@@ -1697,7 +1697,7 @@ class ClinicalUseDefinitionUndesirableEffect
 
 /// [ClinicalUseDefinitionWarning] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
+abstract class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
   /// [ClinicalUseDefinitionWarning] A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.
   const ClinicalUseDefinitionWarning._();
 
@@ -1772,7 +1772,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
 
 /// [ManufacturedItemDefinition] The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product.
 @freezed
-class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
+abstract class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   /// [ManufacturedItemDefinition] The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product.
   const ManufacturedItemDefinition._();
 
@@ -1915,7 +1915,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
 }
 
 @freezed
-class ManufacturedItemDefinitionProperty
+abstract class ManufacturedItemDefinitionProperty
     with _$ManufacturedItemDefinitionProperty {
   const ManufacturedItemDefinitionProperty._();
 
@@ -2020,7 +2020,7 @@ class ManufacturedItemDefinitionProperty
 
 /// [MedicinalProductDefinition] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
 @freezed
-class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
+abstract class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   /// [MedicinalProductDefinition] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
   const MedicinalProductDefinition._();
 
@@ -2282,7 +2282,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
 }
 
 @freezed
-class MedicinalProductDefinitionContact
+abstract class MedicinalProductDefinitionContact
     with _$MedicinalProductDefinitionContact {
   const MedicinalProductDefinitionContact._();
 
@@ -2357,7 +2357,7 @@ class MedicinalProductDefinitionContact
 
 /// [MedicinalProductDefinitionName] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
 @freezed
-class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
+abstract class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   /// [MedicinalProductDefinitionName] A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
   const MedicinalProductDefinitionName._();
 
@@ -2445,7 +2445,7 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
 }
 
 @freezed
-class MedicinalProductDefinitionNamePart
+abstract class MedicinalProductDefinitionNamePart
     with _$MedicinalProductDefinitionNamePart {
   const MedicinalProductDefinitionNamePart._();
 
@@ -2524,7 +2524,7 @@ class MedicinalProductDefinitionNamePart
 }
 
 @freezed
-class MedicinalProductDefinitionCountryLanguage
+abstract class MedicinalProductDefinitionCountryLanguage
     with _$MedicinalProductDefinitionCountryLanguage {
   const MedicinalProductDefinitionCountryLanguage._();
 
@@ -2604,7 +2604,7 @@ class MedicinalProductDefinitionCountryLanguage
 }
 
 @freezed
-class MedicinalProductDefinitionCrossReference
+abstract class MedicinalProductDefinitionCrossReference
     with _$MedicinalProductDefinitionCrossReference {
   const MedicinalProductDefinitionCrossReference._();
 
@@ -2679,7 +2679,7 @@ class MedicinalProductDefinitionCrossReference
 }
 
 @freezed
-class MedicinalProductDefinitionOperation
+abstract class MedicinalProductDefinitionOperation
     with _$MedicinalProductDefinitionOperation {
   const MedicinalProductDefinitionOperation._();
 
@@ -2763,7 +2763,7 @@ class MedicinalProductDefinitionOperation
 }
 
 @freezed
-class MedicinalProductDefinitionCharacteristic
+abstract class MedicinalProductDefinitionCharacteristic
     with _$MedicinalProductDefinitionCharacteristic {
   const MedicinalProductDefinitionCharacteristic._();
 
@@ -2869,7 +2869,7 @@ class MedicinalProductDefinitionCharacteristic
 
 /// [PackagedProductDefinition] A medically related item or items, in a container or package.
 @freezed
-class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
+abstract class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   /// [PackagedProductDefinition] A medically related item or items, in a container or package.
   const PackagedProductDefinition._();
 
@@ -3062,7 +3062,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
 }
 
 @freezed
-class PackagedProductDefinitionLegalStatusOfSupply
+abstract class PackagedProductDefinitionLegalStatusOfSupply
     with _$PackagedProductDefinitionLegalStatusOfSupply {
   const PackagedProductDefinitionLegalStatusOfSupply._();
 
@@ -3138,7 +3138,7 @@ class PackagedProductDefinitionLegalStatusOfSupply
 
 /// [PackagedProductDefinitionPackage] A medically related item or items, in a container or package.
 @freezed
-class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
+abstract class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
   /// [PackagedProductDefinitionPackage] A medically related item or items, in a container or package.
   const PackagedProductDefinitionPackage._();
 
@@ -3257,7 +3257,7 @@ class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
 }
 
 @freezed
-class PackagedProductDefinitionShelfLifeStorage
+abstract class PackagedProductDefinitionShelfLifeStorage
     with _$PackagedProductDefinitionShelfLifeStorage {
   const PackagedProductDefinitionShelfLifeStorage._();
 
@@ -3415,7 +3415,7 @@ class PackagedProductDefinitionShelfLifeStorage
 }
 
 @freezed
-class PackagedProductDefinitionProperty
+abstract class PackagedProductDefinitionProperty
     with _$PackagedProductDefinitionProperty {
   const PackagedProductDefinitionProperty._();
 
@@ -3519,7 +3519,7 @@ class PackagedProductDefinitionProperty
 }
 
 @freezed
-class PackagedProductDefinitionContainedItem
+abstract class PackagedProductDefinitionContainedItem
     with _$PackagedProductDefinitionContainedItem {
   const PackagedProductDefinitionContainedItem._();
 
@@ -3594,7 +3594,7 @@ class PackagedProductDefinitionContainedItem
 
 /// [RegulatedAuthorization] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
 @freezed
-class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
+abstract class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   /// [RegulatedAuthorization] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
   const RegulatedAuthorization._();
 
@@ -3776,7 +3776,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
 
 /// [RegulatedAuthorizationCase] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
 @freezed
-class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
+abstract class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   /// [RegulatedAuthorizationCase] Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
   const RegulatedAuthorizationCase._();
 
@@ -3874,7 +3874,7 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
 
 /// [SubstanceDefinition] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinition with Resource, _$SubstanceDefinition {
+abstract class SubstanceDefinition with Resource, _$SubstanceDefinition {
   /// [SubstanceDefinition] The detailed description of a substance, typically at a level beyond what is used for prescribing.
   const SubstanceDefinition._();
 
@@ -4081,7 +4081,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
 
 /// [SubstanceDefinitionMoiety] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
+abstract class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   /// [SubstanceDefinitionMoiety] The detailed description of a substance, typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionMoiety._();
 
@@ -4204,7 +4204,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
 
 /// [SubstanceDefinitionProperty] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
+abstract class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
   /// [SubstanceDefinitionProperty] The detailed description of a substance, typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionProperty._();
 
@@ -4306,7 +4306,7 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
 }
 
 @freezed
-class SubstanceDefinitionMolecularWeight
+abstract class SubstanceDefinitionMolecularWeight
     with _$SubstanceDefinitionMolecularWeight {
   const SubstanceDefinitionMolecularWeight._();
 
@@ -4386,7 +4386,7 @@ class SubstanceDefinitionMolecularWeight
 
 /// [SubstanceDefinitionStructure] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
+abstract class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   /// [SubstanceDefinitionStructure] The detailed description of a substance, typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionStructure._();
 
@@ -4499,7 +4499,7 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
 }
 
 @freezed
-class SubstanceDefinitionRepresentation
+abstract class SubstanceDefinitionRepresentation
     with _$SubstanceDefinitionRepresentation {
   const SubstanceDefinitionRepresentation._();
 
@@ -4589,7 +4589,7 @@ class SubstanceDefinitionRepresentation
 
 /// [SubstanceDefinitionCode] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
+abstract class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   /// [SubstanceDefinitionCode] The detailed description of a substance, typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionCode._();
 
@@ -4682,7 +4682,7 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
 
 /// [SubstanceDefinitionName] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionName with _$SubstanceDefinitionName {
+abstract class SubstanceDefinitionName with _$SubstanceDefinitionName {
   /// [SubstanceDefinitionName] The detailed description of a substance, typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionName._();
 
@@ -4810,7 +4810,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
 
 /// [SubstanceDefinitionOfficial] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
+abstract class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   /// [SubstanceDefinitionOfficial] The detailed description of a substance, typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionOfficial._();
 
@@ -4893,7 +4893,7 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
 
 /// [SubstanceDefinitionRelationship] The detailed description of a substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
+abstract class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
   /// [SubstanceDefinitionRelationship] The detailed description of a substance, typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionRelationship._();
 
@@ -5016,7 +5016,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
 }
 
 @freezed
-class SubstanceDefinitionSourceMaterial
+abstract class SubstanceDefinitionSourceMaterial
     with _$SubstanceDefinitionSourceMaterial {
   const SubstanceDefinitionSourceMaterial._();
 

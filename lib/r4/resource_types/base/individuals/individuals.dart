@@ -15,7 +15,7 @@ part 'individuals.g.dart';
 
 /// [FhirGroup] Represents a defined collection of entities that may be discussed
 @freezed
-class FhirGroup with Resource, _$FhirGroup {
+abstract class FhirGroup with Resource, _$FhirGroup {
   /// [FhirGroup] Represents a defined collection of entities that may be discussed
   const FhirGroup._();
 
@@ -274,7 +274,7 @@ class FhirGroup with Resource, _$FhirGroup {
 
 /// [GroupCharacteristic] Represents a defined collection of entities that
 @freezed
-class GroupCharacteristic with _$GroupCharacteristic {
+abstract class GroupCharacteristic with _$GroupCharacteristic {
   /// [GroupCharacteristic] Represents a defined collection of entities that
   const GroupCharacteristic._();
 
@@ -436,7 +436,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
 
 /// [GroupMember] Represents a defined collection of entities that may be
 @freezed
-class GroupMember with _$GroupMember {
+abstract class GroupMember with _$GroupMember {
   /// [GroupMember] Represents a defined collection of entities that may be
   const GroupMember._();
 
@@ -560,7 +560,7 @@ class GroupMember with _$GroupMember {
 
 /// [Patient] Demographics and other administrative information about an
 @freezed
-class Patient with Resource, _$Patient {
+abstract class Patient with Resource, _$Patient {
   /// [Patient] Demographics and other administrative information about an
   const Patient._();
 
@@ -1208,7 +1208,7 @@ class Patient with Resource, _$Patient {
 
 /// [PatientContact] Demographics and other administrative information about
 @freezed
-class PatientContact with _$PatientContact {
+abstract class PatientContact with _$PatientContact {
   /// [PatientContact] Demographics and other administrative information about
   const PatientContact._();
 
@@ -1499,7 +1499,7 @@ class PatientContact with _$PatientContact {
 
 /// [PatientCommunication] Demographics and other administrative information
 @freezed
-class PatientCommunication with _$PatientCommunication {
+abstract class PatientCommunication with _$PatientCommunication {
   /// [PatientCommunication] Demographics and other administrative information
   const PatientCommunication._();
 
@@ -1619,7 +1619,7 @@ class PatientCommunication with _$PatientCommunication {
 
 /// [PatientLink] Demographics and other administrative information about an
 @freezed
-class PatientLink with _$PatientLink {
+abstract class PatientLink with _$PatientLink {
   /// [PatientLink] Demographics and other administrative information about an
   const PatientLink._();
 
@@ -1732,7 +1732,7 @@ class PatientLink with _$PatientLink {
 
 /// [Person] Demographics and administrative information about a person
 @freezed
-class Person with Resource, _$Person {
+abstract class Person with Resource, _$Person {
   /// [Person] Demographics and administrative information about a person
   const Person._();
 
@@ -2282,7 +2282,7 @@ class Person with Resource, _$Person {
 
 /// [PersonLink] Demographics and administrative information about a person
 @freezed
-class PersonLink with _$PersonLink {
+abstract class PersonLink with _$PersonLink {
   /// [PersonLink] Demographics and administrative information about a person
   const PersonLink._();
 
@@ -2395,7 +2395,7 @@ class PersonLink with _$PersonLink {
 
 /// [Practitioner] A person who is directly or indirectly involved in the
 @freezed
-class Practitioner with Resource, _$Practitioner {
+abstract class Practitioner with Resource, _$Practitioner {
   /// [Practitioner] A person who is directly or indirectly involved in the
   const Practitioner._();
 
@@ -2961,7 +2961,7 @@ class Practitioner with Resource, _$Practitioner {
 
 /// [PractitionerQualification] A person who is directly or indirectly
 @freezed
-class PractitionerQualification with _$PractitionerQualification {
+abstract class PractitionerQualification with _$PractitionerQualification {
   /// [PractitionerQualification] A person who is directly or indirectly
   const PractitionerQualification._();
 
@@ -3079,7 +3079,7 @@ class PractitionerQualification with _$PractitionerQualification {
 
 /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
 @freezed
-class PractitionerRole with Resource, _$PractitionerRole {
+abstract class PractitionerRole with Resource, _$PractitionerRole {
   /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
   const PractitionerRole._();
 
@@ -3423,7 +3423,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
 
 /// [PractitionerRoleAvailableTime] A specific set of
 @freezed
-class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
+abstract class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   /// [PractitionerRoleAvailableTime] A specific set of
   const PractitionerRoleAvailableTime._();
 
@@ -3568,7 +3568,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
 
 /// [PractitionerRoleNotAvailable] A specific set of
 @freezed
-class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
+abstract class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   /// [PractitionerRoleNotAvailable] A specific set of
   const PractitionerRoleNotAvailable._();
 
@@ -3684,7 +3684,7 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
 
 /// [RelatedPerson] Information about a person that is involved in the care
 @freezed
-class RelatedPerson with Resource, _$RelatedPerson {
+abstract class RelatedPerson with Resource, _$RelatedPerson {
   /// [RelatedPerson] Information about a person that is involved in the care
   const RelatedPerson._();
 
@@ -4251,7 +4251,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
 
 /// [RelatedPersonCommunication] Information about a person that is involved
 @freezed
-class RelatedPersonCommunication with _$RelatedPersonCommunication {
+abstract class RelatedPersonCommunication with _$RelatedPersonCommunication {
   /// [RelatedPersonCommunication] Information about a person that is involved
   const RelatedPersonCommunication._();
 

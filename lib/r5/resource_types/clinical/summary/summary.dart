@@ -29,7 +29,7 @@ part 'summary.enums.dart';
 ///  implementation guides include specific extensions, value sets and
 ///  constraints.
 @freezed
-class AdverseEvent with Resource, _$AdverseEvent {
+abstract class AdverseEvent with Resource, _$AdverseEvent {
   /// [AdverseEvent] An event (i.e. any change to current patient status) that
   ///  may be related to unintended effects on a patient or research participant.
   ///  The unintended effects may require additional monitoring, treatment,
@@ -451,7 +451,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
 ///  Resource. The implementation guides include specific extensions, value
 ///  sets and constraints.
 @freezed
-class AdverseEventParticipant with _$AdverseEventParticipant {
+abstract class AdverseEventParticipant with _$AdverseEventParticipant {
   /// [AdverseEventParticipant] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or research
   ///  participant. The unintended effects may require additional monitoring,
@@ -596,7 +596,7 @@ class AdverseEventParticipant with _$AdverseEventParticipant {
 ///  Resource. The implementation guides include specific extensions, value
 ///  sets and constraints.
 @freezed
-class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
+abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   /// [AdverseEventSuspectEntity] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or research
   ///  participant. The unintended effects may require additional monitoring,
@@ -752,7 +752,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
 ///  Resource. The implementation guides include specific extensions, value
 ///  sets and constraints.
 @freezed
-class AdverseEventCausality with _$AdverseEventCausality {
+abstract class AdverseEventCausality with _$AdverseEventCausality {
   /// [AdverseEventCausality] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or research
   ///  participant. The unintended effects may require additional monitoring,
@@ -904,7 +904,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
 ///  implementing the AdverseEvent Resource. The implementation guides include
 ///  specific extensions, value sets and constraints.
 @freezed
-class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
+abstract class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
   /// [AdverseEventContributingFactor] An event (i.e. any change to current
   ///  patient status) that may be related to unintended effects on a patient or
   ///  research participant. The unintended effects may require additional
@@ -1053,7 +1053,7 @@ class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
 ///  Resource. The implementation guides include specific extensions, value
 ///  sets and constraints.
 @freezed
-class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
+abstract class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
   /// [AdverseEventPreventiveAction] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or research
   ///  participant. The unintended effects may require additional monitoring,
@@ -1199,7 +1199,7 @@ class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
 ///  Resource. The implementation guides include specific extensions, value
 ///  sets and constraints.
 @freezed
-class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
+abstract class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
   /// [AdverseEventMitigatingAction] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or research
   ///  participant. The unintended effects may require additional monitoring,
@@ -1347,7 +1347,7 @@ class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
 ///  Resource. The implementation guides include specific extensions, value
 ///  sets and constraints.
 @freezed
-class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
+abstract class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
   /// [AdverseEventSupportingInfo] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or research
   ///  participant. The unintended effects may require additional monitoring,
@@ -1515,7 +1515,7 @@ class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
 ///  which is specific to an individual and associated with exposure to a
 ///  substance.
 @freezed
-class AllergyIntolerance with Resource, _$AllergyIntolerance {
+abstract class AllergyIntolerance with Resource, _$AllergyIntolerance {
   /// [AllergyIntolerance] Risk of harmful or undesirable physiological response
   ///  which is specific to an individual and associated with exposure to a
   ///  substance.
@@ -1880,7 +1880,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
 ///  physiological response which is specific to an individual and associated
 ///  with exposure to a substance.
 @freezed
-class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
+abstract class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
   /// [AllergyIntoleranceParticipant] Risk of harmful or undesirable
   ///  physiological response which is specific to an individual and associated
   ///  with exposure to a substance.
@@ -1995,7 +1995,7 @@ class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
 ///  response which is specific to an individual and associated with exposure
 ///  to a substance.
 @freezed
-class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
+abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   /// [AllergyIntoleranceReaction] Risk of harmful or undesirable physiological
   ///  response which is specific to an individual and associated with exposure
   ///  to a substance.
@@ -2180,7 +2180,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 ///  "ClinicalAssessment" to avoid confusion with the recording of assessment
 ///  tools such as Apgar score.
 @freezed
-class ClinicalImpression with Resource, _$ClinicalImpression {
+abstract class ClinicalImpression with Resource, _$ClinicalImpression {
   /// [ClinicalImpression] A record of a clinical assessment performed to
   ///  determine what problem(s) may affect the patient and before planning the
   ///  treatments or management strategies that are best to manage a patient's
@@ -2537,7 +2537,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
 ///  "ClinicalAssessment" to avoid confusion with the recording of assessment
 ///  tools such as Apgar score.
 @freezed
-class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
+abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   /// [ClinicalImpressionFinding] A record of a clinical assessment performed to
   ///  determine what problem(s) may affect the patient and before planning the
   ///  treatments or management strategies that are best to manage a patient's
@@ -2663,7 +2663,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 /// [Condition] A clinical condition, problem, diagnosis, or other event,
 ///  situation, issue, or clinical concept that has risen to a level of concern.
 @freezed
-class Condition with Resource, _$Condition {
+abstract class Condition with Resource, _$Condition {
   /// [Condition] A clinical condition, problem, diagnosis, or other event,
   ///  situation, issue, or clinical concept that has risen to a level of concern.
   const Condition._();
@@ -3062,7 +3062,7 @@ class Condition with Resource, _$Condition {
 ///  event, situation, issue, or clinical concept that has risen to a level of
 ///  concern.
 @freezed
-class ConditionParticipant with _$ConditionParticipant {
+abstract class ConditionParticipant with _$ConditionParticipant {
   /// [ConditionParticipant] A clinical condition, problem, diagnosis, or other
   ///  event, situation, issue, or clinical concept that has risen to a level of
   ///  concern.
@@ -3175,7 +3175,7 @@ class ConditionParticipant with _$ConditionParticipant {
 /// [ConditionStage] A clinical condition, problem, diagnosis, or other event,
 ///  situation, issue, or clinical concept that has risen to a level of concern.
 @freezed
-class ConditionStage with _$ConditionStage {
+abstract class ConditionStage with _$ConditionStage {
   /// [ConditionStage] A clinical condition, problem, diagnosis, or other event,
   ///  situation, issue, or clinical concept that has risen to a level of concern.
   const ConditionStage._();
@@ -3297,7 +3297,7 @@ class ConditionStage with _$ConditionStage {
 ///  e.g. Drug-drug interaction, Ineffective treatment frequency,
 ///  Procedure-condition conflict, gaps in care, etc.
 @freezed
-class DetectedIssue with Resource, _$DetectedIssue {
+abstract class DetectedIssue with Resource, _$DetectedIssue {
   /// [DetectedIssue] Indicates an actual or potential clinical issue with or
   ///  between one or more active or proposed clinical actions for a patient;
   ///  e.g. Drug-drug interaction, Ineffective treatment frequency,
@@ -3598,7 +3598,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
 ///  patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
 ///  Procedure-condition conflict, gaps in care, etc.
 @freezed
-class DetectedIssueEvidence with _$DetectedIssueEvidence {
+abstract class DetectedIssueEvidence with _$DetectedIssueEvidence {
   /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
   ///  with or between one or more active or proposed clinical actions for a
   ///  patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
@@ -3713,7 +3713,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
 ///  patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
 ///  Procedure-condition conflict, gaps in care, etc.
 @freezed
-class DetectedIssueMitigation with _$DetectedIssueMitigation {
+abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
   /// [DetectedIssueMitigation] Indicates an actual or potential clinical issue
   ///  with or between one or more active or proposed clinical actions for a
   ///  patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
@@ -3849,7 +3849,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
 /// [FamilyMemberHistory] Significant health conditions for a person related to
 ///  the patient relevant in the context of care for the patient.
 @freezed
-class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
+abstract class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// [FamilyMemberHistory] Significant health conditions for a person related to
   ///  the patient relevant in the context of care for the patient.
   const FamilyMemberHistory._();
@@ -4270,7 +4270,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
 /// [FamilyMemberHistoryParticipant] Significant health conditions for a person
 ///  related to the patient relevant in the context of care for the patient.
 @freezed
-class FamilyMemberHistoryParticipant with _$FamilyMemberHistoryParticipant {
+abstract class FamilyMemberHistoryParticipant with _$FamilyMemberHistoryParticipant {
   /// [FamilyMemberHistoryParticipant] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
   const FamilyMemberHistoryParticipant._();
@@ -4383,7 +4383,7 @@ class FamilyMemberHistoryParticipant with _$FamilyMemberHistoryParticipant {
 /// [FamilyMemberHistoryCondition] Significant health conditions for a person
 ///  related to the patient relevant in the context of care for the patient.
 @freezed
-class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
+abstract class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   /// [FamilyMemberHistoryCondition] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
   const FamilyMemberHistoryCondition._();
@@ -4561,7 +4561,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
 /// [FamilyMemberHistoryProcedure] Significant health conditions for a person
 ///  related to the patient relevant in the context of care for the patient.
 @freezed
-class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
+abstract class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
   /// [FamilyMemberHistoryProcedure] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
   const FamilyMemberHistoryProcedure._();
@@ -4769,7 +4769,7 @@ class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
 ///  quality or safety inspection for a location, organization, or device.
 ///  This can be an accreditation procedure on a practitioner for licensing.
 @freezed
-class Procedure with Resource, _$Procedure {
+abstract class Procedure with Resource, _$Procedure {
   /// [Procedure] An action that is or was performed on or for a patient,
   ///  practitioner, device, organization, or location. For example, this can be
   ///  a physical intervention on a patient like an operation, or less invasive
@@ -5297,7 +5297,7 @@ class Procedure with Resource, _$Procedure {
 ///  device.  This can be an accreditation procedure on a practitioner for
 ///  licensing.
 @freezed
-class ProcedurePerformer with _$ProcedurePerformer {
+abstract class ProcedurePerformer with _$ProcedurePerformer {
   /// [ProcedurePerformer] An action that is or was performed on or for a
   ///  patient, practitioner, device, organization, or location. For example,
   ///  this can be a physical intervention on a patient like an operation, or
@@ -5435,7 +5435,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
 ///  device.  This can be an accreditation procedure on a practitioner for
 ///  licensing.
 @freezed
-class ProcedureFocalDevice with _$ProcedureFocalDevice {
+abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
   /// [ProcedureFocalDevice] An action that is or was performed on or for a
   ///  patient, practitioner, device, organization, or location. For example,
   ///  this can be a physical intervention on a patient like an operation, or

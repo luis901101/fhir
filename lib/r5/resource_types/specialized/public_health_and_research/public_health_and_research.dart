@@ -21,7 +21,7 @@ part 'public_health_and_research.enums.dart';
 ///  certain outcomes and certain groups of people by looking at data collected
 ///  in the past or future.
 @freezed
-class ResearchStudy with Resource, _$ResearchStudy {
+abstract class ResearchStudy with Resource, _$ResearchStudy {
   /// [ResearchStudy] A scientific study of nature that sometimes includes
   ///  processes involved in health and disease. For example, clinical trials are
   ///  research studies that involve people. These studies may be related to new
@@ -488,7 +488,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
 ///  certain outcomes and certain groups of people by looking at data collected
 ///  in the past or future.
 @freezed
-class ResearchStudyLabel with _$ResearchStudyLabel {
+abstract class ResearchStudyLabel with _$ResearchStudyLabel {
   /// [ResearchStudyLabel] A scientific study of nature that sometimes includes
   ///  processes involved in health and disease. For example, clinical trials are
   ///  research studies that involve people. These studies may be related to new
@@ -612,7 +612,7 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
 ///  may also study certain outcomes and certain groups of people by looking at
 ///  data collected in the past or future.
 @freezed
-class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
+abstract class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
   /// [ResearchStudyAssociatedParty] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
   ///  trials are research studies that involve people. These studies may be
@@ -756,7 +756,7 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
 ///  may also study certain outcomes and certain groups of people by looking at
 ///  data collected in the past or future.
 @freezed
-class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
+abstract class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
   /// [ResearchStudyProgressStatus] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
   ///  trials are research studies that involve people. These studies may be
@@ -890,7 +890,7 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
 ///  may also study certain outcomes and certain groups of people by looking at
 ///  data collected in the past or future.
 @freezed
-class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
+abstract class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
   /// [ResearchStudyRecruitment] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
   ///  trials are research studies that involve people. These studies may be
@@ -1029,7 +1029,7 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
 ///  may also study certain outcomes and certain groups of people by looking at
 ///  data collected in the past or future.
 @freezed
-class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
+abstract class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
   /// [ResearchStudyComparisonGroup] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
   ///  trials are research studies that involve people. These studies may be
@@ -1194,7 +1194,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
 ///  may also study certain outcomes and certain groups of people by looking at
 ///  data collected in the past or future.
 @freezed
-class ResearchStudyObjective with _$ResearchStudyObjective {
+abstract class ResearchStudyObjective with _$ResearchStudyObjective {
   /// [ResearchStudyObjective] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
   ///  trials are research studies that involve people. These studies may be
@@ -1332,7 +1332,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
 ///  may also study certain outcomes and certain groups of people by looking at
 ///  data collected in the past or future.
 @freezed
-class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
+abstract class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
   /// [ResearchStudyOutcomeMeasure] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
   ///  trials are research studies that involve people. These studies may be
@@ -1470,7 +1470,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
 /// [ResearchSubject] A ResearchSubject is a participant or object which is the
 ///  recipient of investigative activities in a research study.
 @freezed
-class ResearchSubject with Resource, _$ResearchSubject {
+abstract class ResearchSubject with Resource, _$ResearchSubject {
   /// [ResearchSubject] A ResearchSubject is a participant or object which is the
   ///  recipient of investigative activities in a research study.
   const ResearchSubject._();
@@ -1717,7 +1717,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
 /// [ResearchSubjectProgress] A ResearchSubject is a participant or object
 ///  which is the recipient of investigative activities in a research study.
 @freezed
-class ResearchSubjectProgress with _$ResearchSubjectProgress {
+abstract class ResearchSubjectProgress with _$ResearchSubjectProgress {
   /// [ResearchSubjectProgress] A ResearchSubject is a participant or object
   ///  which is the recipient of investigative activities in a research study.
   const ResearchSubjectProgress._();

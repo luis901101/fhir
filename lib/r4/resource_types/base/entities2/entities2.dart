@@ -15,7 +15,7 @@ part 'entities2.g.dart';
 
 /// [BiologicallyDerivedProduct] A material substance originating from a
 @freezed
-class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
+abstract class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   /// [BiologicallyDerivedProduct] A material substance originating from a
   const BiologicallyDerivedProduct._();
 
@@ -269,7 +269,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
 }
 
 @freezed
-class BiologicallyDerivedProductCollection
+abstract class BiologicallyDerivedProductCollection
     with _$BiologicallyDerivedProductCollection {
   const BiologicallyDerivedProductCollection._();
 
@@ -377,7 +377,7 @@ class BiologicallyDerivedProductCollection
 }
 
 @freezed
-class BiologicallyDerivedProductProcessing
+abstract class BiologicallyDerivedProductProcessing
     with _$BiologicallyDerivedProductProcessing {
   const BiologicallyDerivedProductProcessing._();
 
@@ -493,7 +493,7 @@ class BiologicallyDerivedProductProcessing
 }
 
 @freezed
-class BiologicallyDerivedProductManipulation
+abstract class BiologicallyDerivedProductManipulation
     with _$BiologicallyDerivedProductManipulation {
   const BiologicallyDerivedProductManipulation._();
 
@@ -600,7 +600,7 @@ class BiologicallyDerivedProductManipulation
 }
 
 @freezed
-class BiologicallyDerivedProductStorage
+abstract class BiologicallyDerivedProductStorage
     with _$BiologicallyDerivedProductStorage {
   const BiologicallyDerivedProductStorage._();
 
@@ -717,7 +717,7 @@ class BiologicallyDerivedProductStorage
 
 /// [Device] A type of a manufactured item that is used in the provision of
 @freezed
-class Device with Resource, _$Device {
+abstract class Device with Resource, _$Device {
   /// [Device] A type of a manufactured item that is used in the provision of
   const Device._();
 
@@ -1176,7 +1176,7 @@ class Device with Resource, _$Device {
 
 /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
 @freezed
-class DeviceUdiCarrier with _$DeviceUdiCarrier {
+abstract class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
   const DeviceUdiCarrier._();
 
@@ -1375,7 +1375,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
 
 /// [DeviceDeviceName] A type of a manufactured item that is used in the
 @freezed
-class DeviceDeviceName with _$DeviceDeviceName {
+abstract class DeviceDeviceName with _$DeviceDeviceName {
   /// [DeviceDeviceName] A type of a manufactured item that is used in the
   const DeviceDeviceName._();
 
@@ -1496,7 +1496,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
 
 /// [DeviceSpecialization] A type of a manufactured item that is used in the
 @freezed
-class DeviceSpecialization with _$DeviceSpecialization {
+abstract class DeviceSpecialization with _$DeviceSpecialization {
   /// [DeviceSpecialization] A type of a manufactured item that is used in the
   const DeviceSpecialization._();
 
@@ -1610,7 +1610,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
 
 /// [DeviceVersion] A type of a manufactured item that is used in the
 @freezed
-class DeviceVersion with _$DeviceVersion {
+abstract class DeviceVersion with _$DeviceVersion {
   /// [DeviceVersion] A type of a manufactured item that is used in the
   const DeviceVersion._();
 
@@ -1727,7 +1727,7 @@ class DeviceVersion with _$DeviceVersion {
 
 /// [DeviceProperty] A type of a manufactured item that is used in the
 @freezed
-class DeviceProperty with _$DeviceProperty {
+abstract class DeviceProperty with _$DeviceProperty {
   /// [DeviceProperty] A type of a manufactured item that is used in the
   const DeviceProperty._();
 
@@ -1841,7 +1841,7 @@ class DeviceProperty with _$DeviceProperty {
 
 /// [DeviceMetric] Describes a measurement, calculation or setting capability
 @freezed
-class DeviceMetric with Resource, _$DeviceMetric {
+abstract class DeviceMetric with Resource, _$DeviceMetric {
   /// [DeviceMetric] Describes a measurement, calculation or setting capability
   const DeviceMetric._();
 
@@ -2122,7 +2122,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
 /// [DeviceMetricCalibration] Describes a measurement, calculation or
 @freezed
-class DeviceMetricCalibration with _$DeviceMetricCalibration {
+abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// [DeviceMetricCalibration] Describes a measurement, calculation or
   const DeviceMetricCalibration._();
 
@@ -2248,7 +2248,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
 
 /// [NutritionProduct] A food or supplement that is consumed by patients.
 @freezed
-class NutritionProduct with Resource, _$NutritionProduct {
+abstract class NutritionProduct with Resource, _$NutritionProduct {
   /// [NutritionProduct] A food or supplement that is consumed by patients.
   const NutritionProduct._();
 
@@ -2399,7 +2399,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
 
 /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
 @freezed
-class NutritionProductNutrient with _$NutritionProductNutrient {
+abstract class NutritionProductNutrient with _$NutritionProductNutrient {
   /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
   const NutritionProductNutrient._();
 
@@ -2475,7 +2475,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
 
 /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
 @freezed
-class NutritionProductIngredient with _$NutritionProductIngredient {
+abstract class NutritionProductIngredient with _$NutritionProductIngredient {
   /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
   const NutritionProductIngredient._();
 
@@ -2551,7 +2551,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
 
 /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
 @freezed
-class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
+abstract class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
   const NutritionProductCharacteristic._();
 
@@ -2673,7 +2673,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
 
 /// [NutritionProductInstance] A food or supplement that is consumed by patients.
 @freezed
-class NutritionProductInstance with _$NutritionProductInstance {
+abstract class NutritionProductInstance with _$NutritionProductInstance {
   /// [NutritionProductInstance] A food or supplement that is consumed by patients.
   const NutritionProductInstance._();
 
@@ -2761,7 +2761,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
 
 /// [Substance] A homogeneous material with a definite composition.
 @freezed
-class Substance with Resource, _$Substance {
+abstract class Substance with Resource, _$Substance {
   /// [Substance] A homogeneous material with a definite composition.
   const Substance._();
 
@@ -2907,7 +2907,7 @@ class Substance with Resource, _$Substance {
 
 /// [SubstanceInstance] A homogeneous material with a definite composition.
 @freezed
-class SubstanceInstance with _$SubstanceInstance {
+abstract class SubstanceInstance with _$SubstanceInstance {
   /// [SubstanceInstance] A homogeneous material with a definite composition.
   const SubstanceInstance._();
 
@@ -2993,7 +2993,7 @@ class SubstanceInstance with _$SubstanceInstance {
 
 /// [SubstanceIngredient] A homogeneous material with a definite
 @freezed
-class SubstanceIngredient with _$SubstanceIngredient {
+abstract class SubstanceIngredient with _$SubstanceIngredient {
   /// [SubstanceIngredient] A homogeneous material with a definite
   const SubstanceIngredient._();
 

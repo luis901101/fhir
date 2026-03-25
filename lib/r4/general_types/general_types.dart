@@ -16,7 +16,7 @@ part 'general_types.g.dart';
 
 /// [Annotation] A  text note which also  contains information about who made
 @freezed
-class Annotation with _$Annotation {
+abstract class Annotation with _$Annotation {
   /// [Annotation] A  text note which also  contains information about who made
   const Annotation._();
 
@@ -118,7 +118,7 @@ class Annotation with _$Annotation {
 
 /// [Attachment] For referring to data content defined in other formats.
 @freezed
-class Attachment with _$Attachment {
+abstract class Attachment with _$Attachment {
   /// [Attachment] For referring to data content defined in other formats.
   const Attachment._();
 
@@ -276,7 +276,7 @@ class Attachment with _$Attachment {
 
 /// [Identifier] An identifier - identifies some entity uniquely and
 @freezed
-class Identifier with _$Identifier {
+abstract class Identifier with _$Identifier {
   /// [Identifier] An identifier - identifies some entity uniquely and
   const Identifier._();
 
@@ -394,7 +394,7 @@ class Identifier with _$Identifier {
 
 /// [CodeableConcept] A concept that may be defined by a formal reference to
 @freezed
-class CodeableConcept with _$CodeableConcept {
+abstract class CodeableConcept with _$CodeableConcept {
   /// [CodeableConcept] A concept that may be defined by a formal reference to
   const CodeableConcept._();
 
@@ -480,7 +480,7 @@ class CodeableConcept with _$CodeableConcept {
 
 /// [Coding] A reference to a code defined by a terminology system.
 @freezed
-class Coding with _$Coding {
+abstract class Coding with _$Coding {
   /// [Coding] A reference to a code defined by a terminology system.
   const Coding._();
 
@@ -615,7 +615,7 @@ class Coding with _$Coding {
 
 /// [Quantity] A measured amount (or an amount that can potentially be
 @freezed
-class Quantity with _$Quantity {
+abstract class Quantity with _$Quantity {
   /// [Quantity] A measured amount (or an amount that can potentially be
   const Quantity._();
 
@@ -747,7 +747,7 @@ class Quantity with _$Quantity {
 
 /// [Duration] A length of time.
 @freezed
-class FhirDuration with _$FhirDuration {
+abstract class FhirDuration with _$FhirDuration {
   /// [Duration] A length of time.
   const FhirDuration._();
 
@@ -876,7 +876,7 @@ class FhirDuration with _$FhirDuration {
 
 /// [Distance] A length - a value with a unit that is a physical distance.
 @freezed
-class Distance with _$Distance {
+abstract class Distance with _$Distance {
   /// [Distance] A length - a value with a unit that is a physical distance.
   const Distance._();
 
@@ -1005,7 +1005,7 @@ class Distance with _$Distance {
 
 /// [Count] A measured amount (or an amount that can potentially be
 @freezed
-class Count with _$Count {
+abstract class Count with _$Count {
   /// [Count] A measured amount (or an amount that can potentially be
   const Count._();
 
@@ -1135,7 +1135,7 @@ class Count with _$Count {
 
 /// [Money] An amount of economic utility in some recognized currency.
 @freezed
-class Money with _$Money {
+abstract class Money with _$Money {
   /// [Money] An amount of economic utility in some recognized currency.
   const Money._();
 
@@ -1219,7 +1219,7 @@ class Money with _$Money {
 
 /// [Age] A duration of time during which an organism (or a process) has
 @freezed
-class Age with _$Age {
+abstract class Age with _$Age {
   /// [Age] A duration of time during which an organism (or a process) has
   const Age._();
 
@@ -1345,7 +1345,7 @@ class Age with _$Age {
 
 /// [Range] A set of ordered Quantities defined by a low and high limit.
 @freezed
-class Range with _$Range {
+abstract class Range with _$Range {
   /// [Range] A set of ordered Quantities defined by a low and high limit.
   const Range._();
 
@@ -1419,7 +1419,7 @@ class Range with _$Range {
 
 /// [Period] A time period defined by a start and end date and optionally
 @freezed
-class Period with _$Period {
+abstract class Period with _$Period {
   /// [Period] A time period defined by a start and end date and optionally
   const Period._();
 
@@ -1511,7 +1511,7 @@ class Period with _$Period {
 
 /// [Ratio] A relationship of two Quantity values - expressed as a numerator
 @freezed
-class Ratio with _$Ratio {
+abstract class Ratio with _$Ratio {
   /// [Ratio] A relationship of two Quantity values - expressed as a numerator
   const Ratio._();
 
@@ -1586,7 +1586,7 @@ class Ratio with _$Ratio {
 
 /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
 @freezed
-class RatioRange with _$RatioRange {
+abstract class RatioRange with _$RatioRange {
   /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
   const RatioRange._();
 
@@ -1650,7 +1650,7 @@ class RatioRange with _$RatioRange {
 
 /// [SampledData] A series of measurements taken by a device, with upper and
 @freezed
-class SampledData with _$SampledData {
+abstract class SampledData with _$SampledData {
   /// [SampledData] A series of measurements taken by a device, with upper and
   const SampledData._();
 
@@ -1806,7 +1806,7 @@ class SampledData with _$SampledData {
 
 /// [Signature] A signature along with supporting context. The signature may
 @freezed
-class Signature with _$Signature {
+abstract class Signature with _$Signature {
   /// [Signature] A signature along with supporting context. The signature may
   const Signature._();
 
@@ -1951,7 +1951,7 @@ class Signature with _$Signature {
 
 /// [HumanName] A human's name with the ability to identify parts and usage.
 @freezed
-class HumanName with _$HumanName {
+abstract class HumanName with _$HumanName {
   /// [HumanName] A human's name with the ability to identify parts and usage.
   const HumanName._();
 
@@ -2112,7 +2112,7 @@ class HumanName with _$HumanName {
 
 /// [Address] An address expressed using postal conventions (as opposed to
 @freezed
-class Address with _$Address {
+abstract class Address with _$Address {
   /// [Address] An address expressed using postal conventions (as opposed to
   const Address._();
 
@@ -2321,7 +2321,7 @@ class Address with _$Address {
 
 /// [ContactPoint] Details for all kinds of technology mediated contact
 @freezed
-class ContactPoint with _$ContactPoint {
+abstract class ContactPoint with _$ContactPoint {
   /// [ContactPoint] Details for all kinds of technology mediated contact
   const ContactPoint._();
 
@@ -2453,7 +2453,7 @@ class ContactPoint with _$ContactPoint {
 
 /// [Timing] Specifies an event that may occur multiple times. Timing
 @freezed
-class Timing with _$Timing {
+abstract class Timing with _$Timing {
   /// [Timing] Specifies an event that may occur multiple times. Timing
   const Timing._();
 
@@ -2584,7 +2584,7 @@ class Timing with _$Timing {
 
 /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
 @freezed
-class TimingRepeat with _$TimingRepeat {
+abstract class TimingRepeat with _$TimingRepeat {
   /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
   const TimingRepeat._();
 

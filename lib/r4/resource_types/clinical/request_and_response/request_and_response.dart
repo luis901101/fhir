@@ -15,7 +15,7 @@ part 'request_and_response.g.dart';
 
 /// [Communication] An occurrence of information being transmitted; e.g. an
 @freezed
-class Communication with Resource, _$Communication {
+abstract class Communication with Resource, _$Communication {
   /// [Communication] An occurrence of information being transmitted; e.g. an
   const Communication._();
 
@@ -372,7 +372,7 @@ class Communication with Resource, _$Communication {
 
 /// [CommunicationPayload] An occurrence of information being transmitted;
 @freezed
-class CommunicationPayload with _$CommunicationPayload {
+abstract class CommunicationPayload with _$CommunicationPayload {
   /// [CommunicationPayload] An occurrence of information being transmitted;
   const CommunicationPayload._();
 
@@ -495,7 +495,7 @@ class CommunicationPayload with _$CommunicationPayload {
 
 /// [CommunicationRequest] A request to convey information; e.g. the CDS
 @freezed
-class CommunicationRequest with Resource, _$CommunicationRequest {
+abstract class CommunicationRequest with Resource, _$CommunicationRequest {
   /// [CommunicationRequest] A request to convey information; e.g. the CDS
   const CommunicationRequest._();
 
@@ -847,7 +847,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 
 /// [CommunicationRequestPayload] A request to convey information; e.g. the
 @freezed
-class CommunicationRequestPayload with _$CommunicationRequestPayload {
+abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// [CommunicationRequestPayload] A request to convey information; e.g. the
   const CommunicationRequestPayload._();
 
@@ -971,7 +971,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
 
 /// [DeviceRequest] Represents a request for a patient to employ a medical
 @freezed
-class DeviceRequest with Resource, _$DeviceRequest {
+abstract class DeviceRequest with Resource, _$DeviceRequest {
   /// [DeviceRequest] Represents a request for a patient to employ a medical
   const DeviceRequest._();
 
@@ -1357,7 +1357,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
 
 /// [DeviceRequestParameter] Represents a request for a patient to employ a
 @freezed
-class DeviceRequestParameter with _$DeviceRequestParameter {
+abstract class DeviceRequestParameter with _$DeviceRequestParameter {
   /// [DeviceRequestParameter] Represents a request for a patient to employ a
   const DeviceRequestParameter._();
 
@@ -1484,7 +1484,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
 
 /// [DeviceUseStatement] A record of a device being used by a patient where
 @freezed
-class DeviceUseStatement with Resource, _$DeviceUseStatement {
+abstract class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// [DeviceUseStatement] A record of a device being used by a patient where
   const DeviceUseStatement._();
 
@@ -1759,7 +1759,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
 
 /// [GuidanceResponse] A guidance response is the formal response to a
 @freezed
-class GuidanceResponse with Resource, _$GuidanceResponse {
+abstract class GuidanceResponse with Resource, _$GuidanceResponse {
   /// [GuidanceResponse] A guidance response is the formal response to a
   const GuidanceResponse._();
 
@@ -2098,7 +2098,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
 
 /// [SupplyDelivery] Record of delivery of what is supplied.
 @freezed
-class SupplyDelivery with Resource, _$SupplyDelivery {
+abstract class SupplyDelivery with Resource, _$SupplyDelivery {
   /// [SupplyDelivery] Record of delivery of what is supplied.
   const SupplyDelivery._();
 
@@ -2352,7 +2352,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 
 /// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
 @freezed
-class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
+abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   /// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
   const SupplyDeliverySuppliedItem._();
 
@@ -2472,7 +2472,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
 
 /// [SupplyRequest] A record of a request for a medication, substance or
 @freezed
-class SupplyRequest with Resource, _$SupplyRequest {
+abstract class SupplyRequest with Resource, _$SupplyRequest {
   /// [SupplyRequest] A record of a request for a medication, substance or
   const SupplyRequest._();
 
@@ -2764,7 +2764,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 
 /// [SupplyRequestParameter] A record of a request for a medication,
 @freezed
-class SupplyRequestParameter with _$SupplyRequestParameter {
+abstract class SupplyRequestParameter with _$SupplyRequestParameter {
   /// [SupplyRequestParameter] A record of a request for a medication,
   const SupplyRequestParameter._();
 

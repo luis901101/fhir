@@ -19,7 +19,7 @@ part 'request_and_response.enums.dart';
 ///  provider, a public health agency communication to a provider/reporter in
 ///  response to a case report for a reportable condition.
 @freezed
-class Communication with Resource, _$Communication {
+abstract class Communication with Resource, _$Communication {
   /// [Communication] A clinical or business level record of information being
   ///  transmitted or shared; e.g. an alert that was sent to a responsible
   ///  provider, a public health agency communication to a provider/reporter in
@@ -369,7 +369,7 @@ class Communication with Resource, _$Communication {
 ///  provider, a public health agency communication to a provider/reporter in
 ///  response to a case report for a reportable condition.
 @freezed
-class CommunicationPayload with _$CommunicationPayload {
+abstract class CommunicationPayload with _$CommunicationPayload {
   /// [CommunicationPayload] A clinical or business level record of information
   ///  being transmitted or shared; e.g. an alert that was sent to a responsible
   ///  provider, a public health agency communication to a provider/reporter in
@@ -493,7 +493,7 @@ class CommunicationPayload with _$CommunicationPayload {
 ///  proposes that the public health agency be notified about a reportable
 ///  condition.
 @freezed
-class CommunicationRequest with Resource, _$CommunicationRequest {
+abstract class CommunicationRequest with Resource, _$CommunicationRequest {
   /// [CommunicationRequest] A request to convey information; e.g. the CDS system
   ///  proposes that an alert be sent to a responsible provider, the CDS system
   ///  proposes that the public health agency be notified about a reportable
@@ -869,7 +869,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 ///  system proposes that the public health agency be notified about a
 ///  reportable condition.
 @freezed
-class CommunicationRequestPayload with _$CommunicationRequestPayload {
+abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// [CommunicationRequestPayload] A request to convey information; e.g. the CDS
   ///  system proposes that an alert be sent to a responsible provider, the CDS
   ///  system proposes that the public health agency be notified about a
@@ -992,7 +992,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
 /// [DeviceAssociation] A record of association or dissociation of a device
 ///  with a patient.
 @freezed
-class DeviceAssociation with Resource, _$DeviceAssociation {
+abstract class DeviceAssociation with Resource, _$DeviceAssociation {
   /// [DeviceAssociation] A record of association or dissociation of a device
   ///  with a patient.
   const DeviceAssociation._();
@@ -1210,7 +1210,7 @@ class DeviceAssociation with Resource, _$DeviceAssociation {
 /// [DeviceAssociationOperation] A record of association or dissociation of a
 ///  device with a patient.
 @freezed
-class DeviceAssociationOperation with _$DeviceAssociationOperation {
+abstract class DeviceAssociationOperation with _$DeviceAssociationOperation {
   /// [DeviceAssociationOperation] A record of association or dissociation of a
   ///  device with a patient.
   const DeviceAssociationOperation._();
@@ -1324,7 +1324,7 @@ class DeviceAssociationOperation with _$DeviceAssociationOperation {
 /// [DeviceDispense] A record of dispensation of a device - i.e., assigning a
 ///  device to a patient, or to a professional for their use.
 @freezed
-class DeviceDispense with Resource, _$DeviceDispense {
+abstract class DeviceDispense with Resource, _$DeviceDispense {
   /// [DeviceDispense] A record of dispensation of a device - i.e., assigning a
   ///  device to a patient, or to a professional for their use.
   const DeviceDispense._();
@@ -1644,7 +1644,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
 /// [DeviceDispensePerformer] A record of dispensation of a device - i.e.,
 ///  assigning a device to a patient, or to a professional for their use.
 @freezed
-class DeviceDispensePerformer with _$DeviceDispensePerformer {
+abstract class DeviceDispensePerformer with _$DeviceDispensePerformer {
   /// [DeviceDispensePerformer] A record of dispensation of a device - i.e.,
   ///  assigning a device to a patient, or to a professional for their use.
   const DeviceDispensePerformer._();
@@ -1756,7 +1756,7 @@ class DeviceDispensePerformer with _$DeviceDispensePerformer {
 ///  device. The device may be an implantable device, or an external assistive
 ///  device, such as a walker.
 @freezed
-class DeviceRequest with Resource, _$DeviceRequest {
+abstract class DeviceRequest with Resource, _$DeviceRequest {
   /// [DeviceRequest] Represents a request for a patient to employ a medical
   ///  device. The device may be an implantable device, or an external assistive
   ///  device, such as a walker.
@@ -2191,7 +2191,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
 ///  medical device. The device may be an implantable device, or an external
 ///  assistive device, such as a walker.
 @freezed
-class DeviceRequestParameter with _$DeviceRequestParameter {
+abstract class DeviceRequestParameter with _$DeviceRequestParameter {
   /// [DeviceRequestParameter] Represents a request for a patient to employ a
   ///  medical device. The device may be an implantable device, or an external
   ///  assistive device, such as a walker.
@@ -2320,7 +2320,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
 /// [DeviceUsage] A record of a device being used by a patient where the record
 ///  is the result of a report from the patient or a clinician.
 @freezed
-class DeviceUsage with Resource, _$DeviceUsage {
+abstract class DeviceUsage with Resource, _$DeviceUsage {
   /// [DeviceUsage] A record of a device being used by a patient where the record
   ///  is the result of a report from the patient or a clinician.
   const DeviceUsage._();
@@ -2629,7 +2629,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
 /// [DeviceUsageAdherence] A record of a device being used by a patient where
 ///  the record is the result of a report from the patient or a clinician.
 @freezed
-class DeviceUsageAdherence with _$DeviceUsageAdherence {
+abstract class DeviceUsageAdherence with _$DeviceUsageAdherence {
   /// [DeviceUsageAdherence] A record of a device being used by a patient where
   ///  the record is the result of a report from the patient or a clinician.
   const DeviceUsageAdherence._();
@@ -2737,7 +2737,7 @@ class DeviceUsageAdherence with _$DeviceUsageAdherence {
 ///  request, including any output parameters returned by the evaluation, as
 ///  well as the description of any proposed actions to be taken.
 @freezed
-class GuidanceResponse with Resource, _$GuidanceResponse {
+abstract class GuidanceResponse with Resource, _$GuidanceResponse {
   /// [GuidanceResponse] A guidance response is the formal response to a guidance
   ///  request, including any output parameters returned by the evaluation, as
   ///  well as the description of any proposed actions to be taken.
@@ -3076,7 +3076,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
 /// [InventoryItem] A functional description of an inventory item used in
 ///  inventory and supply-related workflows.
 @freezed
-class InventoryItem with Resource, _$InventoryItem {
+abstract class InventoryItem with Resource, _$InventoryItem {
   /// [InventoryItem] A functional description of an inventory item used in
   ///  inventory and supply-related workflows.
   const InventoryItem._();
@@ -3328,7 +3328,7 @@ class InventoryItem with Resource, _$InventoryItem {
 /// [InventoryItemName] A functional description of an inventory item used in
 ///  inventory and supply-related workflows.
 @freezed
-class InventoryItemName with _$InventoryItemName {
+abstract class InventoryItemName with _$InventoryItemName {
   /// [InventoryItemName] A functional description of an inventory item used in
   ///  inventory and supply-related workflows.
   const InventoryItemName._();
@@ -3452,7 +3452,7 @@ class InventoryItemName with _$InventoryItemName {
 /// [InventoryItemResponsibleOrganization] A functional description of an
 ///  inventory item used in inventory and supply-related workflows.
 @freezed
-class InventoryItemResponsibleOrganization
+abstract class InventoryItemResponsibleOrganization
     with _$InventoryItemResponsibleOrganization {
   /// [InventoryItemResponsibleOrganization] A functional description of an
   ///  inventory item used in inventory and supply-related workflows.
@@ -3565,7 +3565,7 @@ class InventoryItemResponsibleOrganization
 /// [InventoryItemDescription] A functional description of an inventory item
 ///  used in inventory and supply-related workflows.
 @freezed
-class InventoryItemDescription with _$InventoryItemDescription {
+abstract class InventoryItemDescription with _$InventoryItemDescription {
   /// [InventoryItemDescription] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
   const InventoryItemDescription._();
@@ -3686,7 +3686,7 @@ class InventoryItemDescription with _$InventoryItemDescription {
 /// [InventoryItemAssociation] A functional description of an inventory item
 ///  used in inventory and supply-related workflows.
 @freezed
-class InventoryItemAssociation with _$InventoryItemAssociation {
+abstract class InventoryItemAssociation with _$InventoryItemAssociation {
   /// [InventoryItemAssociation] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
   const InventoryItemAssociation._();
@@ -3812,7 +3812,7 @@ class InventoryItemAssociation with _$InventoryItemAssociation {
 /// [InventoryItemCharacteristic] A functional description of an inventory item
 ///  used in inventory and supply-related workflows.
 @freezed
-class InventoryItemCharacteristic with _$InventoryItemCharacteristic {
+abstract class InventoryItemCharacteristic with _$InventoryItemCharacteristic {
   /// [InventoryItemCharacteristic] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
   const InventoryItemCharacteristic._();
@@ -4010,7 +4010,7 @@ class InventoryItemCharacteristic with _$InventoryItemCharacteristic {
 /// [InventoryItemInstance] A functional description of an inventory item used
 ///  in inventory and supply-related workflows.
 @freezed
-class InventoryItemInstance with _$InventoryItemInstance {
+abstract class InventoryItemInstance with _$InventoryItemInstance {
   /// [InventoryItemInstance] A functional description of an inventory item used
   ///  in inventory and supply-related workflows.
   const InventoryItemInstance._();
@@ -4143,7 +4143,7 @@ class InventoryItemInstance with _$InventoryItemInstance {
 
 /// [InventoryReport] A report of inventory or stock items.
 @freezed
-class InventoryReport with Resource, _$InventoryReport {
+abstract class InventoryReport with Resource, _$InventoryReport {
   /// [InventoryReport] A report of inventory or stock items.
   const InventoryReport._();
 
@@ -4386,7 +4386,7 @@ class InventoryReport with Resource, _$InventoryReport {
 
 /// [InventoryReportInventoryListing] A report of inventory or stock items.
 @freezed
-class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
+abstract class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
   /// [InventoryReportInventoryListing] A report of inventory or stock items.
   const InventoryReportInventoryListing._();
 
@@ -4509,7 +4509,7 @@ class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
 
 /// [InventoryReportItem] A report of inventory or stock items.
 @freezed
-class InventoryReportItem with _$InventoryReportItem {
+abstract class InventoryReportItem with _$InventoryReportItem {
   /// [InventoryReportItem] A report of inventory or stock items.
   const InventoryReportItem._();
 
@@ -4622,7 +4622,7 @@ class InventoryReportItem with _$InventoryReportItem {
 
 /// [SupplyDelivery] Record of delivery of what is supplied.
 @freezed
-class SupplyDelivery with Resource, _$SupplyDelivery {
+abstract class SupplyDelivery with Resource, _$SupplyDelivery {
   /// [SupplyDelivery] Record of delivery of what is supplied.
   const SupplyDelivery._();
 
@@ -4881,7 +4881,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 
 /// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
 @freezed
-class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
+abstract class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   /// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
   const SupplyDeliverySuppliedItem._();
 
@@ -5006,7 +5006,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
 ///  device used in the healthcare setting to a particular destination for a
 ///  particular person or organization.
 @freezed
-class SupplyRequest with Resource, _$SupplyRequest {
+abstract class SupplyRequest with Resource, _$SupplyRequest {
   /// [SupplyRequest] A record of a request to deliver a medication, substance or
   ///  device used in the healthcare setting to a particular destination for a
   ///  particular person or organization.
@@ -5306,7 +5306,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 ///  substance or device used in the healthcare setting to a particular
 ///  destination for a particular person or organization.
 @freezed
-class SupplyRequestParameter with _$SupplyRequestParameter {
+abstract class SupplyRequestParameter with _$SupplyRequestParameter {
   /// [SupplyRequestParameter] A record of a request to deliver a medication,
   ///  substance or device used in the healthcare setting to a particular
   ///  destination for a particular person or organization.

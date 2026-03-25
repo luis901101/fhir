@@ -6,29 +6,18 @@ part of 'element.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ElementImpl _$$ElementImplFromJson(Map<String, dynamic> json) =>
-    _$ElementImpl(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      line: json['line'] as int?,
-      col: json['col'] as int?,
-    );
+_Element _$ElementFromJson(Map<String, dynamic> json) => _Element(
+  fhirId: json['id'] as String?,
+  extension_: (json['extension'] as List<dynamic>?)
+      ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  line: (json['line'] as num?)?.toInt(),
+  col: (json['col'] as num?)?.toInt(),
+);
 
-Map<String, dynamic> _$$ElementImplToJson(_$ElementImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('line', instance.line);
-  writeNotNull('col', instance.col);
-  return val;
-}
+Map<String, dynamic> _$ElementToJson(_Element instance) => <String, dynamic>{
+  'id': ?instance.fhirId,
+  'extension': ?instance.extension_?.map((e) => e.toJson()).toList(),
+  'line': ?instance.line,
+  'col': ?instance.col,
+};

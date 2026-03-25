@@ -20,7 +20,7 @@ part 'management.enums.dart';
 ///  about the actual activities that occurred, where Appointment is used to
 ///  record planned activities.
 @freezed
-class Encounter with Resource, _$Encounter {
+abstract class Encounter with Resource, _$Encounter {
   /// [Encounter] An interaction between a patient and healthcare provider(s) for
   ///  the purpose of providing healthcare service(s) or assessing the health
   ///  status of a patient.  Encounter is primarily used to record information
@@ -430,7 +430,7 @@ class Encounter with Resource, _$Encounter {
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
 @freezed
-class EncounterParticipant with _$EncounterParticipant {
+abstract class EncounterParticipant with _$EncounterParticipant {
   /// [EncounterParticipant] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.  Encounter is primarily used to
@@ -561,7 +561,7 @@ class EncounterParticipant with _$EncounterParticipant {
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
 @freezed
-class EncounterReason with _$EncounterReason {
+abstract class EncounterReason with _$EncounterReason {
   /// [EncounterReason] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.  Encounter is primarily used to
@@ -683,7 +683,7 @@ class EncounterReason with _$EncounterReason {
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
 @freezed
-class EncounterDiagnosis with _$EncounterDiagnosis {
+abstract class EncounterDiagnosis with _$EncounterDiagnosis {
   /// [EncounterDiagnosis] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.  Encounter is primarily used to
@@ -805,7 +805,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
 @freezed
-class EncounterAdmission with _$EncounterAdmission {
+abstract class EncounterAdmission with _$EncounterAdmission {
   /// [EncounterAdmission] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.  Encounter is primarily used to
@@ -949,7 +949,7 @@ class EncounterAdmission with _$EncounterAdmission {
 ///  record information about the actual activities that occurred, where
 ///  Appointment is used to record planned activities.
 @freezed
-class EncounterLocation with _$EncounterLocation {
+abstract class EncounterLocation with _$EncounterLocation {
   /// [EncounterLocation] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.  Encounter is primarily used to
@@ -1086,7 +1086,7 @@ class EncounterLocation with _$EncounterLocation {
 ///  throughout the history of an Encounter, often tracked for specific
 ///  purposes such as billing.
 @freezed
-class EncounterHistory with Resource, _$EncounterHistory {
+abstract class EncounterHistory with Resource, _$EncounterHistory {
   /// [EncounterHistory] A record of significant events/milestones key data
   ///  throughout the history of an Encounter, often tracked for specific
   ///  purposes such as billing.
@@ -1372,7 +1372,7 @@ class EncounterHistory with Resource, _$EncounterHistory {
 ///  data throughout the history of an Encounter, often tracked for specific
 ///  purposes such as billing.
 @freezed
-class EncounterHistoryLocation with _$EncounterHistoryLocation {
+abstract class EncounterHistoryLocation with _$EncounterHistoryLocation {
   /// [EncounterHistoryLocation] A record of significant events/milestones key
   ///  data throughout the history of an Encounter, often tracked for specific
   ///  purposes such as billing.
@@ -1487,7 +1487,7 @@ class EncounterHistoryLocation with _$EncounterHistoryLocation {
 ///  managing organization assumes a level of responsibility for the patient
 ///  during this time.
 @freezed
-class EpisodeOfCare with Resource, _$EpisodeOfCare {
+abstract class EpisodeOfCare with Resource, _$EpisodeOfCare {
   /// [EpisodeOfCare] An association between a patient and an organization /
   ///  healthcare provider(s) during which time encounters may occur. The
   ///  managing organization assumes a level of responsibility for the patient
@@ -1756,7 +1756,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 ///  occur. The managing organization assumes a level of responsibility for the
 ///  patient during this time.
 @freezed
-class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
+abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   /// [EpisodeOfCareStatusHistory] An association between a patient and an
   ///  organization / healthcare provider(s) during which time encounters may
   ///  occur. The managing organization assumes a level of responsibility for the
@@ -1876,7 +1876,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 ///  managing organization assumes a level of responsibility for the patient
 ///  during this time.
 @freezed
-class EpisodeOfCareReason with _$EpisodeOfCareReason {
+abstract class EpisodeOfCareReason with _$EpisodeOfCareReason {
   /// [EpisodeOfCareReason] An association between a patient and an organization
   ///  / healthcare provider(s) during which time encounters may occur. The
   ///  managing organization assumes a level of responsibility for the patient
@@ -1995,7 +1995,7 @@ class EpisodeOfCareReason with _$EpisodeOfCareReason {
 ///  occur. The managing organization assumes a level of responsibility for the
 ///  patient during this time.
 @freezed
-class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
+abstract class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   /// [EpisodeOfCareDiagnosis] An association between a patient and an
   ///  organization / healthcare provider(s) during which time encounters may
   ///  occur. The managing organization assumes a level of responsibility for the
@@ -2110,7 +2110,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 /// [Flag] Prospective warnings of potential issues when providing care to the
 ///  patient.
 @freezed
-class Flag with Resource, _$Flag {
+abstract class Flag with Resource, _$Flag {
   /// [Flag] Prospective warnings of potential issues when providing care to the
   ///  patient.
   const Flag._();
@@ -2338,7 +2338,7 @@ class Flag with Resource, _$Flag {
 ///  knowledge assets such as logic libraries and information model
 ///  descriptions, as well as to describe a collection of knowledge assets.
 @freezed
-class Library with Resource, _$Library {
+abstract class Library with Resource, _$Library {
   /// [Library] The Library resource is a general-purpose container for knowledge
   ///  asset definitions. It can be used to describe and expose existing
   ///  knowledge assets such as logic libraries and information model
@@ -2900,7 +2900,7 @@ class Library with Resource, _$Library {
 /// [FhirList] A List is a curated collection of resources, for things such as
 ///  problem lists, allergy lists, facility list, organization list, etc.
 @freezed
-class FhirList with Resource, _$FhirList {
+abstract class FhirList with Resource, _$FhirList {
   /// [FhirList] A List is a curated collection of resources, for things such as
   ///  problem lists, allergy lists, facility list, organization list, etc.
   const FhirList._();
@@ -3168,7 +3168,7 @@ class FhirList with Resource, _$FhirList {
 /// [ListEntry] A List is a curated collection of resources, for things such as
 ///  problem lists, allergy lists, facility list, organization list, etc.
 @freezed
-class ListEntry with _$ListEntry {
+abstract class ListEntry with _$ListEntry {
   /// [ListEntry] A List is a curated collection of resources, for things such as
   ///  problem lists, allergy lists, facility list, organization list, etc.
   const ListEntry._();

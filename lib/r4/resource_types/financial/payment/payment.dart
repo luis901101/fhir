@@ -15,7 +15,7 @@ part 'payment.g.dart';
 
 /// [PaymentNotice] This resource provides the status of the payment for
 @freezed
-class PaymentNotice with Resource, _$PaymentNotice {
+abstract class PaymentNotice with Resource, _$PaymentNotice {
   /// [PaymentNotice] This resource provides the status of the payment for
   const PaymentNotice._();
 
@@ -263,7 +263,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
 
 /// [PaymentReconciliation] This resource provides the details including
 @freezed
-class PaymentReconciliation with Resource, _$PaymentReconciliation {
+abstract class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// [PaymentReconciliation] This resource provides the details including
   const PaymentReconciliation._();
 
@@ -543,7 +543,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 
 /// [PaymentReconciliationDetail] This resource provides the details
 @freezed
-class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
+abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   /// [PaymentReconciliationDetail] This resource provides the details
   const PaymentReconciliationDetail._();
 
@@ -708,7 +708,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 
 /// [PaymentReconciliationProcessNote] This resource provides the details
 @freezed
-class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
+abstract class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   /// [PaymentReconciliationProcessNote] This resource provides the details
   const PaymentReconciliationProcessNote._();
 

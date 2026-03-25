@@ -15,7 +15,7 @@ part 'care_provision.g.dart';
 
 /// [CarePlan] Describes the intention of how one or more practitioners
 @freezed
-class CarePlan with Resource, _$CarePlan {
+abstract class CarePlan with Resource, _$CarePlan {
   /// [CarePlan] Describes the intention of how one or more practitioners
   const CarePlan._();
 
@@ -376,7 +376,7 @@ class CarePlan with Resource, _$CarePlan {
 
 /// [CarePlanActivity] Describes the intention of how one or more
 @freezed
-class CarePlanActivity with _$CarePlanActivity {
+abstract class CarePlanActivity with _$CarePlanActivity {
   /// [CarePlanActivity] Describes the intention of how one or more
   const CarePlanActivity._();
 
@@ -517,7 +517,7 @@ class CarePlanActivity with _$CarePlanActivity {
 
 /// [CarePlanDetail] Describes the intention of how one or more
 @freezed
-class CarePlanDetail with _$CarePlanDetail {
+abstract class CarePlanDetail with _$CarePlanDetail {
   /// [CarePlanDetail] Describes the intention of how one or more
   const CarePlanDetail._();
 
@@ -807,7 +807,7 @@ class CarePlanDetail with _$CarePlanDetail {
 
 /// [CareTeam] The Care Team includes all the people and organizations who
 @freezed
-class CareTeam with Resource, _$CareTeam {
+abstract class CareTeam with Resource, _$CareTeam {
   /// [CareTeam] The Care Team includes all the people and organizations who
   const CareTeam._();
 
@@ -1143,7 +1143,7 @@ class CareTeam with Resource, _$CareTeam {
 
 /// [CareTeamParticipant] The Care Team includes all the people and
 @freezed
-class CareTeamParticipant with _$CareTeamParticipant {
+abstract class CareTeamParticipant with _$CareTeamParticipant {
   /// [CareTeamParticipant] The Care Team includes all the people and
   const CareTeamParticipant._();
 
@@ -1268,7 +1268,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
 
 /// [Goal] Describes the intended objective(s) for a patient, group or
 @freezed
-class Goal with Resource, _$Goal {
+abstract class Goal with Resource, _$Goal {
   /// [Goal] Describes the intended objective(s) for a patient, group or
   const Goal._();
 
@@ -1563,7 +1563,7 @@ class Goal with Resource, _$Goal {
 
 /// [GoalTarget] Describes the intended objective(s) for a patient, group or
 @freezed
-class GoalTarget with _$GoalTarget {
+abstract class GoalTarget with _$GoalTarget {
   /// [GoalTarget] Describes the intended objective(s) for a patient, group or
   const GoalTarget._();
 
@@ -1809,7 +1809,7 @@ class GoalTarget with _$GoalTarget {
 
 /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
 @freezed
-class NutritionOrder with Resource, _$NutritionOrder {
+abstract class NutritionOrder with Resource, _$NutritionOrder {
   /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
   const NutritionOrder._();
 
@@ -2145,7 +2145,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
 
 /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
 @freezed
-class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
+abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
   const NutritionOrderOralDiet._();
 
@@ -2294,7 +2294,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 
 /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
 @freezed
-class NutritionOrderNutrient with _$NutritionOrderNutrient {
+abstract class NutritionOrderNutrient with _$NutritionOrderNutrient {
   /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
   const NutritionOrderNutrient._();
 
@@ -2402,7 +2402,7 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
 
 /// [NutritionOrderTexture] A request to supply a diet, formula feeding
 @freezed
-class NutritionOrderTexture with _$NutritionOrderTexture {
+abstract class NutritionOrderTexture with _$NutritionOrderTexture {
   /// [NutritionOrderTexture] A request to supply a diet, formula feeding
   const NutritionOrderTexture._();
 
@@ -2512,7 +2512,7 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
 
 /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
 @freezed
-class NutritionOrderSupplement with _$NutritionOrderSupplement {
+abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
   /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
   const NutritionOrderSupplement._();
 
@@ -2653,7 +2653,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
 
 /// [NutritionOrderEnteralFormula] A request to supply a diet, formula
 @freezed
-class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
+abstract class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   /// [NutritionOrderEnteralFormula] A request to supply a diet, formula
   const NutritionOrderEnteralFormula._();
 
@@ -2845,7 +2845,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
 
 /// [NutritionOrderAdministration] A request to supply a diet, formula
 @freezed
-class NutritionOrderAdministration with _$NutritionOrderAdministration {
+abstract class NutritionOrderAdministration with _$NutritionOrderAdministration {
   /// [NutritionOrderAdministration] A request to supply a diet, formula
   const NutritionOrderAdministration._();
 
@@ -2969,7 +2969,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
 
 /// [RequestGroup] A group of related requests that can be used to capture
 @freezed
-class RequestGroup with Resource, _$RequestGroup {
+abstract class RequestGroup with Resource, _$RequestGroup {
   /// [RequestGroup] A group of related requests that can be used to capture
   const RequestGroup._();
 
@@ -3285,7 +3285,7 @@ class RequestGroup with Resource, _$RequestGroup {
 
 /// [RequestGroupAction] A group of related requests that can be used to
 @freezed
-class RequestGroupAction with _$RequestGroupAction {
+abstract class RequestGroupAction with _$RequestGroupAction {
   /// [RequestGroupAction] A group of related requests that can be used to
   const RequestGroupAction._();
 
@@ -3605,7 +3605,7 @@ class RequestGroupAction with _$RequestGroupAction {
 
 /// [RequestGroupCondition] A group of related requests that can be used to
 @freezed
-class RequestGroupCondition with _$RequestGroupCondition {
+abstract class RequestGroupCondition with _$RequestGroupCondition {
   /// [RequestGroupCondition] A group of related requests that can be used to
   const RequestGroupCondition._();
 
@@ -3719,7 +3719,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
 
 /// [RequestGroupRelatedAction] A group of related requests that can be used
 @freezed
-class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
+abstract class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   /// [RequestGroupRelatedAction] A group of related requests that can be used
   const RequestGroupRelatedAction._();
 
@@ -3850,7 +3850,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
 
 /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
 @freezed
-class RiskAssessment with Resource, _$RiskAssessment {
+abstract class RiskAssessment with Resource, _$RiskAssessment {
   /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
   const RiskAssessment._();
 
@@ -4139,7 +4139,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
 
 /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
 @freezed
-class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
+abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
   const RiskAssessmentPrediction._();
 
@@ -4310,7 +4310,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 
 /// [ServiceRequest] A record of a request for service such as diagnostic
 @freezed
-class ServiceRequest with Resource, _$ServiceRequest {
+abstract class ServiceRequest with Resource, _$ServiceRequest {
   /// [ServiceRequest] A record of a request for service such as diagnostic
   const ServiceRequest._();
 
@@ -4825,7 +4825,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
 
 /// [VisionPrescription] An authorization for the provision of glasses and/or
 @freezed
-class VisionPrescription with Resource, _$VisionPrescription {
+abstract class VisionPrescription with Resource, _$VisionPrescription {
   /// [VisionPrescription] An authorization for the provision of glasses and/or
   const VisionPrescription._();
 
@@ -5057,7 +5057,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
 }
 
 @freezed
-class VisionPrescriptionLensSpecification
+abstract class VisionPrescriptionLensSpecification
     with _$VisionPrescriptionLensSpecification {
   const VisionPrescriptionLensSpecification._();
 
@@ -5266,7 +5266,7 @@ class VisionPrescriptionLensSpecification
 
 /// [VisionPrescriptionPrism] An authorization for the provision of glasses
 @freezed
-class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
+abstract class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   /// [VisionPrescriptionPrism] An authorization for the provision of glasses
   const VisionPrescriptionPrism._();
 

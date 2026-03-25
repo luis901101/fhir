@@ -16,7 +16,7 @@ part 'metadata_types.g.dart';
 
 /// [ContactDetail] Specifies contact information for a person or
 @freezed
-class ContactDetail with _$ContactDetail {
+abstract class ContactDetail with _$ContactDetail {
   /// [ContactDetail] Specifies contact information for a person or
   const ContactDetail._();
 
@@ -176,7 +176,7 @@ class ContactDetail with _$ContactDetail {
 
 /// [Contributor] A contributor to the content of a knowledge asset,
 @freezed
-class Contributor with _$Contributor {
+abstract class Contributor with _$Contributor {
   /// [Contributor] A contributor to the content of a knowledge asset,
   const Contributor._();
 
@@ -272,7 +272,7 @@ class Contributor with _$Contributor {
 
 /// [DataRequirement] Describes a required data item for evaluation in terms
 @freezed
-class DataRequirement with _$DataRequirement {
+abstract class DataRequirement with _$DataRequirement {
   /// [DataRequirement] Describes a required data item for evaluation in terms
   const DataRequirement._();
 
@@ -439,7 +439,7 @@ class DataRequirement with _$DataRequirement {
 
 /// [DataRequirementCodeFilter] Describes a required data item for
 @freezed
-class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
+abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// [DataRequirementCodeFilter] Describes a required data item for
   const DataRequirementCodeFilter._();
 
@@ -598,7 +598,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 
 /// [DataRequirementDateFilter] Describes a required data item for
 @freezed
-class DataRequirementDateFilter with _$DataRequirementDateFilter {
+abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// [DataRequirementDateFilter] Describes a required data item for
   const DataRequirementDateFilter._();
 
@@ -783,7 +783,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
 
 /// [DataRequirementSort] Describes a required data item for evaluation in
 @freezed
-class DataRequirementSort with _$DataRequirementSort {
+abstract class DataRequirementSort with _$DataRequirementSort {
   /// [DataRequirementSort] Describes a required data item for evaluation in
   const DataRequirementSort._();
 
@@ -909,7 +909,7 @@ class DataRequirementSort with _$DataRequirementSort {
 
 /// [ParameterDefinition] The parameters to the module. This collection
 @freezed
-class ParameterDefinition with _$ParameterDefinition {
+abstract class ParameterDefinition with _$ParameterDefinition {
   /// [ParameterDefinition] The parameters to the module. This collection
   const ParameterDefinition._();
 
@@ -1053,7 +1053,7 @@ class ParameterDefinition with _$ParameterDefinition {
 
 /// [RelatedArtifact] Related artifacts such as additional documentation,
 @freezed
-class RelatedArtifact with _$RelatedArtifact {
+abstract class RelatedArtifact with _$RelatedArtifact {
   /// [RelatedArtifact] Related artifacts such as additional documentation,
   const RelatedArtifact._();
 
@@ -1193,7 +1193,7 @@ class RelatedArtifact with _$RelatedArtifact {
 
 /// [TriggerDefinition] A description of a triggering event. Triggering
 @freezed
-class TriggerDefinition with _$TriggerDefinition {
+abstract class TriggerDefinition with _$TriggerDefinition {
   /// [TriggerDefinition] A description of a triggering event. Triggering
   const TriggerDefinition._();
 
@@ -1336,7 +1336,7 @@ class TriggerDefinition with _$TriggerDefinition {
 
 /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
 @freezed
-class UsageContext with _$UsageContext {
+abstract class UsageContext with _$UsageContext {
   /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
   const UsageContext._();
 
@@ -1440,7 +1440,7 @@ class UsageContext with _$UsageContext {
 
 /// [FhirExpression] A expression that is evaluated in a specified context and
 @freezed
-class FhirExpression with _$FhirExpression {
+abstract class FhirExpression with _$FhirExpression {
   /// [FhirExpression] A expression that is evaluated in a specified context and
   const FhirExpression._();
 

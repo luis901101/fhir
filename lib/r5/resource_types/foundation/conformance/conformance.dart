@@ -19,7 +19,7 @@ part 'conformance.enums.dart';
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatement with Resource, _$CapabilityStatement {
+abstract class CapabilityStatement with Resource, _$CapabilityStatement {
   /// [CapabilityStatement] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -570,7 +570,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
+abstract class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   /// [CapabilityStatementSoftware] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -704,7 +704,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementImplementation
+abstract class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
   /// [CapabilityStatementImplementation] A Capability Statement documents a set
   ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -842,7 +842,7 @@ class CapabilityStatementImplementation
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementRest with _$CapabilityStatementRest {
+abstract class CapabilityStatementRest with _$CapabilityStatementRest {
   /// [CapabilityStatementRest] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -1017,7 +1017,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
+abstract class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   /// [CapabilityStatementSecurity] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -1150,7 +1150,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementResource with _$CapabilityStatementResource {
+abstract class CapabilityStatementResource with _$CapabilityStatementResource {
   /// [CapabilityStatementResource] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -1485,7 +1485,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
+abstract class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   /// [CapabilityStatementInteraction] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -1614,7 +1614,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
+abstract class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   /// [CapabilityStatementSearchParam] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -1776,7 +1776,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementOperation with _$CapabilityStatementOperation {
+abstract class CapabilityStatementOperation with _$CapabilityStatementOperation {
   /// [CapabilityStatementOperation] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -1937,7 +1937,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
+abstract class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   /// [CapabilityStatementInteraction1] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -2066,7 +2066,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
+abstract class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// [CapabilityStatementMessaging] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -2212,7 +2212,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
+abstract class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -2336,7 +2336,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
 ///  server functionality or a statement of required or desired server
 ///  implementation.
 @freezed
-class CapabilityStatementSupportedMessage
+abstract class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
   /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
   ///  set of capabilities (behaviors) of a FHIR Server or Client for a
@@ -2464,7 +2464,7 @@ class CapabilityStatementSupportedMessage
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatementDocument with _$CapabilityStatementDocument {
+abstract class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// [CapabilityStatementDocument] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -2599,7 +2599,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
 /// [CompartmentDefinition] A compartment definition that defines how resources
 ///  are accessed on a server.
 @freezed
-class CompartmentDefinition with Resource, _$CompartmentDefinition {
+abstract class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// [CompartmentDefinition] A compartment definition that defines how resources
   ///  are accessed on a server.
   const CompartmentDefinition._();
@@ -3031,7 +3031,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
 /// [CompartmentDefinitionResource] A compartment definition that defines how
 ///  resources are accessed on a server.
 @freezed
-class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
+abstract class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   /// [CompartmentDefinitionResource] A compartment definition that defines how
   ///  resources are accessed on a server.
   const CompartmentDefinitionResource._();
@@ -3191,7 +3191,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
 ///  references. The Graph Definition resource defines a set and makes rules
 ///  about the set.
 @freezed
-class GraphDefinition with Resource, _$GraphDefinition {
+abstract class GraphDefinition with Resource, _$GraphDefinition {
   /// [GraphDefinition] A formal computable definition of a graph of resources -
   ///  that is, a coherent set of resources that form a graph by following
   ///  references. The Graph Definition resource defines a set and makes rules
@@ -3624,7 +3624,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
 ///  following references. The Graph Definition resource defines a set and
 ///  makes rules about the set.
 @freezed
-class GraphDefinitionNode with _$GraphDefinitionNode {
+abstract class GraphDefinitionNode with _$GraphDefinitionNode {
   /// [GraphDefinitionNode] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
   ///  following references. The Graph Definition resource defines a set and
@@ -3764,7 +3764,7 @@ class GraphDefinitionNode with _$GraphDefinitionNode {
 ///  following references. The Graph Definition resource defines a set and
 ///  makes rules about the set.
 @freezed
-class GraphDefinitionLink with _$GraphDefinitionLink {
+abstract class GraphDefinitionLink with _$GraphDefinitionLink {
   /// [GraphDefinitionLink] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
   ///  following references. The Graph Definition resource defines a set and
@@ -3956,7 +3956,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
 ///  following references. The Graph Definition resource defines a set and
 ///  makes rules about the set.
 @freezed
-class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
+abstract class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   /// [GraphDefinitionCompartment] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
   ///  following references. The Graph Definition resource defines a set and
@@ -4114,7 +4114,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuide with Resource, _$ImplementationGuide {
+abstract class ImplementationGuide with Resource, _$ImplementationGuide {
   /// [ImplementationGuide] A set of rules of how a particular interoperability
   ///  or standards problem is solved - typically through the use of FHIR
   ///  resources. This resource is used to gather all the parts of an
@@ -4606,7 +4606,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
+abstract class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   /// [ImplementationGuideDependsOn] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -4754,7 +4754,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
+abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   /// [ImplementationGuideGlobal] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -4875,7 +4875,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
+abstract class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   /// [ImplementationGuideDefinition] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -5021,7 +5021,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
+abstract class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   /// [ImplementationGuideGrouping] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -5150,7 +5150,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideResource with _$ImplementationGuideResource {
+abstract class ImplementationGuideResource with _$ImplementationGuideResource {
   /// [ImplementationGuideResource] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -5325,7 +5325,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuidePage with _$ImplementationGuidePage {
+abstract class ImplementationGuidePage with _$ImplementationGuidePage {
   /// [ImplementationGuidePage] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -5502,7 +5502,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideParameter with _$ImplementationGuideParameter {
+abstract class ImplementationGuideParameter with _$ImplementationGuideParameter {
   /// [ImplementationGuideParameter] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -5624,7 +5624,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
+abstract class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   /// [ImplementationGuideTemplate] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -5761,7 +5761,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideManifest with _$ImplementationGuideManifest {
+abstract class ImplementationGuideManifest with _$ImplementationGuideManifest {
   /// [ImplementationGuideManifest] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -5920,7 +5920,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
+abstract class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   /// [ImplementationGuideResource1] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -6059,7 +6059,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
+abstract class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   /// [ImplementationGuidePage1] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
   ///  use of FHIR resources. This resource is used to gather all the parts of an
@@ -6194,7 +6194,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
 ///  message, the content to be transmitted and what response(s), if any, are
 ///  permitted.
 @freezed
-class MessageDefinition with Resource, _$MessageDefinition {
+abstract class MessageDefinition with Resource, _$MessageDefinition {
   /// [MessageDefinition] Defines the characteristics of a message that can be
   ///  shared between systems, including the type of event that initiates the
   ///  message, the content to be transmitted and what response(s), if any, are
@@ -6684,7 +6684,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
 ///  message, the content to be transmitted and what response(s), if any, are
 ///  permitted.
 @freezed
-class MessageDefinitionFocus with _$MessageDefinitionFocus {
+abstract class MessageDefinitionFocus with _$MessageDefinitionFocus {
   /// [MessageDefinitionFocus] Defines the characteristics of a message that can
   ///  be shared between systems, including the type of event that initiates the
   ///  message, the content to be transmitted and what response(s), if any, are
@@ -6832,7 +6832,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
 ///  initiates the message, the content to be transmitted and what response(s),
 ///  if any, are permitted.
 @freezed
-class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
+abstract class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   /// [MessageDefinitionAllowedResponse] Defines the characteristics of a message
   ///  that can be shared between systems, including the type of event that
   ///  initiates the message, the content to be transmitted and what response(s),
@@ -6955,7 +6955,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
 /// [OperationDefinition] A formal computable definition of an operation (on
 ///  the RESTful interface) or a named query (using the search interaction).
 @freezed
-class OperationDefinition with Resource, _$OperationDefinition {
+abstract class OperationDefinition with Resource, _$OperationDefinition {
   /// [OperationDefinition] A formal computable definition of an operation (on
   ///  the RESTful interface) or a named query (using the search interaction).
   const OperationDefinition._();
@@ -7500,7 +7500,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
 ///  operation (on the RESTful interface) or a named query (using the search
 ///  interaction).
 @freezed
-class OperationDefinitionParameter with _$OperationDefinitionParameter {
+abstract class OperationDefinitionParameter with _$OperationDefinitionParameter {
   /// [OperationDefinitionParameter] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
@@ -7740,7 +7740,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
 /// [OperationDefinitionBinding] A formal computable definition of an operation
 ///  (on the RESTful interface) or a named query (using the search interaction).
 @freezed
-class OperationDefinitionBinding with _$OperationDefinitionBinding {
+abstract class OperationDefinitionBinding with _$OperationDefinitionBinding {
   /// [OperationDefinitionBinding] A formal computable definition of an operation
   ///  (on the RESTful interface) or a named query (using the search interaction).
   const OperationDefinitionBinding._();
@@ -7859,7 +7859,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
 ///  operation (on the RESTful interface) or a named query (using the search
 ///  interaction).
 @freezed
-class OperationDefinitionReferencedFrom
+abstract class OperationDefinitionReferencedFrom
     with _$OperationDefinitionReferencedFrom {
   /// [OperationDefinitionReferencedFrom] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
@@ -7989,7 +7989,7 @@ class OperationDefinitionReferencedFrom
 ///  operation (on the RESTful interface) or a named query (using the search
 ///  interaction).
 @freezed
-class OperationDefinitionOverload with _$OperationDefinitionOverload {
+abstract class OperationDefinitionOverload with _$OperationDefinitionOverload {
   /// [OperationDefinitionOverload] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
@@ -8109,7 +8109,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
 /// [SearchParameter] A search parameter that defines a named search item that
 ///  can be used to search/filter on a resource.
 @freezed
-class SearchParameter with Resource, _$SearchParameter {
+abstract class SearchParameter with Resource, _$SearchParameter {
   /// [SearchParameter] A search parameter that defines a named search item that
   ///  can be used to search/filter on a resource.
   const SearchParameter._();
@@ -8684,7 +8684,7 @@ class SearchParameter with Resource, _$SearchParameter {
 /// [SearchParameterComponent] A search parameter that defines a named search
 ///  item that can be used to search/filter on a resource.
 @freezed
-class SearchParameterComponent with _$SearchParameterComponent {
+abstract class SearchParameterComponent with _$SearchParameterComponent {
   /// [SearchParameterComponent] A search parameter that defines a named search
   ///  item that can be used to search/filter on a resource.
   const SearchParameterComponent._();
@@ -8801,7 +8801,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
 ///  used to describe the underlying resources, data types defined in FHIR, and
 ///  also for describing extensions and constraints on resources and data types.
 @freezed
-class StructureDefinition with Resource, _$StructureDefinition {
+abstract class StructureDefinition with Resource, _$StructureDefinition {
   /// [StructureDefinition] A definition of a FHIR structure. This resource is
   ///  used to describe the underlying resources, data types defined in FHIR, and
   ///  also for describing extensions and constraints on resources and data types.
@@ -9362,7 +9362,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 ///  in FHIR, and also for describing extensions and constraints on resources
 ///  and data types.
 @freezed
-class StructureDefinitionMapping with _$StructureDefinitionMapping {
+abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
   /// [StructureDefinitionMapping] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types defined
   ///  in FHIR, and also for describing extensions and constraints on resources
@@ -9511,7 +9511,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 ///  in FHIR, and also for describing extensions and constraints on resources
 ///  and data types.
 @freezed
-class StructureDefinitionContext with _$StructureDefinitionContext {
+abstract class StructureDefinitionContext with _$StructureDefinitionContext {
   /// [StructureDefinitionContext] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types defined
   ///  in FHIR, and also for describing extensions and constraints on resources
@@ -9638,7 +9638,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
 ///  in FHIR, and also for describing extensions and constraints on resources
 ///  and data types.
 @freezed
-class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
+abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types defined
   ///  in FHIR, and also for describing extensions and constraints on resources
@@ -9747,7 +9747,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 ///  in FHIR, and also for describing extensions and constraints on resources
 ///  and data types.
 @freezed
-class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
+abstract class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types defined
   ///  in FHIR, and also for describing extensions and constraints on resources
@@ -9855,7 +9855,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
 /// [StructureMap] A Map of relationships between 2 structures that can be used
 ///  to transform data.
 @freezed
-class StructureMap with Resource, _$StructureMap {
+abstract class StructureMap with Resource, _$StructureMap {
   /// [StructureMap] A Map of relationships between 2 structures that can be used
   ///  to transform data.
   const StructureMap._();
@@ -10284,7 +10284,7 @@ class StructureMap with Resource, _$StructureMap {
 /// [StructureMapStructure] A Map of relationships between 2 structures that
 ///  can be used to transform data.
 @freezed
-class StructureMapStructure with _$StructureMapStructure {
+abstract class StructureMapStructure with _$StructureMapStructure {
   /// [StructureMapStructure] A Map of relationships between 2 structures that
   ///  can be used to transform data.
   const StructureMapStructure._();
@@ -10418,7 +10418,7 @@ class StructureMapStructure with _$StructureMapStructure {
 /// [StructureMapConst] A Map of relationships between 2 structures that can be
 ///  used to transform data.
 @freezed
-class StructureMapConst with _$StructureMapConst {
+abstract class StructureMapConst with _$StructureMapConst {
   /// [StructureMapConst] A Map of relationships between 2 structures that can be
   ///  used to transform data.
   const StructureMapConst._();
@@ -10535,7 +10535,7 @@ class StructureMapConst with _$StructureMapConst {
 /// [StructureMapGroup] A Map of relationships between 2 structures that can be
 ///  used to transform data.
 @freezed
-class StructureMapGroup with _$StructureMapGroup {
+abstract class StructureMapGroup with _$StructureMapGroup {
   /// [StructureMapGroup] A Map of relationships between 2 structures that can be
   ///  used to transform data.
   const StructureMapGroup._();
@@ -10688,7 +10688,7 @@ class StructureMapGroup with _$StructureMapGroup {
 /// [StructureMapInput] A Map of relationships between 2 structures that can be
 ///  used to transform data.
 @freezed
-class StructureMapInput with _$StructureMapInput {
+abstract class StructureMapInput with _$StructureMapInput {
   /// [StructureMapInput] A Map of relationships between 2 structures that can be
   ///  used to transform data.
   const StructureMapInput._();
@@ -10825,7 +10825,7 @@ class StructureMapInput with _$StructureMapInput {
 /// [StructureMapRule] A Map of relationships between 2 structures that can be
 ///  used to transform data.
 @freezed
-class StructureMapRule with _$StructureMapRule {
+abstract class StructureMapRule with _$StructureMapRule {
   /// [StructureMapRule] A Map of relationships between 2 structures that can be
   ///  used to transform data.
   const StructureMapRule._();
@@ -10962,7 +10962,7 @@ class StructureMapRule with _$StructureMapRule {
 /// [StructureMapSource] A Map of relationships between 2 structures that can
 ///  be used to transform data.
 @freezed
-class StructureMapSource with _$StructureMapSource {
+abstract class StructureMapSource with _$StructureMapSource {
   /// [StructureMapSource] A Map of relationships between 2 structures that can
   ///  be used to transform data.
   const StructureMapSource._();
@@ -11183,7 +11183,7 @@ class StructureMapSource with _$StructureMapSource {
 /// [StructureMapTarget] A Map of relationships between 2 structures that can
 ///  be used to transform data.
 @freezed
-class StructureMapTarget with _$StructureMapTarget {
+abstract class StructureMapTarget with _$StructureMapTarget {
   /// [StructureMapTarget] A Map of relationships between 2 structures that can
   ///  be used to transform data.
   const StructureMapTarget._();
@@ -11345,7 +11345,7 @@ class StructureMapTarget with _$StructureMapTarget {
 /// [StructureMapParameter] A Map of relationships between 2 structures that
 ///  can be used to transform data.
 @freezed
-class StructureMapParameter with _$StructureMapParameter {
+abstract class StructureMapParameter with _$StructureMapParameter {
   /// [StructureMapParameter] A Map of relationships between 2 structures that
   ///  can be used to transform data.
   const StructureMapParameter._();
@@ -11522,7 +11522,7 @@ class StructureMapParameter with _$StructureMapParameter {
 /// [StructureMapDependent] A Map of relationships between 2 structures that
 ///  can be used to transform data.
 @freezed
-class StructureMapDependent with _$StructureMapDependent {
+abstract class StructureMapDependent with _$StructureMapDependent {
   /// [StructureMapDependent] A Map of relationships between 2 structures that
   ///  can be used to transform data.
   const StructureMapDependent._();

@@ -15,7 +15,7 @@ part 'fhir_extension.g.dart';
 
 /// [extension_] Optional Extension Element - found in all resources.
 @freezed
-class FhirExtension with _$FhirExtension {
+abstract class FhirExtension with _$FhirExtension {
   const FhirExtension._();
 
   /// [extension_] Optional Extension Element - found in all resources.

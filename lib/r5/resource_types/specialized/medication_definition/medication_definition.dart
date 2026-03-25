@@ -18,7 +18,7 @@ part 'medication_definition.enums.dart';
 ///  which is suitable for administering to a patient (after any mixing of
 ///  multiple components, dissolution etc. has been performed).
 @freezed
-class AdministrableProductDefinition
+abstract class AdministrableProductDefinition
     with Resource, _$AdministrableProductDefinition {
   /// [AdministrableProductDefinition] A medicinal product in the final form
   ///  which is suitable for administering to a patient (after any mixing of
@@ -335,7 +335,7 @@ class AdministrableProductDefinition
 ///  form which is suitable for administering to a patient (after any mixing of
 ///  multiple components, dissolution etc. has been performed).
 @freezed
-class AdministrableProductDefinitionProperty
+abstract class AdministrableProductDefinitionProperty
     with _$AdministrableProductDefinitionProperty {
   /// [AdministrableProductDefinitionProperty] A medicinal product in the final
   ///  form which is suitable for administering to a patient (after any mixing of
@@ -499,7 +499,7 @@ class AdministrableProductDefinitionProperty
 ///  in the final form which is suitable for administering to a patient (after
 ///  any mixing of multiple components, dissolution etc. has been performed).
 @freezed
-class AdministrableProductDefinitionRouteOfAdministration
+abstract class AdministrableProductDefinitionRouteOfAdministration
     with _$AdministrableProductDefinitionRouteOfAdministration {
   /// [AdministrableProductDefinitionRouteOfAdministration] A medicinal product
   ///  in the final form which is suitable for administering to a patient (after
@@ -651,7 +651,7 @@ class AdministrableProductDefinitionRouteOfAdministration
 ///  final form which is suitable for administering to a patient (after any
 ///  mixing of multiple components, dissolution etc. has been performed).
 @freezed
-class AdministrableProductDefinitionTargetSpecies
+abstract class AdministrableProductDefinitionTargetSpecies
     with _$AdministrableProductDefinitionTargetSpecies {
   /// [AdministrableProductDefinitionTargetSpecies] A medicinal product in the
   ///  final form which is suitable for administering to a patient (after any
@@ -768,7 +768,7 @@ class AdministrableProductDefinitionTargetSpecies
 ///  final form which is suitable for administering to a patient (after any
 ///  mixing of multiple components, dissolution etc. has been performed).
 @freezed
-class AdministrableProductDefinitionWithdrawalPeriod
+abstract class AdministrableProductDefinitionWithdrawalPeriod
     with _$AdministrableProductDefinitionWithdrawalPeriod {
   /// [AdministrableProductDefinitionWithdrawalPeriod] A medicinal product in the
   ///  final form which is suitable for administering to a patient (after any
@@ -899,7 +899,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
+abstract class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   /// [ClinicalUseDefinition] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
   ///  product, medication, device or procedure.
@@ -1152,7 +1152,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
 ///  indication, contraindication, interaction or an undesirable effect for a
 ///  medicinal product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionContraindication
+abstract class ClinicalUseDefinitionContraindication
     with _$ClinicalUseDefinitionContraindication {
   /// [ClinicalUseDefinitionContraindication] A single issue - either an
   ///  indication, contraindication, interaction or an undesirable effect for a
@@ -1296,7 +1296,7 @@ class ClinicalUseDefinitionContraindication
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionOtherTherapy
+abstract class ClinicalUseDefinitionOtherTherapy
     with _$ClinicalUseDefinitionOtherTherapy {
   /// [ClinicalUseDefinitionOtherTherapy] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
@@ -1416,7 +1416,7 @@ class ClinicalUseDefinitionOtherTherapy
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
+abstract class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
   /// [ClinicalUseDefinitionIndication] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
   ///  product, medication, device or procedure.
@@ -1596,7 +1596,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
+abstract class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
   /// [ClinicalUseDefinitionInteraction] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
   ///  product, medication, device or procedure.
@@ -1730,7 +1730,7 @@ class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
+abstract class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
   /// [ClinicalUseDefinitionInteractant] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
   ///  product, medication, device or procedure.
@@ -1847,7 +1847,7 @@ class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
 ///  indication, contraindication, interaction or an undesirable effect for a
 ///  medicinal product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionUndesirableEffect
+abstract class ClinicalUseDefinitionUndesirableEffect
     with _$ClinicalUseDefinitionUndesirableEffect {
   /// [ClinicalUseDefinitionUndesirableEffect] A single issue - either an
   ///  indication, contraindication, interaction or an undesirable effect for a
@@ -1968,7 +1968,7 @@ class ClinicalUseDefinitionUndesirableEffect
 ///  contraindication, interaction or an undesirable effect for a medicinal
 ///  product, medication, device or procedure.
 @freezed
-class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
+abstract class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
   /// [ClinicalUseDefinitionWarning] A single issue - either an indication,
   ///  contraindication, interaction or an undesirable effect for a medicinal
   ///  product, medication, device or procedure.
@@ -2082,7 +2082,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
 
 /// [Ingredient] An ingredient of a manufactured item or pharmaceutical product.
 @freezed
-class Ingredient with Resource, _$Ingredient {
+abstract class Ingredient with Resource, _$Ingredient {
   /// [Ingredient] An ingredient of a manufactured item or pharmaceutical product.
   const Ingredient._();
 
@@ -2350,7 +2350,7 @@ class Ingredient with Resource, _$Ingredient {
 /// [IngredientManufacturer] An ingredient of a manufactured item or
 ///  pharmaceutical product.
 @freezed
-class IngredientManufacturer with _$IngredientManufacturer {
+abstract class IngredientManufacturer with _$IngredientManufacturer {
   /// [IngredientManufacturer] An ingredient of a manufactured item or
   ///  pharmaceutical product.
   const IngredientManufacturer._();
@@ -2468,7 +2468,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
 /// [IngredientSubstance] An ingredient of a manufactured item or
 ///  pharmaceutical product.
 @freezed
-class IngredientSubstance with _$IngredientSubstance {
+abstract class IngredientSubstance with _$IngredientSubstance {
   /// [IngredientSubstance] An ingredient of a manufactured item or
   ///  pharmaceutical product.
   const IngredientSubstance._();
@@ -2583,7 +2583,7 @@ class IngredientSubstance with _$IngredientSubstance {
 /// [IngredientStrength] An ingredient of a manufactured item or pharmaceutical
 ///  product.
 @freezed
-class IngredientStrength with _$IngredientStrength {
+abstract class IngredientStrength with _$IngredientStrength {
   /// [IngredientStrength] An ingredient of a manufactured item or pharmaceutical
   ///  product.
   const IngredientStrength._();
@@ -2841,7 +2841,7 @@ class IngredientStrength with _$IngredientStrength {
 /// [IngredientReferenceStrength] An ingredient of a manufactured item or
 ///  pharmaceutical product.
 @freezed
-class IngredientReferenceStrength with _$IngredientReferenceStrength {
+abstract class IngredientReferenceStrength with _$IngredientReferenceStrength {
   /// [IngredientReferenceStrength] An ingredient of a manufactured item or
   ///  pharmaceutical product.
   const IngredientReferenceStrength._();
@@ -2979,7 +2979,7 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
 ///  medicinal manufactured item, such as a tablet or capsule, as contained in
 ///  a packaged medicinal product.
 @freezed
-class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
+abstract class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   /// [ManufacturedItemDefinition] The definition and characteristics of a
   ///  medicinal manufactured item, such as a tablet or capsule, as contained in
   ///  a packaged medicinal product.
@@ -3227,7 +3227,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
 ///  a medicinal manufactured item, such as a tablet or capsule, as contained
 ///  in a packaged medicinal product.
 @freezed
-class ManufacturedItemDefinitionProperty
+abstract class ManufacturedItemDefinitionProperty
     with _$ManufacturedItemDefinitionProperty {
   /// [ManufacturedItemDefinitionProperty] The definition and characteristics of
   ///  a medicinal manufactured item, such as a tablet or capsule, as contained
@@ -3386,7 +3386,7 @@ class ManufacturedItemDefinitionProperty
 ///  a medicinal manufactured item, such as a tablet or capsule, as contained
 ///  in a packaged medicinal product.
 @freezed
-class ManufacturedItemDefinitionComponent
+abstract class ManufacturedItemDefinitionComponent
     with _$ManufacturedItemDefinitionComponent {
   /// [ManufacturedItemDefinitionComponent] The definition and characteristics of
   ///  a medicinal manufactured item, such as a tablet or capsule, as contained
@@ -3530,7 +3530,7 @@ class ManufacturedItemDefinitionComponent
 ///  of a medicinal manufactured item, such as a tablet or capsule, as
 ///  contained in a packaged medicinal product.
 @freezed
-class ManufacturedItemDefinitionConstituent
+abstract class ManufacturedItemDefinitionConstituent
     with _$ManufacturedItemDefinitionConstituent {
   /// [ManufacturedItemDefinitionConstituent] The definition and characteristics
   ///  of a medicinal manufactured item, such as a tablet or capsule, as
@@ -3670,7 +3670,7 @@ class ManufacturedItemDefinitionConstituent
 ///  properties, for uses other than direct patient care (e.g. regulatory use,
 ///  or drug catalogs).
 @freezed
-class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
+abstract class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   /// [MedicinalProductDefinition] A medicinal product, being a substance or
   ///  combination of substances that is intended to treat, prevent or diagnose a
   ///  disease, or to restore, correct or modify physiological functions by
@@ -4133,7 +4133,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
 ///  their properties, for uses other than direct patient care (e.g. regulatory
 ///  use, or drug catalogs).
 @freezed
-class MedicinalProductDefinitionContact
+abstract class MedicinalProductDefinitionContact
     with _$MedicinalProductDefinitionContact {
   /// [MedicinalProductDefinitionContact] A medicinal product, being a substance
   ///  or combination of substances that is intended to treat, prevent or
@@ -4263,7 +4263,7 @@ class MedicinalProductDefinitionContact
 ///  properties, for uses other than direct patient care (e.g. regulatory use,
 ///  or drug catalogs).
 @freezed
-class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
+abstract class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   /// [MedicinalProductDefinitionName] A medicinal product, being a substance or
   ///  combination of substances that is intended to treat, prevent or diagnose a
   ///  disease, or to restore, correct or modify physiological functions by
@@ -4406,7 +4406,7 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
 ///  properties, for uses other than direct patient care (e.g. regulatory use,
 ///  or drug catalogs).
 @freezed
-class MedicinalProductDefinitionPart with _$MedicinalProductDefinitionPart {
+abstract class MedicinalProductDefinitionPart with _$MedicinalProductDefinitionPart {
   /// [MedicinalProductDefinitionPart] A medicinal product, being a substance or
   ///  combination of substances that is intended to treat, prevent or diagnose a
   ///  disease, or to restore, correct or modify physiological functions by
@@ -4535,7 +4535,7 @@ class MedicinalProductDefinitionPart with _$MedicinalProductDefinitionPart {
 ///  properties, for uses other than direct patient care (e.g. regulatory use,
 ///  or drug catalogs).
 @freezed
-class MedicinalProductDefinitionUsage with _$MedicinalProductDefinitionUsage {
+abstract class MedicinalProductDefinitionUsage with _$MedicinalProductDefinitionUsage {
   /// [MedicinalProductDefinitionUsage] A medicinal product, being a substance or
   ///  combination of substances that is intended to treat, prevent or diagnose a
   ///  disease, or to restore, correct or modify physiological functions by
@@ -4668,7 +4668,7 @@ class MedicinalProductDefinitionUsage with _$MedicinalProductDefinitionUsage {
 ///  their properties, for uses other than direct patient care (e.g. regulatory
 ///  use, or drug catalogs).
 @freezed
-class MedicinalProductDefinitionCrossReference
+abstract class MedicinalProductDefinitionCrossReference
     with _$MedicinalProductDefinitionCrossReference {
   /// [MedicinalProductDefinitionCrossReference] A medicinal product, being a
   ///  substance or combination of substances that is intended to treat, prevent
@@ -4801,7 +4801,7 @@ class MedicinalProductDefinitionCrossReference
 ///  their properties, for uses other than direct patient care (e.g. regulatory
 ///  use, or drug catalogs).
 @freezed
-class MedicinalProductDefinitionOperation
+abstract class MedicinalProductDefinitionOperation
     with _$MedicinalProductDefinitionOperation {
   /// [MedicinalProductDefinitionOperation] A medicinal product, being a
   ///  substance or combination of substances that is intended to treat, prevent
@@ -4947,7 +4947,7 @@ class MedicinalProductDefinitionOperation
 ///  their properties, for uses other than direct patient care (e.g. regulatory
 ///  use, or drug catalogs).
 @freezed
-class MedicinalProductDefinitionCharacteristic
+abstract class MedicinalProductDefinitionCharacteristic
     with _$MedicinalProductDefinitionCharacteristic {
   /// [MedicinalProductDefinitionCharacteristic] A medicinal product, being a
   ///  substance or combination of substances that is intended to treat, prevent
@@ -5119,7 +5119,7 @@ class MedicinalProductDefinitionCharacteristic
 /// [PackagedProductDefinition] A medically related item or items, in a
 ///  container or package.
 @freezed
-class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
+abstract class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   /// [PackagedProductDefinition] A medically related item or items, in a
   ///  container or package.
   const PackagedProductDefinition._();
@@ -5447,7 +5447,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
 /// [PackagedProductDefinitionLegalStatusOfSupply] A medically related item or
 ///  items, in a container or package.
 @freezed
-class PackagedProductDefinitionLegalStatusOfSupply
+abstract class PackagedProductDefinitionLegalStatusOfSupply
     with _$PackagedProductDefinitionLegalStatusOfSupply {
   /// [PackagedProductDefinitionLegalStatusOfSupply] A medically related item or
   ///  items, in a container or package.
@@ -5563,7 +5563,7 @@ class PackagedProductDefinitionLegalStatusOfSupply
 /// [PackagedProductDefinitionPackaging] A medically related item or items, in
 ///  a container or package.
 @freezed
-class PackagedProductDefinitionPackaging
+abstract class PackagedProductDefinitionPackaging
     with _$PackagedProductDefinitionPackaging {
   /// [PackagedProductDefinitionPackaging] A medically related item or items, in
   ///  a container or package.
@@ -5757,7 +5757,7 @@ class PackagedProductDefinitionPackaging
 /// [PackagedProductDefinitionProperty] A medically related item or items, in a
 ///  container or package.
 @freezed
-class PackagedProductDefinitionProperty
+abstract class PackagedProductDefinitionProperty
     with _$PackagedProductDefinitionProperty {
   /// [PackagedProductDefinitionProperty] A medically related item or items, in a
   ///  container or package.
@@ -5898,7 +5898,7 @@ class PackagedProductDefinitionProperty
 /// [PackagedProductDefinitionContainedItem] A medically related item or items,
 ///  in a container or package.
 @freezed
-class PackagedProductDefinitionContainedItem
+abstract class PackagedProductDefinitionContainedItem
     with _$PackagedProductDefinitionContainedItem {
   /// [PackagedProductDefinitionContainedItem] A medically related item or items,
   ///  in a container or package.
@@ -6031,7 +6031,7 @@ class PackagedProductDefinitionContainedItem
 ///  cited in a guidance, regulation, rule or legislative act. An example is
 ///  Market Authorization relating to a Medicinal Product.
 @freezed
-class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
+abstract class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   /// [RegulatedAuthorization] Regulatory approval, clearance or licencing
   ///  related to a regulated product, treatment, facility or activity that is
   ///  cited in a guidance, regulation, rule or legislative act. An example is
@@ -6329,7 +6329,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
 ///  cited in a guidance, regulation, rule or legislative act. An example is
 ///  Market Authorization relating to a Medicinal Product.
 @freezed
-class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
+abstract class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   /// [RegulatedAuthorizationCase] Regulatory approval, clearance or licencing
   ///  related to a regulated product, treatment, facility or activity that is
   ///  cited in a guidance, regulation, rule or legislative act. An example is
@@ -6473,7 +6473,7 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
 /// [SubstanceDefinition] The detailed description of a substance, typically at
 ///  a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinition with Resource, _$SubstanceDefinition {
+abstract class SubstanceDefinition with Resource, _$SubstanceDefinition {
   /// [SubstanceDefinition] The detailed description of a substance, typically at
   ///  a level beyond what is used for prescribing.
   const SubstanceDefinition._();
@@ -6792,7 +6792,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
 /// [SubstanceDefinitionMoiety] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
+abstract class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   /// [SubstanceDefinitionMoiety] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionMoiety._();
@@ -6959,7 +6959,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
 /// [SubstanceDefinitionCharacterization] The detailed description of a
 ///  substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionCharacterization
+abstract class SubstanceDefinitionCharacterization
     with _$SubstanceDefinitionCharacterization {
   /// [SubstanceDefinitionCharacterization] The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
@@ -7095,7 +7095,7 @@ class SubstanceDefinitionCharacterization
 /// [SubstanceDefinitionProperty] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
+abstract class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
   /// [SubstanceDefinitionProperty] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionProperty._();
@@ -7233,7 +7233,7 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
 /// [SubstanceDefinitionMolecularWeight] The detailed description of a
 ///  substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionMolecularWeight
+abstract class SubstanceDefinitionMolecularWeight
     with _$SubstanceDefinitionMolecularWeight {
   /// [SubstanceDefinitionMolecularWeight] The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
@@ -7357,7 +7357,7 @@ class SubstanceDefinitionMolecularWeight
 /// [SubstanceDefinitionStructure] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
+abstract class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   /// [SubstanceDefinitionStructure] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionStructure._();
@@ -7520,7 +7520,7 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
 /// [SubstanceDefinitionRepresentation] The detailed description of a
 ///  substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionRepresentation
+abstract class SubstanceDefinitionRepresentation
     with _$SubstanceDefinitionRepresentation {
   /// [SubstanceDefinitionRepresentation] The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
@@ -7654,7 +7654,7 @@ class SubstanceDefinitionRepresentation
 /// [SubstanceDefinitionCode] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
+abstract class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   /// [SubstanceDefinitionCode] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionCode._();
@@ -7785,7 +7785,7 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
 /// [SubstanceDefinitionName] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionName with _$SubstanceDefinitionName {
+abstract class SubstanceDefinitionName with _$SubstanceDefinitionName {
   /// [SubstanceDefinitionName] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionName._();
@@ -7951,7 +7951,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
 /// [SubstanceDefinitionOfficial] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
+abstract class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   /// [SubstanceDefinitionOfficial] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionOfficial._();
@@ -8071,7 +8071,7 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
 /// [SubstanceDefinitionRelationship] The detailed description of a substance,
 ///  typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
+abstract class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
   /// [SubstanceDefinitionRelationship] The detailed description of a substance,
   ///  typically at a level beyond what is used for prescribing.
   const SubstanceDefinitionRelationship._();
@@ -8254,7 +8254,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
 /// [SubstanceDefinitionSourceMaterial] The detailed description of a
 ///  substance, typically at a level beyond what is used for prescribing.
 @freezed
-class SubstanceDefinitionSourceMaterial
+abstract class SubstanceDefinitionSourceMaterial
     with _$SubstanceDefinitionSourceMaterial {
   /// [SubstanceDefinitionSourceMaterial] The detailed description of a
   ///  substance, typically at a level beyond what is used for prescribing.
@@ -8390,7 +8390,7 @@ class SubstanceDefinitionSourceMaterial
 ///  will be created for each of these elements. The nucleotide sequence will
 ///  be always entered in the 5’-3’ direction.
 @freezed
-class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
+abstract class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   /// [SubstanceNucleicAcid] Nucleic acids are defined by three distinct
   ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
   ///  will be created for each of these elements. The nucleotide sequence will
@@ -8626,7 +8626,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
 ///  will be created for each of these elements. The nucleotide sequence will
 ///  be always entered in the 5’-3’ direction.
 @freezed
-class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
+abstract class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   /// [SubstanceNucleicAcidSubunit] Nucleic acids are defined by three distinct
   ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
   ///  will be created for each of these elements. The nucleotide sequence will
@@ -8807,7 +8807,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
 ///  will be created for each of these elements. The nucleotide sequence will
 ///  be always entered in the 5’-3’ direction.
 @freezed
-class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
+abstract class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   /// [SubstanceNucleicAcidLinkage] Nucleic acids are defined by three distinct
   ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
   ///  will be created for each of these elements. The nucleotide sequence will
@@ -8958,7 +8958,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
 ///  will be created for each of these elements. The nucleotide sequence will
 ///  be always entered in the 5’-3’ direction.
 @freezed
-class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
+abstract class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   /// [SubstanceNucleicAcidSugar] Nucleic acids are defined by three distinct
   ///  elements: the base, sugar and linkage. Individual substance/moiety IDs
   ///  will be created for each of these elements. The nucleotide sequence will
@@ -9091,7 +9091,7 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
 
 /// [SubstancePolymer] Properties of a substance specific to it being a polymer.
 @freezed
-class SubstancePolymer with Resource, _$SubstancePolymer {
+abstract class SubstancePolymer with Resource, _$SubstancePolymer {
   /// [SubstancePolymer] Properties of a substance specific to it being a polymer.
   const SubstancePolymer._();
 
@@ -9310,7 +9310,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
 /// [SubstancePolymerMonomerSet] Properties of a substance specific to it being
 ///  a polymer.
 @freezed
-class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
+abstract class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   /// [SubstancePolymerMonomerSet] Properties of a substance specific to it being
   ///  a polymer.
   const SubstancePolymerMonomerSet._();
@@ -9421,7 +9421,7 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
 /// [SubstancePolymerStartingMaterial] Properties of a substance specific to it
 ///  being a polymer.
 @freezed
-class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
+abstract class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   /// [SubstancePolymerStartingMaterial] Properties of a substance specific to it
   ///  being a polymer.
   const SubstancePolymerStartingMaterial._();
@@ -9548,7 +9548,7 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
 /// [SubstancePolymerRepeat] Properties of a substance specific to it being a
 ///  polymer.
 @freezed
-class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
+abstract class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   /// [SubstancePolymerRepeat] Properties of a substance specific to it being a
   ///  polymer.
   const SubstancePolymerRepeat._();
@@ -9672,7 +9672,7 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
 /// [SubstancePolymerRepeatUnit] Properties of a substance specific to it being
 ///  a polymer.
 @freezed
-class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
+abstract class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   /// [SubstancePolymerRepeatUnit] Properties of a substance specific to it being
   ///  a polymer.
   const SubstancePolymerRepeatUnit._();
@@ -9808,7 +9808,7 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
 /// [SubstancePolymerDegreeOfPolymerisation] Properties of a substance specific
 ///  to it being a polymer.
 @freezed
-class SubstancePolymerDegreeOfPolymerisation
+abstract class SubstancePolymerDegreeOfPolymerisation
     with _$SubstancePolymerDegreeOfPolymerisation {
   /// [SubstancePolymerDegreeOfPolymerisation] Properties of a substance specific
   ///  to it being a polymer.
@@ -9946,7 +9946,7 @@ class SubstancePolymerDegreeOfPolymerisation
 /// [SubstancePolymerStructuralRepresentation] Properties of a substance
 ///  specific to it being a polymer.
 @freezed
-class SubstancePolymerStructuralRepresentation
+abstract class SubstancePolymerStructuralRepresentation
     with _$SubstancePolymerStructuralRepresentation {
   /// [SubstancePolymerStructuralRepresentation] Properties of a substance
   ///  specific to it being a polymer.
@@ -10083,7 +10083,7 @@ class SubstancePolymerStructuralRepresentation
 ///  cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes,
 ///  toxins, toxoids, recombinant vaccines, and immunomodulators.
 @freezed
-class SubstanceProtein with Resource, _$SubstanceProtein {
+abstract class SubstanceProtein with Resource, _$SubstanceProtein {
   /// [SubstanceProtein] A SubstanceProtein is defined as a single unit of a
   ///  linear amino acid sequence, or a combination of subunits that are either
   ///  covalently linked or have a defined invariant stoichiometric relationship.
@@ -10340,7 +10340,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
 ///  cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes,
 ///  toxins, toxoids, recombinant vaccines, and immunomodulators.
 @freezed
-class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
+abstract class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   /// [SubstanceProteinSubunit] A SubstanceProtein is defined as a single unit of
   ///  a linear amino acid sequence, or a combination of subunits that are either
   ///  covalently linked or have a defined invariant stoichiometric relationship.
@@ -10561,7 +10561,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
 
 /// [SubstanceReferenceInformation] FhirTodo.
 @freezed
-class SubstanceReferenceInformation
+abstract class SubstanceReferenceInformation
     with Resource, _$SubstanceReferenceInformation {
   /// [SubstanceReferenceInformation] FhirTodo.
   const SubstanceReferenceInformation._();
@@ -10754,7 +10754,7 @@ class SubstanceReferenceInformation
 
 /// [SubstanceReferenceInformationGene] FhirTodo.
 @freezed
-class SubstanceReferenceInformationGene
+abstract class SubstanceReferenceInformationGene
     with _$SubstanceReferenceInformationGene {
   /// [SubstanceReferenceInformationGene] FhirTodo.
   const SubstanceReferenceInformationGene._();
@@ -10867,7 +10867,7 @@ class SubstanceReferenceInformationGene
 
 /// [SubstanceReferenceInformationGeneElement] FhirTodo.
 @freezed
-class SubstanceReferenceInformationGeneElement
+abstract class SubstanceReferenceInformationGeneElement
     with _$SubstanceReferenceInformationGeneElement {
   /// [SubstanceReferenceInformationGeneElement] FhirTodo.
   const SubstanceReferenceInformationGeneElement._();
@@ -10981,7 +10981,7 @@ class SubstanceReferenceInformationGeneElement
 
 /// [SubstanceReferenceInformationTarget] FhirTodo.
 @freezed
-class SubstanceReferenceInformationTarget
+abstract class SubstanceReferenceInformationTarget
     with _$SubstanceReferenceInformationTarget {
   /// [SubstanceReferenceInformationTarget] FhirTodo.
   const SubstanceReferenceInformationTarget._();
@@ -11147,7 +11147,7 @@ class SubstanceReferenceInformationTarget
 ///  Specified Substance Group 1 information level. See for further explanation
 ///  the Substance Class: Structurally Diverse and the herbal annex.
 @freezed
-class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
+abstract class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   /// [SubstanceSourceMaterial] Source material shall capture information on the
   ///  taxonomic and anatomical origins as well as the fraction of a material
   ///  that can result in or can be modified to form a substance. This set of
@@ -11491,7 +11491,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
 @freezed
-class SubstanceSourceMaterialFractionDescription
+abstract class SubstanceSourceMaterialFractionDescription
     with _$SubstanceSourceMaterialFractionDescription {
   /// [SubstanceSourceMaterialFractionDescription] Source material shall capture
   ///  information on the taxonomic and anatomical origins as well as the
@@ -11653,7 +11653,7 @@ class SubstanceSourceMaterialFractionDescription
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
 @freezed
-class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
+abstract class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   /// [SubstanceSourceMaterialOrganism] Source material shall capture information
   ///  on the taxonomic and anatomical origins as well as the fraction of a
   ///  material that can result in or can be modified to form a substance. This
@@ -11855,7 +11855,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
 @freezed
-class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
+abstract class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   /// [SubstanceSourceMaterialAuthor] Source material shall capture information
   ///  on the taxonomic and anatomical origins as well as the fraction of a
   ///  material that can result in or can be modified to form a substance. This
@@ -12023,7 +12023,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
 @freezed
-class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
+abstract class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   /// [SubstanceSourceMaterialHybrid] Source material shall capture information
   ///  on the taxonomic and anatomical origins as well as the fraction of a
   ///  material that can result in or can be modified to form a substance. This
@@ -12231,7 +12231,7 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
 @freezed
-class SubstanceSourceMaterialOrganismGeneral
+abstract class SubstanceSourceMaterialOrganismGeneral
     with _$SubstanceSourceMaterialOrganismGeneral {
   /// [SubstanceSourceMaterialOrganismGeneral] Source material shall capture
   ///  information on the taxonomic and anatomical origins as well as the
@@ -12391,7 +12391,7 @@ class SubstanceSourceMaterialOrganismGeneral
 ///  further explanation the Substance Class: Structurally Diverse and the
 ///  herbal annex.
 @freezed
-class SubstanceSourceMaterialPartDescription
+abstract class SubstanceSourceMaterialPartDescription
     with _$SubstanceSourceMaterialPartDescription {
   /// [SubstanceSourceMaterialPartDescription] Source material shall capture
   ///  information on the taxonomic and anatomical origins as well as the

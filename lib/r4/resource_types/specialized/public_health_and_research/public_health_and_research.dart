@@ -15,7 +15,7 @@ part 'public_health_and_research.g.dart';
 
 /// [ResearchStudy] A process where a researcher or organization plans and
 @freezed
-class ResearchStudy with Resource, _$ResearchStudy {
+abstract class ResearchStudy with Resource, _$ResearchStudy {
   /// [ResearchStudy] A process where a researcher or organization plans and
   const ResearchStudy._();
 
@@ -373,7 +373,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
 
 /// [ResearchStudyArm] A process where a researcher or organization plans
 @freezed
-class ResearchStudyArm with _$ResearchStudyArm {
+abstract class ResearchStudyArm with _$ResearchStudyArm {
   /// [ResearchStudyArm] A process where a researcher or organization plans
   const ResearchStudyArm._();
 
@@ -503,7 +503,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
 
 /// [ResearchStudyObjective] A process where a researcher or organization
 @freezed
-class ResearchStudyObjective with _$ResearchStudyObjective {
+abstract class ResearchStudyObjective with _$ResearchStudyObjective {
   /// [ResearchStudyObjective] A process where a researcher or organization
   const ResearchStudyObjective._();
 
@@ -619,7 +619,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
 
 /// [ResearchSubject] A physical entity which is the primary unit of
 @freezed
-class ResearchSubject with Resource, _$ResearchSubject {
+abstract class ResearchSubject with Resource, _$ResearchSubject {
   /// [ResearchSubject] A physical entity which is the primary unit of
   const ResearchSubject._();
 

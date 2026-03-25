@@ -17,7 +17,7 @@ part 'management.g.dart';
 
 /// [Encounter] An interaction between a patient and healthcare provider(s)
 @freezed
-class Encounter with Resource, _$Encounter {
+abstract class Encounter with Resource, _$Encounter {
   /// [Encounter] An interaction between a patient and healthcare provider(s)
   const Encounter._();
 
@@ -366,7 +366,7 @@ class Encounter with Resource, _$Encounter {
 
 /// [EncounterStatusHistory] An interaction between a patient and healthcare
 @freezed
-class EncounterStatusHistory with _$EncounterStatusHistory {
+abstract class EncounterStatusHistory with _$EncounterStatusHistory {
   /// [EncounterStatusHistory] An interaction between a patient and healthcare
   const EncounterStatusHistory._();
 
@@ -480,7 +480,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 
 /// [EncounterClassHistory] An interaction between a patient and healthcare
 @freezed
-class EncounterClassHistory with _$EncounterClassHistory {
+abstract class EncounterClassHistory with _$EncounterClassHistory {
   /// [EncounterClassHistory] An interaction between a patient and healthcare
   const EncounterClassHistory._();
 
@@ -587,7 +587,7 @@ class EncounterClassHistory with _$EncounterClassHistory {
 
 /// [EncounterParticipant] An interaction between a patient and healthcare
 @freezed
-class EncounterParticipant with _$EncounterParticipant {
+abstract class EncounterParticipant with _$EncounterParticipant {
   /// [EncounterParticipant] An interaction between a patient and healthcare
   const EncounterParticipant._();
 
@@ -703,7 +703,7 @@ class EncounterParticipant with _$EncounterParticipant {
 
 /// [EncounterDiagnosis] An interaction between a patient and healthcare
 @freezed
-class EncounterDiagnosis with _$EncounterDiagnosis {
+abstract class EncounterDiagnosis with _$EncounterDiagnosis {
   /// [EncounterDiagnosis] An interaction between a patient and healthcare
   const EncounterDiagnosis._();
 
@@ -828,7 +828,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
 
 /// [EncounterHospitalization] An interaction between a patient and
 @freezed
-class EncounterHospitalization with _$EncounterHospitalization {
+abstract class EncounterHospitalization with _$EncounterHospitalization {
   /// [EncounterHospitalization] An interaction between a patient and
   const EncounterHospitalization._();
 
@@ -980,7 +980,7 @@ class EncounterHospitalization with _$EncounterHospitalization {
 
 /// [EncounterLocation] An interaction between a patient and healthcare
 @freezed
-class EncounterLocation with _$EncounterLocation {
+abstract class EncounterLocation with _$EncounterLocation {
   /// [EncounterLocation] An interaction between a patient and healthcare
   const EncounterLocation._();
 
@@ -1112,7 +1112,7 @@ class EncounterLocation with _$EncounterLocation {
 
 /// [EpisodeOfCare] An association between a patient and an organization /
 @freezed
-class EpisodeOfCare with Resource, _$EpisodeOfCare {
+abstract class EpisodeOfCare with Resource, _$EpisodeOfCare {
   /// [EpisodeOfCare] An association between a patient and an organization /
   const EpisodeOfCare._();
 
@@ -1363,7 +1363,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 
 /// [EpisodeOfCareStatusHistory] An association between a patient and an
 @freezed
-class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
+abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   /// [EpisodeOfCareStatusHistory] An association between a patient and an
   const EpisodeOfCareStatusHistory._();
 
@@ -1478,7 +1478,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 
 /// [EpisodeOfCareDiagnosis] An association between a patient and an
 @freezed
-class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
+abstract class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   /// [EpisodeOfCareDiagnosis] An association between a patient and an
   const EpisodeOfCareDiagnosis._();
 
@@ -1600,7 +1600,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 
 /// [Flag] Prospective warnings of potential issues when providing care to
 @freezed
-class Flag with Resource, _$Flag {
+abstract class Flag with Resource, _$Flag {
   /// [Flag] Prospective warnings of potential issues when providing care to
   const Flag._();
 
@@ -1823,7 +1823,7 @@ class Flag with Resource, _$Flag {
 
 /// [Library] The Library resource is a general-purpose container for
 @freezed
-class Library with Resource, _$Library {
+abstract class Library with Resource, _$Library {
   /// [Library] The Library resource is a general-purpose container for
   const Library._();
 
@@ -2346,7 +2346,7 @@ class Library with Resource, _$Library {
 
 /// [FhirList] A list is a curated collection of resources.
 @freezed
-class FhirList with Resource, _$FhirList {
+abstract class FhirList with Resource, _$FhirList {
   /// [FhirList] A list is a curated collection of resources.
   const FhirList._();
 
@@ -2610,7 +2610,7 @@ class FhirList with Resource, _$FhirList {
 
 /// [FhirListEntry] A list is a curated collection of resources.
 @freezed
-class FhirListEntry with _$FhirListEntry {
+abstract class FhirListEntry with _$FhirListEntry {
   /// [FhirListEntry] A list is a curated collection of resources.
   const FhirListEntry._();
 

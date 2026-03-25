@@ -16,7 +16,7 @@ part 'metadata_types.g.dart';
 
 /// [ContactDetail] Specifies contact information for a person or organization.
 @freezed
-class ContactDetail with _$ContactDetail {
+abstract class ContactDetail with _$ContactDetail {
   /// [ContactDetail] Specifies contact information for a person or organization.
   const ContactDetail._();
 
@@ -103,7 +103,7 @@ class ContactDetail with _$ContactDetail {
 ///  purpose over a period of time, might be handled/monitored by a specific
 ///  named person or organization.
 @freezed
-class ExtendedContactDetail with _$ExtendedContactDetail {
+abstract class ExtendedContactDetail with _$ExtendedContactDetail {
   /// [ExtendedContactDetail] Specifies contact information for a specific
   ///  purpose over a period of time, might be handled/monitored by a specific
   ///  named person or organization.
@@ -211,7 +211,7 @@ class ExtendedContactDetail with _$ExtendedContactDetail {
 
 /// [VirtualServiceDetail] Virtual Service Contact Details.
 @freezed
-class VirtualServiceDetail with _$VirtualServiceDetail {
+abstract class VirtualServiceDetail with _$VirtualServiceDetail {
   /// [VirtualServiceDetail] Virtual Service Contact Details.
   const VirtualServiceDetail._();
 
@@ -370,7 +370,7 @@ class VirtualServiceDetail with _$VirtualServiceDetail {
 
 /// [Availability] Availability data for an {item}.
 @freezed
-class Availability with _$Availability {
+abstract class Availability with _$Availability {
   /// [Availability] Availability data for an {item}.
   const Availability._();
 
@@ -448,7 +448,7 @@ class Availability with _$Availability {
 
 /// [AvailabilityAvailableTime] Availability data for an {item}.
 @freezed
-class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
+abstract class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
   /// [AvailabilityAvailableTime] Availability data for an {item}.
   const AvailabilityAvailableTime._();
 
@@ -587,7 +587,7 @@ class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
 
 /// [AvailabilityNotAvailableTime] Availability data for an {item}.
 @freezed
-class AvailabilityNotAvailableTime with _$AvailabilityNotAvailableTime {
+abstract class AvailabilityNotAvailableTime with _$AvailabilityNotAvailableTime {
   /// [AvailabilityNotAvailableTime] Availability data for an {item}.
   const AvailabilityNotAvailableTime._();
 
@@ -700,7 +700,7 @@ class AvailabilityNotAvailableTime with _$AvailabilityNotAvailableTime {
 
 /// [MonetaryComponent] Availability data for an {item}.
 @freezed
-class MonetaryComponent with _$MonetaryComponent {
+abstract class MonetaryComponent with _$MonetaryComponent {
   /// [MonetaryComponent] Availability data for an {item}.
   const MonetaryComponent._();
 
@@ -801,7 +801,7 @@ class MonetaryComponent with _$MonetaryComponent {
 /// [Contributor] A contributor to the content of a knowledge asset, including
 ///  authors, editors, reviewers, and endorsers.
 @freezed
-class Contributor with _$Contributor {
+abstract class Contributor with _$Contributor {
   /// [Contributor] A contributor to the content of a knowledge asset, including
   ///  authors, editors, reviewers, and endorsers.
   const Contributor._();
@@ -901,7 +901,7 @@ class Contributor with _$Contributor {
 /// [DataRequirement] Describes a required data item for evaluation in terms of
 ///  the type of data, and optional code or date-based filters of the data.
 @freezed
-class DataRequirement with _$DataRequirement {
+abstract class DataRequirement with _$DataRequirement {
   /// [DataRequirement] Describes a required data item for evaluation in terms of
   ///  the type of data, and optional code or date-based filters of the data.
   const DataRequirement._();
@@ -1083,7 +1083,7 @@ class DataRequirement with _$DataRequirement {
 ///  in terms of the type of data, and optional code or date-based filters of
 ///  the data.
 @freezed
-class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
+abstract class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// [DataRequirementCodeFilter] Describes a required data item for evaluation
   ///  in terms of the type of data, and optional code or date-based filters of
   ///  the data.
@@ -1246,7 +1246,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 ///  in terms of the type of data, and optional code or date-based filters of
 ///  the data.
 @freezed
-class DataRequirementDateFilter with _$DataRequirementDateFilter {
+abstract class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// [DataRequirementDateFilter] Describes a required data item for evaluation
   ///  in terms of the type of data, and optional code or date-based filters of
   ///  the data.
@@ -1435,7 +1435,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
 ///  in terms of the type of data, and optional code or date-based filters of
 ///  the data.
 @freezed
-class DataRequirementValueFilter with _$DataRequirementValueFilter {
+abstract class DataRequirementValueFilter with _$DataRequirementValueFilter {
   /// [DataRequirementValueFilter] Describes a required data item for evaluation
   ///  in terms of the type of data, and optional code or date-based filters of
   ///  the data.
@@ -1608,7 +1608,7 @@ class DataRequirementValueFilter with _$DataRequirementValueFilter {
 ///  terms of the type of data, and optional code or date-based filters of the
 ///  data.
 @freezed
-class DataRequirementSort with _$DataRequirementSort {
+abstract class DataRequirementSort with _$DataRequirementSort {
   /// [DataRequirementSort] Describes a required data item for evaluation in
   ///  terms of the type of data, and optional code or date-based filters of the
   ///  data.
@@ -1738,7 +1738,7 @@ class DataRequirementSort with _$DataRequirementSort {
 ///  provided by the caller as part of the $evaluate operation. Output
 ///  parameters are included in the GuidanceResponse.
 @freezed
-class ParameterDefinition with _$ParameterDefinition {
+abstract class ParameterDefinition with _$ParameterDefinition {
   /// [ParameterDefinition] The parameters to the module. This collection
   ///  specifies both the input and output parameters. Input parameters are
   ///  provided by the caller as part of the $evaluate operation. Output
@@ -1888,7 +1888,7 @@ class ParameterDefinition with _$ParameterDefinition {
 /// [RelatedArtifact] Related artifacts such as additional documentation,
 ///  justification, or bibliographic references.
 @freezed
-class RelatedArtifact with _$RelatedArtifact {
+abstract class RelatedArtifact with _$RelatedArtifact {
   /// [RelatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   const RelatedArtifact._();
@@ -2056,7 +2056,7 @@ class RelatedArtifact with _$RelatedArtifact {
 ///  can be named events, data events, or periodic, as determined by the type
 ///  element.
 @freezed
-class TriggerDefinition with _$TriggerDefinition {
+abstract class TriggerDefinition with _$TriggerDefinition {
   /// [TriggerDefinition] A description of a triggering event. Triggering events
   ///  can be named events, data events, or periodic, as determined by the type
   ///  element.
@@ -2217,7 +2217,7 @@ class TriggerDefinition with _$TriggerDefinition {
 ///  be specific to the applicable population (e.g., age category, DRG) or the
 ///  specific context of care (e.g., venue, care setting, provider of care).
 @freezed
-class UsageContext with _$UsageContext {
+abstract class UsageContext with _$UsageContext {
   /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
   ///  to retrieve, index and/or categorize an artifact. This metadata can either
   ///  be specific to the applicable population (e.g., age category, DRG) or the
@@ -2329,7 +2329,7 @@ class UsageContext with _$UsageContext {
 ///  context in which the expression is evaluated, and how the result of the
 ///  expression is used.
 @freezed
-class FhirExpression with _$FhirExpression {
+abstract class FhirExpression with _$FhirExpression {
   /// [FhirExpression] A expression that is evaluated in a specified context and
   ///  returns a value. The context of use of the expression must specify the
   ///  context in which the expression is evaluated, and how the result of the

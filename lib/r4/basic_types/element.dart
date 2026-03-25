@@ -15,7 +15,7 @@ part 'element.g.dart';
 
 /// [Element] Base definition for all elements in a resource.
 @freezed
-class Element with _$Element {
+abstract class Element with _$Element {
   /// [Element] Base definition for all elements in a resource.
   const Element._();
 

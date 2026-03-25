@@ -15,7 +15,7 @@ part 'summary.g.dart';
 
 /// [AdverseEvent] Actual or  potential/avoided event causing unintended
 @freezed
-class AdverseEvent with Resource, _$AdverseEvent {
+abstract class AdverseEvent with Resource, _$AdverseEvent {
   /// [AdverseEvent] Actual or  potential/avoided event causing unintended
   const AdverseEvent._();
 
@@ -222,7 +222,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
 
 /// [AdverseEventSuspectEntity] Actual or  potential/avoided event causing
 @freezed
-class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
+abstract class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   /// [AdverseEventSuspectEntity] Actual or  potential/avoided event causing
   const AdverseEventSuspectEntity._();
 
@@ -306,7 +306,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
 
 /// [AdverseEventCausality] Actual or  potential/avoided event causing
 @freezed
-class AdverseEventCausality with _$AdverseEventCausality {
+abstract class AdverseEventCausality with _$AdverseEventCausality {
   /// [AdverseEventCausality] Actual or  potential/avoided event causing
   const AdverseEventCausality._();
 
@@ -398,7 +398,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
 
 /// [AllergyIntolerance] Risk of harmful or undesirable, physiological
 @freezed
-class AllergyIntolerance with Resource, _$AllergyIntolerance {
+abstract class AllergyIntolerance with Resource, _$AllergyIntolerance {
   /// [AllergyIntolerance] Risk of harmful or undesirable, physiological
   const AllergyIntolerance._();
 
@@ -624,7 +624,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
 
 /// [AllergyIntoleranceReaction] Risk of harmful or undesirable,
 @freezed
-class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
+abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   /// [AllergyIntoleranceReaction] Risk of harmful or undesirable,
   const AllergyIntoleranceReaction._();
 
@@ -743,7 +743,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 
 /// [ClinicalImpression] A record of a clinical assessment performed to
 @freezed
-class ClinicalImpression with Resource, _$ClinicalImpression {
+abstract class ClinicalImpression with Resource, _$ClinicalImpression {
   /// [ClinicalImpression] A record of a clinical assessment performed to
   const ClinicalImpression._();
 
@@ -961,7 +961,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
 
 /// [ClinicalImpressionInvestigation] A record of a clinical assessment
 @freezed
-class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
+abstract class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   /// [ClinicalImpressionInvestigation] A record of a clinical assessment
   const ClinicalImpressionInvestigation._();
 
@@ -1050,7 +1050,7 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
 
 /// [ClinicalImpressionFinding] A record of a clinical assessment performed
 @freezed
-class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
+abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   /// [ClinicalImpressionFinding] A record of a clinical assessment performed
   const ClinicalImpressionFinding._();
 
@@ -1143,7 +1143,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 
 /// [Condition] A clinical condition, problem, diagnosis, or other event,
 @freezed
-class Condition with Resource, _$Condition {
+abstract class Condition with Resource, _$Condition {
   /// [Condition] A clinical condition, problem, diagnosis, or other event,
   const Condition._();
 
@@ -1378,7 +1378,7 @@ class Condition with Resource, _$Condition {
 
 /// [ConditionStage] A clinical condition, problem, diagnosis, or other
 @freezed
-class ConditionStage with _$ConditionStage {
+abstract class ConditionStage with _$ConditionStage {
   /// [ConditionStage] A clinical condition, problem, diagnosis, or other
   const ConditionStage._();
 
@@ -1463,7 +1463,7 @@ class ConditionStage with _$ConditionStage {
 
 /// [ConditionEvidence] A clinical condition, problem, diagnosis, or other
 @freezed
-class ConditionEvidence with _$ConditionEvidence {
+abstract class ConditionEvidence with _$ConditionEvidence {
   /// [ConditionEvidence] A clinical condition, problem, diagnosis, or other
   const ConditionEvidence._();
 
@@ -1545,7 +1545,7 @@ class ConditionEvidence with _$ConditionEvidence {
 
 /// [DetectedIssue] Indicates an actual or potential clinical issue with or
 @freezed
-class DetectedIssue with Resource, _$DetectedIssue {
+abstract class DetectedIssue with Resource, _$DetectedIssue {
   /// [DetectedIssue] Indicates an actual or potential clinical issue with or
   const DetectedIssue._();
 
@@ -1726,7 +1726,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
 
 /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
 @freezed
-class DetectedIssueEvidence with _$DetectedIssueEvidence {
+abstract class DetectedIssueEvidence with _$DetectedIssueEvidence {
   /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
   const DetectedIssueEvidence._();
 
@@ -1808,7 +1808,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
 
 /// [DetectedIssueMitigation] Indicates an actual or potential clinical
 @freezed
-class DetectedIssueMitigation with _$DetectedIssueMitigation {
+abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
   /// [DetectedIssueMitigation] Indicates an actual or potential clinical
   const DetectedIssueMitigation._();
 
@@ -1898,7 +1898,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
 
 /// [FamilyMemberHistory] Significant health conditions for a person related
 @freezed
-class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
+abstract class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// [FamilyMemberHistory] Significant health conditions for a person related
   const FamilyMemberHistory._();
 
@@ -2147,7 +2147,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
 
 /// [FamilyMemberHistoryCondition] Significant health conditions for a
 @freezed
-class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
+abstract class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   /// [FamilyMemberHistoryCondition] Significant health conditions for a
   const FamilyMemberHistoryCondition._();
 
@@ -2266,7 +2266,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
 
 /// [Procedure] An action that is or was performed on or for a patient. This
 @freezed
-class Procedure with Resource, _$Procedure {
+abstract class Procedure with Resource, _$Procedure {
   /// [Procedure] An action that is or was performed on or for a patient. This
   const Procedure._();
 
@@ -2534,7 +2534,7 @@ class Procedure with Resource, _$Procedure {
 
 /// [ProcedurePerformer] An action that is or was performed on or for a
 @freezed
-class ProcedurePerformer with _$ProcedurePerformer {
+abstract class ProcedurePerformer with _$ProcedurePerformer {
   /// [ProcedurePerformer] An action that is or was performed on or for a
   const ProcedurePerformer._();
 
@@ -2619,7 +2619,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
 
 /// [ProcedureFocalDevice] An action that is or was performed on or for a
 @freezed
-class ProcedureFocalDevice with _$ProcedureFocalDevice {
+abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
   /// [ProcedureFocalDevice] An action that is or was performed on or for a
   const ProcedureFocalDevice._();
 

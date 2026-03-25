@@ -18,7 +18,7 @@ part 'support.enums.dart';
 ///  health care products and services. Includes both insurance and
 ///  self-payment.
 @freezed
-class Coverage with Resource, _$Coverage {
+abstract class Coverage with Resource, _$Coverage {
   /// [Coverage] Financial instrument which may be used to reimburse or pay for
   ///  health care products and services. Includes both insurance and
   ///  self-payment.
@@ -368,7 +368,7 @@ class Coverage with Resource, _$Coverage {
 ///  pay for health care products and services. Includes both insurance and
 ///  self-payment.
 @freezed
-class CoveragePaymentBy with _$CoveragePaymentBy {
+abstract class CoveragePaymentBy with _$CoveragePaymentBy {
   /// [CoveragePaymentBy] Financial instrument which may be used to reimburse or
   ///  pay for health care products and services. Includes both insurance and
   ///  self-payment.
@@ -485,7 +485,7 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
 ///  for health care products and services. Includes both insurance and
 ///  self-payment.
 @freezed
-class CoverageClass with _$CoverageClass {
+abstract class CoverageClass with _$CoverageClass {
   /// [CoverageClass] Financial instrument which may be used to reimburse or pay
   ///  for health care products and services. Includes both insurance and
   ///  self-payment.
@@ -611,7 +611,7 @@ class CoverageClass with _$CoverageClass {
 ///  reimburse or pay for health care products and services. Includes both
 ///  insurance and self-payment.
 @freezed
-class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
+abstract class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// [CoverageCostToBeneficiary] Financial instrument which may be used to
   ///  reimburse or pay for health care products and services. Includes both
   ///  insurance and self-payment.
@@ -759,7 +759,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
 ///  pay for health care products and services. Includes both insurance and
 ///  self-payment.
 @freezed
-class CoverageException with _$CoverageException {
+abstract class CoverageException with _$CoverageException {
   /// [CoverageException] Financial instrument which may be used to reimburse or
   ///  pay for health care products and services. Includes both insurance and
   ///  self-payment.
@@ -871,7 +871,7 @@ class CoverageException with _$CoverageException {
 ///  regarding whether the stated coverage is valid and in-force and optionally
 ///  to provide the insurance details of the policy.
 @freezed
-class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
+abstract class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
   ///  respond, in the form of an CoverageEligibilityResponse, with information
@@ -1175,7 +1175,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
 ///  regarding whether the stated coverage is valid and in-force and optionally
 ///  to provide the insurance details of the policy.
 @freezed
-class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
+abstract class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
   /// [CoverageEligibilityRequestEvent] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
   ///  respond, in the form of an CoverageEligibilityResponse, with information
@@ -1307,7 +1307,7 @@ class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
 ///  information regarding whether the stated coverage is valid and in-force
 ///  and optionally to provide the insurance details of the policy.
 @freezed
-class CoverageEligibilityRequestSupportingInfo
+abstract class CoverageEligibilityRequestSupportingInfo
     with _$CoverageEligibilityRequestSupportingInfo {
   /// [CoverageEligibilityRequestSupportingInfo] The CoverageEligibilityRequest
   ///  provides patient and insurance coverage information to an insurer for them
@@ -1449,7 +1449,7 @@ class CoverageEligibilityRequestSupportingInfo
 ///  information regarding whether the stated coverage is valid and in-force
 ///  and optionally to provide the insurance details of the policy.
 @freezed
-class CoverageEligibilityRequestInsurance
+abstract class CoverageEligibilityRequestInsurance
     with _$CoverageEligibilityRequestInsurance {
   /// [CoverageEligibilityRequestInsurance] The CoverageEligibilityRequest
   ///  provides patient and insurance coverage information to an insurer for them
@@ -1596,7 +1596,7 @@ class CoverageEligibilityRequestInsurance
 ///  regarding whether the stated coverage is valid and in-force and optionally
 ///  to provide the insurance details of the policy.
 @freezed
-class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
+abstract class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
   ///  respond, in the form of an CoverageEligibilityResponse, with information
@@ -1774,7 +1774,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
 ///  information regarding whether the stated coverage is valid and in-force
 ///  and optionally to provide the insurance details of the policy.
 @freezed
-class CoverageEligibilityRequestDiagnosis
+abstract class CoverageEligibilityRequestDiagnosis
     with _$CoverageEligibilityRequestDiagnosis {
   /// [CoverageEligibilityRequestDiagnosis] The CoverageEligibilityRequest
   ///  provides patient and insurance coverage information to an insurer for them
@@ -1895,7 +1895,7 @@ class CoverageEligibilityRequestDiagnosis
 /// [CoverageEligibilityResponse] This resource provides eligibility and plan
 ///  details from the processing of an CoverageEligibilityRequest resource.
 @freezed
-class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
+abstract class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// [CoverageEligibilityResponse] This resource provides eligibility and plan
   ///  details from the processing of an CoverageEligibilityRequest resource.
   const CoverageEligibilityResponse._();
@@ -2209,7 +2209,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
 /// [CoverageEligibilityResponseEvent] This resource provides eligibility and
 ///  plan details from the processing of an CoverageEligibilityRequest resource.
 @freezed
-class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
+abstract class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
   /// [CoverageEligibilityResponseEvent] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest resource.
   const CoverageEligibilityResponseEvent._();
@@ -2334,7 +2334,7 @@ class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
 ///  and plan details from the processing of an CoverageEligibilityRequest
 ///  resource.
 @freezed
-class CoverageEligibilityResponseInsurance
+abstract class CoverageEligibilityResponseInsurance
     with _$CoverageEligibilityResponseInsurance {
   /// [CoverageEligibilityResponseInsurance] This resource provides eligibility
   ///  and plan details from the processing of an CoverageEligibilityRequest
@@ -2474,7 +2474,7 @@ class CoverageEligibilityResponseInsurance
 /// [CoverageEligibilityResponseItem] This resource provides eligibility and
 ///  plan details from the processing of an CoverageEligibilityRequest resource.
 @freezed
-class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
+abstract class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// [CoverageEligibilityResponseItem] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest resource.
   const CoverageEligibilityResponseItem._();
@@ -2695,7 +2695,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
 /// [CoverageEligibilityResponseBenefit] This resource provides eligibility and
 ///  plan details from the processing of an CoverageEligibilityRequest resource.
 @freezed
-class CoverageEligibilityResponseBenefit
+abstract class CoverageEligibilityResponseBenefit
     with _$CoverageEligibilityResponseBenefit {
   /// [CoverageEligibilityResponseBenefit] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest resource.
@@ -2861,7 +2861,7 @@ class CoverageEligibilityResponseBenefit
 /// [CoverageEligibilityResponseError] This resource provides eligibility and
 ///  plan details from the processing of an CoverageEligibilityRequest resource.
 @freezed
-class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
+abstract class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   /// [CoverageEligibilityResponseError] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest resource.
   const CoverageEligibilityResponseError._();
@@ -2984,7 +2984,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
 /// [EnrollmentRequest] This resource provides the insurance enrollment details
 ///  to the insurer regarding a specified coverage.
 @freezed
-class EnrollmentRequest with Resource, _$EnrollmentRequest {
+abstract class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// [EnrollmentRequest] This resource provides the insurance enrollment details
   ///  to the insurer regarding a specified coverage.
   const EnrollmentRequest._();
@@ -3202,7 +3202,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 /// [EnrollmentResponse] This resource provides enrollment and plan details
 ///  from the processing of an EnrollmentRequest resource.
 @freezed
-class EnrollmentResponse with Resource, _$EnrollmentResponse {
+abstract class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// [EnrollmentResponse] This resource provides enrollment and plan details
   ///  from the processing of an EnrollmentRequest resource.
   const EnrollmentResponse._();

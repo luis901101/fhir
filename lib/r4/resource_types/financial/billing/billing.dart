@@ -15,7 +15,7 @@ part 'billing.g.dart';
 
 /// [Claim] A provider issued list of professional services and products
 @freezed
-class Claim with Resource, _$Claim {
+abstract class Claim with Resource, _$Claim {
   /// [Claim] A provider issued list of professional services and products
   const Claim._();
 
@@ -378,7 +378,7 @@ class Claim with Resource, _$Claim {
 
 /// [ClaimRelated] A provider issued list of professional services and
 @freezed
-class ClaimRelated with _$ClaimRelated {
+abstract class ClaimRelated with _$ClaimRelated {
   /// [ClaimRelated] A provider issued list of professional services and
   const ClaimRelated._();
 
@@ -492,7 +492,7 @@ class ClaimRelated with _$ClaimRelated {
 
 /// [ClaimPayee] A provider issued list of professional services and
 @freezed
-class ClaimPayee with _$ClaimPayee {
+abstract class ClaimPayee with _$ClaimPayee {
   /// [ClaimPayee] A provider issued list of professional services and
   const ClaimPayee._();
 
@@ -601,7 +601,7 @@ class ClaimPayee with _$ClaimPayee {
 
 /// [ClaimCareTeam] A provider issued list of professional services and
 @freezed
-class ClaimCareTeam with _$ClaimCareTeam {
+abstract class ClaimCareTeam with _$ClaimCareTeam {
   /// [ClaimCareTeam] A provider issued list of professional services and
   const ClaimCareTeam._();
 
@@ -739,7 +739,7 @@ class ClaimCareTeam with _$ClaimCareTeam {
 
 /// [ClaimSupportingInfo] A provider issued list of professional services
 @freezed
-class ClaimSupportingInfo with _$ClaimSupportingInfo {
+abstract class ClaimSupportingInfo with _$ClaimSupportingInfo {
   /// [ClaimSupportingInfo] A provider issued list of professional services
   const ClaimSupportingInfo._();
 
@@ -939,7 +939,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
 
 /// [ClaimDiagnosis] A provider issued list of professional services and
 @freezed
-class ClaimDiagnosis with _$ClaimDiagnosis {
+abstract class ClaimDiagnosis with _$ClaimDiagnosis {
   /// [ClaimDiagnosis] A provider issued list of professional services and
   const ClaimDiagnosis._();
 
@@ -1081,7 +1081,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
 
 /// [ClaimProcedure] A provider issued list of professional services and
 @freezed
-class ClaimProcedure with _$ClaimProcedure {
+abstract class ClaimProcedure with _$ClaimProcedure {
   /// [ClaimProcedure] A provider issued list of professional services and
   const ClaimProcedure._();
 
@@ -1222,7 +1222,7 @@ class ClaimProcedure with _$ClaimProcedure {
 
 /// [ClaimInsurance] A provider issued list of professional services and
 @freezed
-class ClaimInsurance with _$ClaimInsurance {
+abstract class ClaimInsurance with _$ClaimInsurance {
   /// [ClaimInsurance] A provider issued list of professional services and
   const ClaimInsurance._();
 
@@ -1394,7 +1394,7 @@ class ClaimInsurance with _$ClaimInsurance {
 
 /// [ClaimAccident] A provider issued list of professional services and
 @freezed
-class ClaimAccident with _$ClaimAccident {
+abstract class ClaimAccident with _$ClaimAccident {
   /// [ClaimAccident] A provider issued list of professional services and
   const ClaimAccident._();
 
@@ -1522,7 +1522,7 @@ class ClaimAccident with _$ClaimAccident {
 
 /// [ClaimItem] A provider issued list of professional services and products
 @freezed
-class ClaimItem with _$ClaimItem {
+abstract class ClaimItem with _$ClaimItem {
   /// [ClaimItem] A provider issued list of professional services and products
   const ClaimItem._();
 
@@ -1811,7 +1811,7 @@ class ClaimItem with _$ClaimItem {
 
 /// [ClaimDetail] A provider issued list of professional services and
 @freezed
-class ClaimDetail with _$ClaimDetail {
+abstract class ClaimDetail with _$ClaimDetail {
   /// [ClaimDetail] A provider issued list of professional services and
   const ClaimDetail._();
 
@@ -2002,7 +2002,7 @@ class ClaimDetail with _$ClaimDetail {
 
 /// [ClaimSubDetail] A provider issued list of professional services and
 @freezed
-class ClaimSubDetail with _$ClaimSubDetail {
+abstract class ClaimSubDetail with _$ClaimSubDetail {
   /// [ClaimSubDetail] A provider issued list of professional services and
   const ClaimSubDetail._();
 
@@ -2186,7 +2186,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
 
 /// [ClaimResponse] This resource provides the adjudication details from the
 @freezed
-class ClaimResponse with Resource, _$ClaimResponse {
+abstract class ClaimResponse with Resource, _$ClaimResponse {
   /// [ClaimResponse] This resource provides the adjudication details from the
   const ClaimResponse._();
 
@@ -2563,7 +2563,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 
 /// [ClaimResponseItem] This resource provides the adjudication details from
 @freezed
-class ClaimResponseItem with _$ClaimResponseItem {
+abstract class ClaimResponseItem with _$ClaimResponseItem {
   /// [ClaimResponseItem] This resource provides the adjudication details from
   const ClaimResponseItem._();
 
@@ -2697,7 +2697,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
 
 /// [ClaimResponseAdjudication] This resource provides the adjudication
 @freezed
-class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
+abstract class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   /// [ClaimResponseAdjudication] This resource provides the adjudication
   const ClaimResponseAdjudication._();
 
@@ -2830,7 +2830,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 
 /// [ClaimResponseDetail] This resource provides the adjudication details
 @freezed
-class ClaimResponseDetail with _$ClaimResponseDetail {
+abstract class ClaimResponseDetail with _$ClaimResponseDetail {
   /// [ClaimResponseDetail] This resource provides the adjudication details
   const ClaimResponseDetail._();
 
@@ -2958,7 +2958,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
 
 /// [ClaimResponseSubDetail] This resource provides the adjudication details
 @freezed
-class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
+abstract class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   /// [ClaimResponseSubDetail] This resource provides the adjudication details
   const ClaimResponseSubDetail._();
 
@@ -3083,7 +3083,7 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
 
 /// [ClaimResponseAddItem] This resource provides the adjudication details
 @freezed
-class ClaimResponseAddItem with _$ClaimResponseAddItem {
+abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
   /// [ClaimResponseAddItem] This resource provides the adjudication details
   const ClaimResponseAddItem._();
 
@@ -3349,7 +3349,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
 /// [ClaimResponseDetail1] This resource provides the adjudication details
 @freezed
-class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
+abstract class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   /// [ClaimResponseDetail1] This resource provides the adjudication details
   const ClaimResponseDetail1._();
 
@@ -3522,7 +3522,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
 
 /// [ClaimResponseSubDetail1] This resource provides the adjudication
 @freezed
-class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
+abstract class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   /// [ClaimResponseSubDetail1] This resource provides the adjudication
   const ClaimResponseSubDetail1._();
 
@@ -3688,7 +3688,7 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
 
 /// [ClaimResponseTotal] This resource provides the adjudication details
 @freezed
-class ClaimResponseTotal with _$ClaimResponseTotal {
+abstract class ClaimResponseTotal with _$ClaimResponseTotal {
   /// [ClaimResponseTotal] This resource provides the adjudication details
   const ClaimResponseTotal._();
 
@@ -3802,7 +3802,7 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
 
 /// [ClaimResponsePayment] This resource provides the adjudication details
 @freezed
-class ClaimResponsePayment with _$ClaimResponsePayment {
+abstract class ClaimResponsePayment with _$ClaimResponsePayment {
   /// [ClaimResponsePayment] This resource provides the adjudication details
   const ClaimResponsePayment._();
 
@@ -3939,7 +3939,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
 
 /// [ClaimResponseProcessNote] This resource provides the adjudication
 @freezed
-class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
+abstract class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   /// [ClaimResponseProcessNote] This resource provides the adjudication
   const ClaimResponseProcessNote._();
 
@@ -4070,7 +4070,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
 
 /// [ClaimResponseInsurance] This resource provides the adjudication details
 @freezed
-class ClaimResponseInsurance with _$ClaimResponseInsurance {
+abstract class ClaimResponseInsurance with _$ClaimResponseInsurance {
   /// [ClaimResponseInsurance] This resource provides the adjudication details
   const ClaimResponseInsurance._();
 
@@ -4220,7 +4220,7 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
 
 /// [ClaimResponseError] This resource provides the adjudication details
 @freezed
-class ClaimResponseError with _$ClaimResponseError {
+abstract class ClaimResponseError with _$ClaimResponseError {
   /// [ClaimResponseError] This resource provides the adjudication details
   const ClaimResponseError._();
 
@@ -4365,7 +4365,7 @@ class ClaimResponseError with _$ClaimResponseError {
 
 /// [Invoice] Invoice containing collected ChargeItems from an Account with
 @freezed
-class Invoice with Resource, _$Invoice {
+abstract class Invoice with Resource, _$Invoice {
   /// [Invoice] Invoice containing collected ChargeItems from an Account with
   const Invoice._();
 
@@ -4657,7 +4657,7 @@ class Invoice with Resource, _$Invoice {
 
 /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
 @freezed
-class InvoiceParticipant with _$InvoiceParticipant {
+abstract class InvoiceParticipant with _$InvoiceParticipant {
   /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
   const InvoiceParticipant._();
 
@@ -4769,7 +4769,7 @@ class InvoiceParticipant with _$InvoiceParticipant {
 
 /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
 @freezed
-class InvoiceLineItem with _$InvoiceLineItem {
+abstract class InvoiceLineItem with _$InvoiceLineItem {
   /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
   const InvoiceLineItem._();
 
@@ -4912,7 +4912,7 @@ class InvoiceLineItem with _$InvoiceLineItem {
 
 /// [InvoicePriceComponent] Invoice containing collected ChargeItems from an
 @freezed
-class InvoicePriceComponent with _$InvoicePriceComponent {
+abstract class InvoicePriceComponent with _$InvoicePriceComponent {
   /// [InvoicePriceComponent] Invoice containing collected ChargeItems from an
   const InvoicePriceComponent._();
 

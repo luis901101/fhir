@@ -15,7 +15,7 @@ part 'entities1.g.dart';
 
 /// [FhirEndpoint] The technical details of an endpoint that can be used for
 @freezed
-class FhirEndpoint with Resource, _$FhirEndpoint {
+abstract class FhirEndpoint with Resource, _$FhirEndpoint {
   /// [FhirEndpoint] The technical details of an endpoint that can be used for
   const FhirEndpoint._();
 
@@ -361,7 +361,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
 
 /// [HealthcareService] The details of a healthcare service available at a
 @freezed
-class HealthcareService with Resource, _$HealthcareService {
+abstract class HealthcareService with Resource, _$HealthcareService {
   /// [HealthcareService] The details of a healthcare service available at a
   const HealthcareService._();
 
@@ -804,7 +804,7 @@ class HealthcareService with Resource, _$HealthcareService {
 
 /// [HealthcareServiceEligibility] The details of a healthcare service
 @freezed
-class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
+abstract class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   /// [HealthcareServiceEligibility] The details of a healthcare service
   const HealthcareServiceEligibility._();
 
@@ -915,7 +915,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
 
 /// [HealthcareServiceAvailableTime] The details of a healthcare service
 @freezed
-class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
+abstract class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   /// [HealthcareServiceAvailableTime] The details of a healthcare service
   const HealthcareServiceAvailableTime._();
 
@@ -1060,7 +1060,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 
 /// [HealthcareServiceNotAvailable] The details of a healthcare service
 @freezed
-class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
+abstract class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   /// [HealthcareServiceNotAvailable] The details of a healthcare service
   const HealthcareServiceNotAvailable._();
 
@@ -1175,7 +1175,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
 
 /// [Location] Details and position information for a physical place where
 @freezed
-class Location with Resource, _$Location {
+abstract class Location with Resource, _$Location {
   /// [Location] Details and position information for a physical place where
   const Location._();
 
@@ -1612,7 +1612,7 @@ class Location with Resource, _$Location {
 
 /// [LocationPosition] Details and position information for a physical place
 @freezed
-class LocationPosition with _$LocationPosition {
+abstract class LocationPosition with _$LocationPosition {
   /// [LocationPosition] Details and position information for a physical place
   const LocationPosition._();
 
@@ -1745,7 +1745,7 @@ class LocationPosition with _$LocationPosition {
 
 /// [LocationHoursOfOperation] Details and position information for a
 @freezed
-class LocationHoursOfOperation with _$LocationHoursOfOperation {
+abstract class LocationHoursOfOperation with _$LocationHoursOfOperation {
   /// [LocationHoursOfOperation] Details and position information for a
   const LocationHoursOfOperation._();
 
@@ -1884,7 +1884,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
 
 /// [Organization] A formally or informally recognized grouping of people or
 @freezed
-class Organization with Resource, _$Organization {
+abstract class Organization with Resource, _$Organization {
   /// [Organization] A formally or informally recognized grouping of people or
   const Organization._();
 
@@ -2340,7 +2340,7 @@ class Organization with Resource, _$Organization {
 
 /// [OrganizationContact] A formally or informally recognized grouping of
 @freezed
-class OrganizationContact with _$OrganizationContact {
+abstract class OrganizationContact with _$OrganizationContact {
   /// [OrganizationContact] A formally or informally recognized grouping of
   const OrganizationContact._();
 
@@ -2609,7 +2609,7 @@ class OrganizationContact with _$OrganizationContact {
 
 /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
 @freezed
-class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
+abstract class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
   const OrganizationAffiliation._();
 

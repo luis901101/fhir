@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,257 +9,308 @@ part of 'element.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Element _$ElementFromJson(Map<String, dynamic> json) {
-  return _Element.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Element {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
 
-  /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
-  /// safe and manageable, there is a strict set of governance  applied to the
-  /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  int? get line => throw _privateConstructorUsedError;
-  int? get col => throw _privateConstructorUsedError;
+/// [id] Unique id for the element within a resource (for internal
+///  references). This may be any string value that does not contain spaces.
+@JsonKey(name: 'id') String? get fhirId;/// [extension_] May be used to represent additional information that is not
+/// part of the basic definition of the element. To make the use of extensions
+/// safe and manageable, there is a strict set of governance  applied to the
+/// definition and use of extensions. Though any implementer can define an
+/// extension, there is a set of requirements that SHALL be met as part of the
+///  definition of the extension.
+@JsonKey(name: 'extension') List<FhirExtension>? get extension_; int? get line; int? get col;
+/// Create a copy of Element
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ElementCopyWith<Element> get copyWith => _$ElementCopyWithImpl<Element>(this as Element, _$identity);
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ElementCopyWith<Element> get copyWith => throw _privateConstructorUsedError;
+  /// Serializes this Element to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Element&&(identical(other.fhirId, fhirId) || other.fhirId == fhirId)&&const DeepCollectionEquality().equals(other.extension_, extension_)&&(identical(other.line, line) || other.line == line)&&(identical(other.col, col) || other.col == col));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,fhirId,const DeepCollectionEquality().hash(extension_),line,col);
+
+@override
+String toString() {
+  return 'Element(fhirId: $fhirId, extension_: $extension_, line: $line, col: $col)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ElementCopyWith<$Res> {
-  factory $ElementCopyWith(Element value, $Res Function(Element) then) =
-      _$ElementCopyWithImpl<$Res, Element>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      int? line,
-      int? col});
-}
+abstract mixin class $ElementCopyWith<$Res>  {
+  factory $ElementCopyWith(Element value, $Res Function(Element) _then) = _$ElementCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'id') String? fhirId,@JsonKey(name: 'extension') List<FhirExtension>? extension_, int? line, int? col
+});
 
+
+
+
+}
 /// @nodoc
-class _$ElementCopyWithImpl<$Res, $Val extends Element>
+class _$ElementCopyWithImpl<$Res>
     implements $ElementCopyWith<$Res> {
-  _$ElementCopyWithImpl(this._value, this._then);
+  _$ElementCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Element _self;
+  final $Res Function(Element) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? fhirId = freezed,
-    Object? extension_ = freezed,
-    Object? line = freezed,
-    Object? col = freezed,
-  }) {
-    return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      line: freezed == line
-          ? _value.line
-          : line // ignore: cast_nullable_to_non_nullable
-              as int?,
-      col: freezed == col
-          ? _value.col
-          : col // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
-  }
+/// Create a copy of Element
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? fhirId = freezed,Object? extension_ = freezed,Object? line = freezed,Object? col = freezed,}) {
+  return _then(_self.copyWith(
+fhirId: freezed == fhirId ? _self.fhirId : fhirId // ignore: cast_nullable_to_non_nullable
+as String?,extension_: freezed == extension_ ? _self.extension_ : extension_ // ignore: cast_nullable_to_non_nullable
+as List<FhirExtension>?,line: freezed == line ? _self.line : line // ignore: cast_nullable_to_non_nullable
+as int?,col: freezed == col ? _self.col : col // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$ElementImplCopyWith<$Res> implements $ElementCopyWith<$Res> {
-  factory _$$ElementImplCopyWith(
-          _$ElementImpl value, $Res Function(_$ElementImpl) then) =
-      __$$ElementImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      int? line,
-      int? col});
 }
 
-/// @nodoc
-class __$$ElementImplCopyWithImpl<$Res>
-    extends _$ElementCopyWithImpl<$Res, _$ElementImpl>
-    implements _$$ElementImplCopyWith<$Res> {
-  __$$ElementImplCopyWithImpl(
-      _$ElementImpl _value, $Res Function(_$ElementImpl) _then)
-      : super(_value, _then);
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? fhirId = freezed,
-    Object? extension_ = freezed,
-    Object? line = freezed,
-    Object? col = freezed,
-  }) {
-    return _then(_$ElementImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      line: freezed == line
-          ? _value.line
-          : line // ignore: cast_nullable_to_non_nullable
-              as int?,
-      col: freezed == col
-          ? _value.col
-          : col // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [Element].
+extension ElementPatterns on Element {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Element value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Element() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Element value)  $default,){
+final _that = this;
+switch (_that) {
+case _Element():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Element value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Element() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'id')  String? fhirId, @JsonKey(name: 'extension')  List<FhirExtension>? extension_,  int? line,  int? col)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Element() when $default != null:
+return $default(_that.fhirId,_that.extension_,_that.line,_that.col);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'id')  String? fhirId, @JsonKey(name: 'extension')  List<FhirExtension>? extension_,  int? line,  int? col)  $default,) {final _that = this;
+switch (_that) {
+case _Element():
+return $default(_that.fhirId,_that.extension_,_that.line,_that.col);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'id')  String? fhirId, @JsonKey(name: 'extension')  List<FhirExtension>? extension_,  int? line,  int? col)?  $default,) {final _that = this;
+switch (_that) {
+case _Element() when $default != null:
+return $default(_that.fhirId,_that.extension_,_that.line,_that.col);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ElementImpl extends _Element {
-  const _$ElementImpl(
-      {@JsonKey(name: 'id') this.fhirId,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      this.line,
-      this.col})
-      : _extension_ = extension_,
-        super._();
 
-  factory _$ElementImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ElementImplFromJson(json);
+class _Element extends Element {
+  const _Element({@JsonKey(name: 'id') this.fhirId, @JsonKey(name: 'extension') final  List<FhirExtension>? extension_, this.line, this.col}): _extension_ = extension_,super._();
+  factory _Element.fromJson(Map<String, dynamic> json) => _$ElementFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
-
-  /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
-  /// safe and manageable, there is a strict set of governance  applied to the
-  /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension.
-  final List<FhirExtension>? _extension_;
-
-  /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
-  /// safe and manageable, there is a strict set of governance  applied to the
-  /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension.
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final int? line;
-  @override
-  final int? col;
-
-  @override
-  String toString() {
-    return 'Element(fhirId: $fhirId, extension_: $extension_, line: $line, col: $col)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ElementImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            (identical(other.line, line) || other.line == line) &&
-            (identical(other.col, col) || other.col == col));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, fhirId,
-      const DeepCollectionEquality().hash(_extension_), line, col);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ElementImplCopyWith<_$ElementImpl> get copyWith =>
-      __$$ElementImplCopyWithImpl<_$ElementImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ElementImplToJson(
-      this,
-    );
-  }
+/// [id] Unique id for the element within a resource (for internal
+///  references). This may be any string value that does not contain spaces.
+@override@JsonKey(name: 'id') final  String? fhirId;
+/// [extension_] May be used to represent additional information that is not
+/// part of the basic definition of the element. To make the use of extensions
+/// safe and manageable, there is a strict set of governance  applied to the
+/// definition and use of extensions. Though any implementer can define an
+/// extension, there is a set of requirements that SHALL be met as part of the
+///  definition of the extension.
+ final  List<FhirExtension>? _extension_;
+/// [extension_] May be used to represent additional information that is not
+/// part of the basic definition of the element. To make the use of extensions
+/// safe and manageable, there is a strict set of governance  applied to the
+/// definition and use of extensions. Though any implementer can define an
+/// extension, there is a set of requirements that SHALL be met as part of the
+///  definition of the extension.
+@override@JsonKey(name: 'extension') List<FhirExtension>? get extension_ {
+  final value = _extension_;
+  if (value == null) return null;
+  if (_extension_ is EqualUnmodifiableListView) return _extension_;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
-abstract class _Element extends Element {
-  const factory _Element(
-      {@JsonKey(name: 'id') final String? fhirId,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final int? line,
-      final int? col}) = _$ElementImpl;
-  const _Element._() : super._();
+@override final  int? line;
+@override final  int? col;
 
-  factory _Element.fromJson(Map<String, dynamic> json) = _$ElementImpl.fromJson;
+/// Create a copy of Element
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ElementCopyWith<_Element> get copyWith => __$ElementCopyWithImpl<_Element>(this, _$identity);
 
-  @override
-
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
-  @override
-
-  /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of extensions
-  /// safe and manageable, there is a strict set of governance  applied to the
-  /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of the
-  ///  definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  int? get line;
-  @override
-  int? get col;
-  @override
-  @JsonKey(ignore: true)
-  _$$ElementImplCopyWith<_$ElementImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$ElementToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Element&&(identical(other.fhirId, fhirId) || other.fhirId == fhirId)&&const DeepCollectionEquality().equals(other._extension_, _extension_)&&(identical(other.line, line) || other.line == line)&&(identical(other.col, col) || other.col == col));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,fhirId,const DeepCollectionEquality().hash(_extension_),line,col);
+
+@override
+String toString() {
+  return 'Element(fhirId: $fhirId, extension_: $extension_, line: $line, col: $col)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
+  factory _$ElementCopyWith(_Element value, $Res Function(_Element) _then) = __$ElementCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'id') String? fhirId,@JsonKey(name: 'extension') List<FhirExtension>? extension_, int? line, int? col
+});
+
+
+
+
+}
+/// @nodoc
+class __$ElementCopyWithImpl<$Res>
+    implements _$ElementCopyWith<$Res> {
+  __$ElementCopyWithImpl(this._self, this._then);
+
+  final _Element _self;
+  final $Res Function(_Element) _then;
+
+/// Create a copy of Element
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? fhirId = freezed,Object? extension_ = freezed,Object? line = freezed,Object? col = freezed,}) {
+  return _then(_Element(
+fhirId: freezed == fhirId ? _self.fhirId : fhirId // ignore: cast_nullable_to_non_nullable
+as String?,extension_: freezed == extension_ ? _self._extension_ : extension_ // ignore: cast_nullable_to_non_nullable
+as List<FhirExtension>?,line: freezed == line ? _self.line : line // ignore: cast_nullable_to_non_nullable
+as int?,col: freezed == col ? _self.col : col // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on
