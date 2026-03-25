@@ -1,4 +1,4 @@
-# FHIR
+# FHIR Plus
 
 A Dart/Flutter package for working with FHIR® resources. FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7.
 
@@ -9,7 +9,7 @@ It contains packages for the 3 released FHIR versions:
 
 # Important
 - **This package is a fork of [fhir](https://pub.dev/packages/fhir) that I plan to continue to maintain. Thanks to [fhirfli.dev](https://fhirfli.dev) and all the contributors, for their work on this package.**
-- **I recommend you to check all the FHIR packages already supported by [fhirfli.dev](https://fhir-fli.github.io/fhir_fli_documentation/docs#fhir-version-support) before using this package.**
+- **I recommend you to check all the FHIR packages already supported by [fhirfli.dev](https://pub.dev/publishers/fhirfli.dev/packages) before using this package.**
 
 ## FYIs & Questions
 
@@ -25,23 +25,22 @@ In order to use this package in your app, you must include the following in your
 
 ```yaml
 dependencies:
-  fhir: ^1.0.0
+  fhir_plus: ^1.0.0
 ```
 
 Then, in any file where you're going to be using it, simply import it like this:
 
 ```dart
-import 'package:fhir/r4.dart';
+import 'package:fhir_plus/r4.dart';
 ```
 
 Or, you may need to rename the package, for instance, there are some variables FHIR uses that overlap with dart:core, or if you're going to be using more than oen version of FHIR in the same file:
 
 ```dart
-import 'package:fhir/r4.dart' as r4;
-import 'package:fhir/stu3.dart' as stu3;
+import 'package:fhir_plus/r4.dart' as r4;
 ```
 
-And then just remember to append r4 or stu3 to any variables you use from the library.
+And then just remember to append r4 to any variables you use from the library.
 
 Currently this package is really just for serializing/deserializing FHIR data, and being able to create FHIR resources.
 
@@ -168,13 +167,4 @@ It will be false, because it will use the DateTime ```==``` instead.
     null
   ]
 }
-```
-
-## Code Generation
-
-I think it's the new compiling. It's actually great though, [json_serializable](https://pub.dev/packages/json_serializable) and [freezed](https://pub.dev/packages/freezed) are used extensively throughout. In order to allow a field to contain any resource, it is passed to the resource class and is passed to a switch case statement (which feels a little clunky, but I haven't managed a better way yet). I've removed the resource.g.dart files for all versions. It didn't appear to ever be used, but did lose me points on pub.dev. But if it changes your functionality, please let me know. It will state that there's an error when you run code generation however.
-
-```dart
-[WARNING] json_serializable:json_serializable on lib/dstu2/basic_types/resource.dart:
-Missing "part 'resource.g.dart';".
 ```

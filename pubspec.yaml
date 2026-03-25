@@ -1,4 +1,4 @@
-name: fhir
+name: fhir_plus
 description: FHIR library of versions R4 and R5 (draft) for Dart & Flutter.
 version: 1.0.0
 repository: https://github.com/luis901101/fhir

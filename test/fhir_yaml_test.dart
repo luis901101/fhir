@@ -4,7 +4,7 @@
 import 'dart:convert';
 
 // Project imports:
-import 'package:fhir/yaml/fhir_yaml.dart';
+import 'package:fhir_plus/yaml/fhir_yaml.dart';
 // Package imports:
 import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
